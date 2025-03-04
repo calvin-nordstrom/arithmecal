@@ -1,0 +1,49 @@
+'use client';
+
+import React from 'react';
+
+export interface CalculatorOutputProps {
+  label: string;
+  value: string;
+  unit: string;
+  onUnitChange: (unit: string) => void;
+  unitOptions: string[];
+  precision?: number;
+}
+
+export default function CalculatorOutput({
+  label,
+  value,
+  unit,
+  onUnitChange,
+  unitOptions,
+  precision,
+}: CalculatorOutputProps) {
+  let displayValue = value;
+  if (value !== '') {
+    const num = parseFloat(value);
+    if (!isNaN(num) && precision !== undefined) {
+      displayValue = num.toFixed(precision);
+    }
+  }
+
+  return (
+    <div style={{ marginBottom: '1rem' }}>
+      <label>
+        <b>{label}</b>: 
+      </label>
+      <label> {displayValue}</label>
+      <select
+        value={unit}
+        onChange={(e) => onUnitChange(e.target.value)}
+        style={{ marginLeft: '0.5rem' }}
+      >
+        {unitOptions.map((option) => (
+          <option key={option} value={option}>
+            {option}
+          </option>
+        ))}
+      </select>
+    </div>
+  );
+}
