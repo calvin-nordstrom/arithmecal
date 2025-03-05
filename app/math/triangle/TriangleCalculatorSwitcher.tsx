@@ -2,7 +2,6 @@
 
 import React, { useState } from 'react';
 import TriangleAreaCalculator from './TriangleAreaCalculator';
-import TriangleBaseCalculator from './TriangleBaseCalculator';
 
 export type CalculatorType = 'area' | 'base' | 'height' | 'side (a)' | 'side (b)' | 'gamma' | 'perimeter';
 
@@ -35,7 +34,6 @@ export default function TriangleCalculatorSwitcher() {
       </div>
       <div>
         {calculatorType === 'area' && <TriangleAreaCalculator />}
-        {calculatorType === 'base' && <TriangleBaseCalculator />}
       </div>
     </div>
   );

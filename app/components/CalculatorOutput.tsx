@@ -20,17 +20,17 @@ export default function CalculatorOutput({
   precision,
 }: CalculatorOutputProps) {
   let displayValue = value;
-  if (value !== '') {
+  if (value !== '' && precision !== undefined) {
     const num = parseFloat(value);
-    if (!isNaN(num) && precision !== undefined) {
-      displayValue = num.toFixed(precision);
+    if (!isNaN(num)) {
+      displayValue = String(parseFloat(num.toFixed(precision)));
     }
   }
 
   return (
     <div style={{ marginBottom: '1rem' }}>
       <label>
-        <b>{label}</b>: 
+        <b>{label}</b>:
       </label>
       <label> {displayValue}</label>
       <select

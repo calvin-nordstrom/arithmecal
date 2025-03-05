@@ -9,7 +9,6 @@ export interface CalculatorInputProps {
   unit: string;
   onUnitChange: (unit: string) => void;
   unitOptions: string[];
-  precision?: number;
 }
 
 export default function CalculatorInput({
@@ -19,15 +18,8 @@ export default function CalculatorInput({
   unit,
   onUnitChange,
   unitOptions,
-  precision,
 }: CalculatorInputProps) {
-  let displayValue = value;
-  if (value !== '') {
-    const num = parseFloat(value);
-    if (!isNaN(num) && precision !== undefined) {
-      displayValue = num.toFixed(precision);
-    }
-  }
+  const displayValue = value;
 
   return (
     <div style={{ marginBottom: '1rem' }}>
@@ -39,6 +31,7 @@ export default function CalculatorInput({
           value={displayValue}
           onChange={(e) => onValueChange(e.target.value)}
           style={{ marginTop: '0.5rem' }}
+          autoComplete="off"
         />
       </label>
       <select
