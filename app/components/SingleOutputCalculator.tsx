@@ -27,7 +27,7 @@ interface SingleOutputCalculatorProps {
   config: CalculatorConfig;
 }
 
-export default function GenericCalculator({
+export default function SingleOutputCalculator({
   config 
 }: SingleOutputCalculatorProps) {
   // Build initial state for inputs and their units.
