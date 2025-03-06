@@ -43,6 +43,6 @@ const config: CalculatorConfig = {
   },
 };
 
-export default function TriangleAreaCalculator() {
+export default function Calculator() {
   return <SingleOutputCalculator config={config} />;
 }

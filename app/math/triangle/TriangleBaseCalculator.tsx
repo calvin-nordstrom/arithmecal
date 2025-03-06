@@ -46,6 +46,6 @@ const config: CalculatorConfig = {
   },
 };
 
-export default function TriangleBaseCalculator() {
+export default function Calculator() {
   return <SingleOutputCalculator config={config} />;
 }
