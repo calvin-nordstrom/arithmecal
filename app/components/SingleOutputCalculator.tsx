@@ -5,6 +5,8 @@ import CalculatorInput from './CalculatorInput';
 import CalculatorOutput from './CalculatorOutput';
 
 const convert = require('convert-units');
+const inputPrecision = 5;
+const outputPrecision = 5;
 
 // Define an interface for each input/output field
 export interface CalculatorField {
@@ -86,7 +88,7 @@ export default function SingleOutputCalculator({
       return {
         ...prev,
         [key]: newUnit,
-        [inputKey]: String(parseFloat(convertedValue.toFixed(9))),
+        [inputKey]: String(parseFloat(convertedValue.toFixed(inputPrecision))),
       };
     });
   };
@@ -112,7 +114,7 @@ export default function SingleOutputCalculator({
           handleUnitChange(config.outputField.key + 'Unit', unit)
         }
         unitOptions={config.outputField.unitOptions}
-        precision={9}
+        precision={outputPrecision}
       />
       {errorMessage && (
         <div style={{ color: 'red', marginTop: '8px' }}>
