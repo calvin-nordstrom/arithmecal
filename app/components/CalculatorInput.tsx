@@ -19,8 +19,6 @@ export default function CalculatorInput({
   onUnitChange,
   unitOptions,
 }: CalculatorInputProps) {
-  const displayValue = value;
-
   return (
     <div style={{ marginBottom: '1rem' }}>
       <label>
@@ -28,7 +26,7 @@ export default function CalculatorInput({
         <br />
         <input
           type="number"
-          value={displayValue}
+          value={value}
           onChange={(e) => onValueChange(e.target.value)}
           style={{ marginTop: '0.5rem' }}
           autoComplete="off"
