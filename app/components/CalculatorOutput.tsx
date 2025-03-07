@@ -32,7 +32,7 @@ export default function CalculatorOutput({
       <label>
         <b>{label}</b>:
       </label>
-      <label> {displayValue}</label>
+      <span> {displayValue}</span>
       <select
         value={unit}
         onChange={(e) => onUnitChange(e.target.value)}
