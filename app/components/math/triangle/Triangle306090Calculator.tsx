@@ -4,7 +4,7 @@ import React from 'react';
 import { areaUnits, lengthUnits } from "@/app/utils/units";
 import DynamicCalculator, { DynamicCalculatorConfig } from "@/app/components/DynamicCalculator";
 
-const triangleConfig: DynamicCalculatorConfig = {
+const config: DynamicCalculatorConfig = {
   fields: [
     {
       key: 'a',
@@ -108,6 +108,6 @@ const triangleConfig: DynamicCalculatorConfig = {
   }
 };
 
-export default function TriangleCalculator() {
-  return <DynamicCalculator config={triangleConfig} />;
+export default function Calculator() {
+  return <DynamicCalculator config={config} />;
 }
