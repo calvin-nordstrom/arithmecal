@@ -1,3 +1,4 @@
+import CircumscribedCircleCalculator from '@/app/components/math/CircumscribedCircleCalculator';
 import Head from 'next/head';
 
 export default function TriangleCalculatorPage() {
@@ -5,10 +6,11 @@ export default function TriangleCalculatorPage() {
     <>
       <Head>
         <title>Triangle Calculator</title>
-        <meta name="description" content="Calculate the properties of triangles including area, perimeter, sides, base, and height." />
+        <meta name="description" content="" />
       </Head>
       <main style={{ padding: '2rem' }}>
-        <h1>Triangle Calculator</h1>
+        <h1>Circumscribed Circle Calculator</h1>
+        <CircumscribedCircleCalculator />
       </main>
     </>
   );

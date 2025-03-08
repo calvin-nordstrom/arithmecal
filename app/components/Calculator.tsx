@@ -2,10 +2,11 @@
 
 import React, { useState, useRef } from 'react';
 import CalculatorInput from './CalculatorInput';
-import { countConsecutiveDecimalZeroes, getDecimalCount } from '@/app/utils/mathUtils';
-
+import CalculatorOutput from './CalculatorOutput';
+import { clamp, countConsecutiveDecimalZeroes, getDecimalCount } from '@/app/utils/mathUtils';
 const convert = require('convert-units');
-let inputDecimals = 0;
+
+let input = 0;
 
 export interface CalculatorField {
   key: string;
@@ -13,6 +14,7 @@ export interface CalculatorField {
   unitOptions: string[];
   defaultUnit: string;
   conversionBase: string;
+  isOutput?: boolean;
 }
 
 export interface DynamicCalculatorConfig {
@@ -37,6 +39,7 @@ interface DynamicCalculatorProps {
 // Helper to format values for display.
 // Uses exponential notation for very small numbers.
 function formatValue(value: number): string {
+  const inputDecimals = getDecimalCount(input);
   let precision = inputDecimals + 3;
   const fixedValue = parseFloat(value.toFixed(precision));
   const decimalCount = getDecimalCount(fixedValue);
@@ -48,6 +51,11 @@ function formatValue(value: number): string {
     }
   }
 
+  precision = clamp(precision, 3, 9);
+
+  if (value === 0) {
+    return parseFloat(value.toFixed(0)).toString();
+  }
   if (Math.abs(value) < Math.pow(10, -precision)) {
     return value.toExponential(precision);
   }
@@ -57,67 +65,62 @@ function formatValue(value: number): string {
 export default function DynamicCalculator({ config }: DynamicCalculatorProps) {
   // Initialize state: for each field, store its precise value, formatted display, and unit.
   const initialState = config.fields.reduce((acc, field) => {
+    let initialReal = NaN;
+    let initialDisplay = '';
+    if (field.isOutput) {
+      initialReal = 0;
+      initialDisplay = '0';
+    }
     acc[field.key] = {
-      real: 0,
-      display: '',
+      real: initialReal,
+      display: initialDisplay,
       unit: field.defaultUnit,
     };
     return acc;
   }, {} as Record<string, FieldData>);
 
   const [fieldData, setFieldData] = useState<Record<string, FieldData>>(initialState);
-  // This state holds the key of a field that is in the "delay" period.
   const [delayedField, setDelayedField] = useState<string | null>(null);
   const delayTimeoutRef = useRef<NodeJS.Timeout | null>(null);
 
-  // Convert each field's precise (real) value to the standard unit for calculations.
+  // Convert each field's value to its standard unit.
   const computeStandardInputs = (data: Record<string, FieldData>) => {
     return config.fields.reduce((acc, field) => {
-      acc[field.key] = convert(data[field.key].real)
-        .from(data[field.key].unit)
-        .to(field.conversionBase);
+      acc[field.key] = data[field.key].real;
       return acc;
     }, {} as Record<string, number>);
   };
 
-  // Handler for user input changes.
+  const standardInputs = computeStandardInputs(fieldData);
+  const rawInputs = config.fields.reduce((acc, field) => {
+    acc[field.key] = fieldData[field.key].display;
+    return acc;
+  }, {} as Record<string, string>);
+  const errorMessage = !delayedField && config.validate ? config.validate(standardInputs, rawInputs) : null;
+
+  // Handler for user input changes (for editable fields only)
   const handleInputChange = (key: string, newDisplay: string) => {
-    const newReal = parseFloat(newDisplay);
     const newFieldData = { ...fieldData };
+    const fieldConfig = config.fields.find(field => field.key === key);
+    if (!fieldConfig) return;
+
+    const parsedValue = parseFloat(newDisplay);
+    // If the parsed value is not a valid number, keep it as NaN.
+    // Otherwise, convert the input from the current unit to the conversion base.
+    const newReal = isNaN(parsedValue)
+      ? NaN
+      : convert(parsedValue).from(newFieldData[key].unit).to(fieldConfig.conversionBase);
+
     newFieldData[key] = {
       ...newFieldData[key],
       real: newReal,
       display: newDisplay, // show the raw input until it becomes valid
     };
-  
-    // If the new value is invalid (e.g., ≤ 0), do not update other fields.
-    if (newReal <= 0) {
-      setDelayedField(key);
-      if (delayTimeoutRef.current) {
-        clearTimeout(delayTimeoutRef.current);
-      }
-      delayTimeoutRef.current = setTimeout(() => {
-        setDelayedField(null);
-      }, 1000);
-      // Update state only for the changed field and exit.
-      setFieldData(newFieldData);
-      return;
-    } else {
-      // Clear the delay if the input becomes valid.
-      if (delayedField === key) {
-        setDelayedField(null);
-        if (delayTimeoutRef.current) {
-          clearTimeout(delayTimeoutRef.current);
-          delayTimeoutRef.current = null;
-        }
-      }
-    }
-  
-    // If the input is valid, compute standard values and update computed fields.
+
+    // Compute new values from the updated inputs.
     const standardInputs = computeStandardInputs(newFieldData);
     const computedStandard = config.formula(standardInputs, key);
-  
-    // Update other fields based on computed values.
+
     config.fields.forEach(field => {
       if (field.key !== key && computedStandard[field.key] !== undefined) {
         const computedReal = computedStandard[field.key];
@@ -127,54 +130,72 @@ export default function DynamicCalculator({ config }: DynamicCalculatorProps) {
           display: formatValue(
             convert(computedReal)
               .from(field.conversionBase)
-              .to(newFieldData[field.key].unit),
-          ),
+              .to(newFieldData[field.key].unit)
+          )
         };
       } else {
-        inputDecimals = getDecimalCount(newFieldData[key].real);
+        input = newFieldData[key].real;
       }
     });
     setFieldData(newFieldData);
-  };  
+  };
 
-  // Handler for unit changes.
+  // Handler for unit changes (applies to both inputs and outputs)
   const handleUnitChange = (key: string, newUnit: string) => {
     const newFieldData = { ...fieldData };
-    const oldUnit = newFieldData[key].unit;
+    const fieldConfig = config.fields.find(field => field.key === key);
+    if (!fieldConfig) return;
+
+    // If this is an input field and the current display is empty or invalid,
+    // simply update the unit without converting any value.
+    if (!fieldConfig.isOutput && (isNaN(newFieldData[key].real) || newFieldData[key].display.trim() === '')) {
+      newFieldData[key] = {
+        ...newFieldData[key],
+        unit: newUnit,
+        // Leave display unchanged (or keep it empty) and do not update "real"
+      };
+      setFieldData(newFieldData);
+      return;
+    }
+
+    // For valid values (or for outputs), always convert from the conversion base.
     const realValue = newFieldData[key].real;
-    const newRealValue = convert(realValue).from(oldUnit).to(newUnit);
+    const displayValue = convert(realValue)
+      .from(fieldConfig.conversionBase)
+      .to(newUnit);
+
     newFieldData[key] = {
       ...newFieldData[key],
-      real: newRealValue,
       unit: newUnit,
-      display: formatValue(newRealValue),
+      display: formatValue(displayValue),
     };
     setFieldData(newFieldData);
   };
 
-  // Prepare data for validation.
-  const standardInputs = computeStandardInputs(fieldData);
-  const rawInputs = config.fields.reduce((acc, field) => {
-    acc[field.key] = fieldData[field.key].display;
-    return acc;
-  }, {} as Record<string, string>);
-  // Only show error messages if no field is currently in the delay period.
-  const errorMessage =
-    !delayedField && config.validate ? config.validate(standardInputs, rawInputs) : null;
-
   return (
     <div>
-      {config.fields.map((field) => (
-        <CalculatorInput
-          key={field.key}
-          label={field.label}
-          value={fieldData[field.key].display}
-          unit={fieldData[field.key].unit}
-          onValueChange={(value) => handleInputChange(field.key, value)}
-          onUnitChange={(unit) => handleUnitChange(field.key, unit)}
-          unitOptions={field.unitOptions}
-        />
-      ))}
+      {config.fields.map((field) =>
+        field.isOutput ? (
+          <CalculatorOutput
+            key={field.key}
+            label={field.label}
+            value={fieldData[field.key].display}
+            unit={fieldData[field.key].unit}
+            onUnitChange={(unit) => handleUnitChange(field.key, unit)}
+            unitOptions={field.unitOptions}
+          />
+        ) : (
+          <CalculatorInput
+            key={field.key}
+            label={field.label}
+            value={fieldData[field.key].display}
+            unit={fieldData[field.key].unit}
+            onValueChange={(value) => handleInputChange(field.key, value)}
+            onUnitChange={(unit) => handleUnitChange(field.key, unit)}
+            unitOptions={field.unitOptions}
+          />
+        )
+      )}
       {errorMessage && (
         <div style={{ color: 'red', marginTop: '8px' }}>
           {Array.isArray(errorMessage)

@@ -1,4 +1,4 @@
-import Triangle306090Calculator from '@/app/components/math/triangle/Triangle306090Calculator';
+import Triangle306090Calculator from '@/app/components/math/Triangle306090Calculator';
 import Head from 'next/head';
 
 export default function TriangleCalculatorPage() {

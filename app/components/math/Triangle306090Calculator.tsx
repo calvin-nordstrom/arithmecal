@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { areaUnits, lengthUnits } from "@/app/utils/units";
-import DynamicCalculator, { DynamicCalculatorConfig } from "@/app/components/DynamicCalculator";
+import DynamicCalculator, { DynamicCalculatorConfig } from "@/app/components/Calculator";
 
 const config: DynamicCalculatorConfig = {
   fields: [
@@ -105,7 +105,7 @@ const config: DynamicCalculatorConfig = {
       errors.push('Perimeter must be positive');
     }
     return errors.length > 0 ? errors : null;
-  }
+  },
 };
 
 export default function Calculator() {
