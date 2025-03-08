@@ -1,31 +1,31 @@
 'use client';
 
 import React from 'react';
-import DynamicCalculator, { DynamicCalculatorConfig } from '@/app/components/Calculator';
+import Calculator, { CalculatorConfig } from '@/app/components/Calculator';
 import { lengthUnits, areaUnits } from '@/app/utils/units';
 
-const config: DynamicCalculatorConfig = {
+const config: CalculatorConfig = {
   fields: [
     {
       key: 'a',
-      label: 'Side a',
+      label: 'Side (a)',
       unitOptions: lengthUnits,
       defaultUnit: 'm',
-      conversionBase: 'm',
+      conversionBase: 'm'
     },
     {
       key: 'b',
-      label: 'Side b',
+      label: 'Side (b)',
       unitOptions: lengthUnits,
       defaultUnit: 'm',
-      conversionBase: 'm',
+      conversionBase: 'm'
     },
     {
       key: 'c',
-      label: 'Side c',
+      label: 'Side (c)',
       unitOptions: lengthUnits,
       defaultUnit: 'm',
-      conversionBase: 'm',
+      conversionBase: 'm'
     },
     {
       key: 'radius',
@@ -33,7 +33,7 @@ const config: DynamicCalculatorConfig = {
       unitOptions: lengthUnits,
       defaultUnit: 'm',
       conversionBase: 'm',
-      isOutput: true,
+      isOutput: true
     },
     {
       key: 'diameter',
@@ -41,7 +41,7 @@ const config: DynamicCalculatorConfig = {
       unitOptions: lengthUnits,
       defaultUnit: 'm',
       conversionBase: 'm',
-      isOutput: true,
+      isOutput: true
     },
     {
       key: 'circumference',
@@ -49,7 +49,7 @@ const config: DynamicCalculatorConfig = {
       unitOptions: lengthUnits,
       defaultUnit: 'm',
       conversionBase: 'm',
-      isOutput: true,
+      isOutput: true
     },
     {
       key: 'area',
@@ -57,7 +57,7 @@ const config: DynamicCalculatorConfig = {
       unitOptions: areaUnits,
       defaultUnit: 'm2',
       conversionBase: 'm2',
-      isOutput: true,
+      isOutput: true
     }
   ],
   formula: (inputs, changedField) => {
@@ -67,6 +67,7 @@ const config: DynamicCalculatorConfig = {
     const s = (a + b + c) / 2;
     const triangleArea = Math.sqrt(s * (s - a) * (s - b) * (s - c));
     let radius = 0, diameter = 0, circumference = 0, area = 0;
+    
     if (triangleArea > 0) {
       radius = (a * b * c) / (4 * triangleArea);
       diameter = 2 * radius;
@@ -96,5 +97,5 @@ const config: DynamicCalculatorConfig = {
 };
 
 export default function CircumscribedCircleCalculator() {
-  return <DynamicCalculator config={config} />;
+  return <Calculator config={config} />;
 }

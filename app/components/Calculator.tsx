@@ -8,6 +8,8 @@ const convert = require('convert-units');
 
 let input = 0;
 
+// Interface representing a field of the calculator.
+// This can be input or output depending on the isOutput option
 export interface CalculatorField {
   key: string;
   label: string;
@@ -17,27 +19,28 @@ export interface CalculatorField {
   isOutput?: boolean;
 }
 
-export interface DynamicCalculatorConfig {
+// Interface representing the structure of the calculator.
+// This contains the fields, the formula to evaluate, and the validation option.
+export interface CalculatorConfig {
   fields: CalculatorField[];
-  // When a field changes, this function returns computed values (in standard units)
-  // for the other fields.
   formula: (inputs: Record<string, number>, changedField: string) => Record<string, number>;
   validate?: (inputs: Record<string, number>, rawInputs: Record<string, string>) => string[] | null;
 }
 
-// Store separate "real" (precise) and "display" values for each field.
+// Local interface to store the real value, display value, and the unit for a 
+// field.
 interface FieldData {
   real: number;
   display: string;
   unit: string;
 }
 
-interface DynamicCalculatorProps {
-  config: DynamicCalculatorConfig;
+// Local props interface for the calculator configuration.
+interface CalculatorProps {
+  config: CalculatorConfig;
 }
 
-// Helper to format values for display.
-// Uses exponential notation for very small numbers.
+// Helper function used to format output values.
 function formatValue(value: number): string {
   const inputDecimals = getDecimalCount(input);
   let precision = inputDecimals + 3;
@@ -62,8 +65,9 @@ function formatValue(value: number): string {
   return parseFloat(value.toFixed(precision)).toString();
 }
 
-export default function DynamicCalculator({ config }: DynamicCalculatorProps) {
-  // Initialize state: for each field, store its precise value, formatted display, and unit.
+// Export function for the generic Calculator component.
+// Takes in config props used to build the calculator from this template.
+export default function Calculator({ config }: CalculatorProps) {
   const initialState = config.fields.reduce((acc, field) => {
     let initialReal = NaN;
     let initialDisplay = '';

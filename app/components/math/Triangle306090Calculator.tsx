@@ -1,28 +1,28 @@
 'use client';
 
 import React from 'react';
-import { areaUnits, lengthUnits } from "@/app/utils/units";
-import DynamicCalculator, { DynamicCalculatorConfig } from "@/app/components/Calculator";
+import Calculator, { CalculatorConfig } from '@/app/components/Calculator';
+import { lengthUnits, areaUnits } from '@/app/utils/units';
 
-const config: DynamicCalculatorConfig = {
+const config: CalculatorConfig = {
   fields: [
     {
       key: 'a',
-      label: 'Side a',
+      label: 'Side (a)',
       unitOptions: lengthUnits,
       defaultUnit: 'm',
       conversionBase: 'm'
     },
     {
       key: 'b',
-      label: 'Side b',
+      label: 'Side (b)',
       unitOptions: lengthUnits,
       defaultUnit: 'm',
       conversionBase: 'm'
     },
     {
       key: 'c',
-      label: 'Side c',
+      label: 'Side (c)',
       unitOptions: lengthUnits,
       defaultUnit: 'm',
       conversionBase: 'm'
@@ -108,6 +108,6 @@ const config: DynamicCalculatorConfig = {
   },
 };
 
-export default function Calculator() {
-  return <DynamicCalculator config={config} />;
+export default function Triangle306090Calculator() {
+  return <Calculator config={config} />;
 }
