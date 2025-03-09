@@ -138,7 +138,7 @@ export default function Calculator({ config }: CalculatorProps) {
           )
         };
       } else {
-        input = newFieldData[key].real;
+        input = parsedValue;
       }
     });
     setFieldData(newFieldData);
