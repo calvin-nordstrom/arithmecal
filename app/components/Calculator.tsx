@@ -177,7 +177,7 @@ export default function Calculator({ config }: CalculatorProps) {
   };
 
   return (
-    <div>
+    <div className='calculator'>
       {config.fields.map((field) =>
         field.isOutput ? (
           <CalculatorOutput
@@ -201,7 +201,7 @@ export default function Calculator({ config }: CalculatorProps) {
         )
       )}
       {errorMessage && (
-        <div style={{ color: 'red', marginTop: '8px' }}>
+        <div className='calculator-error'>
           {Array.isArray(errorMessage)
             ? errorMessage.map((msg, index) => <div key={index}>{msg}</div>)
             : errorMessage}

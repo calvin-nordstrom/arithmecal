@@ -1,11 +1,26 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  /* Fonts */
+  --rubik-text: 350 16px 'Rubik', sans-serif;
+
+  /* Calculator styles */
+  --calculator-border: rgb(160, 160, 160);
+  --calculator-background: rgb(240, 240, 240);
+  --calculator-enabled-border: rgb(176, 176, 176);
+  --calculator-disabled-border: rgb(216, 216, 216);
+  --calculator-error-color: rgb(255, 0, 0);
+  
+  /* Calculator field styles */
+  --calculator-field-label-font-size: 16px;
+  --calculator-field-font-size: 20px;
+  --calculator-field-select-font-size: 16px;
+
+  /* Calculator input styles */
+  --calculator-input-background: rgb(255, 255, 255);
+
+  /* Calculator output styles */
+  --calculator-output-background: rgb(216, 216, 216);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -15,5 +30,102 @@
 }
 
 body {
-  
+  margin: 0;
+}
+
+/* Calculator styles */
+
+.calculator {
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  background-color: var(--calculator-background);
+  border: 1px solid var(--calculator-border);
+  border-radius: 4px;
+}
+
+.calculator-error {
+  color: var(--calculator-error-color);
+  font: var(--rubik-text);
+  font-size: 20px;
+}
+
+.calculator-select {
+  font: var(--rubik-text);
+  font-size: var(--calculator-field-select-font-size);
+  margin-left: 0.5rem;
+  padding: 0.3rem;
+  border: 1px solid var(--calculator-enabled-border);
+  border-radius: 4px;
+}
+
+/* Calculator input styles */
+
+.calculator-input-container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.5rem;
+}
+
+.calculator-input {
+  font: var(--rubik-text);
+  font-size: var(--calculator-field-font-size);
+  padding: 0.5rem;
+  border: 1px solid var(--calculator-enabled-border);
+  border-radius: 4px;
+  background-color: var(--calculator-input-background);
+  flex-grow: 1;
+}
+
+.calculator-input-label {
+  font: var(--rubik-text);
+  font-size: var(--calculator-field-label-font-size);
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.calculator-input-controls {
+  display: flex;
+}
+
+/* Calculator output styles */
+
+.calculator-output-container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.5rem;
+}
+
+.calculator-output {
+  font: var(--rubik-text);
+  font-size: var(--calculator-field-font-size);
+  padding: 0.5rem;
+  border: 1px solid var(--calculator-disabled-border);
+  border-radius: 4px;
+  background-color: var(--calculator-output-background);
+  flex-grow: 1;
+}
+
+.calculator-output-label {
+  font: var(--rubik-text);
+  font-size: var(--calculator-field-label-font-size);
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.calculator-output-controls {
+  display: flex;
+}
+
+/* Miscellaneous styles */
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
 }

@@ -18,22 +18,20 @@ export default function CalculatorOutput({
   unitOptions,
 }: CalculatorOutputProps) {
   return (
-    <div style={{ marginBottom: '1rem' }}>
-      <label>
-        <b>{label}</b>:
-      </label>
-      <span> {value}</span>
-      <select
-        value={unit}
-        onChange={(e) => onUnitChange(e.target.value)}
-        style={{ marginLeft: '0.5rem' }}
-      >
-        {unitOptions.map((option) => (
-          <option key={option} value={option}>
-            {option}
-          </option>
-        ))}
-      </select>
+    <div className='calculator-output-container'>
+      <label className='calculator-output-label'>{label}</label>
+      <div className='calculator-output-controls'>
+        <span className='calculator-output'> {value}</span>
+        <select
+          value={unit}
+          onChange={(e) => onUnitChange(e.target.value)}
+          className='calculator-select'
+        >
+          {unitOptions.map((option) => (
+            <option key={option} value={option}>{option}</option>
+          ))}
+        </select>
+      </div>
     </div>
   );
 }
