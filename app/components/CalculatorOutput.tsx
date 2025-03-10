@@ -21,16 +21,20 @@ export default function CalculatorOutput({
     <div className='calculator-output-container'>
       <label className='calculator-output-label'>{label}</label>
       <div className='calculator-output-controls'>
-        <span className='calculator-output'> {value}</span>
-        <select
-          value={unit}
-          onChange={(e) => onUnitChange(e.target.value)}
-          className='calculator-select'
-        >
-          {unitOptions.map((option) => (
-            <option key={option} value={option}>{option}</option>
-          ))}
-        </select>
+        <span className='calculator-output'>{value}</span>
+        {unitOptions.length > 0 && (
+          <select
+            value={unit}
+            onChange={(e) => onUnitChange(e.target.value)}
+            className='calculator-select'
+          >
+            {unitOptions.map((option) => (
+              <option key={option} value={option}>
+                {option}
+              </option>
+            ))}
+          </select>
+        )}
       </div>
     </div>
   );

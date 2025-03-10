@@ -24,9 +24,9 @@ export interface FieldElement {
   type: 'field';
   key: string;
   label: string;
-  unitOptions: string[];
-  defaultUnit: string;
-  conversionBase: string;
+  unitOptions?: string[];
+  defaultUnit?: string;
+  conversionBase?: string;
   isOutput?: boolean;
 }
 
@@ -82,16 +82,12 @@ export default function Calculator({ config }: CalculatorProps) {
   );
 
   const initialState = fieldConfigs.reduce((acc, field) => {
-    let initialReal = NaN;
-    let initialDisplay = '';
-    if (field.isOutput) {
-      initialReal = 0;
-      initialDisplay = '0';
-    }
+    const initialReal = field.isOutput ? 0 : NaN;
+    const initialDisplay = field.isOutput ? '0' : '';
     acc[field.key] = {
       real: initialReal,
       display: initialDisplay,
-      unit: field.defaultUnit,
+      unit: field.defaultUnit || '',
     };
     return acc;
   }, {} as Record<string, FieldData>);
@@ -122,16 +118,22 @@ export default function Calculator({ config }: CalculatorProps) {
     if (!fieldConfig) return;
 
     const parsedValue = parseFloat(newDisplay);
-    // If the parsed value is not a valid number, keep it as NaN.
-    // Otherwise, convert the input from the current unit to the conversion base.
-    const newReal = isNaN(parsedValue)
-      ? NaN
-      : convert(parsedValue).from(newFieldData[key].unit).to(fieldConfig.conversionBase);
-
+    let newReal: number;
+    if (isNaN(parsedValue)) {
+      newReal = NaN;
+    } else if (!fieldConfig.conversionBase) {
+      // Field is unitless; use the raw number.
+      newReal = parsedValue;
+    } else {
+      // Field has units: convert from the current unit to the conversion base.
+      newReal = convert(parsedValue)
+        .from(newFieldData[key].unit)
+        .to(fieldConfig.conversionBase);
+    }
     newFieldData[key] = {
       ...newFieldData[key],
       real: newReal,
-      display: newDisplay, // show the raw input until it becomes valid
+      display: newDisplay,
     };
 
     // Compute new values from the updated inputs.
@@ -141,19 +143,30 @@ export default function Calculator({ config }: CalculatorProps) {
     fieldConfigs.forEach(field => {
       if (field.key !== key && computedStandard[field.key] !== undefined) {
         const computedReal = computedStandard[field.key];
-        newFieldData[field.key] = {
-          ...newFieldData[field.key],
-          real: computedReal,
-          display: formatValue(
-            convert(computedReal)
-              .from(field.conversionBase)
-              .to(newFieldData[field.key].unit)
-          )
-        };
+        if (!field.conversionBase) {
+          // For unitless fields, just display the raw computed value.
+          newFieldData[field.key] = {
+            ...newFieldData[field.key],
+            real: computedReal,
+            display: formatValue(computedReal)
+          };
+        } else {
+          // For fields with units, perform conversion.
+          newFieldData[field.key] = {
+            ...newFieldData[field.key],
+            real: computedReal,
+            display: formatValue(
+              convert(computedReal)
+                .from(field.conversionBase)
+                .to(newFieldData[field.key].unit)
+            )
+          };
+        }
       } else {
         input = parsedValue;
       }
     });
+    
     setFieldData(newFieldData);
   };
 
@@ -175,17 +188,23 @@ export default function Calculator({ config }: CalculatorProps) {
       return;
     }
 
-    // For valid values (or for outputs), always convert from the conversion base.
-    const realValue = newFieldData[key].real;
-    const displayValue = convert(realValue)
-      .from(fieldConfig.conversionBase)
-      .to(newUnit);
+    if (!fieldConfig.conversionBase) {
+      newFieldData[key] = {
+        ...newFieldData[key],
+        unit: newUnit, // Or potentially ignore if you don't want unit changes.
+      };
+    } else {
+      const realValue = newFieldData[key].real;
+      const displayValue = convert(realValue)
+        .from(fieldConfig.conversionBase)
+        .to(newUnit);
+      newFieldData[key] = {
+        ...newFieldData[key],
+        unit: newUnit,
+        display: formatValue(displayValue),
+      };
+    }
 
-    newFieldData[key] = {
-      ...newFieldData[key],
-      unit: newUnit,
-      display: formatValue(displayValue),
-    };
     setFieldData(newFieldData);
   };
 
@@ -208,7 +227,7 @@ export default function Calculator({ config }: CalculatorProps) {
               value={fieldData[element.key].display}
               unit={fieldData[element.key].unit}
               onUnitChange={(unit) => handleUnitChange(element.key, unit)}
-              unitOptions={element.unitOptions}
+              unitOptions={element.unitOptions || []}
             />
           ) : (
             <CalculatorInput
@@ -218,7 +237,7 @@ export default function Calculator({ config }: CalculatorProps) {
               unit={fieldData[element.key].unit}
               onValueChange={(value) => handleInputChange(element.key, value)}
               onUnitChange={(unit) => handleUnitChange(element.key, unit)}
-              unitOptions={element.unitOptions}
+              unitOptions={element.unitOptions || []}
             />
           );
         }
