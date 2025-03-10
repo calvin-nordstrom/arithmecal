@@ -105,9 +105,6 @@ const config: CalculatorConfig = {
       label: 'Ratio of areas',
       isOutput: true
     },
-    {
-      type: 'divider'
-    },
   ],
   formula: (inputs, changedField) => {
     const a = inputs.a;

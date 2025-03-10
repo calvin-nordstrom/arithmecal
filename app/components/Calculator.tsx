@@ -249,6 +249,7 @@ export default function Calculator({ config }: CalculatorProps) {
             : errorMessage}
         </div>
       )}
+      <hr className="calculator-divider" />
       <div className='calculator-controls'>
         <button className='calculator-button' onClick={handleReset}>Reset All</button>
       </div>

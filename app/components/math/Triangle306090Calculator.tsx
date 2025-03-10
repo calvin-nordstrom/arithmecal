@@ -46,9 +46,6 @@ const config: CalculatorConfig = {
       defaultUnit: 'm',
       conversionBase: 'm'
     },
-    {
-      type: 'divider'
-    },
   ],
   formula: (inputs, changedField) => {
     let a: number, b: number, c: number, area: number, perimeter: number;

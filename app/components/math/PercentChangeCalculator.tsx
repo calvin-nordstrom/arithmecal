@@ -24,9 +24,6 @@ const config: CalculatorConfig = {
       label: 'Percent change',
       isOutput: true
     },
-    {
-      type: 'divider'
-    },
   ],
   formula: (inputs, changedField) => {
     const initialValue = inputs.initialValue;
