@@ -72,22 +72,74 @@ const config: CalculatorConfig = {
     {
       type: 'divider'
     },
+    {
+      type: 'field',
+      key: 'trianglePerimeter',
+      label: 'Triangle perimeter',
+      unitOptions: lengthUnits,
+      defaultUnit: 'm',
+      conversionBase: 'm',
+      isOutput: true
+    },
+    {
+      type: 'field',
+      key: 'triangleArea',
+      label: 'Triangle area',
+      unitOptions: areaUnits,
+      defaultUnit: 'm2',
+      conversionBase: 'm2',
+      isOutput: true
+    },
+    {
+      type: 'field',
+      key: 'circumradius',
+      label: 'Circumradius',
+      unitOptions: lengthUnits,
+      defaultUnit: 'm',
+      conversionBase: 'm',
+      isOutput: true
+    },
+    {
+      type: 'field',
+      key: 'areaRatio',
+      label: 'Ratio of areas',
+      isOutput: true
+    },
+    {
+      type: 'divider'
+    },
   ],
   formula: (inputs, changedField) => {
     const a = inputs.a;
     const b = inputs.b;
     const c = inputs.c;
     const s = (a + b + c) / 2;
-    const triangleArea = Math.sqrt(s * (s - a) * (s - b) * (s - c));
-    let radius = 0, diameter = 0, circumference = 0, area = 0;
+    let radius = 0;
+    let diameter = 0;
+    let circumference = 0;
+    let area = 0;
+    let trianglePerimeter = 0;
+    let triangleArea = Math.sqrt(s * (s - a) * (s - b) * (s - c));
+    let circumradius = 0;
+    let areaRatio = 0;
     
     if (triangleArea > 0) {
       radius = (a * b * c) / (4 * triangleArea);
       diameter = 2 * radius;
       circumference = 2 * Math.PI * radius;
       area = Math.PI * radius * radius;
+      trianglePerimeter = a + b + c;
+      circumradius = (a * b * c) / (4 * triangleArea);
+      areaRatio = area / triangleArea;
+    } else {
+      triangleArea = 0;
     }
-    return { a, b, c, radius, diameter, circumference, area };
+
+    return {
+      a, b, c, 
+      radius, diameter, circumference, area, 
+      trianglePerimeter, triangleArea, circumradius, areaRatio 
+    };
   },
   validate: (inputs, rawInputs) => {
     const errors: string[] = [];
