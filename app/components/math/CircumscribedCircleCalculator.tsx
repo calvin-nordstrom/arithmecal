@@ -92,17 +92,8 @@ const config: CalculatorConfig = {
     },
     {
       type: 'field',
-      key: 'circumradius',
-      label: 'Circumradius',
-      unitOptions: lengthUnits,
-      defaultUnit: 'm',
-      conversionBase: 'm',
-      isOutput: true
-    },
-    {
-      type: 'field',
       key: 'areaRatio',
-      label: 'Ratio of areas',
+      label: 'Area ratio',
       isOutput: true
     },
   ],
@@ -117,7 +108,6 @@ const config: CalculatorConfig = {
     let area = 0;
     let trianglePerimeter = 0;
     let triangleArea = Math.sqrt(s * (s - a) * (s - b) * (s - c));
-    let circumradius = 0;
     let areaRatio = 0;
     
     if (triangleArea > 0) {
@@ -126,7 +116,6 @@ const config: CalculatorConfig = {
       circumference = 2 * Math.PI * radius;
       area = Math.PI * radius * radius;
       trianglePerimeter = a + b + c;
-      circumradius = (a * b * c) / (4 * triangleArea);
       areaRatio = area / triangleArea;
     } else {
       triangleArea = 0;
@@ -135,7 +124,7 @@ const config: CalculatorConfig = {
     return {
       a, b, c, 
       radius, diameter, circumference, area, 
-      trianglePerimeter, triangleArea, circumradius, areaRatio 
+      trianglePerimeter, triangleArea, areaRatio 
     };
   },
   validate: (inputs, rawInputs) => {
