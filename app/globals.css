@@ -11,6 +11,10 @@
   --calculator-disabled-border: rgb(216, 216, 216);
   --calculator-error-color: rgb(255, 0, 0);
   --calculator-divider-color: rgb(160, 160, 160);
+  --calculator-button-border: rgb(176, 176, 176);
+  --calculator-button-font-size: 16px;
+  --calculator-button-background: rgb(255, 255, 255);
+  --calculator-button-hover-background: rgb(216, 216, 216);
   
   /* Calculator field styles */
   --calculator-field-label-font-size: 16px;
@@ -41,8 +45,6 @@ body {
   display: flex;
   flex-direction: column;
   padding: 1rem;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
   background-color: var(--calculator-background);
   border: 1px solid var(--calculator-border);
   border-radius: 4px;
@@ -52,6 +54,8 @@ body {
   color: var(--calculator-error-color);
   font: var(--rubik-text);
   font-size: 20px;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
 }
 
 .calculator-select {
@@ -61,6 +65,17 @@ body {
   padding: 0.3rem;
   border: 1px solid var(--calculator-enabled-border);
   border-radius: 4px;
+  background-color: var(--calculator-button-background);
+  transition-duration: 0.25s;
+  cursor: pointer;
+}
+
+.calculator-select:hover {
+  background-color: var(--calculator-button-hover-background);
+}
+
+.calculator-select option {
+  background-color: var(--calculator-button-background);
 }
 
 .calculator-divider {
@@ -68,6 +83,29 @@ body {
   color: var(--calculator-divider-color);
   margin-top: 1rem;
   margin-bottom: 1rem;
+}
+
+.calculator-controls {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.calculator-button {
+  font: var(--rubik-text);
+  font-size: var(--calculator-button-font-size);
+  height: 50px;
+  border: 1px solid var(--calculator-button-border);
+  border-radius: 4px;
+  background-color: var(--calculator-button-background);
+  transition-duration: 0.25s;
+  cursor: pointer;
+}
+
+.calculator-button:hover {
+  background-color: var(--calculator-button-hover-background);
 }
 
 /* Calculator input styles */

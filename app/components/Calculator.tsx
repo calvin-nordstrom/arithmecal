@@ -189,6 +189,12 @@ export default function Calculator({ config }: CalculatorProps) {
     setFieldData(newFieldData);
   };
 
+  // Handler to clear all fields: resets state to initial values.
+  const handleReset = () => {
+    input = 0;
+    setFieldData(initialState);
+  };
+
   return (
     <div className='calculator'>
       {config.fields.map((element, index) => {
@@ -224,6 +230,9 @@ export default function Calculator({ config }: CalculatorProps) {
             : errorMessage}
         </div>
       )}
+      <div className='calculator-controls'>
+        <button className='calculator-button' onClick={handleReset}>Reset All</button>
+      </div>
     </div>
   );
 }

@@ -30,8 +30,8 @@ const config: CalculatorConfig = {
       defaultUnit: 'm',
       conversionBase: 'm'
     },
-    { 
-      type: 'divider' 
+    {
+      type: 'divider'
     },
     {
       type: 'field',
@@ -68,7 +68,10 @@ const config: CalculatorConfig = {
       defaultUnit: 'm2',
       conversionBase: 'm2',
       isOutput: true
-    }
+    },
+    {
+      type: 'divider'
+    },
   ],
   formula: (inputs, changedField) => {
     const a = inputs.a;
