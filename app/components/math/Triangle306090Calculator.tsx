@@ -7,6 +7,7 @@ import { lengthUnits, areaUnits } from '@/app/utils/units';
 const config: CalculatorConfig = {
   fields: [
     {
+      type: 'field',
       key: 'a',
       label: 'Side (a)',
       unitOptions: lengthUnits,
@@ -14,6 +15,7 @@ const config: CalculatorConfig = {
       conversionBase: 'm'
     },
     {
+      type: 'field',
       key: 'b',
       label: 'Side (b)',
       unitOptions: lengthUnits,
@@ -21,6 +23,7 @@ const config: CalculatorConfig = {
       conversionBase: 'm'
     },
     {
+      type: 'field',
       key: 'c',
       label: 'Side (c)',
       unitOptions: lengthUnits,
@@ -28,6 +31,7 @@ const config: CalculatorConfig = {
       conversionBase: 'm'
     },
     {
+      type: 'field',
       key: 'area',
       label: 'Area',
       unitOptions: areaUnits,
@@ -35,6 +39,7 @@ const config: CalculatorConfig = {
       conversionBase: 'm2'
     },
     {
+      type: 'field',
       key: 'perimeter',
       label: 'Perimeter',
       unitOptions: lengthUnits,

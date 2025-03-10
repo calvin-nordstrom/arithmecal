@@ -8,9 +8,20 @@ const convert = require('convert-units');
 
 let input = 0;
 
+// Local interface to store the real value, display value, and the unit for a 
+// field.
+interface FieldData {
+  real: number;
+  display: string;
+  unit: string;
+}
+
+export type CalculatorElement = FieldElement | DividerElement;
+
 // Interface representing a field of the calculator.
-// This can be input or output depending on the isOutput option
-export interface CalculatorField {
+// This can be input or output depending on the isOutput option.
+export interface FieldElement {
+  type: 'field';
   key: string;
   label: string;
   unitOptions: string[];
@@ -19,20 +30,18 @@ export interface CalculatorField {
   isOutput?: boolean;
 }
 
+// Interface representing a divider of the calculator.
+// This is used to separate field elements.
+export interface DividerElement {
+  type: 'divider';
+}
+
 // Interface representing the structure of the calculator.
 // This contains the fields, the formula to evaluate, and the validation option.
 export interface CalculatorConfig {
-  fields: CalculatorField[];
+  fields: CalculatorElement[];
   formula: (inputs: Record<string, number>, changedField: string) => Record<string, number>;
   validate?: (inputs: Record<string, number>, rawInputs: Record<string, string>) => string[] | null;
-}
-
-// Local interface to store the real value, display value, and the unit for a 
-// field.
-interface FieldData {
-  real: number;
-  display: string;
-  unit: string;
 }
 
 // Local props interface for the calculator configuration.
@@ -68,7 +77,11 @@ function formatValue(value: number): string {
 // Export function for the generic Calculator component.
 // Takes in config props used to build the calculator from this template.
 export default function Calculator({ config }: CalculatorProps) {
-  const initialState = config.fields.reduce((acc, field) => {
+  const fieldConfigs = config.fields.filter(
+    (el): el is FieldElement => el.type === 'field'
+  );
+
+  const initialState = fieldConfigs.reduce((acc, field) => {
     let initialReal = NaN;
     let initialDisplay = '';
     if (field.isOutput) {
@@ -89,14 +102,14 @@ export default function Calculator({ config }: CalculatorProps) {
 
   // Convert each field's value to its standard unit.
   const computeStandardInputs = (data: Record<string, FieldData>) => {
-    return config.fields.reduce((acc, field) => {
+    return fieldConfigs.reduce((acc, field) => {
       acc[field.key] = data[field.key].real;
       return acc;
     }, {} as Record<string, number>);
   };
 
   const standardInputs = computeStandardInputs(fieldData);
-  const rawInputs = config.fields.reduce((acc, field) => {
+  const rawInputs = fieldConfigs.reduce((acc, field) => {
     acc[field.key] = fieldData[field.key].display;
     return acc;
   }, {} as Record<string, string>);
@@ -105,7 +118,7 @@ export default function Calculator({ config }: CalculatorProps) {
   // Handler for user input changes (for editable fields only)
   const handleInputChange = (key: string, newDisplay: string) => {
     const newFieldData = { ...fieldData };
-    const fieldConfig = config.fields.find(field => field.key === key);
+    const fieldConfig = fieldConfigs.find(field => field.key === key);
     if (!fieldConfig) return;
 
     const parsedValue = parseFloat(newDisplay);
@@ -125,7 +138,7 @@ export default function Calculator({ config }: CalculatorProps) {
     const standardInputs = computeStandardInputs(newFieldData);
     const computedStandard = config.formula(standardInputs, key);
 
-    config.fields.forEach(field => {
+    fieldConfigs.forEach(field => {
       if (field.key !== key && computedStandard[field.key] !== undefined) {
         const computedReal = computedStandard[field.key];
         newFieldData[field.key] = {
@@ -147,7 +160,7 @@ export default function Calculator({ config }: CalculatorProps) {
   // Handler for unit changes (applies to both inputs and outputs)
   const handleUnitChange = (key: string, newUnit: string) => {
     const newFieldData = { ...fieldData };
-    const fieldConfig = config.fields.find(field => field.key === key);
+    const fieldConfig = fieldConfigs.find(field => field.key === key);
     if (!fieldConfig) return;
 
     // If this is an input field and the current display is empty or invalid,
@@ -178,28 +191,32 @@ export default function Calculator({ config }: CalculatorProps) {
 
   return (
     <div className='calculator'>
-      {config.fields.map((field) =>
-        field.isOutput ? (
-          <CalculatorOutput
-            key={field.key}
-            label={field.label}
-            value={fieldData[field.key].display}
-            unit={fieldData[field.key].unit}
-            onUnitChange={(unit) => handleUnitChange(field.key, unit)}
-            unitOptions={field.unitOptions}
-          />
-        ) : (
-          <CalculatorInput
-            key={field.key}
-            label={field.label}
-            value={fieldData[field.key].display}
-            unit={fieldData[field.key].unit}
-            onValueChange={(value) => handleInputChange(field.key, value)}
-            onUnitChange={(unit) => handleUnitChange(field.key, unit)}
-            unitOptions={field.unitOptions}
-          />
-        )
-      )}
+      {config.fields.map((element, index) => {
+        if (element.type === 'divider') {
+          return <hr key={`divider-${index}`} className="calculator-divider" />;
+        } else if (element.type === 'field') {
+          return element.isOutput ? (
+            <CalculatorOutput
+              key={element.key}
+              label={element.label}
+              value={fieldData[element.key].display}
+              unit={fieldData[element.key].unit}
+              onUnitChange={(unit) => handleUnitChange(element.key, unit)}
+              unitOptions={element.unitOptions}
+            />
+          ) : (
+            <CalculatorInput
+              key={element.key}
+              label={element.label}
+              value={fieldData[element.key].display}
+              unit={fieldData[element.key].unit}
+              onValueChange={(value) => handleInputChange(element.key, value)}
+              onUnitChange={(unit) => handleUnitChange(element.key, unit)}
+              unitOptions={element.unitOptions}
+            />
+          );
+        }
+      })}
       {errorMessage && (
         <div className='calculator-error'>
           {Array.isArray(errorMessage)

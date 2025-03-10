@@ -7,6 +7,7 @@ import { lengthUnits, areaUnits } from '@/app/utils/units';
 const config: CalculatorConfig = {
   fields: [
     {
+      type: 'field',
       key: 'a',
       label: 'Side (a)',
       unitOptions: lengthUnits,
@@ -14,6 +15,7 @@ const config: CalculatorConfig = {
       conversionBase: 'm'
     },
     {
+      type: 'field',
       key: 'b',
       label: 'Side (b)',
       unitOptions: lengthUnits,
@@ -21,13 +23,18 @@ const config: CalculatorConfig = {
       conversionBase: 'm'
     },
     {
+      type: 'field',
       key: 'c',
       label: 'Side (c)',
       unitOptions: lengthUnits,
       defaultUnit: 'm',
       conversionBase: 'm'
     },
+    { 
+      type: 'divider' 
+    },
     {
+      type: 'field',
       key: 'radius',
       label: 'Radius',
       unitOptions: lengthUnits,
@@ -36,6 +43,7 @@ const config: CalculatorConfig = {
       isOutput: true
     },
     {
+      type: 'field',
       key: 'diameter',
       label: 'Diameter',
       unitOptions: lengthUnits,
@@ -44,6 +52,7 @@ const config: CalculatorConfig = {
       isOutput: true
     },
     {
+      type: 'field',
       key: 'circumference',
       label: 'Circumference',
       unitOptions: lengthUnits,
@@ -52,6 +61,7 @@ const config: CalculatorConfig = {
       isOutput: true
     },
     {
+      type: 'field',
       key: 'area',
       label: 'Area',
       unitOptions: areaUnits,
