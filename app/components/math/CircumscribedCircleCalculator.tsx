@@ -93,7 +93,7 @@ const config: CalculatorConfig = {
     {
       type: 'field',
       key: 'areaRatio',
-      label: 'Area ratio',
+      label: 'Area ratio (circle to triangle)',
       isOutput: true
     },
   ],
