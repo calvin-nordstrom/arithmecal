@@ -16,8 +16,6 @@ interface FieldData {
   unit: string;
 }
 
-export type CalculatorElement = FieldElement | DividerElement;
-
 // Interface representing a field of the calculator.
 // This can be input or output depending on the isOutput option.
 export interface FieldElement {
@@ -35,6 +33,15 @@ export interface FieldElement {
 export interface DividerElement {
   type: 'divider';
 }
+
+// Interface representing the error element of the calculator.
+// This is used to display error messages at the position in which this was 
+// added to the config.
+export interface ErrorElement {
+  type: 'error';
+}
+
+export type CalculatorElement = FieldElement | DividerElement | ErrorElement;
 
 // Interface representing the structure of the calculator.
 // This contains the fields, the formula to evaluate, and the validation option.
@@ -219,6 +226,15 @@ export default function Calculator({ config }: CalculatorProps) {
       {config.fields.map((element, index) => {
         if (element.type === 'divider') {
           return <hr key={`divider-${index}`} className="calculator-divider" />;
+        } else if (element.type === 'error') {
+          // Render errors at this location if they exist.
+          return errorMessage ? (
+            <div key={`error-${index}`} className='calculator-error'>
+              {Array.isArray(errorMessage)
+                ? errorMessage.map((msg, idx) => <div key={idx}>{msg}</div>)
+                : errorMessage}
+            </div>
+          ) : null;
         } else if (element.type === 'field') {
           return element.isOutput ? (
             <CalculatorOutput
@@ -242,7 +258,8 @@ export default function Calculator({ config }: CalculatorProps) {
           );
         }
       })}
-      {errorMessage && (
+      {/* Fallback: if no error placeholder exists in the config, render errors at the bottom */}
+      {!config.fields.some((el) => el.type === 'error') && errorMessage && (
         <div className='calculator-error'>
           {Array.isArray(errorMessage)
             ? errorMessage.map((msg, index) => <div key={index}>{msg}</div>)
@@ -254,5 +271,5 @@ export default function Calculator({ config }: CalculatorProps) {
         <button className='calculator-button' onClick={handleReset}>Reset All</button>
       </div>
     </div>
-  );
+  );  
 }

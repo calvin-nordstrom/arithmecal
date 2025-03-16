@@ -16,6 +16,9 @@ const config: CalculatorConfig = {
       label: 'Final value',
     },
     {
+      type: 'error'
+    },
+    {
       type: 'divider'
     },
     {
