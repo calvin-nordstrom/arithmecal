@@ -227,13 +227,12 @@ export default function Calculator({ config }: CalculatorProps) {
         if (element.type === 'divider') {
           return <hr key={`divider-${index}`} className="calculator-divider" />;
         } else if (element.type === 'error') {
-          // Render errors at this location if they exist.
           return errorMessage ? (
-            <div key={`error-${index}`} className='calculator-error'>
+            <ul key={`error-${index}`} className='calculator-error-ul'>
               {Array.isArray(errorMessage)
-                ? errorMessage.map((msg, idx) => <div key={idx}>{msg}</div>)
-                : errorMessage}
-            </div>
+                ? errorMessage.map((msg, index) => <li key={index} className='calculator-error-li'>{msg}</li>)
+                : <li className='calculator-error-li'>{errorMessage}</li>}
+            </ul>
           ) : null;
         } else if (element.type === 'field') {
           return element.isOutput ? (
@@ -258,13 +257,12 @@ export default function Calculator({ config }: CalculatorProps) {
           );
         }
       })}
-      {/* Fallback: if no error placeholder exists in the config, render errors at the bottom */}
       {!config.fields.some((el) => el.type === 'error') && errorMessage && (
-        <div className='calculator-error'>
+        <ul className='calculator-error-ul'>
           {Array.isArray(errorMessage)
-            ? errorMessage.map((msg, index) => <div key={index}>{msg}</div>)
-            : errorMessage}
-        </div>
+            ? errorMessage.map((msg, index) => <li key={index} className='calculator-error-li'>{msg}</li>)
+            : <li className='calculator-error-li'>{errorMessage}</li>}
+        </ul>
       )}
       <hr className="calculator-divider" />
       <div className='calculator-controls'>
