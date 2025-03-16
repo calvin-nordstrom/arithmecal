@@ -2,8 +2,9 @@ import './globals.css'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: "Arithmecal",
-  description: "Arithmecal home page",
+  title: 'Arithmecal',
+  description: 'Arithmecal home page',
+  keywords: '',
 }
 
 export default function RootLayout({
@@ -12,7 +13,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang='en'>
       <body>
         {children}
       </body>
