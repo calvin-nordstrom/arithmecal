@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 export default function CircumscribedCircleCalculatorPage() {
   return (
     <CalculatorLayout>
-      <h1 className='calculator-title'>Circumscribed Circle Calculator</h1>
+      <h1>Circumscribed Circle Calculator</h1>
       <div className='calculator-content'>
         <div className='calculator-component'>
           <CircumscribedCircleCalculator />

@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 export default function Triangle306090CalculatorPage() {
   return (
     <CalculatorLayout>
-      <h1 className='calculator-title'>30 60 90 Triangle Calculator</h1>
+      <h1>30 60 90 Triangle Calculator</h1>
       <div className='calculator-content'>
         <div className='calculator-component'>
           <Triangle306090Calculator />

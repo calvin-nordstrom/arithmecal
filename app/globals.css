@@ -4,9 +4,6 @@
   /* Fonts */
   --rubik-text: 350 16px 'Rubik', sans-serif;
 
-  /* Global styles */
-  --calculator-title-font-size: 36px;
-
   /* Calculator styles */
   --calculator-border: rgb(160, 160, 160);
   --calculator-background: rgb(240, 240, 240);
@@ -18,12 +15,6 @@
   --calculator-button-font-size: 16px;
   --calculator-button-background: rgb(255, 255, 255);
   --calculator-button-hover-background: rgb(216, 216, 216);
-  
-  /* Calculator field styles */
-  --calculator-field-label-font-size: 16px;
-  --calculator-field-font-size: 20px;
-  --calculator-field-select-font-size: 16px;
-  --calculator-error-font-size: 20px;
 
   /* Calculator input styles */
   --calculator-input-background: rgb(255, 255, 255);
@@ -60,6 +51,15 @@ body {
   border: 1px solid black;
 }
 
+.content h1 {
+  display: flex;
+  align-self: center;
+  text-align: center;
+  font: var(--rubik-text);
+  font-size: 36px;
+  font-weight: 400;
+}
+
 .calculator-content {
   display: flex;
   gap: 2rem;
@@ -68,13 +68,15 @@ body {
   margin-bottom: 2rem;
 }
 
-.calculator-title {
-  display: flex;
-  align-self: center;
-  text-align: center;
+.calculator-description h2 {
   font: var(--rubik-text);
-  font-size: var(--calculator-title-font-size);
+  font-size: 28px;
   font-weight: 400;
+}
+
+.calculator-description p {
+  font: var(--rubik-text);
+  font-size: 18px;
 }
 
 /* Calculator styles */
@@ -90,23 +92,24 @@ body {
   position: sticky;
 }
 
-.calculator-error-ul {
-  color: var(--calculator-error-color);
+.calculator ul {
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
 }
 
-.calculator-error-li {
+.calculator li {
+  color: var(--calculator-error-color);
   font: var(--rubik-text);
-  font-size: var(--calculator-error-font-size);
-  margin-top: 0.25rem;
-  margin-bottom: 0.25rem;
+  font-size: 20px;
+  font-weight: 400;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 
 .calculator-select {
   width: 70px;
   font: var(--rubik-text);
-  font-size: var(--calculator-field-select-font-size);
+  font-size: 16px;
   margin-left: 0.5rem;
   padding: 0.3rem;
   border: 1px solid var(--calculator-enabled-border);
@@ -125,7 +128,7 @@ body {
   background-color: var(--calculator-button-background);
 }
 
-.calculator-divider {
+.calculator hr {
   width: 100%;
   color: var(--calculator-divider-color);
   margin-top: 1rem;
@@ -169,7 +172,7 @@ body {
   width: 0;
   flex-grow: 1;
   font: var(--rubik-text);
-  font-size: var(--calculator-field-font-size);
+  font-size: 20px;
   padding: 0.5rem;
   border: 1px solid var(--calculator-enabled-border);
   border-radius: 4px;
@@ -178,7 +181,7 @@ body {
 
 .calculator-input-label {
   font: var(--rubik-text);
-  font-size: var(--calculator-field-label-font-size);
+  font-size: 16px;
   font-weight: 500;
   margin-bottom: 0.5rem;
 }
@@ -198,7 +201,7 @@ body {
 
 .calculator-output {
   font: var(--rubik-text);
-  font-size: var(--calculator-field-font-size);
+  font-size: 20px;
   padding: 0.5rem;
   border: 1px solid var(--calculator-disabled-border);
   border-radius: 4px;
@@ -208,7 +211,7 @@ body {
 
 .calculator-output-label {
   font: var(--rubik-text);
-  font-size: var(--calculator-field-label-font-size);
+  font-size: 16px;
   font-weight: 500;
   margin-bottom: 0.5rem;
 }

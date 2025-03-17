@@ -225,13 +225,13 @@ export default function Calculator({ config }: CalculatorProps) {
     <div className='calculator'>
       {config.fields.map((element, index) => {
         if (element.type === 'divider') {
-          return <hr key={`divider-${index}`} className="calculator-divider" />;
+          return <hr key={`divider-${index}`} />;
         } else if (element.type === 'error') {
           return errorMessage ? (
-            <ul key={`error-${index}`} className='calculator-error-ul'>
+            <ul key={`error-${index}`}>
               {Array.isArray(errorMessage)
-                ? errorMessage.map((msg, index) => <li key={index} className='calculator-error-li'>{msg}</li>)
-                : <li className='calculator-error-li'>{errorMessage}</li>}
+                ? errorMessage.map((msg, index) => <li key={index}>{msg}</li>)
+                : <li>{errorMessage}</li>}
             </ul>
           ) : null;
         } else if (element.type === 'field') {
@@ -258,13 +258,13 @@ export default function Calculator({ config }: CalculatorProps) {
         }
       })}
       {!config.fields.some((el) => el.type === 'error') && errorMessage && (
-        <ul className='calculator-error-ul'>
+        <ul>
           {Array.isArray(errorMessage)
-            ? errorMessage.map((msg, index) => <li key={index} className='calculator-error-li'>{msg}</li>)
-            : <li className='calculator-error-li'>{errorMessage}</li>}
+            ? errorMessage.map((msg, index) => <li key={index}>{msg}</li>)
+            : <li>{errorMessage}</li>}
         </ul>
       )}
-      <hr className="calculator-divider" />
+      <hr />
       <div className='calculator-controls'>
         <button className='calculator-button' onClick={handleReset}>Reset All</button>
       </div>
