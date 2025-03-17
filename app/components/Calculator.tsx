@@ -266,7 +266,7 @@ export default function Calculator({ config }: CalculatorProps) {
       )}
       <hr />
       <div className='calculator-controls'>
-        <button className='calculator-button' onClick={handleReset}>Reset All</button>
+        <button onClick={handleReset}>Reset All</button>
       </div>
     </div>
   );  

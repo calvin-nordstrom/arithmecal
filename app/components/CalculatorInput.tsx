@@ -27,14 +27,12 @@ export default function CalculatorInput({
           type='number'
           value={value}
           onChange={(e) => onValueChange(e.target.value)}
-          className='calculator-input'
           autoComplete='off'
         />
         {unitOptions.length > 0 && (
           <select
             value={unit}
             onChange={(e) => onUnitChange(e.target.value)}
-            className='calculator-select'
           >
             {unitOptions.map((option) => (
               <option key={option} value={option}>

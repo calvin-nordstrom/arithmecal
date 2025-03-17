@@ -26,7 +26,6 @@ export default function CalculatorOutput({
           <select
             value={unit}
             onChange={(e) => onUnitChange(e.target.value)}
-            className='calculator-select'
           >
             {unitOptions.map((option) => (
               <option key={option} value={option}>

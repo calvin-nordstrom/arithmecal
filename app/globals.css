@@ -20,11 +20,7 @@
   --calculator-button-font-size: 16px;
   --calculator-button-background: rgb(255, 255, 255);
   --calculator-button-hover-background: rgb(216, 216, 216);
-
-  /* Calculator input styles */
   --calculator-input-background: rgb(255, 255, 255);
-
-  /* Calculator output styles */
   --calculator-output-background: rgb(216, 216, 216);
 }
 
@@ -139,7 +135,7 @@ body {
   margin-bottom: 0.5rem;
 }
 
-.calculator-select {
+.calculator select {
   width: 70px;
   font: var(--rubik-text);
   font-size: 16px;
@@ -153,11 +149,11 @@ body {
   box-shadow: rgba(0, 0, 0, 0.1) 2px 2px 2px;
 }
 
-.calculator-select:hover {
+.calculator select:hover {
   background-color: var(--calculator-button-hover-background);
 }
 
-.calculator-select option {
+.calculator select option {
   background-color: var(--calculator-button-background);
 }
 
@@ -176,7 +172,7 @@ body {
   padding-bottom: 0.5rem;
 }
 
-.calculator-button {
+.calculator button {
   font: var(--rubik-text);
   font-size: var(--calculator-button-font-size);
   height: 50px;
@@ -188,7 +184,7 @@ body {
   box-shadow: rgba(0, 0, 0, 0.1) 2px 2px 2px;
 }
 
-.calculator-button:hover {
+.calculator button:hover {
   background-color: var(--calculator-button-hover-background);
 }
 
@@ -201,7 +197,7 @@ body {
   margin-bottom: 0.5rem;
 }
 
-.calculator-input {
+.calculator input {
   width: 0;
   flex-grow: 1;
   font: var(--rubik-text);
