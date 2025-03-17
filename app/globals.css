@@ -2,7 +2,12 @@
 
 :root {
   /* Fonts */
-  --rubik-text: 350 16px 'Rubik', sans-serif;
+  --rubik-text: 400 16px 'Rubik', sans-serif;
+
+  --center-background-color: rgb(232, 232, 232);
+  --content-background-color: rgb(255, 255, 255);
+
+  --katex-block-background-color: rgb(240, 240, 240);
 
   /* Calculator styles */
   --calculator-border: rgb(160, 160, 160);
@@ -42,13 +47,14 @@ body {
 .center {
   display: flex;
   justify-content: center;
+  background-color: var(--center-background-color);
 }
 
 .content {
   display: flex;
   flex-direction: column;
   padding: 2rem;
-  border: 1px solid black;
+  background-color: var(--content-background-color);
 }
 
 .content h1 {
@@ -57,7 +63,7 @@ body {
   text-align: center;
   font: var(--rubik-text);
   font-size: 36px;
-  font-weight: 400;
+  font-weight: 450;
 }
 
 .calculator-content {
@@ -70,13 +76,41 @@ body {
 
 .calculator-description h2 {
   font: var(--rubik-text);
-  font-size: 28px;
-  font-weight: 400;
+  font-size: 24px;
+  font-weight: 450;
+  padding-top: 1rem;
+}
+
+.calculator-description h3 {
+  font: var(--rubik-text);
+  font-size: 20px;
+  font-weight: 450;
+  padding-top: 0.5rem;
 }
 
 .calculator-description p {
   font: var(--rubik-text);
-  font-size: 18px;
+  font-size: 16px;
+}
+
+.calculator-description li {
+  font: var(--rubik-text);
+  font-size: 16px;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+/* KaTeX styles */
+
+.katex-block {
+  padding: 0.5rem;
+  background-color: var(--katex-block-background-color);
+  border-radius: 8px;
+}
+
+.katex-formula {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
 }
 
 /* Calculator styles */
@@ -101,7 +135,6 @@ body {
   color: var(--calculator-error-color);
   font: var(--rubik-text);
   font-size: 20px;
-  font-weight: 400;
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
 }
@@ -173,6 +206,7 @@ body {
   flex-grow: 1;
   font: var(--rubik-text);
   font-size: 20px;
+  font-weight: 350;
   padding: 0.5rem;
   border: 1px solid var(--calculator-enabled-border);
   border-radius: 4px;
@@ -202,6 +236,7 @@ body {
 .calculator-output {
   font: var(--rubik-text);
   font-size: 20px;
+  font-weight: 350;
   padding: 0.5rem;
   border: 1px solid var(--calculator-disabled-border);
   border-radius: 4px;
