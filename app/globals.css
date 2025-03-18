@@ -119,7 +119,6 @@ body {
   background-color: var(--calculator-background);
   border: 1px solid var(--calculator-border);
   border-radius: 4px;
-  position: sticky;
 }
 
 .calculator ul {
