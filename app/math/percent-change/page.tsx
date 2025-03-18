@@ -25,7 +25,7 @@ export default function PercentChangeCalculatorPage() {
             <li>Enter the initial value (must be nonzero)</li>
             <li>Enter the final value</li>
           </ol>
-          <p>A positive value indicates an increase between the initial and final values, and a negative value indicates a decrease.</p>
+          <p>A positive percent change result indicates an increase between the initial and final values, and a negative value indicates a decrease.</p>
 
           <h2>Understanding the Formula</h2>
           <div className='katex-block'>
@@ -50,7 +50,7 @@ export default function PercentChangeCalculatorPage() {
             <KatexRenderer formula='= \text{0.8} \times 100' />
             <KatexRenderer formula='= \text{80}' />
           </div>
-          <p>This indicates an <strong>80% increase</strong> between the initial and final values.</p>
+          <p>This indicates an <strong>80% increase</strong> between 50 and 90.</p>
           <h3>Percent Decrease</h3>
           <ul>
             <li>Initial value = 50</li>
@@ -62,7 +62,7 @@ export default function PercentChangeCalculatorPage() {
             <KatexRenderer formula='= -\text{0.4} \times 100' />
             <KatexRenderer formula='= -\text{40}' />
           </div>
-          <p>This indicates a <strong>40% decrease</strong> between the initial and final values.</p>
+          <p>This indicates a <strong>40% decrease</strong>, or -40% increase, between 50 and 30.</p>
         </div>
       </div>
     </CalculatorLayout>
