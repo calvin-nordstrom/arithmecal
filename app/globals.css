@@ -22,6 +22,7 @@
   --calculator-button-hover-background: rgb(216, 216, 216);
   --calculator-input-background: rgb(255, 255, 255);
   --calculator-output-background: rgb(216, 216, 216);
+  --calculator-description-note-color: rgb(0, 128, 255);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -62,6 +63,26 @@ body {
   font-weight: 450;
 }
 
+.center-image {
+  justify-self: center;
+  padding-top: 0.5rem;
+}
+
+/* KaTeX styles */
+
+.katex-block {
+  padding: 0.5rem;
+  background-color: var(--katex-block-background-color);
+  border-radius: 8px;
+}
+
+.katex-formula {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+
+/* Calculator styles */
+
 .calculator-content {
   display: flex;
   gap: 2rem;
@@ -96,20 +117,10 @@ body {
   margin-bottom: 0.5rem;
 }
 
-/* KaTeX styles */
-
-.katex-block {
-  padding: 0.5rem;
-  background-color: var(--katex-block-background-color);
-  border-radius: 8px;
+.calculator-description .note {
+  font-style: italic;
+  color: var(--calculator-description-note-color);
 }
-
-.katex-formula {
-  padding-top: 0.25rem;
-  padding-bottom: 0.25rem;
-}
-
-/* Calculator styles */
 
 .calculator {
   width: 300px;
