@@ -9,6 +9,10 @@
 
   --katex-block-background-color: rgb(240, 240, 240);
 
+  --blue: rgb(0, 128, 255);
+  --blue-light: rgb(64, 160, 255);
+  --blue-lighter: rgb(128, 192, 255);
+
   /* Calculator styles */
   --calculator-border: rgb(160, 160, 160);
   --calculator-background: rgb(240, 240, 240);
@@ -22,7 +26,6 @@
   --calculator-button-hover-background: rgb(216, 216, 216);
   --calculator-input-background: rgb(255, 255, 255);
   --calculator-output-background: rgb(216, 216, 216);
-  --calculator-description-note-color: rgb(0, 128, 255);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -68,10 +71,17 @@ body {
   padding-top: 0.5rem;
 }
 
+.block {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
 /* KaTeX styles */
 
 .katex-block {
   padding: 0.5rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
   background-color: var(--katex-block-background-color);
   border-radius: 8px;
 }
@@ -119,7 +129,7 @@ body {
 
 .calculator-description .note {
   font-style: italic;
-  color: var(--calculator-description-note-color);
+  color: var(--blue);
 }
 
 .calculator {
