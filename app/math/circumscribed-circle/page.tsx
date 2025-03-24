@@ -19,9 +19,6 @@ export default function CircumscribedCircleCalculatorPage() {
           <CircumscribedCircleCalculator />
         </div>
         <div className='calculator-description'>
-          <p>Given a triangle's sides, the circumscribed circle calculator computes the properties of a circle that pass through each of the vertices of the triangle.</p>
-          <p>A circumscribed circle is also known as a circumcircle. <strong>Every triangle has one</strong>.</p>
-
           <div className='center-image'>
             <Image 
               src='/circumscribed_circle.png'
@@ -30,6 +27,9 @@ export default function CircumscribedCircleCalculatorPage() {
               alt='A triangle with a circumscribed circle'
             />
           </div>
+
+          <p>Given a triangle's sides, the circumscribed circle calculator computes the properties of a circle that pass through each of the vertices of the triangle.</p>
+          <p>A circumscribed circle is also known as a circumcircle. <strong>Every triangle has one</strong>.</p>
 
           <h3>Key Terms:</h3>
           <ol>
