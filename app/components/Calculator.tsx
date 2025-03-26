@@ -8,16 +8,12 @@ const convert = require('convert-units');
 
 let input = 0;
 
-// Local interface to store the real value, display value, and the unit for a 
-// field.
 interface FieldData {
   real: number;
   display: string;
   unit: string;
 }
 
-// Interface representing a field of the calculator.
-// This can be input or output depending on the isOutput option.
 export interface FieldElement {
   type: 'field';
   key: string;
@@ -28,35 +24,26 @@ export interface FieldElement {
   isOutput?: boolean;
 }
 
-// Interface representing a divider of the calculator.
-// This is used to separate field elements.
 export interface DividerElement {
   type: 'divider';
 }
 
-// Interface representing the error element of the calculator.
-// This is used to display error messages at the position in which this was 
-// added to the config.
 export interface ErrorElement {
   type: 'error';
 }
 
 export type CalculatorElement = FieldElement | DividerElement | ErrorElement;
 
-// Interface representing the structure of the calculator.
-// This contains the fields, the formula to evaluate, and the validation option.
 export interface CalculatorConfig {
   fields: CalculatorElement[];
-  formula: (inputs: Record<string, number>, changedField: string) => Record<string, number>;
+  formula: (inputs: Record<string, number>, changedField: string) => Record<string, number | string>;
   validate?: (inputs: Record<string, number>, rawInputs: Record<string, string>) => string[] | null;
 }
 
-// Local props interface for the calculator configuration.
 interface CalculatorProps {
   config: CalculatorConfig;
 }
 
-// Helper function used to format output values.
 function formatValue(value: number): string {
   const inputDecimals = getDecimalCount(input);
   let precision = inputDecimals + 3;
@@ -81,8 +68,6 @@ function formatValue(value: number): string {
   return parseFloat(value.toFixed(precision)).toString();
 }
 
-// Export function for the generic Calculator component.
-// Takes in config props used to build the calculator from this template.
 export default function Calculator({ config }: CalculatorProps) {
   const fieldConfigs = config.fields.filter(
     (el): el is FieldElement => el.type === 'field'
@@ -103,7 +88,6 @@ export default function Calculator({ config }: CalculatorProps) {
   const [delayedField, setDelayedField] = useState<string | null>(null);
   const delayTimeoutRef = useRef<NodeJS.Timeout | null>(null);
 
-  // Convert each field's value to its standard unit.
   const computeStandardInputs = (data: Record<string, FieldData>) => {
     return fieldConfigs.reduce((acc, field) => {
       acc[field.key] = data[field.key].real;
@@ -118,7 +102,6 @@ export default function Calculator({ config }: CalculatorProps) {
   }, {} as Record<string, string>);
   const errorMessage = !delayedField && config.validate ? config.validate(standardInputs, rawInputs) : null;
 
-  // Handler for user input changes (for editable fields only)
   const handleInputChange = (key: string, newDisplay: string) => {
     const newFieldData = { ...fieldData };
     const fieldConfig = fieldConfigs.find(field => field.key === key);
@@ -129,10 +112,8 @@ export default function Calculator({ config }: CalculatorProps) {
     if (isNaN(parsedValue)) {
       newReal = NaN;
     } else if (!fieldConfig.conversionBase) {
-      // Field is unitless; use the raw number.
       newReal = parsedValue;
     } else {
-      // Field has units: convert from the current unit to the conversion base.
       newReal = convert(parsedValue)
         .from(newFieldData[key].unit)
         .to(fieldConfig.conversionBase);
@@ -143,30 +124,37 @@ export default function Calculator({ config }: CalculatorProps) {
       display: newDisplay,
     };
 
-    // Compute new values from the updated inputs.
     const standardInputs = computeStandardInputs(newFieldData);
     const computedStandard = config.formula(standardInputs, key);
 
     fieldConfigs.forEach(field => {
       if (field.key !== key && computedStandard[field.key] !== undefined) {
-        const computedReal = computedStandard[field.key];
-        if (!field.conversionBase) {
-          // For unitless fields, just display the raw computed value.
+        const computedValue = computedStandard[field.key];
+        // If the computed value is a number, use formatting (and conversion if needed)
+        if (typeof computedValue === 'number') {
+          if (!field.conversionBase) {
+            newFieldData[field.key] = {
+              ...newFieldData[field.key],
+              real: computedValue,
+              display: formatValue(computedValue)
+            };
+          } else {
+            newFieldData[field.key] = {
+              ...newFieldData[field.key],
+              real: computedValue,
+              display: formatValue(
+                convert(computedValue)
+                  .from(field.conversionBase)
+                  .to(newFieldData[field.key].unit)
+              )
+            };
+          }
+        } else if (typeof computedValue === 'string') {
+          // For string values (like our FOIL equation), simply assign the string.
           newFieldData[field.key] = {
             ...newFieldData[field.key],
-            real: computedReal,
-            display: formatValue(computedReal)
-          };
-        } else {
-          // For fields with units, perform conversion.
-          newFieldData[field.key] = {
-            ...newFieldData[field.key],
-            real: computedReal,
-            display: formatValue(
-              convert(computedReal)
-                .from(field.conversionBase)
-                .to(newFieldData[field.key].unit)
-            )
+            real: NaN,
+            display: computedValue,
           };
         }
       } else {
@@ -177,19 +165,15 @@ export default function Calculator({ config }: CalculatorProps) {
     setFieldData(newFieldData);
   };
 
-  // Handler for unit changes (applies to both inputs and outputs)
   const handleUnitChange = (key: string, newUnit: string) => {
     const newFieldData = { ...fieldData };
     const fieldConfig = fieldConfigs.find(field => field.key === key);
     if (!fieldConfig) return;
 
-    // If this is an input field and the current display is empty or invalid,
-    // simply update the unit without converting any value.
     if (!fieldConfig.isOutput && (isNaN(newFieldData[key].real) || newFieldData[key].display.trim() === '')) {
       newFieldData[key] = {
         ...newFieldData[key],
         unit: newUnit,
-        // Leave display unchanged (or keep it empty) and do not update "real"
       };
       setFieldData(newFieldData);
       return;
@@ -198,7 +182,7 @@ export default function Calculator({ config }: CalculatorProps) {
     if (!fieldConfig.conversionBase) {
       newFieldData[key] = {
         ...newFieldData[key],
-        unit: newUnit, // Or potentially ignore if you don't want unit changes.
+        unit: newUnit,
       };
     } else {
       const realValue = newFieldData[key].real;
@@ -215,7 +199,6 @@ export default function Calculator({ config }: CalculatorProps) {
     setFieldData(newFieldData);
   };
 
-  // Handler to clear all fields: resets state to initial values.
   const handleReset = () => {
     input = 0;
     setFieldData(initialState);
