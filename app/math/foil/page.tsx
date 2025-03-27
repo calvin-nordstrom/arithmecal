@@ -1,0 +1,153 @@
+import CalculatorLayout from '@/app/components/CalculatorLayout';
+import KatexRenderer from '@/app/components/KatexRenderer';
+import FOILCalculator from '@/app/components/math/FOILCalculator';
+import Image from 'next/image';
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'FOIL Calculator',
+  description: 'Arithmecal FOIL calculator',
+  keywords: '',
+}
+
+export default function FOILCalculatorPage() {
+  return (
+    <CalculatorLayout>
+      <h1>FOIL Calculator</h1>
+      <div className='calculator-content'>
+        <div className='calculator-component'>
+          <FOILCalculator />
+        </div>
+        <div className='calculator-description'>
+          <div className='center-image'>
+            <Image
+              src='/foil.png'
+              width={384}
+              height={280}
+              alt='A diagram showing two binomials multiplied together with the FOIL method'
+            />
+          </div>
+
+          <p>This calculator uses the first-outer-inner-last (FOIL) method to multiply two binomials. This page includes an explanation of the method as well as example computations with steps.</p>
+          <p>This diagram shows how the FOIL method is used to multiply the two binomials.</p>
+
+          <h2>How to Use This Calculator</h2>
+          <ol>
+            <li>Enter the corresponding coefficients of the two binomials being multiplied</li>
+          </ol>
+          <p>Once all coefficients are entered, the result will be computed.</p>
+
+          <h2>Understanding the Formula</h2>
+          <div className='katex-block'>
+            <KatexRenderer formula='\left(ax+b\right)\left(cx+d\right)' />
+          </div>
+          <p>The FOIL method is used to multiply two binomials that are in this form.</p>
+          <p>The steps of FOIL are as follows:</p>
+          <ol>
+            <li>
+              <strong>First (F)</strong> - Multiply the first terms
+              <div className='katex-block'>
+                <KatexRenderer formula='ax \times cx = acx^2' />
+              </div>
+            </li>
+            <li>
+              <strong>Outer (O)</strong> - Multiply the outer terms
+              <div className='katex-block'>
+                <KatexRenderer formula='ax \times d = adx' />
+              </div>
+            </li>
+            <li>
+              <strong>Inner (I)</strong> - Multiply the inner terms
+              <div className='katex-block'>
+                <KatexRenderer formula='b \times cx = bcx' />
+              </div>
+            </li>
+            <li>
+              <strong>Last (L)</strong> - Multiply the last terms
+              <div className='katex-block'>
+                <KatexRenderer formula='b \times d = bd' />
+              </div>
+            </li>
+            <li>
+              Add the products
+              <div className='katex-block'>
+                <KatexRenderer formula='acx^2 + adx + bcx + bd' />
+              </div>
+            </li>
+            <li>
+              Combine like terms
+              <div className='katex-block'>
+                <KatexRenderer formula='acx^2 + \left( ad + bc \right)x + bd' />
+              </div>
+            </li>
+          </ol>
+          <p>The final result is</p>
+          <div className='katex-block'>
+            <KatexRenderer formula='acx^2 + \left( ad + bc \right)x + bd' />
+          </div>
+
+          <h2>Example Problem</h2>
+          <div className='katex-block'>
+            <KatexRenderer formula='\left( 5x + 4 \right) \left( 3x + 2 \right)' />
+          </div>
+          <p>In this example, the values of the coefficients are as follows:</p>
+          <ul>
+            <li>a = 5</li>
+            <li>b = 4</li>
+            <li>c = 3</li>
+            <li>d = 2</li>
+          </ul>
+          <p>The steps to solve this expression:</p>
+          <ol>
+            <li>
+              <strong>First (F)</strong> - Multiply the first terms
+              <div className='katex-block'>
+                <KatexRenderer formula='ax \times cx = acx^2' />
+                <KatexRenderer formula='\Rarr 5x \times 3x = 15x^2' />
+              </div>
+            </li>
+            <li>
+              <strong>Outer (O)</strong> - Multiply the outer terms
+              <div className='katex-block'>
+                <KatexRenderer formula='ax \times d = adx' />
+                <KatexRenderer formula='\Rarr 5x \times 2 = 10x' />
+              </div>
+            </li>
+            <li>
+              <strong>Inner (I)</strong> - Multiply the inner terms
+              <div className='katex-block'>
+                <KatexRenderer formula='b \times cx = bcx' />
+                <KatexRenderer formula='\Rarr 4 \times 3x = 12x' />
+              </div>
+            </li>
+            <li>
+              <strong>Last (L)</strong> - Multiply the last terms
+              <div className='katex-block'>
+                <KatexRenderer formula='b \times d = bd' />
+                <KatexRenderer formula='\Rarr 4 \times 2 = 8' />
+              </div>
+            </li>
+            <li>
+              Add the products
+              <div className='katex-block'>
+                <KatexRenderer formula='acx^2 + adx + bcx + bd' />
+                <KatexRenderer formula='\Rarr 15x^2 + 10x + 12x + 8' />
+              </div>
+            </li>
+            <li>
+              Combine like terms
+              <div className='katex-block'>
+                <KatexRenderer formula='acx^2 + \left( ad + bc \right)x + bd' />
+                <KatexRenderer formula='\Rarr 15x^2 + 22x + 8' />
+              </div>
+            </li>
+          </ol>
+          <p>The final result is</p>
+          <div className='katex-block'>
+            <KatexRenderer formula='15x^2 + 22x + 8' />
+          </div>
+        </div>
+      </div>
+    </CalculatorLayout>
+  );
+}
