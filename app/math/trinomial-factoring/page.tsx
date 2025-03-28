@@ -36,12 +36,8 @@ export default function TrinomialFactoringCalculatorPage() {
 
           <h2>How to Use This Calculator</h2>
           <ol>
-            <li>
-              Enter the coefficients for <em>a</em>, <em>b</em>, and <em>c</em> in the input fields.
-            </li>
-            <li>
-              Once all coefficients are provided, the calculator will attempt to factor the trinomial.
-            </li>
+            <li>Enter the coefficients for <em>a</em>, <em>b</em>, and <em>c</em> in the input fields.</li>
+            <li>Once all coefficients are provided, the calculator will attempt to factor the trinomial.</li>
           </ol>
           <p>If the trinomial is factorable over the integers, the result will be shown as two binomials. Otherwise, you'll see a message stating that the trinomial is not factorable over the integers.</p>
 
@@ -52,9 +48,9 @@ export default function TrinomialFactoringCalculatorPage() {
           </div>
           <p>This calculator uses the <strong>ac method</strong> that utilizes these steps:</p>
           <ol>
-            <li><p>Find the divisors of a multiplied with c</p></li>
-            <li><p>Find pair of divisors that sum to the term b</p></li>
-            <li><p>Use the pair to find the factors that make up each binomial factor of the trinomial</p></li>
+            <li>Find the divisors of a multiplied with c</li>
+            <li>Find pair of divisors that sum to the term b</li>
+            <li>Use the pair to find the factors that make up each binomial factor of the trinomial</li>
           </ol>
           <p>You can see a full example later in this article.</p>
 
