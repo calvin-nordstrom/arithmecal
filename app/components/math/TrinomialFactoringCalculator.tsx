@@ -88,7 +88,7 @@ const config: CalculatorConfig = {
 
           const binomial1 = formatBinomial(p, q);
           const binomial2 = formatBinomial(r, s);
-          factorization = `${binomial1}${binomial2}`;
+          factorization = `${binomial2}${binomial1}`;
           break outer;
         }
       }
