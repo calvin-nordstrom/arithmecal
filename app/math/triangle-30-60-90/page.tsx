@@ -44,76 +44,76 @@ export default function Triangle306090CalculatorPage() {
           <div className='block'>
             <p>Given <strong>Side A</strong>:</p>
             <div className='katex-block'>
-              <KatexRenderer formula='b = a \sqrt{3}' />
+              <KatexRenderer formula='b=a\sqrt{3}' />
             </div>
             <div className='katex-block'>
-              <KatexRenderer formula='c = 2 a' />
+              <KatexRenderer formula='c=2a' />
             </div>
             <div className='katex-block'>
-              <KatexRenderer formula='A = \frac{ 1 }{ 2 } a b' />
+              <KatexRenderer formula='A=\frac{1}{2}ab' />
             </div>
             <div className='katex-block'>
-              <KatexRenderer formula='P = a + b + c' />
+              <KatexRenderer formula='P=a+b+c' />
             </div>
           </div>
           <div className='block'>
             <p>Given <strong>Side B</strong>:</p>
             <div className='katex-block'>
-              <KatexRenderer formula='a = \frac{ b }{ \sqrt{3} }' />
+              <KatexRenderer formula='a=\frac{b}{\sqrt{3}}' />
             </div>
             <div className='katex-block'>
-              <KatexRenderer formula='c = 2 a' />
+              <KatexRenderer formula='c=2a' />
             </div>
             <div className='katex-block'>
-              <KatexRenderer formula='A = \frac{ 1 }{ 2 } a b' />
+              <KatexRenderer formula='A=\frac{1}{2}ab' />
             </div>
             <div className='katex-block'>
-              <KatexRenderer formula='P = a + b + c' />
+              <KatexRenderer formula='P=a+b+c' />
             </div>
           </div>
           <div className='block'>
             <p>Given <strong>Side C</strong>:</p>
             <div className='katex-block'>
-              <KatexRenderer formula='a = \frac{ 1 }{ 2 } c' />
+              <KatexRenderer formula='a=\frac{1}{2}c' />
             </div>
             <div className='katex-block'>
-              <KatexRenderer formula='b = a \sqrt{3}' />
+              <KatexRenderer formula='b=a\sqrt{3}' />
             </div>
             <div className='katex-block'>
-              <KatexRenderer formula='A = \frac{ 1 }{ 2 } a b' />
+              <KatexRenderer formula='A=\frac{1}{2}ab' />
             </div>
             <div className='katex-block'>
-              <KatexRenderer formula='P = a + b + c' />
+              <KatexRenderer formula='P=a+b+c' />
             </div>
           </div>
           <div className='block'>
             <p>Given <strong>Area</strong>:</p>
             <div className='katex-block'>
-              <KatexRenderer formula='a = \sqrt{ \frac{ 2 A }{ \sqrt{3} } }' />
+              <KatexRenderer formula='a=\sqrt{\frac{2A}{\sqrt{3}}}' />
             </div>
             <div className='katex-block'>
-              <KatexRenderer formula='b = a \sqrt{3}' />
+              <KatexRenderer formula='b=a\sqrt{3}' />
             </div>
             <div className='katex-block'>
-              <KatexRenderer formula='c = 2 a' />
+              <KatexRenderer formula='c=2a' />
             </div>
             <div className='katex-block'>
-              <KatexRenderer formula='P = a + b + c' />
+              <KatexRenderer formula='P=a+b+c' />
             </div>
           </div>
           <div className='block'>
             <p>Given <strong>Perimeter</strong>:</p>
             <div className='katex-block'>
-              <KatexRenderer formula='a = \frac{ P }{ 3 + \sqrt{3} } ' />
+              <KatexRenderer formula='a=\frac{P}{3+\sqrt{3}}' />
             </div>
             <div className='katex-block'>
-              <KatexRenderer formula='b = a \sqrt{3}' />
+              <KatexRenderer formula='b=a\sqrt{3}' />
             </div>
             <div className='katex-block'>
-              <KatexRenderer formula='c = 2 a' />
+              <KatexRenderer formula='c=2a' />
             </div>
             <div className='katex-block'>
-              <KatexRenderer formula='A = \frac{ 1 }{ 2 } a b' />
+              <KatexRenderer formula='A=\frac{1}{2}ab' />
             </div>
           </div>
           <p>Where the following variables are represented as:</p>
@@ -130,25 +130,25 @@ export default function Triangle306090CalculatorPage() {
           <div className='block'>
             <p>The <strong>relationship between Side A and Side C</strong> can be solved with these calculations:</p>
             <div className='katex-block'>
-              <KatexRenderer formula='a / c = \sin{(30^{\circ})}' />
-              <KatexRenderer formula='a / c = \frac{ 1 }{ 2 }' />
+              <KatexRenderer formula='a/c=\sin{(30^{\circ})}' />
+              <KatexRenderer formula='a/c=\frac{1}{2}' />
             </div>
             <p>Therefore,</p>
             <div className='katex-block'>
-              <KatexRenderer formula='c = 2 a' />
-              <KatexRenderer formula='a = \frac{ 1 }{ 2 } c' />
+              <KatexRenderer formula='c=2a' />
+              <KatexRenderer formula='a=\frac{1}{2}c' />
             </div>
           </div>
           <div className='block'>
             <p>The <strong>relationship between Side B and Side C</strong> can be solved with these calculations:</p>
             <div className='katex-block'>
-              <KatexRenderer formula='b / c = \sin{(60^{\circ})}' />
-              <KatexRenderer formula='b / c = \frac{ \sqrt{3} }{ 2 }' />
+              <KatexRenderer formula='b/c=\sin{(60^{\circ})}' />
+              <KatexRenderer formula='b/c=\frac{\sqrt{3}}{2}' />
             </div>
             <p>Therefore,</p>
             <div className='katex-block'>
-              <KatexRenderer formula='b = c \frac{ \sqrt{3} }{ 2 }' />
-              <KatexRenderer formula='c = \frac{ 2 b }{\sqrt{ 3 }}' />
+              <KatexRenderer formula='b=c\frac{\sqrt{3}}{2}' />
+              <KatexRenderer formula='c=\frac{2b}{\sqrt{3}}' />
             </div>
           </div>
         </div>

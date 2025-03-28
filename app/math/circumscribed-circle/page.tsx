@@ -20,7 +20,7 @@ export default function CircumscribedCircleCalculatorPage() {
         </div>
         <div className='calculator-description'>
           <div className='center-image'>
-            <Image 
+            <Image
               src='/circumscribed_circle.png'
               width={256}
               height={256}
@@ -52,42 +52,42 @@ export default function CircumscribedCircleCalculatorPage() {
           <h2>Understanding the Formula</h2>
           <p>To calculate the properties of the circumcircle, the <strong>half perimeter</strong> of the triangle <strong>S</strong> must be computed.</p>
           <div className='katex-block'>
-            <KatexRenderer formula='S = \frac{ 1 }{ 2 } \left( a + b + c \right)' />
+            <KatexRenderer formula='S=\frac{1}{2}\left(a+b+c\right)' />
           </div>
           <p>Next, the <strong>area</strong> of the triangle <strong>A</strong> can be found.</p>
           <div className='katex-block'>
-            <KatexRenderer formula='A = \sqrt{S \left( S - a \right) \left( S - b \right) \left( S - c \right)}' />
+            <KatexRenderer formula='A=\sqrt{S\left(S-a\right)\left(S-b\right)\left(S-c\right)}' />
           </div>
           <p className='note'>Note: this formula for area given three sides and the half perimeter is known as <strong>Heron's formula</strong>.</p>
           <h3>Properties of the Circumcircle</h3>
           <p>The <strong>radius</strong> of the circle:</p>
           <div className='katex-block'>
-            <KatexRenderer formula='r = \frac{ abc }{ 4A }' />
+            <KatexRenderer formula='r=\frac{abc}{4A}' />
           </div>
           <p>The <strong>diameter</strong> of the circle:</p>
           <div className='katex-block'>
-            <KatexRenderer formula='d = 2r' />
+            <KatexRenderer formula='d=2r' />
           </div>
           <p>The <strong>circumference</strong> of the circle:</p>
           <div className='katex-block'>
-            <KatexRenderer formula='c = 2 \pi r' />
+            <KatexRenderer formula='c=2\pi r' />
           </div>
           <p>The <strong>area</strong> of the circle:</p>
           <div className='katex-block'>
-            <KatexRenderer formula='a = \pi r^2' />
+            <KatexRenderer formula='a=\pi r^2' />
           </div>
           <h3>Additional Properties of the Triangle</h3>
-          <p>The <strong>perimeter</strong> of the triangle:</p>
+          <p>The <strong>perimeter</strong> of the triangle is</p>
           <div className='katex-block'>
-            <KatexRenderer formula='p = a + b + c' />
+            <KatexRenderer formula='p=a+b+c' />
           </div>
-          <p>To reiterate the <strong>area</strong> of the triangle:</p>
+          <p>To reiterate, the <strong>area</strong> of the triangle is</p>
           <div className='katex-block'>
-            <KatexRenderer formula='A = \sqrt{S \left( S - a \right) \left( S - b \right) \left( S - c \right)}' />
+            <KatexRenderer formula='A=\sqrt{S\left(S-a\right)\left(S-b\right)\left(S-c\right)}' />
           </div>
-          <p>The <strong>area ratio</strong> of the circle to the triangle:</p>
+          <p>The <strong>area ratio</strong> of the circle to the triangle is</p>
           <div className='katex-block'>
-            <KatexRenderer formula='\text{area ratio} = \frac{ \pi r^2 }{ \sqrt{S \left( S - a \right) \left( S - b \right) \left( S - c \right)} }' />
+            <KatexRenderer formula='\text{Area Ratio}=\frac{\pi r^2}{\sqrt{S\left(S-a\right)\left(S-b\right)\left(S-c\right)}}' />
           </div>
         </div>
       </div>

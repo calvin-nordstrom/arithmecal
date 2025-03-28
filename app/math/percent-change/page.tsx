@@ -19,7 +19,7 @@ export default function PercentChangeCalculatorPage() {
         </div>
         <div className='calculator-description'>
           <p>The percent change calculator computes the percentage increase or decrease between an initial and a final value.</p>
-          
+
           <h2>How to Use This Calculator</h2>
           <ol>
             <li>Enter the initial value (must be nonzero)</li>
@@ -29,7 +29,7 @@ export default function PercentChangeCalculatorPage() {
 
           <h2>Understanding the Formula</h2>
           <div className='katex-block'>
-            <KatexRenderer formula='\text{Percent Change} = \left( \frac{\text{Final} - \text{Initial}}{\text{Initial}} \right) \times 100' />
+            <KatexRenderer formula='\text{Percent Change}=\left(\frac{\text{Final}-\text{Initial}}{\text{Initial}}\right)\times 100' />
           </div>
           <p>Using the formula:</p>
           <ul>
@@ -45,10 +45,10 @@ export default function PercentChangeCalculatorPage() {
             <li>Final value = 90</li>
           </ul>
           <div className='katex-block'>
-            <KatexRenderer formula='\text{Percent Change} = \left( \frac{\text{90} - \text{50}}{\text{50}} \right) \times 100' />
-            <KatexRenderer formula='= \left( \frac{\text{40}}{\text{50}} \right) \times 100' />
-            <KatexRenderer formula='= \text{0.8} \times 100' />
-            <KatexRenderer formula='= \text{80}' />
+            <KatexRenderer formula='\text{Percent Change}=\left(\frac{\text{90}-\text{50}}{\text{50}}\right)\times 100' />
+            <KatexRenderer formula='=\left(\frac{\text{40}}{\text{50}}\right)\times 100' />
+            <KatexRenderer formula='=\text{0.8}\times 100' />
+            <KatexRenderer formula='=\text{80}' />
           </div>
           <p>This indicates an <strong>80% increase</strong> between 50 and 90.</p>
           <h3>Percent Decrease</h3>
@@ -57,10 +57,10 @@ export default function PercentChangeCalculatorPage() {
             <li>Final value = 30</li>
           </ul>
           <div className='katex-block'>
-            <KatexRenderer formula='\text{Percent Change} = \left( \frac{\text{30} - \text{50}}{\text{50}} \right) \times 100' />
-            <KatexRenderer formula='= \left( \frac{-\text{20}}{\text{50}} \right) \times 100' />
-            <KatexRenderer formula='= -\text{0.4} \times 100' />
-            <KatexRenderer formula='= -\text{40}' />
+            <KatexRenderer formula='\text{Percent Change}=\left(\frac{\text{30}-\text{50}}{\text{50}}\right)\times 100' />
+            <KatexRenderer formula='=\left(\frac{-\text{20}}{\text{50}}\right)\times 100' />
+            <KatexRenderer formula='=-\text{0.4}\times 100' />
+            <KatexRenderer formula='=-\text{40}' />
           </div>
           <p>This indicates a <strong>40% decrease</strong>, or -40% increase, between 50 and 30.</p>
         </div>

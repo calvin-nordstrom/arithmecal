@@ -29,9 +29,9 @@ export default function TrinomialFactoringCalculatorPage() {
           </div>
           <p>where the factors satisfy:</p>
           <div className='katex-block'>
-            <KatexRenderer formula='p \times r = a' />
-            <KatexRenderer formula='p \times s + q \times r = b' />
-            <KatexRenderer formula='q \times s = c' />
+            <KatexRenderer formula='p\times r=a' />
+            <KatexRenderer formula='p\times s+q\times r=b' />
+            <KatexRenderer formula='q\times s=c' />
           </div>
 
           <h2>How to Use This Calculator</h2>
@@ -65,18 +65,18 @@ export default function TrinomialFactoringCalculatorPage() {
           </div>
           <p>and</p>
           <div className='katex-block'>
-            <KatexRenderer formula='p \times r = a' />
-            <KatexRenderer formula='p \times s + q \times r = b' />
-            <KatexRenderer formula='q \times s = c' />
+            <KatexRenderer formula='p\times r=a' />
+            <KatexRenderer formula='p\times s+q\times r=b' />
+            <KatexRenderer formula='q\times s=c' />
           </div>
           <p>The steps to factor the trinomial:</p>
           <ol>
             <li>
               <p>Plug in the coefficients</p>
               <div className='katex-block'>
-                <KatexRenderer formula='p \times r = 6' />
-                <KatexRenderer formula='p \times s + q \times r = 4' />
-                <KatexRenderer formula='q \times s = 11' />
+                <KatexRenderer formula='p\times r=6' />
+                <KatexRenderer formula='p\times s+q\times r=4' />
+                <KatexRenderer formula='q\times s=11' />
               </div>
             </li>
             <li>
@@ -102,7 +102,7 @@ export default function TrinomialFactoringCalculatorPage() {
               </div>
               <p>Repeat the candidate testing process until the following equation is true.</p>
               <div className='katex-block'>
-                <KatexRenderer formula='p \times s + q \times r = b' />
+                <KatexRenderer formula='p\times s+q\times r=b' />
               </div>
               <p>Testing these candidates with the equation:</p>
               <div className='katex-block'>
@@ -114,10 +114,10 @@ export default function TrinomialFactoringCalculatorPage() {
               </div>
               <p>Therefore,</p>
               <div className='katex-block'>
-                <KatexRenderer formula='p \times s + q \times r = b' />
-                <KatexRenderer formula='2 \times 4 + 1 \times 3 = 11' />
-                <KatexRenderer formula='8 + 3 = 11' />
-                <KatexRenderer formula='11 = 11' />
+                <KatexRenderer formula='p\times s+q\times r=b' />
+                <KatexRenderer formula='2\times 4+1\times 3=11' />
+                <KatexRenderer formula='8+3=11' />
+                <KatexRenderer formula='11=11' />
               </div>
               <p>This equation is true and the binomial factors have been found.</p>
             </li>
