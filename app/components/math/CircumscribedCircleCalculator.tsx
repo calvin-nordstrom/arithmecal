@@ -104,6 +104,15 @@ const config: CalculatorConfig = {
     const a = inputs.a;
     const b = inputs.b;
     const c = inputs.c;
+
+    if (a <= 0 || b <= 0 || c <= 0) {
+      return {
+        a, b, c, 
+        radius: 0, diameter: 0, circumference: 0, area: 0, 
+        trianglePerimeter: 0, triangleArea: 0, areaRatio: 0 
+      };
+    }
+
     const s = (a + b + c) / 2;
     let radius = 0;
     let diameter = 0;
