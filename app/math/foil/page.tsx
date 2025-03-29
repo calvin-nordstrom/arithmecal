@@ -25,6 +25,7 @@ export default function FOILCalculatorPage() {
               width={384}
               height={280}
               alt='A diagram showing two binomials multiplied together with the FOIL method'
+              className='image'
             />
           </div>
 

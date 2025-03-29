@@ -25,6 +25,7 @@ export default function Triangle306090CalculatorPage() {
               width={350}
               height={256}
               alt='A 30 60 90 triangle showing angles and side lengths proportional to Side A'
+              className='image'
             />
           </div>
 

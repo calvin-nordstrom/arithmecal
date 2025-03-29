@@ -25,6 +25,7 @@ export default function CircumscribedCircleCalculatorPage() {
               width={256}
               height={256}
               alt='A triangle with a circumscribed circle'
+              className='image'
             />
           </div>
 
