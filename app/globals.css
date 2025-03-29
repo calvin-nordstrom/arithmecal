@@ -7,8 +7,12 @@
   --center-background-color: rgb(232, 232, 232);
   --content-background-color: rgb(255, 255, 255);
 
+  --link-color: rgb(0, 64, 255);
+
   --katex-block-background-color: rgb(240, 240, 240);
 
+  --blue-darker: rgb(0, 32, 255);
+  --blue-dark: rgb(0, 64, 255);
   --blue: rgb(0, 128, 255);
   --blue-light: rgb(64, 160, 255);
   --blue-lighter: rgb(128, 192, 255);
@@ -57,13 +61,43 @@ body {
   background-color: var(--content-background-color);
 }
 
-.content h1 {
+h1 {
   display: flex;
   align-self: center;
   text-align: center;
   font: var(--rubik-text);
   font-size: 36px;
   font-weight: 450;
+}
+
+h2 {
+  font: var(--rubik-text);
+  font-size: 24px;
+  font-weight: 450;
+  padding-top: 1rem;
+}
+
+h3 {
+  font: var(--rubik-text);
+  font-size: 20px;
+  font-weight: 450;
+  padding-top: 0.5rem;
+}
+
+p {
+  font: var(--rubik-text);
+  font-size: 16px;
+}
+
+li {
+  font: var(--rubik-text);
+  font-size: 16px;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+a {
+  color: var(--link-color);
 }
 
 .center-image {
@@ -91,7 +125,15 @@ body {
   padding-bottom: 0.25rem;
 }
 
-/* Calculator styles */
+/* Calculator category page styles */
+
+.calculator-category ul {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 2.5rem;
+}
+
+/* Calculator page styles */
 
 .calculator-content {
   display: flex;
@@ -101,36 +143,12 @@ body {
   margin-bottom: 2rem;
 }
 
-.calculator-description h2 {
-  font: var(--rubik-text);
-  font-size: 24px;
-  font-weight: 450;
-  padding-top: 1rem;
-}
-
-.calculator-description h3 {
-  font: var(--rubik-text);
-  font-size: 20px;
-  font-weight: 450;
-  padding-top: 0.5rem;
-}
-
-.calculator-description p {
-  font: var(--rubik-text);
-  font-size: 16px;
-}
-
-.calculator-description li {
-  font: var(--rubik-text);
-  font-size: 16px;
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
-}
-
-.calculator-description .note {
+.note {
   font-style: italic;
   color: var(--blue);
 }
+
+/* Calculator styles */
 
 .calculator {
   width: 300px;
@@ -315,7 +333,7 @@ input[type=number] {
 /* Extra Small (Phones) */
 @media (max-width: 479px) {
   .content {
-    width: 70%;
+    width: 75%;
   }
 
   .ad-panel-left {
@@ -333,6 +351,10 @@ input[type=number] {
 
   .calculator {
     width: 220px;
+  }
+
+  .calculator-category li {
+    font-size: 14px;
   }
 }
 
