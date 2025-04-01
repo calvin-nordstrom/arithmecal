@@ -6,7 +6,7 @@ import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: '30-60-90 Triangle Calculator',
-  description: 'Arithmecal percent change calculator',
+  description: 'Arithmecal 30 60 90 triangle calculator',
   keywords: '',
 }
 
