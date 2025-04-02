@@ -58,12 +58,10 @@ const config: CalculatorConfig = {
     let perimeter: number | undefined = undefined;
     const sqrt2 = Math.sqrt(2);
 
-    const checkReturn = (num: number): boolean => num <= 0;
-
     switch (changedField) {
       case 'a':
         a = inputs.a;
-        if (checkReturn(a)) break;
+        if (a <= 0) break;
         b = a;
         c = a * sqrt2;
         area = 0.5 * a * b;
@@ -71,7 +69,7 @@ const config: CalculatorConfig = {
         break;
       case 'b':
         b = inputs.b;
-        if (checkReturn(b)) break;
+        if (b <= 0) break;
         a = b;
         c = a * sqrt2;
         area = 0.5 * a * b;
@@ -79,7 +77,7 @@ const config: CalculatorConfig = {
         break;
       case 'c':
         c = inputs.c;
-        if (checkReturn(c)) break;
+        if (c <= 0) break;
         a = c * sqrt2 / 2;
         b = c * sqrt2 / 2;
         area = 0.5 * a * b;
@@ -87,7 +85,7 @@ const config: CalculatorConfig = {
         break;
       case 'area':
         area = inputs.area;
-        if (checkReturn(area)) break;
+        if (area <= 0) break;
         a = Math.sqrt(2 * area);
         b = Math.sqrt(2 * area);
         c = 2 * Math.sqrt(area);
@@ -95,7 +93,7 @@ const config: CalculatorConfig = {
         break;
       case 'perimeter':
         perimeter = inputs.perimeter;
-        if (checkReturn(perimeter)) break;
+        if (perimeter <= 0) break;
         a = perimeter / (2 + sqrt2);
         b = perimeter / (2 + sqrt2);
         c = a * sqrt2;
