@@ -107,9 +107,10 @@ export default function Calculator({ config }: CalculatorProps) {
     const fieldConfig = fieldConfigs.find(field => field.key === key);
     if (!fieldConfig) return;
 
-    const parsedValue = parseFloat(newDisplay);
-    let newReal: number;
-    if (isNaN(parsedValue)) {
+    const parsedValue = parseFloat(newDisplay.trim());
+    let newReal: number = fieldData[key].real;
+
+    if (newDisplay.trim() === '' || isNaN(parsedValue)) {
       newReal = NaN;
     } else if (!fieldConfig.conversionBase) {
       newReal = parsedValue;
@@ -130,8 +131,8 @@ export default function Calculator({ config }: CalculatorProps) {
     fieldConfigs.forEach(field => {
       if (field.key !== key && computedStandard[field.key] !== undefined) {
         const computedValue = computedStandard[field.key];
-        // If the computed value is a number, use formatting (and conversion if needed)
-        if (typeof computedValue === 'number') {
+
+        if (typeof computedValue === 'number' && !isNaN(computedValue)) {
           if (!field.conversionBase) {
             newFieldData[field.key] = {
               ...newFieldData[field.key],
@@ -150,7 +151,6 @@ export default function Calculator({ config }: CalculatorProps) {
             };
           }
         } else if (typeof computedValue === 'string') {
-          // For string values (like our FOIL equation), simply assign the string.
           newFieldData[field.key] = {
             ...newFieldData[field.key],
             real: NaN,

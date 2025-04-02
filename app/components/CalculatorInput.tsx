@@ -24,7 +24,7 @@ export default function CalculatorInput({
       <label className='calculator-input-label'>{label}</label>
       <div className='calculator-input-controls'>
         <input
-          type='number'
+          type='text'
           value={value}
           onChange={(e) => onValueChange(e.target.value)}
           autoComplete='off'
