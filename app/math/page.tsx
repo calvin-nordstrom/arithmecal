@@ -24,6 +24,7 @@ export default function MathCalculatorsPage() {
         <ul>
           <li><Link href='math/circumscribed-circle'>Circumscribed Circle Calculator</Link></li>
           <li><Link href='math/triangle-30-60-90'>30 60 90 Triangle Calculator</Link></li>
+          <li><Link href='math/triangle-45-45-90'>45 45 90 Triangle Calculator</Link></li>
         </ul>
       </div>
     </CalculatorLayout>
