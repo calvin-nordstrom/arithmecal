@@ -9,8 +9,6 @@
 
   --link-color: rgb(0, 64, 255);
 
-  --katex-block-background-color: rgb(240, 240, 240);
-
   --blue-darker: rgb(0, 32, 255);
   --blue-dark: rgb(0, 64, 255);
   --blue: rgb(0, 128, 255);
@@ -118,10 +116,12 @@ a {
 /* KaTeX styles */
 
 .katex-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding: 0.5rem;
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
-  background-color: var(--katex-block-background-color);
   border-radius: 8px;
 }
 
