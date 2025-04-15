@@ -38,9 +38,7 @@ export default function Converter({ config }: ConverterProps) {
       const result = config.convertAtoB(inputA);
       setInputB(result);
       setErrorB(null);
-    } catch {
-      setErrorB('Invalid conversion');
-    }
+    } catch {}
   }, [inputA]);
 
   // When side B changes, update A
@@ -55,9 +53,7 @@ export default function Converter({ config }: ConverterProps) {
       const result = config.convertBtoA(inputB);
       setInputA(result);
       setErrorA(null);
-    } catch {
-      setErrorA('Invalid conversion');
-    }
+    } catch {}
   }, [inputB]);
 
   return (
@@ -72,7 +68,6 @@ export default function Converter({ config }: ConverterProps) {
             setInputA(e.target.value);
           }}
         />
-        {errorA && <p>{errorA}</p>}
       </div>
       <div className='converter-input-container'>
         <label>{config.sideB.label}</label>
@@ -84,7 +79,10 @@ export default function Converter({ config }: ConverterProps) {
             setInputB(e.target.value);
           }}
         />
-        {errorB && <p>{errorB}</p>}
+        {(errorA || errorB) && <ul>
+          {errorA && <li className='converter-error'>{errorA}</li>}
+          {errorB && <li className='converter-error'>{errorB}</li>}
+        </ul>}
       </div>
     </div>
   );

@@ -326,6 +326,14 @@ select {
   background-color: var(--calculator-input-background);
 }
 
+.converter-error {
+  color: var(--calculator-error-color);
+  font: var(--rubik-text);
+  font-size: 20px;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
 .converter-input-container {
   display: flex;
   flex-direction: column;
