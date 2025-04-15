@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 interface BinaryDropdownProps<T extends string, U extends string> {
   fromOptions: T[];
@@ -17,20 +17,41 @@ const BinaryDropdown = <T extends string, U extends string>({
   selectedTo,
   onChange,
 }: BinaryDropdownProps<T, U>) => {
+  const [localFrom, setLocalFrom] = useState<T>(selectedFrom);
+  const [localTo, setLocalTo] = useState<U>(selectedTo);
+
+  // Sync with external state changes
+  useEffect(() => {
+    setLocalFrom(selectedFrom);
+  }, [selectedFrom]);
+
+  useEffect(() => {
+    setLocalTo(selectedTo);
+  }, [selectedTo]);
+
+  const handleFromChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    const newFrom = e.target.value as T;
+    setLocalFrom(newFrom);
+    if (newFrom !== (localTo as string)) {
+      onChange(newFrom, localTo);
+    }
+  };
+
+  const handleToChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    const newTo = e.target.value as U;
+    setLocalTo(newTo);
+    if (newTo !== (localFrom as string)) {
+      onChange(localFrom, newTo);
+    }
+  };
+
   return (
     <div className='binary-dropdown'>
       <div className='dropdown-container'>
         <label>From</label>
-        <select
-          value={selectedFrom}
-          onChange={(e) => onChange(e.target.value as T, selectedTo)}
-        >
+        <select value={localFrom} onChange={handleFromChange}>
           {fromOptions.map((opt) => (
-            <option
-              key={opt}
-              value={opt}
-              disabled={opt === (selectedTo as string)}
-            >
+            <option key={opt} value={opt}>
               {opt.toWellFormed()}
             </option>
           ))}
@@ -39,16 +60,9 @@ const BinaryDropdown = <T extends string, U extends string>({
 
       <div className='dropdown-container'>
         <label>To</label>
-        <select
-          value={selectedTo}
-          onChange={(e) => onChange(selectedFrom, e.target.value as U)}
-        >
+        <select value={localTo} onChange={handleToChange}>
           {toOptions.map((opt) => (
-            <option
-              key={opt}
-              value={opt}
-              disabled={opt === (selectedFrom as string)}
-            >
+            <option key={opt} value={opt}>
               {opt.toWellFormed()}
             </option>
           ))}
