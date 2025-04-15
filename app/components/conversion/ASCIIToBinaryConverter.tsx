@@ -24,5 +24,5 @@ const config: ConverterConfig = {
 }
 
 export default function ASCIIToBinaryConverter() {
-  return <Converter config = {config}/>;
+  return <Converter config={config}/>;
 }
