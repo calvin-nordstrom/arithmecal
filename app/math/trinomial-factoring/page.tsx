@@ -19,11 +19,12 @@ export default function TrinomialFactoringCalculatorPage() {
           <TrinomialFactoringCalculator />
         </div>
         <div className='calculator-description'>
-          <p>This calculator factors quadratic trinomials of the form</p>
+          <p>A <strong>quadratic trinomial</strong> is an expression with three non-zero terms with two variables in the expression, where the highest power seen in the expression is 2.</p>
+          <p>A trinomial is typically in the form</p>
           <div className='katex-block'>
             <KatexRenderer formula='ax^2+bx+c' />
           </div>
-          <p>into two binomials over the integers. It finds binomials of the form</p>
+          <p>This calculator factors quadratic trinomials into two binomials over the integers. It finds binomials of the form</p>
           <div className='katex-block'>
             <KatexRenderer formula='(px+q)(rx+s)' />
           </div>
