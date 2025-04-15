@@ -26,8 +26,12 @@ const BinaryDropdown = <T extends string, U extends string>({
           onChange={(e) => onChange(e.target.value as T, selectedTo)}
         >
           {fromOptions.map((opt) => (
-            <option key={opt} value={opt}>
-              {opt.toUpperCase()}
+            <option
+              key={opt}
+              value={opt}
+              disabled={opt === (selectedTo as string)}
+            >
+              {opt.toWellFormed()}
             </option>
           ))}
         </select>
@@ -40,8 +44,12 @@ const BinaryDropdown = <T extends string, U extends string>({
           onChange={(e) => onChange(selectedFrom, e.target.value as U)}
         >
           {toOptions.map((opt) => (
-            <option key={opt} value={opt}>
-              {opt.toUpperCase()}
+            <option
+              key={opt}
+              value={opt}
+              disabled={opt === (selectedFrom as string)}
+            >
+              {opt.toWellFormed()}
             </option>
           ))}
         </select>
