@@ -60,6 +60,7 @@ body {
 }
 
 h1 {
+  font: var(--rubik-text);
   display: flex;
   align-self: center;
   text-align: center;
@@ -96,6 +97,18 @@ li {
 
 a {
   color: var(--link-color);
+}
+
+select {
+  font: var(--rubik-text);
+  font-size: 16px;
+  padding: 0.3rem;
+  border: 1px solid var(--calculator-enabled-border);
+  border-radius: 4px;
+  background-color: var(--calculator-button-background);
+  transition-duration: 0.25s;
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.1) 2px 2px 2px;
 }
 
 .center-image {
@@ -145,6 +158,12 @@ a {
   margin-bottom: 2rem;
 }
 
+.calculator-component {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
 .note {
   font-style: italic;
   color: var(--blue);
@@ -178,16 +197,6 @@ a {
 
 .calculator select {
   width: 70px;
-  font: var(--rubik-text);
-  font-size: 16px;
-  margin-left: 0.5rem;
-  padding: 0.3rem;
-  border: 1px solid var(--calculator-enabled-border);
-  border-radius: 4px;
-  background-color: var(--calculator-button-background);
-  transition-duration: 0.25s;
-  cursor: pointer;
-  box-shadow: rgba(0, 0, 0, 0.1) 2px 2px 2px;
 }
 
 .calculator select:hover {
@@ -250,7 +259,7 @@ a {
   background-color: var(--calculator-input-background);
 }
 
-.calculator-input-label {
+.calculator label {
   font: var(--rubik-text);
   font-size: 16px;
   font-weight: 500;
@@ -259,6 +268,7 @@ a {
 
 .calculator-input-controls {
   display: flex;
+  gap: 0.5rem;
 }
 
 /* Calculator output styles */
@@ -281,15 +291,78 @@ a {
   flex-grow: 1;
 }
 
-.calculator-output-label {
+.calculator-output-controls {
+  display: flex;
+  gap: 0.5rem;
+}
+
+/* Converter styles */
+
+.converter {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  background-color: var(--calculator-background);
+  border: 1px solid var(--calculator-border);
+  border-radius: 4px;
+  box-shadow: rgba(0, 0, 0, 0.2) 2px 2px 4px;
+}
+
+.converter label {
   font: var(--rubik-text);
   font-size: 16px;
   font-weight: 500;
   margin-bottom: 0.5rem;
 }
 
-.calculator-output-controls {
+.converter textarea {
+  font: var(--rubik-text);
+  font-size: 16px;
+  font-weight: 350;
+  padding: 0.5rem;
+  border: 1px solid var(--calculator-enabled-border);
+  border-radius: 4px;
+  background-color: var(--calculator-input-background);
+}
+
+.converter-input-container {
   display: flex;
+  flex-direction: column;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Dropdown styles */
+
+.binary-dropdown {
+  width: 300px;
+  display: flex;
+  gap: 0.5rem;
+  padding: 1rem;
+  padding-bottom: 1.5rem;
+  background-color: var(--calculator-background);
+  border: 1px solid var(--calculator-border);
+  border-radius: 4px;
+  box-shadow: rgba(0, 0, 0, 0.2) 2px 2px 4px;
+}
+
+.dropdown-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.dropdown-container label {
+  font: var(--rubik-text);
+  font-size: 16px;
+  font-weight: 500;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.dropdown-container select {
+  width: 100%;
 }
 
 /* Miscellaneous styles */
