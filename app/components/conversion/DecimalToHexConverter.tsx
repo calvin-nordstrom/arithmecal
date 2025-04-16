@@ -9,6 +9,9 @@ const config: ConverterConfig = {
     key: 'decimal',
     label: 'Decimal',
     validate: (value: string) => {
+      if (value.trim() === '') {
+        return null;
+      }
       if (!/^\d+(\s+\d+)*$/.test(value)) {
         return 'Decimal input must only contain digits and spaces.';
       }
