@@ -1,8 +1,11 @@
 import CalculatorLayout from '@/app/components/CalculatorLayout';
+import KatexRenderer from '@/app/components/KatexRenderer';
+import Image from 'next/image';
+import type { Metadata } from 'next'
 import BaseConverterNavigator from '@/app/components/BaseConverterNavigator';
 import OctalToASCIIConverter from '@/app/components/conversion/OctalToASCIIConverter';
 
-export const metadata = {
+export const metadata: Metadata = {
   title: 'Octal to ASCII Conversion',
   description: 'Arithmecal octal to ASCII conversion',
   keywords: '',

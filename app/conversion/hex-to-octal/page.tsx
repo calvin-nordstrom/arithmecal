@@ -1,17 +1,20 @@
 import CalculatorLayout from '@/app/components/CalculatorLayout';
+import KatexRenderer from '@/app/components/KatexRenderer';
+import Image from 'next/image';
+import type { Metadata } from 'next'
 import BaseConverterNavigator from '@/app/components/BaseConverterNavigator';
 import HexToOctalConverter from '@/app/components/conversion/HexToOctalConverter';
 
-export const metadata = {
-  title: 'Hexadecimal to Octal Conversion',
-  description: 'Arithmecal hexadecimal to octal conversion',
+export const metadata: Metadata = {
+  title: 'Hex to Octal Conversion',
+  description: 'Arithmecal hex to octal conversion',
   keywords: '',
 };
 
 export default function HexToOctalConversionPage() {
   return (
     <CalculatorLayout>
-      <h1>Hexadecimal to Octal Conversion</h1>
+      <h1>Hex to Octal Conversion</h1>
       <div className='calculator-content'>
         <div className='calculator-component'>
           <BaseConverterNavigator />

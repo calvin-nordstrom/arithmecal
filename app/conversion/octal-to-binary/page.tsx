@@ -1,8 +1,11 @@
 import CalculatorLayout from '@/app/components/CalculatorLayout';
+import KatexRenderer from '@/app/components/KatexRenderer';
+import Image from 'next/image';
+import type { Metadata } from 'next'
 import BaseConverterNavigator from '@/app/components/BaseConverterNavigator';
 import OctalToBinaryConverter from '@/app/components/conversion/OctalToBinaryConverter';
 
-export const metadata = {
+export const metadata: Metadata = {
   title: 'Octal to Binary Conversion',
   description: 'Arithmecal octal to binary conversion',
   keywords: '',

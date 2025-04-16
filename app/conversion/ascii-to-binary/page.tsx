@@ -1,9 +1,9 @@
 import CalculatorLayout from '@/app/components/CalculatorLayout';
 import KatexRenderer from '@/app/components/KatexRenderer';
-import ASCIIToBinaryConverter from '@/app/components/conversion/ASCIIToBinaryConverter';
 import Image from 'next/image';
 import type { Metadata } from 'next'
 import BaseConverterNavigator from '@/app/components/BaseConverterNavigator';
+import ASCIIToBinaryConverter from '@/app/components/conversion/ASCIIToBinaryConverter';
 
 export const metadata: Metadata = {
   title: 'ASCII to Binary Conversion',
