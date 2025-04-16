@@ -44,6 +44,7 @@ const BaseConverterNavigator = () => {
     if (newFrom === newTo) return;
     const newRoute = `/conversion/${newFrom}-to-${newTo}`;
     if (validRoutes.has(newRoute)) {
+      if (pathname === newRoute) return;
       router.push(newRoute);
     } else {
       console.warn('Invalid route:', newRoute);
