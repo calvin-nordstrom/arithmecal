@@ -56,6 +56,14 @@ export default function Converter({ config }: ConverterProps) {
     } catch {}
   }, [inputB]);
 
+  const handleReset = () => {
+    setInputA('');
+    setInputB('');
+    setErrorA(null);
+    setErrorB(null);
+    setLastChanged('A');
+  };
+
   return (
     <div className='converter'>
       <div className='converter-input-container'>
@@ -83,6 +91,10 @@ export default function Converter({ config }: ConverterProps) {
           {errorA && <li className='converter-error'>{errorA}</li>}
           {errorB && <li className='converter-error'>{errorB}</li>}
         </ul>}
+      </div>
+      <hr />
+      <div className='calculator-controls'>
+        <button className='calculator-control-button' onClick={handleReset}>Reset All</button>
       </div>
     </div>
   );
