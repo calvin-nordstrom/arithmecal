@@ -247,7 +247,7 @@ tbody > tr:nth-of-type(odd) {
   padding-bottom: 0.5rem;
 }
 
-.calculator button {
+.calculator-control-button {
   font: var(--rubik-text);
   font-size: var(--calculator-button-font-size);
   height: 50px;
