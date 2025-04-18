@@ -33,9 +33,9 @@ export default function BinaryToHexConversionPage() {
           <h2>Understanding the Conversion</h2>
           <p>Hexadecimal is base-16, using digits 0-9 and letters A-F. Each 4-bit binary value maps directly to a single hex digit:</p>
           <ul>
-            <li><code>0000 = 0</code></li>
-            <li><code>1010 = A</code></li>
-            <li><code>1111 = F</code></li>
+            <li><code>0000<sub>2</sub> = 0<sub>16</sub></code></li>
+            <li><code>1010<sub>2</sub> = A<sub>16</sub></code></li>
+            <li><code>1111<sub>2</sub> = F<sub>16</sub></code></li>
           </ul>
 
           <h2>Example</h2>
