@@ -22,7 +22,7 @@ export function asciiToDecimal(text: string): string {
 export function asciiToHex(text: string): string {
   return text
     .split('')
-    .map(char => char.charCodeAt(0).toString(16).padStart(2, '0'))
+    .map(char => char.charCodeAt(0).toString(16).toUpperCase().padStart(2, '0'))
     .join(' ');
 }
 
@@ -72,7 +72,7 @@ export function binaryToHex(binary: string): string {
     .map(bin => {
       const num = parseInt(bin, 2);
       if (isNaN(num)) throw new Error('Invalid binary input');
-      return num.toString(16);
+      return num.toString(16).toUpperCase();
     })
     .join(' ');
 }
@@ -128,7 +128,7 @@ export function decimalToHex(decimal: string): string {
     .map(numStr => {
       const num = parseInt(numStr, 10);
       if (isNaN(num)) throw new Error('Invalid decimal input');
-      return num.toString(16);
+      return num.toString(16).toUpperCase();
     })
     .join(' ');
 }
@@ -253,7 +253,7 @@ export function octalToHex(octal: string): string {
     .map(o => {
       const num = parseInt(o, 8);
       if (isNaN(num)) throw new Error('Invalid octal input');
-      return num.toString(16);
+      return num.toString(16).toUpperCase();
     })
     .join(' ');
 }
