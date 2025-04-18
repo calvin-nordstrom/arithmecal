@@ -136,6 +136,13 @@ tbody > tr:nth-of-type(odd) {
   background-color: var(--calculator-input-background);
 }
 
+hr {
+  width: 100%;
+  color: var(--calculator-divider-color);
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
 .center-image {
   justify-self: center;
   padding-top: 0.5rem;
@@ -230,13 +237,6 @@ tbody > tr:nth-of-type(odd) {
 
 .calculator select option {
   background-color: var(--calculator-button-background);
-}
-
-.calculator hr {
-  width: 100%;
-  color: var(--calculator-divider-color);
-  margin-top: 1rem;
-  margin-bottom: 1rem;
 }
 
 .calculator-controls {
