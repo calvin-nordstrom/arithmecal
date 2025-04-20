@@ -37,7 +37,7 @@ export default function ASCIITablePage() {
           <table>
             <caption>Decimal 0 - 31</caption>
             <thead>
-              <tr><th>Decimal</th><th>Binary</th><th>Octal</th><th>Hex</th><th>ASCII</th></tr>
+              <tr><th>Dec</th><th>Bin</th><th>Oct</th><th>Hex</th><th>ASCII</th></tr>
             </thead>
             <tbody>
               <tr><th>0</th><td>00000000</td><td>000</td><td>00</td><td>NUL</td></tr>
@@ -77,7 +77,7 @@ export default function ASCIITablePage() {
           <table>
             <caption>Decimal 32 - 63</caption>
             <thead>
-              <tr><th>Decimal</th><th>Binary</th><th>Octal</th><th>Hex</th><th>ASCII</th></tr>
+              <tr><th>Dec</th><th>Bin</th><th>Oct</th><th>Hex</th><th>ASCII</th></tr>
             </thead>
             <tbody>
               <tr><th>32</th><td>00100000</td><td>040</td><td>20</td><td>SPACE</td></tr>
@@ -117,7 +117,7 @@ export default function ASCIITablePage() {
           <table>
             <caption>Decimal 64 - 95</caption>
             <thead>
-              <tr><th>Decimal</th><th>Binary</th><th>Octal</th><th>Hex</th><th>ASCII</th></tr>
+              <tr><th>Dec</th><th>Bin</th><th>Oct</th><th>Hex</th><th>ASCII</th></tr>
             </thead>
             <tbody>
               <tr><th>64</th><td>01000000</td><td>100</td><td>40</td><td>@</td></tr>
@@ -157,7 +157,7 @@ export default function ASCIITablePage() {
           <table>
             <caption>Decimal 96 - 127</caption>
             <thead>
-              <tr><th>Decimal</th><th>Binary</th><th>Octal</th><th>Hex</th><th>ASCII</th></tr>
+              <tr><th>Dec</th><th>Bin</th><th>Oct</th><th>Hex</th><th>ASCII</th></tr>
             </thead>
             <tbody>
               <tr><th>96</th><td>01100000</td><td>140</td><td>60</td><td>`</td></tr>
