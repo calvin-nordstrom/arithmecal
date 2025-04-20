@@ -120,7 +120,7 @@ table {
 
 th, td {
   border: 1px solid var(--calculator-enabled-border);
-  padding: 0.35rem;
+  padding: 0.5rem;
   font-weight: 400;
 }
 
