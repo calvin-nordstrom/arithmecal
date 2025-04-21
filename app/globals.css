@@ -424,8 +424,21 @@ hr {
   padding-bottom: 1rem;
 }
 
+.ascii-table-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .ascii-table-content table {
   font-size: 12px;
+}
+
+.ascii-table-text-container {
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-bottom: 2rem;
+  max-width: 880px;
 }
 
 /* Miscellaneous styles */
