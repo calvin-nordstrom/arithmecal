@@ -39,7 +39,7 @@ export default function Converter({ config }: ConverterProps) {
       setInputB(result);
       setErrorB(null);
     } catch {}
-  }, [inputA]);
+  }, [inputA, config, lastChanged]);
 
   // When side B changes, update A
   useEffect(() => {
@@ -54,7 +54,7 @@ export default function Converter({ config }: ConverterProps) {
       setInputA(result);
       setErrorA(null);
     } catch {}
-  }, [inputB]);
+  }, [inputB, config, lastChanged]);
 
   const handleReset = () => {
     setInputA('');
