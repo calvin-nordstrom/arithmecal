@@ -64,7 +64,7 @@ export default function BinaryToHexConversionPage() {
 
           <h2>Why Use Hexadecimal?</h2>
           <p>Binary (base-2) uses only 0s and 1s. Computers use binary internally to represent all data, including ASCII characters.</p>
-          <p>Hexadecimal is easier to read and write than binary and more compact. It's widely used in programming, color codes, memory dumps, and low-level debugging.</p>
+          <p>Hexadecimal is easier to read and write than binary and more compact. It&apos;s widely used in programming, color codes, memory dumps, and low-level debugging.</p>
         </div>
       </div>
     </CalculatorLayout>

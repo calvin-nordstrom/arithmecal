@@ -29,14 +29,14 @@ export default function CircumscribedCircleCalculatorPage() {
             />
           </div>
 
-          <p>Given a triangle's sides, the circumscribed circle calculator computes the properties of a circle that pass through each of the vertices of the triangle.</p>
+          <p>Given a triangle&apos;s sides, the circumscribed circle calculator computes the properties of a circle that pass through each of the vertices of the triangle.</p>
           <p>A circumscribed circle is also known as a circumcircle. <strong>Every triangle has one</strong>.</p>
 
           <h3>Key Terms:</h3>
           <ol>
             <li><strong>Circumcircle</strong> - the circle that surrounds any triangle that passes through all of its points.</li>
             <li><strong>Circumradius</strong> - the radius of the circumcircle.</li>
-            <li><strong>Circumcenter</strong> - the center of the circumcenter, which is also where the perpendicular bisectors of the triangle's sides intersect.</li>
+            <li><strong>Circumcenter</strong> - the center of the circumcenter, which is also where the perpendicular bisectors of the triangle&apos;s sides intersect.</li>
           </ol>
 
           <h2>How to Use This Calculator</h2>
@@ -59,7 +59,7 @@ export default function CircumscribedCircleCalculatorPage() {
           <div className='katex-block'>
             <KatexRenderer formula='A=\sqrt{S\left(S-a\right)\left(S-b\right)\left(S-c\right)}' />
           </div>
-          <p className='note'>Note: this formula for area given three sides and the half perimeter is known as <strong>Heron's formula</strong>.</p>
+          <p className='note'>Note: this formula for area given three sides and the half perimeter is known as <strong>Heron&apos;s formula</strong>.</p>
           <h3>Properties of the Circumcircle</h3>
           <p>The <strong>radius</strong> of the circle:</p>
           <div className='katex-block'>

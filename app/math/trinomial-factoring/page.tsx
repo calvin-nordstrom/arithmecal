@@ -40,7 +40,7 @@ export default function TrinomialFactoringCalculatorPage() {
             <li>Enter the coefficients for <em>a</em>, <em>b</em>, and <em>c</em> in the input fields.</li>
             <li>Once all coefficients are provided, the calculator will attempt to factor the trinomial.</li>
           </ol>
-          <p>If the trinomial is factorable over the integers, the result will be shown as two binomials. Otherwise, you'll see a message stating that the trinomial is not factorable over the integers.</p>
+          <p>If the trinomial is factorable over the integers, the result will be shown as two binomials. Otherwise, you&apos;ll see a message stating that the trinomial is not factorable over the integers.</p>
 
           <h2>Understanding the Factorization</h2>
           <p>To reiterate, the relation between the trinomial (left) and its binomial factors (right) is as follows:</p>

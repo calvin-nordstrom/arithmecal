@@ -36,7 +36,7 @@ export default function QuadraticFormulaCalculatorPage() {
           <p className='note'>Note: a must be nonzero because the variable a is in the denominator of the quadratic solution, and you cannot divide by zero.</p>
           
           <h3>Understanding the Discriminant</h3>
-          <p>The <strong>discriminant</strong> is used to determine the nature of the roots. It's an equation derived from within the square root of the quadratic solution equation.</p>
+          <p>The <strong>discriminant</strong> is used to determine the nature of the roots. It&apos;s an equation derived from within the square root of the quadratic solution equation.</p>
           <div className='katex-block'>
             <KatexRenderer formula='b^2-4ac' />
           </div>

@@ -40,7 +40,7 @@ export default function PercentChangeCalculatorPage() {
 
           <h2>Example Problems</h2>
           <h3>Percent Increase</h3>
-          <p>After finding out that the shirt you wanted is no longer on sale, you want to decide if it's still worth buying. During the sale, the price was <strong>$50</strong>. Now, it's <strong>$90</strong>. Find the <strong>percent change</strong> of the shirt price.</p>
+          <p>After finding out that the shirt you wanted is no longer on sale, you want to decide if it&apos;s still worth buying. During the sale, the price was <strong>$50</strong>. Now, it&apos;s <strong>$90</strong>. Find the <strong>percent change</strong> of the shirt price.</p>
           <ul>
             <li>Initial value = 50</li>
             <li>Final value = 90</li>
@@ -53,7 +53,7 @@ export default function PercentChangeCalculatorPage() {
           </div>
           <p>This indicates an <strong>80% increase</strong> between 50 and 90.</p>
           <h3>Percent Decrease</h3>
-          <p>A concert venue decided to sell all of the remaining tickets at a discounted price. Normally, each ticket was <strong>$50</strong> and now they're only <strong>$30</strong>. Find the <strong>percent change</strong> of the ticket price.</p>
+          <p>A concert venue decided to sell all of the remaining tickets at a discounted price. Normally, each ticket was <strong>$50</strong> and now they&apos;re only <strong>$30</strong>. Find the <strong>percent change</strong> of the ticket price.</p>
           <ul>
             <li>Initial value = 50</li>
             <li>Final value = 30</li>

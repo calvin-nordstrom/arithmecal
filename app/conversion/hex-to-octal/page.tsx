@@ -30,7 +30,7 @@ export default function HexToOctalConversionPage() {
           </ul>
 
           <h2>Understanding the Conversion</h2>
-          <p>Hex and octal are both number systems used in computing, but they don't convert directly digit-by-digit. The easiest way to convert between them is via binary:</p>
+          <p>Hex and octal are both number systems used in computing, but they don&apos;t convert directly digit-by-digit. The easiest way to convert between them is via binary:</p>
           <ol>
             <li>Convert hex to binary (each hex digit = 4 bits)</li>
             <li>Group the binary into 3-bit chunks (starting from the right)</li>
@@ -47,7 +47,7 @@ export default function HexToOctalConversionPage() {
 
           <h2>Why Use Octal?</h2>
           <p>Octal was used more frequently in older computing systems, especially when dealing with byte-aligned systems where 3-bit groupings made sense.</p>
-          <p>It's still useful for interpreting file permissions in Unix/Linux systems (e.g., <code>chmod 755</code>).</p>
+          <p>It&apos;s still useful for interpreting file permissions in Unix/Linux systems (e.g., <code>chmod 755</code>).</p>
           <p>Hex and octal both simplify binary numbers for humans. Use this converter when working with different low-level numeric representations.</p>
         </div>
       </div>

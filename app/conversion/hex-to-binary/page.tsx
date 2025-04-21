@@ -72,7 +72,7 @@ export default function HexToBinaryConversionPage() {
           <p><strong>Result: 1101111010101101</strong></p>
 
           <h2>Why Use Hex and Binary?</h2>
-          <p>Hex is a compact way to represent binary. It's commonly used in:</p>
+          <p>Hex is a compact way to represent binary. It&apos;s commonly used in:</p>
           <ul>
             <li>Machine code and assembly</li>
             <li>Memory addresses</li>

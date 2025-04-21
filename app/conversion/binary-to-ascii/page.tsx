@@ -32,7 +32,7 @@ export default function BinaryToASCIIConversionPage() {
           <p>Supports both binary to ASCII and ASCII to binary conversion.</p>
 
           <h2>Understanding the Conversion</h2>
-          <p>Each ASCII character is represented by an 8-bit binary number. For example, the letter "A" is <strong>01000001</strong> in binary.</p>
+          <p>Each ASCII character is represented by an 8-bit binary number. For example, the letter &quot;A&quot; is <strong>01000001</strong> in binary.</p>
           <p>To decode binary, split the binary input into 8-bit segments and match them with their decimal/ASCII equivalents using an <Link href='../reference/ascii-table' target="_blank">ASCII table</Link>.</p>
 
           <h2>Example</h2>

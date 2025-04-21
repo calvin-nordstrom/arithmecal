@@ -31,7 +31,7 @@ export default function Triangle306090CalculatorPage() {
 
           <p>A 30 60 90 triangle is known as a <strong>special right triangle</strong> and has the angles 30&deg;, 60&deg;, and 90&deg;, hence its name. You might also notice that this triangle is half of an equilateral triangle.</p>
           <p>Right triangles are sometimes called <strong>rectangular triangles</strong> or <strong>orthogonal triangles</strong>. A triangle is a right triangle when two sides are perpendicular to each other, forming a right angle.</p>
-          <p>Because of this triangle's predictable angles, the 30 60 90 triangle calculator computes the properties of a triangle given any one of the following measurements:</p>
+          <p>Because of this triangle&apos;s predictable angles, the 30 60 90 triangle calculator computes the properties of a triangle given any one of the following measurements:</p>
           <ul>
             <li>Side (a)</li>
             <li>Side (b)</li>
@@ -41,7 +41,7 @@ export default function Triangle306090CalculatorPage() {
           </ul>
 
           <h2>Understanding the Formula</h2>
-          <p>The triangle's properties are derived from the measurement provided.</p>
+          <p>The triangle&apos;s properties are derived from the measurement provided.</p>
           <div className='block'>
             <p>Given <strong>Side A</strong>:</p>
             <div className='katex-block'>

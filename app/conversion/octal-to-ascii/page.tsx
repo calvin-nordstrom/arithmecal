@@ -26,13 +26,13 @@ export default function OctalToASCIIConversionPage() {
 
           <h2>How to Use This Converter</h2>
           <ul>
-            <li>Enter an octal value like <code>110 145 154 154 157</code> to get ASCII text (e.g., "Hello")</li>
+            <li>Enter an octal value like <code>110 145 154 154 157</code> to get ASCII text (e.g., &quot;Hello&quot;)</li>
             <li>Or enter ASCII text to see its octal representation</li>
           </ul>
 
           <h2>Understanding the Conversion</h2>
           <p>Each ASCII character has a unique numeric value. Octal is one way of representing that value, especially in low-level systems like UNIX.</p>
-          <p><strong>Example:</strong> The word "Hello" in octal:</p>
+          <p><strong>Example:</strong> The word &quot;Hello&quot; in octal:</p>
           <table>
             <thead>
               <tr>
@@ -69,7 +69,7 @@ export default function OctalToASCIIConversionPage() {
               </tr>
             </tbody>
           </table>
-          <p><strong>Result: 110 145 154 154 157 → "Hello"</strong></p>
+          <p><strong>Result: 110 145 154 154 157 → &quot;Hello&quot;</strong></p>
 
           <h2>Why Use Octal?</h2>
           <p>Octal representation is still relevant in contexts such as:</p>

@@ -33,11 +33,11 @@ export default function ASCIIToDecimalConversionPage() {
 
       <h2>Understanding the Conversion</h2>
       <p>Each character in ASCII is represented by a specific decimal number. You can look up these values in an <strong>ASCII table</strong>. We have one available on our <Link href='../reference/ascii-table' target="_blank">reference page</Link>!</p>
-      <p>For example, the uppercase letter "A" corresponds to the decimal value <strong>65</strong>. This value comes directly from the ASCII specification.</p>
+      <p>For example, the uppercase letter &quot;A&quot; corresponds to the decimal value <strong>65</strong>. This value comes directly from the ASCII specification.</p>
       <p>Using this table, you can easily map text characters to their decimal equivalents and reconstruct text from decimal numbers.</p>
 
       <h2>Example</h2>
-      <p>Converting the text "Hello" to decimal.</p>
+      <p>Converting the text &quot;Hello&quot; to decimal.</p>
       <p>Using the ASCII table, we find that the characters map to the following decimal values:</p>
       <table>
         <thead>

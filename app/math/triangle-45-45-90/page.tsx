@@ -31,7 +31,7 @@ export default function Triangle454590CalculatorPage() {
 
           <p>A 45 45 90 triangle is known as a <strong>special right triangle</strong> and has the angles 45&deg;, 45&deg;, and 90&deg;, hence its name. You might also notice that this triangle is half of a square because sides a and b are equal to each other.</p>
           <p>Right triangles are sometimes called <strong>rectangular triangles</strong> or <strong>orthogonal triangles</strong>. A triangle is a right triangle when two sides are perpendicular to each other, forming a right angle.</p>
-          <p>Because of this triangle's predictable angles, the 45 45 90 triangle calculator computes the properties of a triangle given any one of the following measurements:</p>
+          <p>Because of this triangle&apos;s predictable angles, the 45 45 90 triangle calculator computes the properties of a triangle given any one of the following measurements:</p>
           <ul>
             <li>Side (a)</li>
             <li>Side (b)</li>
@@ -41,7 +41,7 @@ export default function Triangle454590CalculatorPage() {
           </ul>
 
           <h2>Understanding the Formula</h2>
-          <p>The triangle's properties are derived from the measurement provided.</p>
+          <p>The triangle&apos;s properties are derived from the measurement provided.</p>
           <div className='block'>
             <p>Given <strong>Side A</strong>:</p>
             <div className='katex-block'>

@@ -26,7 +26,7 @@ export default function HexToASCIIConversionPage() {
 
           <h2>How to Use This Converter</h2>
           <ul>
-            <li>Enter a hex string like <code>48 65 6C 6C 6F</code> to convert it to ASCII (e.g., "Hello")</li>
+            <li>Enter a hex string like <code>48 65 6C 6C 6F</code> to convert it to ASCII (e.g., &quot;Hello&quot;)</li>
             <li>Or input ASCII text to see its hexadecimal representation</li>
           </ul>
           <p>Great for decoding hex-encoded messages or viewing raw data.</p>
@@ -35,9 +35,9 @@ export default function HexToASCIIConversionPage() {
           <p>Each ASCII character is represented by a hexadecimal byte (two hex digits).</p>
           <p>For example:</p>
           <ul>
-            <li>"A" → Hex <code>41</code></li>
-            <li>"B" → Hex <code>42</code></li>
-            <li>"a" → Hex <code>61</code></li>
+            <li>&quot;A&quot; → Hex <code>41</code></li>
+            <li>&quot;B&quot; → Hex <code>42</code></li>
+            <li>&quot;a&quot; → Hex <code>61</code></li>
           </ul>
 
           <h2>Example</h2>
@@ -72,7 +72,7 @@ export default function HexToASCIIConversionPage() {
               </tr>
             </tbody>
           </table>
-          <p><strong>Result: "Hello"</strong></p>
+          <p><strong>Result: &quot;Hello&quot;</strong></p>
 
           <h2>Why Convert Hex to ASCII?</h2>
           <p>Hex to ASCII is commonly used in:</p>

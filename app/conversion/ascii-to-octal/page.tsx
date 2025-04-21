@@ -33,11 +33,11 @@ export default function ASCIIToOctalConversionPage() {
 
           <h2>Understanding the Conversion</h2>
           <p>Each ASCII character maps to a decimal value, which can be converted to octal. Octal (base-8) is another way of representing binary data in a more compact form than binary itself.</p>
-          <p>For example, the character "A" has a decimal value of 65, which is <strong>101</strong> in octal.</p>
+          <p>For example, the character &quot;A&quot; has a decimal value of 65, which is <strong>101</strong> in octal.</p>
           <p>You can use an <Link href='../reference/ascii-table' target="_blank">ASCII table</Link> to find decimal values, then convert those to octal manually or using this tool.</p>
 
           <h2>Example</h2>
-          <p>Converting "Hello" to octal:</p>
+          <p>Converting &quot;Hello&quot; to octal:</p>
           <table>
             <thead>
               <tr>
@@ -77,7 +77,7 @@ export default function ASCIIToOctalConversionPage() {
 
           <h2>More About ASCII</h2>
           <p>ASCII is a 7-bit character set, and each character maps to a specific decimal value. These values can be expressed in octal form, which was more commonly used in older computer systems and certain programming environments like early Unix systems.</p>
-          <p>While octal isn't as widely used today as hexadecimal, it still shows up in specific contexts — especially when dealing with file permissions in Unix-like systems.</p>
+          <p>While octal isn&apos;t as widely used today as hexadecimal, it still shows up in specific contexts — especially when dealing with file permissions in Unix-like systems.</p>
           <p>You can refer to our full <Link href='../reference/ascii-table' target="_blank">ASCII table</Link> for more information.</p>
         </div>
       </div>

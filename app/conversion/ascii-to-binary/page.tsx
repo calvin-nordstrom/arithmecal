@@ -34,10 +34,10 @@ export default function ASCIIToBinaryConversionPage() {
           <h2>Understanding the Conversion</h2>
           <p>The quickest way to convert between ASCII text and binary is to use an <strong>ASCII table</strong>. Lucky for you, we have an <Link href='../reference/ascii-table' target="_blank">ASCII table</Link> on our reference page!</p>
           <p>Typically, you can use an ASCII table to convert a letter into a 1 byte hexadecimal value. You can then use this hexadecimal value to compute the 8 bits of binary that make up the byte.</p>
-          <p>For example, the letter "A" converts to 41<sub>16</sub>, which is equivalent to 01000001<sub>2</sub> in binary.</p>
+          <p>For example, the letter &quot;A&quot; converts to 41<sub>16</sub>, which is equivalent to 01000001<sub>2</sub> in binary.</p>
 
           <h2>Example</h2>
-          <p>Converting the text "Hello" to binary.</p>
+          <p>Converting the text &quot;Hello&quot; to binary.</p>
           <p>Using the ASCII table, we find that the letters correspond to the following hexadecimal values:</p>
           <table>
             <thead>

@@ -35,12 +35,12 @@ export default function DecimalToASCIIConversionPage() {
           <p>Each ASCII character is represented by a number between 0 and 127. These numbers correspond to letters, digits, symbols, and control characters.</p>
           <p>For example:</p>
           <ul>
-            <li>65 → 'A'</li>
-            <li>66 → 'B'</li>
-            <li>97 → 'a'</li>
+            <li>65 → &apos;A&apos;</li>
+            <li>66 → &apos;B&apos;</li>
+            <li>97 → &apos;a&apos;</li>
             <li>32 → (space character)</li>
           </ul>
-          <p>You can use our <Link href='../reference/ascii-table' target="_blank">ASCII table</Link> to look up any character's decimal code.</p>
+          <p>You can use our <Link href='../reference/ascii-table' target="_blank">ASCII table</Link> to look up any character&apos;s decimal code.</p>
 
           <h2>Example</h2>
           <p>Convert the decimal values <code>72 101 108 108 111</code> to ASCII:</p>
@@ -51,7 +51,7 @@ export default function DecimalToASCIIConversionPage() {
             <li>108 → l</li>
             <li>111 → o</li>
           </ul>
-          <p><strong>Result: <code>"Hello"</code></strong></p>
+          <p><strong>Result: <code>&quot;Hello&quot;</code></strong></p>
 
           <h2>Why This Is Useful</h2>
           <p>Decimal to ASCII conversions are useful when dealing with low-level data formats, communication protocols, or debugging output from devices that show ASCII values in numeric form.</p>

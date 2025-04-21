@@ -31,7 +31,7 @@ export default function DecimalToOctalConversionPage() {
           <p>Supports two-way conversion between decimal and octal values.</p>
 
           <h2>Understanding the Conversion</h2>
-          <p>Octal (base-8) uses digits from 0 to 7. It's particularly useful in computing because each octal digit directly represents 3 bits of binary data.</p>
+          <p>Octal (base-8) uses digits from 0 to 7. It&apos;s particularly useful in computing because each octal digit directly represents 3 bits of binary data.</p>
           <p>Example:</p>
           <ul>
             <li>Decimal 64 = Octal 100</li>
@@ -138,7 +138,7 @@ export default function DecimalToOctalConversionPage() {
           </table>
 
           <h2>Why Use Octal?</h2>
-          <p>Octal was historically used in Unix file permissions and in older mainframe computing. While less common than hexadecimal, it's still useful for compactly representing binary data in groups of 3 bits.</p>
+          <p>Octal was historically used in Unix file permissions and in older mainframe computing. While less common than hexadecimal, it&apos;s still useful for compactly representing binary data in groups of 3 bits.</p>
           <p>Example: Unix file permissions like <code>chmod 755</code> are in octal!</p>
         </div>
       </div>

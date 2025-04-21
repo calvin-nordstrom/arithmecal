@@ -32,7 +32,7 @@ export default function DecimalToBinaryConversionPage() {
 
           <h2>Understanding the Conversion</h2>
           <p>Decimal is the standard base-10 number system using digits 0-9. Binary is base-2 and only uses 0 and 1.</p>
-          <p>Each digit in binary represents a power of 2, starting from the right. Here's how the conversion works:</p>
+          <p>Each digit in binary represents a power of 2, starting from the right. Here&apos;s how the conversion works:</p>
           <ul>
             <li>42 in decimal → 101010 in binary</li>
             <li>Explanation: 42 = 32 + 8 + 2 = 2⁵ + 2³ + 2¹</li>

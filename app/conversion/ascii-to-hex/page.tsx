@@ -33,11 +33,11 @@ export default function ASCIIToHexConversionPage() {
 
           <h2>Understanding the Conversion</h2>
           <p>Each ASCII character corresponds to a numeric value, which can be represented in hexadecimal (base-16). You can find these mappings in our <Link href='../reference/ascii-table' target="_blank">ASCII table</Link>.</p>
-          <p>For example, the character "A" corresponds to the decimal value 65, which is <strong>41</strong> in hexadecimal.</p>
-          <p>Hex is commonly used in programming and digital electronics because it's a compact representation of binary data.</p>
+          <p>For example, the character &quot;A&quot; corresponds to the decimal value 65, which is <strong>41</strong> in hexadecimal.</p>
+          <p>Hex is commonly used in programming and digital electronics because it&apos;s a compact representation of binary data.</p>
 
           <h2>Example</h2>
-          <p>Converting the text "Hello" to hexadecimal.</p>
+          <p>Converting the text &quot;Hello&quot; to hexadecimal.</p>
           <table>
             <thead>
               <tr>
