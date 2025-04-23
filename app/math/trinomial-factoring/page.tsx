@@ -1,7 +1,6 @@
 import CalculatorLayout from '@/app/components/CalculatorLayout';
 import KatexRenderer from '@/app/components/KatexRenderer';
 import TrinomialFactoringCalculator from '@/app/components/math/TrinomialFactoringCalculator';
-import Image from 'next/image';
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {

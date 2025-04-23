@@ -1,6 +1,5 @@
 import CalculatorLayout from '@/app/components/CalculatorLayout';
 import KatexRenderer from '@/app/components/KatexRenderer';
-import Image from 'next/image';
 import type { Metadata } from 'next'
 import BaseConverterNavigator from '@/app/components/BaseConverterNavigator';
 import BinaryToDecimalConverter from '@/app/components/conversion/BinaryToDecimalConverter';
