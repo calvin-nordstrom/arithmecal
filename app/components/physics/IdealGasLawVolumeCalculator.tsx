@@ -10,8 +10,8 @@ const config: CalculatorConfig = {
   fields: [
     {
       type: 'field',
-      key: 'p',
-      label: 'Pressure (p)',
+      key: 'P',
+      label: 'Pressure (P)',
       unitOptions: pressureUnits,
       defaultUnit: 'Pa',
       conversionBase: 'Pa'
@@ -23,7 +23,7 @@ const config: CalculatorConfig = {
     },
     {
       type: 'field',
-      key: 't',
+      key: 'T',
       label: 'Temperature (T)',
       unitOptions: temperatureUnits,
       defaultUnit: 'K',
@@ -43,11 +43,11 @@ const config: CalculatorConfig = {
     },
   ],
   formula: (inputs, changedField) => {
-    const { p, n, t } = inputs;
+    const { P, n, T } = inputs;
     let V: number | undefined = undefined;
 
-    if (p > 0 && n > 0 && t > 0) {
-      V = (n * R * t) / p;
+    if (P > 0 && n > 0 && T > 0) {
+      V = (n * R * T) / P;
     }
 
     return {
@@ -57,13 +57,13 @@ const config: CalculatorConfig = {
   },
   validate: (inputs, rawInputs) => {
     const errors: string[] = [];
-    if (rawInputs.p.trim() !== '' && inputs.p <= 0) {
+    if (rawInputs.P.trim() !== '' && inputs.P <= 0) {
       errors.push('Pressure must be positive');
     }
     if (rawInputs.n.trim() !== '' && inputs.n <= 0) {
       errors.push('Amount of substance must be positive');
     }
-    if (rawInputs.t.trim() !== '' && inputs.t <= 0) {
+    if (rawInputs.T.trim() !== '' && inputs.T <= 0) {
       errors.push('Temperature must be positive');
     }
     return errors.length > 0 ? errors : null;
