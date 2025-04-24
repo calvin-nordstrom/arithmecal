@@ -202,7 +202,6 @@ hr {
 .calculator-component {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
 }
 
 .note {
@@ -378,25 +377,25 @@ hr {
 
 /* Dropdown styles */
 
-.binary-dropdown {
-  width: 300px;
+.dropdown-container {
   display: flex;
   gap: 0.5rem;
   padding: 1rem;
   padding-bottom: 1.5rem;
+  margin-bottom: 2rem;
   background-color: var(--calculator-background);
   border: 1px solid var(--calculator-border);
   border-radius: 4px;
   box-shadow: rgba(0, 0, 0, 0.2) 2px 2px 4px;
 }
 
-.dropdown-container {
+.dropdown-item {
   width: 100%;
   display: flex;
   flex-direction: column;
 }
 
-.dropdown-container label {
+.dropdown-item label {
   font: var(--rubik-text);
   font-size: 16px;
   font-weight: 500;
@@ -404,7 +403,7 @@ hr {
   margin-bottom: 0.5rem;
 }
 
-.dropdown-container select {
+.dropdown-item select {
   width: 100%;
 }
 

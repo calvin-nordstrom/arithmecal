@@ -46,8 +46,8 @@ const BinaryDropdown = <T extends string, U extends string>({
   };
 
   return (
-    <div className='binary-dropdown'>
-      <div className='dropdown-container'>
+    <div className='dropdown-container'>
+      <div className='dropdown-item'>
         <label>From</label>
         <select value={localFrom} onChange={handleFromChange}>
           {fromOptions.map((opt) => (
@@ -58,7 +58,7 @@ const BinaryDropdown = <T extends string, U extends string>({
         </select>
       </div>
 
-      <div className='dropdown-container'>
+      <div className='dropdown-item'>
         <label>To</label>
         <select value={localTo} onChange={handleToChange}>
           {toOptions.map((opt) => (
