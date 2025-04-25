@@ -46,27 +46,29 @@ const BinaryDropdown = <T extends string, U extends string>({
   };
 
   return (
-    <div className='dropdown-container'>
-      <div className='dropdown-item'>
-        <label>From</label>
-        <select value={localFrom} onChange={handleFromChange}>
-          {fromOptions.map((opt) => (
-            <option key={opt} value={opt}>
-              {opt.toWellFormed()}
-            </option>
-          ))}
-        </select>
-      </div>
+    <div className='dropdown'>
+      <div className='dropdown-container'>
+        <div className='dropdown-item'>
+          <label>From</label>
+          <select value={localFrom} onChange={handleFromChange}>
+            {fromOptions.map((opt) => (
+              <option key={opt} value={opt}>
+                {opt.toWellFormed()}
+              </option>
+            ))}
+          </select>
+        </div>
 
-      <div className='dropdown-item'>
-        <label>To</label>
-        <select value={localTo} onChange={handleToChange}>
-          {toOptions.map((opt) => (
-            <option key={opt} value={opt}>
-              {opt.toWellFormed()}
-            </option>
-          ))}
-        </select>
+        <div className='dropdown-item'>
+          <label>To</label>
+          <select value={localTo} onChange={handleToChange}>
+            {toOptions.map((opt) => (
+              <option key={opt} value={opt}>
+                {opt.toWellFormed()}
+              </option>
+            ))}
+          </select>
+        </div>
       </div>
     </div>
   );

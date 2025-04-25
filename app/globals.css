@@ -202,6 +202,7 @@ hr {
 .calculator-component {
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
 .note {
@@ -377,8 +378,16 @@ hr {
 
 /* Dropdown styles */
 
+.dropdown {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
 .dropdown-container {
   display: flex;
+  width: calc(100% - 2rem);
   gap: 0.5rem;
   padding: 1rem;
   padding-bottom: 1.5rem;
@@ -500,20 +509,24 @@ input[type=number] {
     align-items: center;
   }
 
+  .calculator-component {
+    width: 90%;
+  }
+
   .calculator {
-    width: 220px;
+    width: 100%;
+  }
+
+  .converter {
+    width: 100%;
+  }
+
+  .dropdown-container {
+    width: 100%;
   }
 
   .calculator-category li {
     font-size: 14px;
-  }
-
-  .binary-dropdown {
-    width: 220px;
-  }
-
-  .converter {
-    width: 220px;
   }
 }
 
