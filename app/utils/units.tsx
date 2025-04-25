@@ -38,3 +38,10 @@ export const volumeFlowRateUnits = getUnits('volumeFlowRate');
 export const illuminanceUnits = getUnits('illuminance');
 export const frequencyUnits = getUnits('frequency');
 export const angleUnits = getUnits('angle');
+
+export const formatUnitDisplay = (abbr: string): string => {
+  return abbr.replace(/(\d)/g, (match) => {
+    const superscripts = '⁰¹²³⁴⁵⁶⁷⁸⁹';
+    return superscripts[parseInt(match)];
+  });
+};

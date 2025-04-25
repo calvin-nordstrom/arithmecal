@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import { formatUnitDisplay } from '../utils/units';
 
 export interface CalculatorOutputProps {
   label: string;
@@ -29,7 +30,7 @@ export default function CalculatorOutput({
           >
             {unitOptions.map((option) => (
               <option key={option} value={option}>
-                {option}
+                {formatUnitDisplay(option)}
               </option>
             ))}
           </select>
