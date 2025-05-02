@@ -4,7 +4,7 @@ import React, { useState, useRef } from 'react';
 import CalculatorInput from './CalculatorInput';
 import CalculatorOutput from './CalculatorOutput';
 import { clamp, countConsecutiveDecimalZeroes, getDecimalCount } from '@/utils/mathUtils';
-const convert = require('convert-units');
+import { cnconvert } from '@/cnconvert/cnconvert';
 
 let input = 0;
 
@@ -115,7 +115,7 @@ export default function Calculator({ config }: CalculatorProps) {
     } else if (!fieldConfig.conversionBase) {
       newReal = parsedValue;
     } else {
-      newReal = convert(parsedValue)
+      newReal = cnconvert(parsedValue)
         .from(newFieldData[key].unit)
         .to(fieldConfig.conversionBase);
     }
@@ -144,7 +144,7 @@ export default function Calculator({ config }: CalculatorProps) {
               ...newFieldData[field.key],
               real: computedValue,
               display: formatValue(
-                convert(computedValue)
+                cnconvert(computedValue)
                   .from(field.conversionBase)
                   .to(newFieldData[field.key].unit)
               )
@@ -186,7 +186,7 @@ export default function Calculator({ config }: CalculatorProps) {
       };
     } else {
       const realValue = newFieldData[key].real;
-      const displayValue = convert(realValue)
+      const displayValue = cnconvert(realValue)
         .from(fieldConfig.conversionBase)
         .to(newUnit);
       newFieldData[key] = {

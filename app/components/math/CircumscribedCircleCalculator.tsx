@@ -2,7 +2,10 @@
 
 import React from 'react';
 import Calculator, { CalculatorConfig } from '@/app/components/Calculator';
-import { lengthUnits, areaUnits } from '@/utils/units';
+import { getUnitsByDimension } from '@/cnconvert/cnconvert';
+
+const lengthUnits = getUnitsByDimension('length');
+const areaUnits = getUnitsByDimension('area');
 
 const config: CalculatorConfig = {
   fields: [

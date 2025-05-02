@@ -2,7 +2,11 @@
 
 import React from 'react';
 import Calculator, { CalculatorConfig } from '@/app/components/Calculator';
-import { pressureUnits, volumeUnits, temperatureUnits } from '@/utils/units';
+import { getUnitsByDimension } from '@/cnconvert/cnconvert';
+
+const pressureUnits = getUnitsByDimension('pressure');
+const volumeUnits = getUnitsByDimension('volume');
+const temperatureUnits = getUnitsByDimension('temperature');
 
 const R = 8.314462618; // J/(mol·K)
 
