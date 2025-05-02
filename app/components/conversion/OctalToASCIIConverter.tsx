@@ -2,7 +2,7 @@
 
 import React from 'react';
 import Converter, { ConverterConfig } from '@/app/components/Converter';
-import { octalToAscii, asciiToOctal } from '@/app/utils/conversionUtils';
+import { octalToAscii, asciiToOctal } from '@/utils/conversionUtils';
 
 const config: ConverterConfig = {
   sideA: {

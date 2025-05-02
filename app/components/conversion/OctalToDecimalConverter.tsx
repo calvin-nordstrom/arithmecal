@@ -2,7 +2,7 @@
 
 import React from 'react';
 import Converter, { ConverterConfig } from '@/app/components/Converter';
-import { octalToDecimal, decimalToOctal } from '@/app/utils/conversionUtils';
+import { octalToDecimal, decimalToOctal } from '@/utils/conversionUtils';
 
 const config: ConverterConfig = {
   sideA: {

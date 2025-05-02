@@ -3,7 +3,7 @@
 import React, { useState, useRef } from 'react';
 import CalculatorInput from './CalculatorInput';
 import CalculatorOutput from './CalculatorOutput';
-import { clamp, countConsecutiveDecimalZeroes, getDecimalCount } from '@/app/utils/mathUtils';
+import { clamp, countConsecutiveDecimalZeroes, getDecimalCount } from '@/utils/mathUtils';
 const convert = require('convert-units');
 
 let input = 0;

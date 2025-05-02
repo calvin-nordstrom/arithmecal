@@ -2,7 +2,7 @@
 
 import React from 'react';
 import Converter, { ConverterConfig } from '@/app/components/Converter';
-import { binaryToOctal, octalToBinary } from '@/app/utils/conversionUtils';
+import { binaryToOctal, octalToBinary } from '@/utils/conversionUtils';
 
 const config: ConverterConfig = {
   sideA: {

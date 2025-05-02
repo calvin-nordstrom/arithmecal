@@ -2,7 +2,7 @@
 
 import React from 'react';
 import Converter, { ConverterConfig } from '@/app/components/Converter';
-import { decimalToBinary, binaryToDecimal } from '@/app/utils/conversionUtils';
+import { decimalToBinary, binaryToDecimal } from '@/utils/conversionUtils';
 
 const config: ConverterConfig = {
   sideA: {

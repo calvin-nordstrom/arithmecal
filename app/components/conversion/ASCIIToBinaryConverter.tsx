@@ -2,7 +2,7 @@
 
 import React from 'react';
 import Converter, { ConverterConfig } from '@/app/components/Converter';
-import { asciiToBinary, binaryToAscii } from '@/app/utils/conversionUtils';
+import { asciiToBinary, binaryToAscii } from '@/utils/conversionUtils';
 
 const config: ConverterConfig = {
   sideA: {

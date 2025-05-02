@@ -2,7 +2,7 @@
 
 import React from 'react';
 import Converter, { ConverterConfig } from '@/app/components/Converter';
-import { decimalToHex, hexToDecimal } from '@/app/utils/conversionUtils';
+import { decimalToHex, hexToDecimal } from '@/utils/conversionUtils';
 
 const config: ConverterConfig = {
   sideA: {

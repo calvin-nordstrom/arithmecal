@@ -2,7 +2,7 @@
 
 import React from 'react';
 import Converter, { ConverterConfig } from '@/app/components/Converter';
-import { hexToBinary, binaryToHex } from '@/app/utils/conversionUtils';
+import { hexToBinary, binaryToHex } from '@/utils/conversionUtils';
 
 const config: ConverterConfig = {
   sideA: {

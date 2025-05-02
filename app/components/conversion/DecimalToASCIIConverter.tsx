@@ -2,7 +2,7 @@
 
 import React from 'react';
 import Converter, { ConverterConfig } from '@/app/components/Converter';
-import { decimalToAscii, asciiToDecimal } from '@/app/utils/conversionUtils';
+import { decimalToAscii, asciiToDecimal } from '@/utils/conversionUtils';
 
 const config: ConverterConfig = {
   sideA: {

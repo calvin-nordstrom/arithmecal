@@ -2,7 +2,7 @@
 
 import React from 'react';
 import Converter, { ConverterConfig } from '@/app/components/Converter';
-import { hexToAscii, asciiToHex } from '@/app/utils/conversionUtils';
+import { hexToAscii, asciiToHex } from '@/utils/conversionUtils';
 
 const config: ConverterConfig = {
   sideA: {

@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { formatUnitDisplay } from '../utils/units';
+import { formatUnitDisplay } from '@/utils/units';
 
 export interface CalculatorOutputProps {
   label: string;

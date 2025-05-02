@@ -39,6 +39,31 @@ export const illuminanceUnits = getUnits('illuminance');
 export const frequencyUnits = getUnits('frequency');
 export const angleUnits = getUnits('angle');
 
+// console.log(lengthUnits);
+// console.log(areaUnits);
+// console.log(massUnits);
+// console.log(volumeUnits);
+// console.log(eachUnits);
+// console.log(temperatureUnits);
+// console.log(timeUnits);
+// console.log(digitalUnits);
+// console.log(partsPerUnits);
+// console.log(speedUnits);
+// console.log(paceUnits);
+// console.log(pressureUnits);
+// console.log(currentUnits);
+// console.log(voltageUnits);
+// console.log(powerUnits);
+// console.log(reactivePowerUnits);
+// console.log(apparentPowerUnits);
+// console.log(energyUnits);
+// console.log(reactiveEnergyUnits);
+// console.log(volumeFlowRateUnits);
+// console.log(illuminanceUnits);
+// console.log(frequencyUnits);
+// console.log(angleUnits);
+console.log(convert().measures());
+
 export const formatUnitDisplay = (abbr: string): string => {
   return abbr.replace(/(\d)/g, (match) => {
     const superscripts = '⁰¹²³⁴⁵⁶⁷⁸⁹';
