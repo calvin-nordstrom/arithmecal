@@ -21,14 +21,24 @@ export const lengthUnits: Record<string, UnitDefinition> = {
     toAnchor: 0.001,
     dimension: "length"
   },
+  um: {
+    name: "micrometer",
+    toAnchor: 0.000001,
+    dimension: "length"
+  },
+  nm: {
+    name: "nanometer",
+    toAnchor: 1e-9,
+    dimension: "length"
+  },
+  pm: {
+    name: "picometer",
+    toAnchor: 1e-12,
+    dimension: "length"
+  },
   ft: {
     name: "foot",
     toAnchor: 0.3048,
-    dimension: "length"
-  },
-  in: {
-    name: "inch",
-    toAnchor: 0.0254,
     dimension: "length"
   },
   yd: {
@@ -36,9 +46,19 @@ export const lengthUnits: Record<string, UnitDefinition> = {
     toAnchor: 0.9144,
     dimension: "length"
   },
+  in: {
+    name: "inch",
+    toAnchor: 0.0254,
+    dimension: "length"
+  },
   mi: {
     name: "mile",
     toAnchor: 1609.34,
     dimension: "length"
-  }
+  },
+  nmi: {
+    name: "nautical mile",
+    toAnchor: 1852,
+    dimension: "length"
+  },
 };
