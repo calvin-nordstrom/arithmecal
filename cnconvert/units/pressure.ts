@@ -36,9 +36,14 @@ export const pressureUnits: Record<string, UnitDefinition> = {
     toAnchor: 6_894.76,
     dimension: "pressure"
   },
-  ksi: {
-    name: "kilopound per square inch",
-    toAnchor: 6_894_760,
+  atm: {
+    name: "atmosphere",
+    toAnchor: 101325,
     dimension: "pressure"
-  }
+  },
+  mmHg: {
+    name: "millimeter of mercury",
+    toAnchor: 133.322,
+    dimension: "pressure"
+  },
 };
