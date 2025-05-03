@@ -6,6 +6,11 @@ export const areaUnits: Record<string, UnitDefinition> = {
     toAnchor: 1,
     dimension: "area"
   },
+  km2: {
+    name: "square kilometer",
+    toAnchor: 1_000_000,
+    dimension: "area"
+  },
   cm2: {
     name: "square centimeter",
     toAnchor: 0.0001,
@@ -31,6 +36,11 @@ export const areaUnits: Record<string, UnitDefinition> = {
     toAnchor: 0.836127,
     dimension: "area"
   },
+  mi2: {
+    name: "square mile",
+    toAnchor: 2_589_988.110336,
+    dimension: "area"
+  },
   acre: {
     name: "acre",
     toAnchor: 4046.86,
@@ -40,5 +50,5 @@ export const areaUnits: Record<string, UnitDefinition> = {
     name: "hectare",
     toAnchor: 10000,
     dimension: "area"
-  }
+  },
 };
