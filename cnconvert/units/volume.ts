@@ -1,9 +1,14 @@
 import { UnitDefinition } from "../unit";
 
 export const volumeUnits: Record<string, UnitDefinition> = {
-  mm3: {
-    name: "cubic millimeter",
-    toAnchor: 1e-9,
+  m3: {
+    name: "cubic meter",
+    toAnchor: 1,
+    dimension: "volume"
+  },
+  km3: {
+    name: "cubic kilometer",
+    toAnchor: 1e9,
     dimension: "volume"
   },
   cm3: {
@@ -11,19 +16,14 @@ export const volumeUnits: Record<string, UnitDefinition> = {
     toAnchor: 1e-6,
     dimension: "volume"
   },
+  mm3: {
+    name: "cubic millimeter",
+    toAnchor: 1e-9,
+    dimension: "volume"
+  },
   ml: {
     name: "milliliter",
     toAnchor: 1e-6,
-    dimension: "volume"
-  },
-  cl: {
-    name: "centiliter",
-    toAnchor: 1e-5,
-    dimension: "volume"
-  },
-  dl: {
-    name: "deciliter",
-    toAnchor: 1e-4,
     dimension: "volume"
   },
   l: {
@@ -36,50 +36,6 @@ export const volumeUnits: Record<string, UnitDefinition> = {
     toAnchor: 1,
     dimension: "volume"
   },
-  m3: {
-    name: "cubic meter",
-    toAnchor: 1,
-    dimension: "volume"
-  },
-  km3: {
-    name: "cubic kilometer",
-    toAnchor: 1e9,
-    dimension: "volume"
-  },
-
-  // Swedish volume units
-  krm: {
-    name: "kryddmått",
-    toAnchor: 1e-6,
-    dimension: "volume"
-  },
-  tsk: {
-    name: "tesked",
-    toAnchor: 5e-6,
-    dimension: "volume"
-  },
-  msk: {
-    name: "matsked",
-    toAnchor: 15e-6,
-    dimension: "volume"
-  },
-  kkp: {
-    name: "kaffekopp",
-    toAnchor: 150e-6,
-    dimension: "volume"
-  },
-  glas: {
-    name: "glas",
-    toAnchor: 200e-6,
-    dimension: "volume"
-  },
-  kanna: {
-    name: "kanna",
-    toAnchor: 2.617e-3,
-    dimension: "volume"
-  },
-
-  // US customary units
   tsp: {
     name: "teaspoon",
     toAnchor: 4.92892159375e-6,
@@ -88,11 +44,6 @@ export const volumeUnits: Record<string, UnitDefinition> = {
   Tbs: {
     name: "tablespoon",
     toAnchor: 1.478676478125e-5,
-    dimension: "volume"
-  },
-  in3: {
-    name: "cubic inch",
-    toAnchor: 1.6387064e-5,
     dimension: "volume"
   },
   "fl-oz": {
@@ -129,5 +80,10 @@ export const volumeUnits: Record<string, UnitDefinition> = {
     name: "cubic yard",
     toAnchor: 0.764554857984,
     dimension: "volume"
-  }
+  },
+  in3: {
+    name: "cubic inch",
+    toAnchor: 1.6387064e-5,
+    dimension: "volume"
+  },
 };
