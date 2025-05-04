@@ -23,7 +23,7 @@ export const areaUnits: Record<string, UnitDefinition> = {
   },
   ft2: {
     name: "square foot",
-    toAnchor: 0.092903,
+    toAnchor: 0.09290304,
     dimension: "area"
   },
   in2: {
@@ -33,7 +33,7 @@ export const areaUnits: Record<string, UnitDefinition> = {
   },
   yd2: {
     name: "square yard",
-    toAnchor: 0.836127,
+    toAnchor: 0.83612736,
     dimension: "area"
   },
   mi2: {
@@ -43,7 +43,7 @@ export const areaUnits: Record<string, UnitDefinition> = {
   },
   acre: {
     name: "acre",
-    toAnchor: 4046.86,
+    toAnchor: 4046.8564224,
     dimension: "area"
   },
   ha: {
