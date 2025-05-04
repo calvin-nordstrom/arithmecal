@@ -4,6 +4,7 @@ import { apparentPowerUnits } from "./apparentPower";
 import { areaUnits } from "./area";
 import { chargeUnits } from "./charge";
 import { currentUnits } from "./current";
+import { densityUnits } from "./density";
 import { digitalUnits } from "./digital";
 import { energyUnits } from "./energy";
 import { forceUnits } from "./force";
@@ -33,6 +34,7 @@ export const allUnits = {
   ...areaUnits,
   ...chargeUnits,
   ...currentUnits,
+  ...densityUnits,
   ...digitalUnits,
   ...energyUnits,
   ...forceUnits,
