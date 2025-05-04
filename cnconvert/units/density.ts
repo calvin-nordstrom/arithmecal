@@ -1,11 +1,6 @@
 import { UnitDefinition } from "../unit";
 
 export const densityUnits: Record<string, UnitDefinition> = {
-  "t/m3": {
-    name: "tonne per cubic meter",
-    toAnchor: 1000,
-    dimension: "density"
-  },
   "kg/m3": {
     name: "kilogram per cubic meter",
     toAnchor: 1,
@@ -59,6 +54,11 @@ export const densityUnits: Record<string, UnitDefinition> = {
   "oz/in3": {
     name: "ounce per cubic inch",
     toAnchor: 1729.994,
+    dimension: "density"
+  },
+  "t/m3": {
+    name: "tonne per cubic meter",
+    toAnchor: 1000,
     dimension: "density"
   },
 };
