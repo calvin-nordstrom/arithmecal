@@ -11,7 +11,7 @@ export const chargeUnits: Record<string, UnitDefinition> = {
     toAnchor: 0.001,
     dimension: "charge"
   },
-  uC: {
+  µC: {
     name: "microcoulomb",
     toAnchor: 1e-6,
     dimension: "charge"

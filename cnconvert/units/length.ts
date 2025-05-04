@@ -21,7 +21,7 @@ export const lengthUnits: Record<string, UnitDefinition> = {
     toAnchor: 0.001,
     dimension: "length"
   },
-  um: {
+  µm: {
     name: "micrometer",
     toAnchor: 0.000001,
     dimension: "length"

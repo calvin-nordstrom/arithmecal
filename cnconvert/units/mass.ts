@@ -16,7 +16,7 @@ export const massUnits: Record<string, UnitDefinition> = {
     toAnchor: 0.000001,
     dimension: "mass"
   },
-  ug: {
+  µg: {
     name: "microgram",
     toAnchor: 1e-9,
     dimension: "mass"

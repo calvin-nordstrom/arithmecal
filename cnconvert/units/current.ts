@@ -11,7 +11,7 @@ export const currentUnits: Record<string, UnitDefinition> = {
     toAnchor: 0.001,
     dimension: "current"
   },
-  uA: {
+  µA: {
     name: "microampere",
     toAnchor: 1e-6,
     dimension: "current"

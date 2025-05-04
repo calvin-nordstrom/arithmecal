@@ -11,7 +11,7 @@ export const timeUnits: Record<string, UnitDefinition> = {
     toAnchor: 1e-3,
     dimension: "time"
   },
-  us: {
+  µs: {
     name: "microsecond",
     toAnchor: 1e-6,
     dimension: "time"
