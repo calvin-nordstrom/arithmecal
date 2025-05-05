@@ -3,10 +3,14 @@
 import React, { useState } from 'react';
 
 interface DropdownProps {
+  label?: string,
   config: { label: string; component: React.ReactNode }[];
 }
 
-export default function Dropdown({ config }: DropdownProps) {
+export default function Dropdown({ 
+  label = "Solve for", 
+  config 
+}: DropdownProps) {
   const [selectedIndex, setSelectedIndex] = useState(0);
 
   const handleSelectionChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
@@ -17,7 +21,7 @@ export default function Dropdown({ config }: DropdownProps) {
     <div className='dropdown'>
       <div className='dropdown-container'>
         <div className='dropdown-item'>
-          <label>Solve for</label>
+          <label>{label}</label>
           <select
             value={selectedIndex}
             onChange={handleSelectionChange}
