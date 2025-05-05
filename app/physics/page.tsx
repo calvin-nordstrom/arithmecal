@@ -18,6 +18,11 @@ export default function PhysicsCalculatorsPage() {
           <li><Link href='physics/density'>Density Calculator</Link></li>
         </ul>
 
+        <h2>Motion and Kinematics Calculators</h2>
+        <ul>
+          <li><Link href='physics/acceleration'>Acceleration Calculator</Link></li>
+        </ul>
+
         <h2>Thermodynamics Calculators</h2>
         <ul>
           <li><Link href='physics/ideal-gas-law'>Ideal Gas Law Calculator</Link></li>
