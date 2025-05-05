@@ -36,7 +36,7 @@ export default function DensityCalculatorPage() {
           <Dropdown config={dropdownConfig} />
         </div>
         <div className='calculator-description'>
-        <p>This calculator allows you to use the <strong>density formula</strong> to solve for mass, volume, or density when the other two values are known.</p>
+          <p>This calculator allows you to use the <strong>density formula</strong> to solve for mass, volume, or density when the other two values are known.</p>
           <p>The relationship between these variables is expressed by the formula:</p>
           <div className='katex-block'>
             <KatexRenderer formula='\rho = \frac{m}{V}' />
