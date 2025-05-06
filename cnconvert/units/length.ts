@@ -36,6 +36,11 @@ export const lengthUnits: Record<string, UnitDefinition> = {
     toAnchor: 1e-12,
     dimension: "length"
   },
+  Å: {
+    name: "angstrom",
+    toAnchor: 1e-10,
+    dimension: "length"
+  },
   ft: {
     name: "foot",
     toAnchor: 0.3048,
