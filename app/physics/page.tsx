@@ -21,6 +21,7 @@ export default function PhysicsCalculatorsPage() {
         <h2>Motion and Kinematics Calculators</h2>
         <ul>
           <li><Link href='physics/acceleration'>Acceleration Calculator</Link></li>
+          <li><Link href='physics/free-fall'>Free Fall Calculator</Link></li>
         </ul>
 
         <h2>Thermodynamics Calculators</h2>
