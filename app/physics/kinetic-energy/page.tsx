@@ -38,7 +38,7 @@ export default function KineticEnergyCalculatorPage() {
         <div className='calculator-description'>
           <p>This calculator helps you solve for <strong>kinetic energy</strong>, <strong>mass</strong>, or <strong>velocity</strong> using the kinetic energy formula:</p>
           <div className='katex-block'>
-            <KatexRenderer formula='KE = \frac{1}{2}mv^2' />
+            <KatexRenderer formula='KE=\frac{1}{2}mv^2' />
           </div>
           <p>Where:</p>
           <ul>
@@ -63,7 +63,7 @@ export default function KineticEnergyCalculatorPage() {
           <h2>Rearranged Forms</h2>
           <p>The following kinetic energy formula contains three variables that can each be represented in terms of each other.</p>
           <div className='katex-block'>
-            <KatexRenderer formula='KE = \frac{1}{2}mv^2' />
+            <KatexRenderer formula='KE=\frac{1}{2}mv^2' />
           </div>
           <h3>1. Solving for Mass</h3>
           <div className='katex-block'>
