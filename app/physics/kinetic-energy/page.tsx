@@ -61,7 +61,7 @@ export default function KineticEnergyCalculatorPage() {
           <p>It is a form of mechanical energy and is always a positive value or zero (an object at rest has zero kinetic energy).</p>
 
           <h2>Rearranged Forms</h2>
-          <p>The following kinetic energy formula contains three variables that can each be represented in terms of each other.</p>
+          <p>The following kinetic energy formula contains two variables that can each be represented in terms of each other.</p>
           <div className='katex-block'>
             <KatexRenderer formula='KE=\frac{1}{2}mv^2' />
           </div>
