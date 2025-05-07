@@ -106,7 +106,7 @@ export default function FreeFallCalculatorPage() {
 
           <h2>Understanding Free Fall</h2>
           <p><strong>Free fall</strong> describes the motion of an object under the sole influence of gravity, with no air resistance. All objects, regardless of mass, accelerate downward at approximately 9.81 m/s<sup>2</sup> near Earth&apos;s surface.</p>
-          <p>If an object is dropped from rest, it accelerates continuously, increasing its speed until it hits the ground. If it's thrown upward or downward, initial velocity must be accounted for.</p>
+          <p>If an object is dropped from rest, it accelerates continuously, increasing its speed until it hits the ground. If it&apos;s thrown upward or downward, initial velocity must be accounted for.</p>
 
           <h2>Applications of Free Fall Calculations</h2>
           <p>Free fall calculations are fundamental in many areas of physics and engineering. Practical applications include:</p>
