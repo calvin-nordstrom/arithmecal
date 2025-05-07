@@ -13,6 +13,11 @@ export default function PhysicsCalculatorsPage() {
     <CalculatorLayout>
       <h1>Physics Calculators</h1>
       <div className='calculator-category'>
+        <h2>Energy, Power, and Work Calculators</h2>
+        <ul>
+          <li><Link href='physics/kinetic-energy'>Kinetic Energy Calculator</Link></li>
+        </ul>
+
         <h2>Materials Calculators</h2>
         <ul>
           <li><Link href='physics/density'>Density Calculator</Link></li>
