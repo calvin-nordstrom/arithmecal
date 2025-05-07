@@ -2,7 +2,7 @@ import CalculatorLayout from '@/app/components/CalculatorLayout';
 import KatexRenderer from '@/app/components/KatexRenderer';
 import type { Metadata } from 'next'
 import Dropdown from '@/app/components/Dropdown';
-import DensityDensityCalculator from '@/app/components/physics/DensityDensityCalculator';
+import DensityCalculator from '@/app/components/physics/DensityCalculator';
 import DensityVolumeCalculator from '@/app/components/physics/DensityVolumeCalculator';
 import DensityMassCalculator from '@/app/components/physics/DensityMassCalculator';
 
@@ -16,7 +16,7 @@ export default function DensityCalculatorPage() {
   const dropdownConfig = [
     {
       label: 'Density (ρ)',
-      component: <DensityDensityCalculator />
+      component: <DensityCalculator />
     },
     {
       label: 'Volume (V)',
