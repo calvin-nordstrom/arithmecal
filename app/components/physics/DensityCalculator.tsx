@@ -64,6 +64,6 @@ const config: CalculatorConfig = {
   },
 };
 
-export default function DensityDensityCalculator() {
+export default function DensityCalculator() {
   return <Calculator config={config} />;
 }
