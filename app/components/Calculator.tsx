@@ -18,6 +18,7 @@ export interface FieldElement {
   type: 'field';
   key: string;
   label: string;
+  defaultValue?: number;
   unitOptions?: string[];
   defaultUnit?: string;
   conversionBase?: string;
@@ -74,8 +75,16 @@ export default function Calculator({ config }: CalculatorProps) {
   );
 
   const initialState = fieldConfigs.reduce((acc, field) => {
-    const initialReal = field.isOutput ? 0 : NaN;
-    const initialDisplay = field.isOutput ? '0' : '';
+    const initialReal = field.isOutput
+      ? 0
+      : field.defaultValue !== undefined
+        ? field.defaultValue
+        : NaN;
+    const initialDisplay = field.isOutput
+      ? '0'
+      : field.defaultValue !== undefined
+        ? formatValue(field.defaultValue)
+        : '';
     acc[field.key] = {
       real: initialReal,
       display: initialDisplay,
@@ -161,7 +170,7 @@ export default function Calculator({ config }: CalculatorProps) {
         input = parsedValue;
       }
     });
-    
+
     setFieldData(newFieldData);
   };
 
@@ -252,5 +261,5 @@ export default function Calculator({ config }: CalculatorProps) {
         <button className='calculator-control-button' onClick={handleReset}>Reset All</button>
       </div>
     </div>
-  );  
+  );
 }
