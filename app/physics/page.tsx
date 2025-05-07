@@ -16,6 +16,7 @@ export default function PhysicsCalculatorsPage() {
         <h2>Energy, Power, and Work Calculators</h2>
         <ul>
           <li><Link href='physics/kinetic-energy'>Kinetic Energy Calculator</Link></li>
+          <li><Link href='physics/potential-energy'>Potential Energy Calculator</Link></li>
         </ul>
 
         <h2>Materials Calculators</h2>
