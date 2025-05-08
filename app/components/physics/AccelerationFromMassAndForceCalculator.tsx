@@ -61,6 +61,6 @@ const config: CalculatorConfig = {
   },
 };
 
-export default function AccelerationByMassAndForceCalculator() {
+export default function AccelerationFromMassAndForceCalculator() {
   return <Calculator config={config} />;
 }
