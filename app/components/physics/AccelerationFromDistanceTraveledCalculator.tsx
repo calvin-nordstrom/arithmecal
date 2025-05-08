@@ -70,6 +70,6 @@ const config: CalculatorConfig = {
   },
 };
 
-export default function AccelerationByDistanceTraveledCalculator() {
+export default function AccelerationFromDistanceTraveledCalculator() {
   return <Calculator config={config} />;
 }
