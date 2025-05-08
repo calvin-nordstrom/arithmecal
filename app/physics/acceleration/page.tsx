@@ -2,9 +2,9 @@ import CalculatorLayout from '@/app/components/CalculatorLayout';
 import KatexRenderer from '@/app/components/KatexRenderer';
 import type { Metadata } from 'next'
 import Dropdown from '@/app/components/Dropdown';
-import AccelerationBySpeedDifferenceCalculator from '@/app/components/physics/AccelerationBySpeedDifferenceCalculator';
-import AccelerationByDistanceTraveledCalculator from '@/app/components/physics/AccelerationByDistanceTraveledCalculator';
-import AccelerationByMassAndForceCalculator from '@/app/components/physics/AccelerationByMassAndForceCalculator';
+import AccelerationFromSpeedDifferenceCalculator from '@/app/components/physics/AccelerationFromSpeedDifferenceCalculator';
+import AccelerationFromDistanceTraveledCalculator from '@/app/components/physics/AccelerationFromDistanceTraveledCalculator';
+import AccelerationFromMassAndForceCalculator from '@/app/components/physics/AccelerationFromMassAndForceCalculator';
 
 export const metadata: Metadata = {
   title: 'Acceleration Calculator',
@@ -16,15 +16,15 @@ export default function AccelerationCalculatorPage() {
   const dropdownConfig = [
     {
       label: 'Speed difference',
-      component: <AccelerationBySpeedDifferenceCalculator />
+      component: <AccelerationFromSpeedDifferenceCalculator />
     },
     {
       label: 'Distance traveled',
-      component: <AccelerationByDistanceTraveledCalculator />
+      component: <AccelerationFromDistanceTraveledCalculator />
     },
     {
       label: 'Mass and force',
-      component: <AccelerationByMassAndForceCalculator />
+      component: <AccelerationFromMassAndForceCalculator />
     },
   ];
 
