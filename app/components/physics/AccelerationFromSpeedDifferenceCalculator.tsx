@@ -69,6 +69,6 @@ const config: CalculatorConfig = {
   },
 };
 
-export default function AccelerationBySpeedDifferenceCalculator() {
+export default function AccelerationFromSpeedDifferenceCalculator() {
   return <Calculator config={config} />;
 }
