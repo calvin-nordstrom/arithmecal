@@ -94,7 +94,7 @@ export default function Converter({ config }: ConverterProps) {
       </div>
       <hr />
       <div className='calculator-controls'>
-        <button className='calculator-control-button' onClick={handleReset}>Reset All</button>
+        <button onClick={handleReset}>Reset All</button>
       </div>
     </div>
   );
