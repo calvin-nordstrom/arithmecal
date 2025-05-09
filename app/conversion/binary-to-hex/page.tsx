@@ -5,8 +5,8 @@ import BinaryToHexConverter from '@/app/components/conversion/BinaryToHexConvert
 
 export const metadata: Metadata = {
   title: 'Binary to Hex Conversion',
-  description: 'Arithmecal binary to hex conversion',
-  keywords: '',
+  description: 'Convert binary numbers to hexadecimal and vice versa using Arithmecal’s calculator. Understand 4-bit binary to hex mapping,  examples, and its importance.',
+  keywords: 'binary to hex, hex to binary, binary converter, hexadecimal calculator, base-2 to base-16, hex digits, binary hex conversion, 4-bit binary mapping, hex values in computing',
 }
 
 export default function BinaryToHexConversionPage() {
