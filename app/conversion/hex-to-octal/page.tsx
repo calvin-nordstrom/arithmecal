@@ -5,8 +5,8 @@ import HexToOctalConverter from '@/app/components/conversion/HexToOctalConverter
 
 export const metadata: Metadata = {
   title: 'Hex to Octal Conversion',
-  description: 'Arithmecal hex to octal conversion',
-  keywords: '',
+  description: 'Convert hexadecimal to octal and vice versa with Arithmecal’s Hex to Octal converter. Ideal for developers, programmers, and tech enthusiasts.',
+  keywords: 'hex to octal, octal to hex, hex conversion, octal conversion, number system conversion, binary to octal, Arithmecal',
 };
 
 export default function HexToOctalConversionPage() {
