@@ -5,8 +5,8 @@ import DecimalToHexConverter from '@/app/components/conversion/DecimalToHexConve
 
 export const metadata: Metadata = {
   title: 'Decimal to Hex Conversion',
-  description: 'Arithmecal decimal to hex conversion',
-  keywords: '',
+  description: 'Convert decimal numbers to hexadecimal and vice versa with Arithmecal’s easy-to-use tool. Understand hexadecimal conversion for programming and digital systems.',
+  keywords: 'decimal to hex, hex to decimal, decimal hexadecimal converter, number conversion tool, hexadecimal conversion, Arithmecal',
 };
 
 export default function DecimalToHexConversionPage() {
