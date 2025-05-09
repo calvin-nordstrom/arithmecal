@@ -4,11 +4,11 @@ import AdPanelRight from '@/app/components/AdPanelRight';
 import Footer from '@/app/components/Footer';
 import React from 'react';
 
-interface CalculatorLayoutProps {
+interface ReferenceLayoutProps {
   children: React.ReactNode;
 }
 
-export default function CalculatorLayout({ children }: CalculatorLayoutProps) {
+export default function ReferenceLayout({ children }: ReferenceLayoutProps) {
   return (
     <>
       <div className='top'>
