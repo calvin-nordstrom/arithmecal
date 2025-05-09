@@ -6,8 +6,8 @@ import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'ASCII to Octal Conversion',
-  description: 'Arithmecal ASCII to octal conversion',
-  keywords: '',
+  description: 'Convert ASCII text to octal numbers (base-8) and vice versa with Arithmecal’s free online converter. Includes examples, explanations, and ASCII reference.',
+  keywords: 'ASCII to octal, octal to ASCII, ASCII octal converter, text to octal, octal conversion tool, online ASCII converter, ASCII table reference',
 }
 
 export default function ASCIIToOctalConversionPage() {
