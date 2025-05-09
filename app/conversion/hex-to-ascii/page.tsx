@@ -6,8 +6,8 @@ import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'Hex to ASCII Conversion',
-  description: 'Arithmecal hex to ASCII conversion',
-  keywords: '',
+  description: 'Convert hexadecimal values to ASCII text and vice versa with Arithmecal’s Hex to ASCII conversion tool. Ideal for decoding and analyzing data.',
+  keywords: 'hex to ASCII, ASCII to hex, hex ASCII converter, hex conversion, ASCII text converter, Arithmecal',
 };
 
 export default function HexToASCIIConversionPage() {
