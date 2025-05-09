@@ -69,7 +69,7 @@ export default function PotentialEnergyCalculatorPage() {
           <h3>Why It Matters</h3>
           <ul>
             <li>Potential energy is a key concept in mechanics and conservation of energy.</li>
-            <li>It's used in physics, engineering, structural design, and energy systems.</li>
+            <li>It&apos;s used in physics, engineering, structural design, and energy systems.</li>
             <li>Real-world applications include roller coasters, cranes, and hydroelectric power.</li>
           </ul>
 
