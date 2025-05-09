@@ -6,8 +6,8 @@ import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'Binary to ASCII Conversion',
-  description: 'Arithmecal binary to ASCII conversion',
-  keywords: '',
+  description: 'Convert binary values to ASCII characters and ASCII text to binary with Arithmecal’s accurate tool. Supports 8-bit binary groups and bidirectional conversion.',
+  keywords: 'binary to ASCII, ASCII to binary, binary text converter, 8-bit binary ASCII, ASCII table reference, binary decoder, text to binary, binary character converter',
 }
 
 export default function BinaryToASCIIConversionPage() {
