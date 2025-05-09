@@ -5,8 +5,8 @@ import DecimalToBinaryConverter from '@/app/components/conversion/DecimalToBinar
 
 export const metadata: Metadata = {
   title: 'Decimal to Binary Conversion',
-  description: 'Arithmecal decimal to binary conversion',
-  keywords: '',
+  description: 'Convert decimal numbers to binary and vice versa with Arithmecal’s easy-to-use converter. Understand binary representation for programming and digital systems.',
+  keywords: 'decimal to binary, binary to decimal, decimal binary converter, number conversion tool, binary conversion, Arithmecal',
 };
 
 export default function DecimalToBinaryConversionPage() {
