@@ -151,6 +151,34 @@ hr {
   margin-bottom: 1rem;
 }
 
+label {
+  font: var(--rubik-text);
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+input {
+  flex-grow: 1;
+  font: var(--rubik-text);
+  font-size: 20px;
+  font-weight: 350;
+  padding: 0.5rem;
+  border: 1px solid var(--calculator-enabled-border);
+  border-radius: 4px;
+  background-color: var(--calculator-input-background);
+}
+
+textarea {
+  font: var(--rubik-text);
+  font-size: 16px;
+  font-weight: 350;
+  padding: 0.5rem;
+  border: 1px solid var(--calculator-enabled-border);
+  border-radius: 4px;
+  background-color: var(--calculator-input-background);
+}
+
 .center-image {
   display: flex;
   justify-content: center;
@@ -283,14 +311,6 @@ hr {
 
 .calculator input {
   width: 0;
-  flex-grow: 1;
-  font: var(--rubik-text);
-  font-size: 20px;
-  font-weight: 350;
-  padding: 0.5rem;
-  border: 1px solid var(--calculator-enabled-border);
-  border-radius: 4px;
-  background-color: var(--calculator-input-background);
 }
 
 .calculator label {
@@ -351,13 +371,7 @@ hr {
 }
 
 .converter textarea {
-  font: var(--rubik-text);
-  font-size: 16px;
-  font-weight: 350;
-  padding: 0.5rem;
-  border: 1px solid var(--calculator-enabled-border);
-  border-radius: 4px;
-  background-color: var(--calculator-input-background);
+  width: calc(100% - 1rem);
   resize: vertical;
 }
 
@@ -488,6 +502,34 @@ input[type=number] {
   gap: 2rem;
 }
 
+/* Contact form styles */
+
+.contact {
+  margin-top: 2rem;
+  align-self: center;
+}
+
+.contact-form-container {
+  padding: 1rem;
+  margin-bottom: 4rem;
+  background-color: var(--calculator-background);
+  border: 1px solid var(--calculator-border);
+  border-radius: 4px;
+  box-shadow: rgba(0, 0, 0, 0.2) 2px 2px 4px;
+}
+
+.contact-form-container form {
+  padding-top: 1rem;
+  padding-right: 1rem;
+  padding-bottom: 1rem;
+}
+
+.contact-form-container input, textarea {
+  width: 100%;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+}
+
 /* Media width dependent styles */
 
 /* Extra Small (Phones) */
@@ -585,5 +627,9 @@ input[type=number] {
 
   .reference-content {
     width: 1180px;
+  }
+
+  .contact {
+    width: 880px;
   }
 }
