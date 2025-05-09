@@ -6,8 +6,8 @@ import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'ASCII to Decimal Conversion',
-  description: 'Arithmecal ASCII to decimal conversion',
-  keywords: '',
+  description: 'Use Arithmecal’s ASCII to decimal converter to convert plain text to decimal values or vice versa. Includes examples and a link to the full ASCII table.',
+  keywords: 'ASCII to decimal, decimal to ASCII, ASCII converter, text to decimal, decimal code converter, ASCII table reference, online ASCII converter',
 }
 
 export default function ASCIIToDecimalConversionPage() {
