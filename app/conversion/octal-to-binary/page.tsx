@@ -5,8 +5,8 @@ import OctalToBinaryConverter from '@/app/components/conversion/OctalToBinaryCon
 
 export const metadata: Metadata = {
   title: 'Octal to Binary Conversion',
-  description: 'Arithmecal octal to binary conversion',
-  keywords: '',
+  description: 'Convert octal (base-8) values to binary (base-2) numbers with Arithmecal’s Octal to Binary converter. Useful for programming, electronics, and digital systems.',
+  keywords: 'octal to binary, octal conversion, binary conversion, number system conversion, octal to binary converter, digital systems, electronics, programming',
 };
 
 export default function OctalToBinaryConversionPage() {
