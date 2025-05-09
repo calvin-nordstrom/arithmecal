@@ -4,9 +4,9 @@ import CalculatorLayout from '../components/CalculatorLayout';
 
 export const metadata: Metadata = {
   title: 'Converters',
-  description: 'Arithmecal converters',
-  keywords: '',
-}
+  description: 'Explore a wide range of number system converters on Arithmecal, including ASCII, binary, decimal, hexadecimal, and octal conversions.',
+  keywords: 'number system converters, ASCII to binary, binary to decimal, hexadecimal conversion, decimal to octal, radix conversion tools, online conversion tool',
+};
 
 export default function ConvertersPage() {
   return (
