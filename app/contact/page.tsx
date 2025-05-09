@@ -6,9 +6,8 @@ import SuggestUnitForm from '../components/contact/SuggestUnitForm';
 
 export const metadata: Metadata = {
   title: 'Contact Us',
-  description: 'Arithmecal contact us page',
-  keywords: '',
-  formatDetection: { telephone: false, },
+  description: 'Have feedback, found an error, or want to suggest a new calculator or unit? Use our contact forms to reach the Arithmecal team.',
+  keywords: 'contact Arithmecal, feedback form, report error, suggest calculator, suggest unit, calculator suggestions, unit suggestions',
 }
 
 export default function ContactPage() {
