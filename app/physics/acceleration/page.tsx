@@ -8,8 +8,8 @@ import AccelerationFromMassAndForceCalculator from '@/app/components/physics/Acc
 
 export const metadata: Metadata = {
   title: 'Acceleration Calculator',
-  description: 'Arithmecal acceleration calculator',
-  keywords: '',
+  description: 'Use Arithmecal’s acceleration calculator to solve for acceleration using speed difference, distance, or Newton’s Second Law. Fast and accurate results.',
+  keywords: 'acceleration calculator, physics calculator, acceleration from speed, acceleration from distance, acceleration from force, Newton’s Second Law, Arithmecal'
 }
 
 export default function AccelerationCalculatorPage() {
