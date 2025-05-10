@@ -6,9 +6,9 @@ import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'Circumscribed Circle Calculator',
-  description: 'Arithmecal circumscribed circle calculator',
-  keywords: '',
-}
+  description: 'Use Arithmecal to calculate the circumradius, circumcenter, and area of a triangle’s circumcircle using side lengths and Heron’s formula. Fast and accurate.',
+  keywords: 'circumscribed circle calculator, circumradius, circumcenter, triangle circumcircle, Heron’s formula, triangle calculator, geometry tools, radius of circumcircle, triangle area, circumcircle center',
+};
 
 export default function CircumscribedCircleCalculatorPage() {
   return (
