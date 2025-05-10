@@ -5,8 +5,8 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Quadratic Formula Calculator',
-  description: 'Arithmecal Quadratic Formula calculator',
-  keywords: '',
+  description: 'Solve quadratic equations easily with Arithmecal’s step-by-step quadratic formula calculator.',
+  keywords: 'quadratic formula calculator, solve quadratic equation, find roots, Arithmecal, discriminant, complex roots'
 };
 
 export default function QuadraticFormulaCalculatorPage() {
