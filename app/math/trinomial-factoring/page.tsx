@@ -5,8 +5,8 @@ import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'Trinomial Factoring Calculator',
-  description: 'Arithmecal trinomial factoring calculator',
-  keywords: '',
+  description: 'Factor any quadratic trinomial with Arithmecal’s trinomial factoring calculator using the AC method. Get step-by-step results instantly.',
+  keywords: 'trinomial factoring calculator, quadratic trinomial, AC method, factor trinomials, factor ax^2+bx+c, Arithmecal'
 }
 
 export default function TrinomialFactoringCalculatorPage() {
