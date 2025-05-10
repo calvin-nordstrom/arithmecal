@@ -8,8 +8,8 @@ import DensityMassCalculator from '@/app/components/physics/DensityMassCalculato
 
 export const metadata: Metadata = {
   title: 'Density Calculator',
-  description: 'Arithmecal density calculator',
-  keywords: '',
+  description: 'Easily calculate density, mass, or volume using Arithmecal’s physics-based density calculator. Enter two values to solve the third using the formula ρ = m / V.',
+  keywords: 'density calculator, mass calculator, volume calculator, physics calculator, density formula, rho = m/V, Arithmecal'
 }
 
 export default function DensityCalculatorPage() {
