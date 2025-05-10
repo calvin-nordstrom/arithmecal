@@ -8,8 +8,8 @@ import KineticEnergyVelocityCalculator from '@/app/components/physics/KineticEne
 
 export const metadata: Metadata = {
   title: 'Kinetic Energy Calculator',
-  description: 'Arithmecal kinetic energy calculator',
-  keywords: '',
+  description: 'Calculate kinetic energy, mass, or velocity with Arithmecal’s Kinetic Energy Calculator using the formula KE = 1/2mv².',
+  keywords: 'kinetic energy calculator, mass calculator, velocity calculator, Arithmecal'
 }
 
 export default function KineticEnergyCalculatorPage() {
