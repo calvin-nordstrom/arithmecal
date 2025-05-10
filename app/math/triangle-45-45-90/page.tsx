@@ -6,8 +6,8 @@ import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: '45-45-90 Triangle Calculator',
-  description: 'Arithmecal 45 45 90 triangle calculator',
-  keywords: '',
+  description: 'Calculate sides, area, and perimeter of a 45-45-90 triangle with Arithmecal’s special right triangle calculator.',
+  keywords: '45 45 90 triangle calculator, special right triangle, isosceles right triangle, triangle area, triangle perimeter, Arithmecal'
 }
 
 export default function Triangle454590CalculatorPage() {
