@@ -3,8 +3,8 @@ import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'ASCII Table',
-  description: 'Arithmecal ASCII table',
-  keywords: '',
+  description: 'Explore Arithmecal’s ASCII table with both standard and extended characters, including binary, octal, hex, and character representations.',
+  keywords: 'ASCII table, standard ASCII, extended ASCII, character encoding, binary, octal, hex, printable characters, control characters, character encoding reference',
   formatDetection: { telephone: false, },
 }
 
