@@ -4,8 +4,8 @@ import CalculatorLayout from '../components/CalculatorLayout';
 
 export const metadata: Metadata = {
   title: 'Physics Calculators',
-  description: 'Arithmecal physics calculators',
-  keywords: '',
+  description: 'Explore Arithmecal’s range of physics calculators for energy, motion, thermodynamics, and materials.',
+  keywords: 'physics calculators, kinetic energy, potential energy, velocity, acceleration, thermodynamics, density'
 }
 
 export default function PhysicsCalculatorsPage() {
