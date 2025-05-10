@@ -7,8 +7,8 @@ import VelocityFromAccelerationCalculator from '@/app/components/physics/Velocit
 
 export const metadata: Metadata = {
   title: 'Velocity Calculator',
-  description: 'Arithmecal velocity calculator',
-  keywords: '',
+  description: 'Arithmecal’s velocity calculator for calculating velocity from distance, time, acceleration, and initial velocity.',
+  keywords: 'velocity calculator, distance traveled, acceleration, physics calculator, Arithmecal'
 }
 
 export default function VelocityCalculatorPage() {
