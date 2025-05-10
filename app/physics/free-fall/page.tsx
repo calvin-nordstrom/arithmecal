@@ -9,8 +9,8 @@ import FreeFallInitialVelocityCalculator from '@/app/components/physics/FreeFall
 
 export const metadata: Metadata = {
   title: 'Free Fall Calculator',
-  description: 'Arithmecal free fall calculator',
-  keywords: '',
+  description: 'Solve time, velocity, height, or initial velocity in free fall using Arithmecal’s physics calculator based on gravity equations.',
+  keywords: 'free fall calculator, gravity calculator, time of fall, final velocity, fall height, initial velocity, Arithmecal'
 }
 
 export default function FreeFallCalculatorPage() {
