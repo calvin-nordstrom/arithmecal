@@ -4,8 +4,8 @@ import CalculatorLayout from '../components/CalculatorLayout';
 
 export const metadata: Metadata = {
   title: 'Reference',
-  description: 'Arithmecal reference',
-  keywords: '',
+  description: 'Explore Arithmecal’s references including ASCII tables and other resources for Science, Technology, Engineering, and Mathematics.',
+  keywords: 'STEM reference, ASCII table, mathematical reference, science reference, technology reference, engineering reference, math tools',
 }
 
 export default function ReferencePage() {
