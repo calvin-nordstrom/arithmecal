@@ -5,9 +5,9 @@ import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'Percent Change Calculator',
-  description: 'Arithmecal percent change calculator',
-  keywords: '',
-}
+  description: 'Calculate percent increase or decrease with Arithmecal’s step-by-step percent change calculator.',
+  keywords: 'percent change calculator, percentage increase, percentage decrease, percent calculator, Arithmecal, percent difference'
+};
 
 export default function PercentChangeCalculatorPage() {
   return (
