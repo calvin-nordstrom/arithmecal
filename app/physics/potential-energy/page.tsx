@@ -9,8 +9,8 @@ import PotentialEnergyGravityCalculator from '@/app/components/physics/Potential
 
 export const metadata: Metadata = {
   title: 'Potential Energy Calculator',
-  description: 'Arithmecal potential energy calculator',
-  keywords: '',
+  description: 'Calculate potential energy, mass, height, or gravitational acceleration with Arithmecal’s Potential Energy Calculator using the formula PE = mgh.',
+  keywords: 'potential energy calculator, mass calculator, height calculator, gravitational acceleration calculator, Arithmecal'
 }
 
 export default function PotentialEnergyCalculatorPage() {
