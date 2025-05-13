@@ -39,8 +39,8 @@ const config: CalculatorConfig = {
       key: 'a',
       label: 'Acceleration',
       unitOptions: accelerationUnits,
-      defaultUnit: 'm/s2',
-      conversionBase: 'm/s2',
+      defaultUnit: 'm/s^2',
+      conversionBase: 'm/s^2',
       isOutput: true,
     },
     {

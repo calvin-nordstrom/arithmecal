@@ -38,8 +38,8 @@ const config: CalculatorConfig = {
       key: 'area',
       label: 'Area',
       unitOptions: areaUnits,
-      defaultUnit: 'm2',
-      conversionBase: 'm2'
+      defaultUnit: 'm^2',
+      conversionBase: 'm^2'
     },
     {
       type: 'field',

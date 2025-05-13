@@ -17,8 +17,8 @@ const config: CalculatorConfig = {
       label: 'Gravitational acceleration',
       defaultValue: 9.80665,
       unitOptions: accelerationUnits,
-      defaultUnit: 'm/s2',
-      conversionBase: 'm/s2',
+      defaultUnit: 'm/s^2',
+      conversionBase: 'm/s^2',
     },
     {
       type: 'field',

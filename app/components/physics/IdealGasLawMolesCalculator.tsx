@@ -18,15 +18,15 @@ const config: CalculatorConfig = {
       label: 'Pressure (P)',
       unitOptions: pressureUnits,
       defaultUnit: 'Pa',
-      conversionBase: 'Pa'
+      conversionBase: 'Pa',
     },
     {
       type: 'field',
       key: 'V',
       label: 'Volume (V)',
       unitOptions: volumeUnits,
-      defaultUnit: 'm3',
-      conversionBase: 'm3'
+      defaultUnit: 'm^3',
+      conversionBase: 'm^3',
     },
     {
       type: 'field',
@@ -34,7 +34,7 @@ const config: CalculatorConfig = {
       label: 'Temperature (T)',
       unitOptions: temperatureUnits,
       defaultUnit: 'K',
-      conversionBase: 'K'
+      conversionBase: 'K',
     },
     {
       type: 'field',
@@ -43,7 +43,7 @@ const config: CalculatorConfig = {
       isOutput: true,
     },
     {
-      type: 'error'
+      type: 'error',
     },
   ],
   formula: (inputs, changedField) => {
