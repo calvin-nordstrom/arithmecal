@@ -1,67 +1,67 @@
 import { UnitDefinition } from "../unit";
 
 export const lengthUnits: Record<string, UnitDefinition> = {
-  m: {
+  "m": {
     name: "meter",
     toAnchor: 1,
     dimension: "length"
   },
-  km: {
+  "km": {
     name: "kilometer",
     toAnchor: 1000,
     dimension: "length"
   },
-  cm: {
+  "cm": {
     name: "centimeter",
     toAnchor: 0.01,
     dimension: "length"
   },
-  mm: {
+  "mm": {
     name: "millimeter",
     toAnchor: 0.001,
     dimension: "length"
   },
-  µm: {
+  "µm": {
     name: "micrometer",
     toAnchor: 0.000001,
     dimension: "length"
   },
-  nm: {
+  "nm": {
     name: "nanometer",
     toAnchor: 1e-9,
     dimension: "length"
   },
-  pm: {
+  "pm": {
     name: "picometer",
     toAnchor: 1e-12,
     dimension: "length"
   },
-  Å: {
+  "Å": {
     name: "angstrom",
     toAnchor: 1e-10,
     dimension: "length"
   },
-  ft: {
+  "ft": {
     name: "foot",
     toAnchor: 0.3048,
     dimension: "length"
   },
-  yd: {
+  "yd": {
     name: "yard",
     toAnchor: 0.9144,
     dimension: "length"
   },
-  in: {
+  "in": {
     name: "inch",
     toAnchor: 0.0254,
     dimension: "length"
   },
-  mi: {
+  "mi": {
     name: "mile",
     toAnchor: 1609.34,
     dimension: "length"
   },
-  nmi: {
+  "nmi": {
     name: "nautical mile",
     toAnchor: 1852,
     dimension: "length"

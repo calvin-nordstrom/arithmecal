@@ -1,47 +1,47 @@
 import { UnitDefinition } from "../unit";
 
 export const pressureUnits: Record<string, UnitDefinition> = {
-  Pa: {
+  "Pa": {
     name: "pascal",
     toAnchor: 1,
     dimension: "pressure"
   },
-  kPa: {
+  "kPa": {
     name: "kilopascal",
     toAnchor: 1_000,
     dimension: "pressure"
   },
-  MPa: {
+  "MPa": {
     name: "megapascal",
     toAnchor: 1_000_000,
     dimension: "pressure"
   },
-  hPa: {
+  "hPa": {
     name: "hectopascal",
     toAnchor: 100,
     dimension: "pressure"
   },
-  bar: {
+  "bar": {
     name: "bar",
     toAnchor: 100_000,
     dimension: "pressure"
   },
-  torr: {
+  "torr": {
     name: "torr",
     toAnchor: 133.322,
     dimension: "pressure"
   },
-  psi: {
+  "psi": {
     name: "pound per square inch",
     toAnchor: 6_894.76,
     dimension: "pressure"
   },
-  atm: {
+  "atm": {
     name: "atmosphere",
     toAnchor: 101325,
     dimension: "pressure"
   },
-  mmHg: {
+  "mmHg": {
     name: "millimeter of mercury",
     toAnchor: 133.322,
     dimension: "pressure"

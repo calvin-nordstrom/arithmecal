@@ -1,57 +1,57 @@
 import { UnitDefinition } from "../unit";
 
 export const energyUnits: Record<string, UnitDefinition> = {
-  J: {
+  "J": {
     name: "joule",
     toAnchor: 1,
     dimension: "energy"
   },
-  kJ: {
+  "kJ": {
     name: "kilojoule",
     toAnchor: 1000,
     dimension: "energy"
   },
-  MJ: {
+  "MJ": {
     name: "megajoule",
     toAnchor: 1_000_000,
     dimension: "energy"
   },
-  GJ: {
+  "GJ": {
     name: "gigajoule",
     toAnchor: 1_000_000_000,
     dimension: "energy"
   },
-  Ws: {
+  "Ws": {
     name: "watt-second",
     toAnchor: 1,
     dimension: "energy"
   },
-  Wm: {
+  "Wm": {
     name: "watt-minute",
     toAnchor: 60,
     dimension: "energy"
   },
-  Wh: {
+  "Wh": {
     name: "watt-hour",
     toAnchor: 3600,
     dimension: "energy"
   },
-  mWh: {
+  "mWh": {
     name: "milliwatt-hour",
     toAnchor: 3.6,
     dimension: "energy"
   },
-  kWh: {
+  "kWh": {
     name: "kilowatt-hour",
     toAnchor: 3_600_000,
     dimension: "energy"
   },
-  MWh: {
+  "MWh": {
     name: "megawatt-hour",
     toAnchor: 3_600_000_000,
     dimension: "energy"
   },
-  GWh: {
+  "GWh": {
     name: "gigawatt-hour",
     toAnchor: 3_600_000_000_000,
     dimension: "energy"

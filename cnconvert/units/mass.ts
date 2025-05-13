@@ -1,42 +1,42 @@
 import { UnitDefinition } from "../unit";
 
 export const massUnits: Record<string, UnitDefinition> = {
-  kg: {
+  "kg": {
     name: "kilogram",
     toAnchor: 1,
     dimension: "mass"
   },
-  g: {
+  "g": {
     name: "gram",
     toAnchor: 0.001,
     dimension: "mass"
   },
-  mg: {
+  "mg": {
     name: "milligram",
     toAnchor: 0.000001,
     dimension: "mass"
   },
-  µg: {
+  "µg": {
     name: "microgram",
     toAnchor: 1e-9,
     dimension: "mass"
   },
-  t: {
+  "t": {
     name: "metric ton",
     toAnchor: 1000,
     dimension: "mass"
   },
-  oz: {
+  "oz": {
     name: "ounce",
     toAnchor: 0.0283495,
     dimension: "mass"
   },
-  lb: {
+  "lb": {
     name: "pound",
     toAnchor: 0.453592,
     dimension: "mass"
   },
-  st: {
+  "st": {
     name: "stone",
     toAnchor: 6.35029,
     dimension: "mass"

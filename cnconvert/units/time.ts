@@ -1,52 +1,52 @@
 import { UnitDefinition } from "../unit";
 
 export const timeUnits: Record<string, UnitDefinition> = {
-  s: {
+  "s": {
     name: "second",
     toAnchor: 1,
     dimension: "time"
   },
-  ms: {
+  "ms": {
     name: "millisecond",
     toAnchor: 1e-3,
     dimension: "time"
   },
-  µs: {
+  "µs": {
     name: "microsecond",
     toAnchor: 1e-6,
     dimension: "time"
   },
-  ns: {
+  "ns": {
     name: "nanosecond",
     toAnchor: 1e-9,
     dimension: "time"
   },
-  min: {
+  "min": {
     name: "minute",
     toAnchor: 60,
     dimension: "time"
   },
-  h: {
+  "h": {
     name: "hour",
     toAnchor: 3600,
     dimension: "time"
   },
-  d: {
+  "d": {
     name: "day",
     toAnchor: 86400,
     dimension: "time"
   },
-  week: {
+  "week": {
     name: "week",
     toAnchor: 604800,
     dimension: "time"
   },
-  month: {
+  "month": {
     name: "month",
     toAnchor: 2_629_746,
     dimension: "time"
   },
-  year: {
+  "year": {
     name: "year",
     toAnchor: 31_556_952,
     dimension: "time"

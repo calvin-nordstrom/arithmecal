@@ -1,52 +1,52 @@
 import { UnitDefinition } from "../unit";
 
 export const areaUnits: Record<string, UnitDefinition> = {
-  m2: {
+  "m2": {
     name: "square meter",
     toAnchor: 1,
     dimension: "area"
   },
-  km2: {
+  "km2": {
     name: "square kilometer",
     toAnchor: 1_000_000,
     dimension: "area"
   },
-  cm2: {
+  "cm2": {
     name: "square centimeter",
     toAnchor: 0.0001,
     dimension: "area"
   },
-  mm2: {
+  "mm2": {
     name: "square millimeter",
     toAnchor: 0.000001,
     dimension: "area"
   },
-  ft2: {
+  "ft2": {
     name: "square foot",
     toAnchor: 0.09290304,
     dimension: "area"
   },
-  in2: {
+  "in2": {
     name: "square inch",
     toAnchor: 0.00064516,
     dimension: "area"
   },
-  yd2: {
+  "yd2": {
     name: "square yard",
     toAnchor: 0.83612736,
     dimension: "area"
   },
-  mi2: {
+  "mi2": {
     name: "square mile",
     toAnchor: 2_589_988.110336,
     dimension: "area"
   },
-  acre: {
+  "acre": {
     name: "acre",
     toAnchor: 4046.8564224,
     dimension: "area"
   },
-  ha: {
+  "ha": {
     name: "hectare",
     toAnchor: 10000,
     dimension: "area"

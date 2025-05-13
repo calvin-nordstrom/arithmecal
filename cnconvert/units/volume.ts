@@ -1,47 +1,47 @@
 import { UnitDefinition } from "../unit";
 
 export const volumeUnits: Record<string, UnitDefinition> = {
-  m3: {
+  "m3": {
     name: "cubic meter",
     toAnchor: 1,
     dimension: "volume"
   },
-  km3: {
+  "km3": {
     name: "cubic kilometer",
     toAnchor: 1e9,
     dimension: "volume"
   },
-  cm3: {
+  "cm3": {
     name: "cubic centimeter",
     toAnchor: 1e-6,
     dimension: "volume"
   },
-  mm3: {
+  "mm3": {
     name: "cubic millimeter",
     toAnchor: 1e-9,
     dimension: "volume"
   },
-  ml: {
+  "ml": {
     name: "milliliter",
     toAnchor: 1e-6,
     dimension: "volume"
   },
-  l: {
+  "l": {
     name: "liter",
     toAnchor: 1e-3,
     dimension: "volume"
   },
-  kl: {
+  "kl": {
     name: "kiloliter",
     toAnchor: 1,
     dimension: "volume"
   },
-  tsp: {
+  "tsp": {
     name: "teaspoon",
     toAnchor: 4.92892159375e-6,
     dimension: "volume"
   },
-  Tbs: {
+  "Tbs": {
     name: "tablespoon",
     toAnchor: 1.478676478125e-5,
     dimension: "volume"
@@ -51,37 +51,37 @@ export const volumeUnits: Record<string, UnitDefinition> = {
     toAnchor: 2.95735295625e-5,
     dimension: "volume"
   },
-  cup: {
+  "cup": {
     name: "cup",
     toAnchor: 2.365882365e-4,
     dimension: "volume"
   },
-  pnt: {
+  "pnt": {
     name: "pint",
     toAnchor: 4.73176473e-4,
     dimension: "volume"
   },
-  qt: {
+  "qt": {
     name: "quart",
     toAnchor: 9.46352946e-4,
     dimension: "volume"
   },
-  gal: {
+  "gal": {
     name: "gallon",
     toAnchor: 3.785411784e-3,
     dimension: "volume"
   },
-  ft3: {
+  "ft3": {
     name: "cubic foot",
     toAnchor: 0.028316846592,
     dimension: "volume"
   },
-  yd3: {
+  "yd3": {
     name: "cubic yard",
     toAnchor: 0.764554857984,
     dimension: "volume"
   },
-  in3: {
+  "in3": {
     name: "cubic inch",
     toAnchor: 1.6387064e-5,
     dimension: "volume"

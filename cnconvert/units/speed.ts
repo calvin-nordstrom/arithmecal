@@ -16,7 +16,7 @@ export const speedUnits: Record<string, UnitDefinition> = {
     toAnchor: 0.001 / 3600,
     dimension: "speed"
   },
-  mph: {
+  "mph": {
     name: "mile per hour",
     toAnchor: 1609.344 / 3600,
     dimension: "speed"
@@ -31,7 +31,7 @@ export const speedUnits: Record<string, UnitDefinition> = {
     toAnchor: 0.0254 / 3600,
     dimension: "speed"
   },
-  knot: {
+  "knot": {
     name: "knot",
     toAnchor: 1852 / 3600,
     dimension: "speed"

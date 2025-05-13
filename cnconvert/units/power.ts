@@ -1,27 +1,27 @@
 import { UnitDefinition } from "../unit";
 
 export const powerUnits: Record<string, UnitDefinition> = {
-  W: {
+  "W": {
     name: "watt",
     toAnchor: 1,
     dimension: "power"
   },
-  mW: {
+  "mW": {
     name: "milliwatt",
     toAnchor: 0.001,
     dimension: "power"
   },
-  kW: {
+  "kW": {
     name: "kilowatt",
     toAnchor: 1000,
     dimension: "power"
   },
-  MW: {
+  "MW": {
     name: "megawatt",
     toAnchor: 1_000_000,
     dimension: "power"
   },
-  GW: {
+  "GW": {
     name: "gigawatt",
     toAnchor: 1_000_000_000,
     dimension: "power"
@@ -31,12 +31,12 @@ export const powerUnits: Record<string, UnitDefinition> = {
     toAnchor: 1.3558179483,
     dimension: "power"
   },
-  hp: {
+  "hp": {
     name: "horsepower (mechanical)",
     toAnchor: 745.69987158227022,
     dimension: "power"
   },
-  PS: {
+  "PS": {
     name: "Pferdestärke (metric horsepower)",
     toAnchor: 735.49875,
     dimension: "power"

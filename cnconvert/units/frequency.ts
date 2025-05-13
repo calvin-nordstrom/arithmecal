@@ -1,37 +1,37 @@
 import { UnitDefinition } from "../unit";
 
 export const frequencyUnits: Record<string, UnitDefinition> = {
-  Hz: {
+  "Hz": {
     name: "hertz",
     toAnchor: 1,
     dimension: "frequency"
   },
-  mHz: {
+  "mHz": {
     name: "millihertz",
     toAnchor: 0.001,
     dimension: "frequency"
   },
-  kHz: {
+  "kHz": {
     name: "kilohertz",
     toAnchor: 1000,
     dimension: "frequency"
   },
-  MHz: {
+  "MHz": {
     name: "megahertz",
     toAnchor: 1_000_000,
     dimension: "frequency"
   },
-  GHz: {
+  "GHz": {
     name: "gigahertz",
     toAnchor: 1_000_000_000,
     dimension: "frequency"
   },
-  THz: {
+  "THz": {
     name: "terahertz",
     toAnchor: 1_000_000_000_000,
     dimension: "frequency"
   },
-  rpm: {
+  "rpm": {
     name: "revolutions per minute",
     toAnchor: 1 / 60,
     dimension: "frequency"
