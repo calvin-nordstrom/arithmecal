@@ -36,7 +36,7 @@ const config: CalculatorConfig = {
       isOutput: true,
     },
     {
-      type: 'error'
+      type: 'error',
     },
   ],
   formula: (inputs, changedField) => {
