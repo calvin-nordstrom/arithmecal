@@ -9,22 +9,16 @@ const config: CalculatorConfig = {
       type: 'field',
       key: 'a',
       label: 'Coefficient a',
-      defaultUnit: '',
-      conversionBase: '',
     },
     {
       type: 'field',
       key: 'b',
       label: 'Coefficient b',
-      defaultUnit: '',
-      conversionBase: '',
     },
     {
       type: 'field',
       key: 'c',
       label: 'Coefficient c',
-      defaultUnit: '',
-      conversionBase: '',
     },
     {
       type: 'error'
