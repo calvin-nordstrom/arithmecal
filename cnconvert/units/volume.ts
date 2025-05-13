@@ -1,22 +1,22 @@
 import { UnitDefinition } from "../unit";
 
 export const volumeUnits: Record<string, UnitDefinition> = {
-  "m3": {
+  "m^3": {
     name: "cubic meter",
     toAnchor: 1,
     dimension: "volume"
   },
-  "km3": {
+  "km^3": {
     name: "cubic kilometer",
     toAnchor: 1e9,
     dimension: "volume"
   },
-  "cm3": {
+  "cm^3": {
     name: "cubic centimeter",
     toAnchor: 1e-6,
     dimension: "volume"
   },
-  "mm3": {
+  "mm^3": {
     name: "cubic millimeter",
     toAnchor: 1e-9,
     dimension: "volume"
@@ -71,17 +71,17 @@ export const volumeUnits: Record<string, UnitDefinition> = {
     toAnchor: 3.785411784e-3,
     dimension: "volume"
   },
-  "ft3": {
+  "ft^3": {
     name: "cubic foot",
     toAnchor: 0.028316846592,
     dimension: "volume"
   },
-  "yd3": {
+  "yd^3": {
     name: "cubic yard",
     toAnchor: 0.764554857984,
     dimension: "volume"
   },
-  "in3": {
+  "in^3": {
     name: "cubic inch",
     toAnchor: 1.6387064e-5,
     dimension: "volume"

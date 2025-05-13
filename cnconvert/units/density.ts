@@ -1,12 +1,12 @@
 import { UnitDefinition } from "../unit";
 
 export const densityUnits: Record<string, UnitDefinition> = {
-  "kg/m3": {
+  "kg/m^3": {
     name: "kilogram per cubic meter",
     toAnchor: 1,
     dimension: "density"
   },
-  "kg/dm3": {
+  "kg/dm^3": {
     name: "kilogram per cubic decimeter",
     toAnchor: 1000,
     dimension: "density"
@@ -36,7 +36,7 @@ export const densityUnits: Record<string, UnitDefinition> = {
     toAnchor: 0.001,
     dimension: "density"
   },
-  "g/cm3": {
+  "g/cm^3": {
     name: "gram per cubic centimeter",
     toAnchor: 1000,
     dimension: "density"
@@ -46,17 +46,17 @@ export const densityUnits: Record<string, UnitDefinition> = {
     toAnchor: 0.45359237 / 0.003785411784,
     dimension: "density"
   },
-  "lb/ft3": {
+  "lb/ft^3": {
     name: "pound per cubic foot",
     toAnchor: 16.018463,
     dimension: "density"
   },
-  "oz/in3": {
+  "oz/in^3": {
     name: "ounce per cubic inch",
     toAnchor: 1729.994,
     dimension: "density"
   },
-  "t/m3": {
+  "t/m^3": {
     name: "tonne per cubic meter",
     toAnchor: 1000,
     dimension: "density"
