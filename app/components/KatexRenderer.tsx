@@ -6,7 +6,7 @@ interface KatexRendererProps {
   displayMode?: boolean;
 }
 
-export default function LatexRenderer({
+export default function KatexRenderer({
   formula,
   displayMode = false,
 }: KatexRendererProps) {
