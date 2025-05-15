@@ -6,7 +6,7 @@ import Link from "next/link";
 import Image from 'next/image';
 import { useState } from "react";
 
-export default function Navbar() {
+export default function Header() {
   const [isSearchExpanded, setIsSearchExpanded] = useState(false);
   const [isCategoryActive, setIsCategoryActive] = useState(false);
   const searchContainerRef = useRef<HTMLDivElement>(null);

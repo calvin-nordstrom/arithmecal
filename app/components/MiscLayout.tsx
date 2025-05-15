@@ -1,4 +1,4 @@
-import Navbar from '@/app/components/Navbar';
+import Header from '@/app/components/Header';
 import Footer from '@/app/components/Footer';
 import React from 'react';
 
@@ -10,7 +10,7 @@ export default function MiscLayout({ children }: MiscLayoutProps) {
   return (
     <>
       <div className='top'>
-        <Navbar />
+        <Header />
       </div>
 
       <div className='center'>

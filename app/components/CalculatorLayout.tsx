@@ -1,4 +1,4 @@
-import Navbar from '@/app/components/Navbar';
+import Header from '@/app/components/Header';
 import AdPanelLeft from '@/app/components/AdPanelLeft';
 import AdPanelRight from '@/app/components/AdPanelRight';
 import Footer from '@/app/components/Footer';
@@ -12,7 +12,7 @@ export default function CalculatorLayout({ children }: CalculatorLayoutProps) {
   return (
     <>
       <div className='top'>
-        <Navbar />
+        <Header />
       </div>
 
       <div className='center'>
