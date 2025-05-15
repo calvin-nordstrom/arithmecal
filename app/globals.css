@@ -11,7 +11,11 @@
   /* Fonts */
   --rubik-text: 400 16px 'Rubik', sans-serif;
 
-  --center-background-color: rgb(232, 232, 232);
+  --header-background-color: rgb(255, 255, 255);
+  --header-hamburger-background-color: rgb(236, 236, 236);
+  --header-font-color: rgb(0, 0, 0);
+
+  --center-background-color: rgb(216, 216, 216);
   --content-background-color: rgb(255, 255, 255);
 
   --link-color: rgb(0, 64, 255);
@@ -52,19 +56,18 @@ body {
   justify-content: center;
   margin: 0;
   padding: 0;
+  background-color: var(--center-background-color);
 }
 
 .center {
   display: flex;
   justify-content: center;
-  background-color: var(--center-background-color);
 }
 
 .content {
   display: flex;
   flex-direction: column;
   padding: 2rem;
-  background-color: var(--content-background-color);
 }
 
 h1 {
@@ -213,6 +216,159 @@ button:hover {
 .block {
   margin-top: 2rem;
   margin-bottom: 2rem;
+}
+
+/* Header styles */
+
+.header {
+  max-width: 100%;
+  font-family: sans-serif;
+  box-shadow: rgba(0, 0, 0, 0.2) 2px 2px 4px;
+  background-color: var(--header-background-color);
+}
+
+.header button {
+  min-width: 2.5rem;
+  height: 2.5rem;
+  border: none;
+  box-shadow: none;
+  font-size: 1.5rem;
+}
+
+.header input {
+  border-radius: 1rem;
+}
+
+.header a {
+  font-size: 18px;
+  text-decoration: none;
+  color: var(--header-font-color);
+}
+
+.header a:hover {
+  color: var(--link-color);
+}
+
+.top-bar {
+  display: flex;
+  align-items: center;
+  padding: 1rem 1rem 0rem 1rem;
+  justify-content: space-between;
+  position: relative;
+}
+
+.top-left-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.search-container {
+  flex-grow: 1;
+  margin: 0 1rem;
+}
+
+.search-input {
+  width: 100%;
+  font-size: 1rem;
+}
+
+.bottom-bar {
+  max-width: 100%;
+  padding: 0.5rem 1rem;
+}
+
+.category-nav {
+  display: flex;
+  padding: 0.5rem 1rem;
+  gap: 1rem;
+  transition: max-height 0.3s ease;
+}
+
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.top-right-container {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  width: 100%;
+  gap: 1rem;
+}
+
+.search-button {
+  background: none;
+  border: none;
+  font-size: 1.25rem;
+  cursor: pointer;
+}
+
+.search-expanded {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 1rem;
+  gap: 1rem;
+  background-color: var(--header-background-color);
+}
+
+.search-expanded input {
+  flex-grow: 1;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1rem;
+}
+
+@media (max-width: 768px) {
+  .top-bar {
+    padding: 1rem 1rem;
+  }
+
+  .bottom-bar {
+    padding: 0;
+  }
+
+  .search-container {
+    display: none !important;
+  }
+
+  .search-button {
+    display: inline !important;
+  }
+
+  .nav-links {
+    justify-content: right;
+  }
+
+  .category-nav {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    z-index: 1001;
+    background-color: var(--header-hamburger-background-color);
+    padding: 1rem;
+  }
+
+  .category-nav.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 /* KaTeX styles */
