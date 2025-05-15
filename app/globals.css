@@ -11,8 +11,8 @@
   /* Fonts */
   --rubik-text: 400 16px 'Rubik', sans-serif;
 
-  --header-background-color: rgb(255, 255, 255);
-  --header-hamburger-background-color: rgb(236, 236, 236);
+  --header-background-color: rgb(240, 240, 240);
+  --header-hamburger-background-color: rgb(255, 255, 255);
   --header-font-color: rgb(0, 0, 0);
 
   --center-background-color: rgb(216, 216, 216);
