@@ -321,6 +321,14 @@ button:hover {
   background-color: var(--header-background-color);
 }
 
+.search-expanded button {
+  background-color: var(--header-background-color);
+}
+
+.search-expanded button:hover {
+  background-color: var(--calculator-button-hover-background);
+}
+
 .search-expanded input {
   flex-grow: 1;
 }
