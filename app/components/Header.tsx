@@ -64,14 +64,10 @@ export default function Header() {
 
       <div className='bottom-bar'>
         <div className={isCategoryActive ? 'category-nav active' : 'category-nav'}>
-          {[
-            'Conversion',
-            'Math',
-            'Physics',
-            'Reference',
-          ].map((cat) => (
-            <Link key={cat} href={`../${cat.toLowerCase()}`}>{cat}</Link>
-          ))}
+          <Link href='../conversion'>Conversion</Link>
+          <Link href='../math'>Math</Link>
+          <Link href='../physics'>Physics</Link>
+          <Link href='../reference'>Reference</Link>
         </div>
       </div>
       {isSearchExpanded && (
