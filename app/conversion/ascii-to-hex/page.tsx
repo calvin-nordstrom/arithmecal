@@ -30,7 +30,7 @@ export default function ASCIIToHexConversionPage() {
           <p>This converter supports both directions: ASCII to hex and hex to ASCII.</p>
 
           <h2>Understanding the Conversion</h2>
-          <p>Each ASCII character corresponds to a numeric value, which can be represented in hexadecimal (base-16). You can find these mappings in our <Link href='../reference/ascii-table' target="_blank">ASCII table</Link>.</p>
+          <p>Each ASCII character corresponds to a numeric value, which can be represented in hexadecimal (base-16). You can find these mappings in our <Link href='../reference/ascii-table' target='_blank'>ASCII table</Link>.</p>
           <p>For example, the character &quot;A&quot; corresponds to the decimal value 65, which is <strong>41</strong> in hexadecimal.</p>
           <p>Hex is commonly used in programming and digital electronics because it&apos;s a compact representation of binary data.</p>
 
@@ -76,7 +76,7 @@ export default function ASCIIToHexConversionPage() {
           <h2>More About ASCII</h2>
           <p>ASCII (American Standard Code for Information Interchange) maps characters to numeric values. These values are often represented in hexadecimal when working with low-level systems, debugging tools, or data encodings.</p>
           <p>While ASCII itself uses 7-bit values, hexadecimal makes it easier to visualize and group binary data—especially in formats like UTF-8, network protocols, or hexadecimal dumps.</p>
-          <p>Explore our full <Link href='../reference/ascii-table' target="_blank">ASCII table</Link> for a detailed breakdown.</p>
+          <p>Explore our full <Link href='../reference/ascii-table' target='_blank'>ASCII table</Link> for a detailed breakdown.</p>
         </div>
       </div>
     </CalculatorLayout>

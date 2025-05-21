@@ -38,7 +38,7 @@ export default function DecimalToASCIIConversionPage() {
             <li>97 → &apos;a&apos;</li>
             <li>32 → (space character)</li>
           </ul>
-          <p>You can use our <Link href='../reference/ascii-table' target="_blank">ASCII table</Link> to look up any character&apos;s decimal code.</p>
+          <p>You can use our <Link href='../reference/ascii-table' target='_blank'>ASCII table</Link> to look up any character&apos;s decimal code.</p>
 
           <h2>Example</h2>
           <p>Convert the decimal values <code>72 101 108 108 111</code> to ASCII:</p>
@@ -64,7 +64,7 @@ export default function DecimalToASCIIConversionPage() {
             <li>Lowercase letters (97-122)</li>
             <li>Common punctuation and symbols</li>
           </ul>
-          <p>Visit our <Link href='../reference/ascii-table' target="_blank">ASCII table</Link> for a full reference.</p>
+          <p>Visit our <Link href='../reference/ascii-table' target='_blank'>ASCII table</Link> for a full reference.</p>
         </div>
       </div>
     </CalculatorLayout>

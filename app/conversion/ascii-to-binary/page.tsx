@@ -30,7 +30,7 @@ export default function ASCIIToBinaryConversionPage() {
           <p>This converter is able to convert from ASCII text to binary and vice versa.</p>
 
           <h2>Understanding the Conversion</h2>
-          <p>The quickest way to convert between ASCII text and binary is to use an <strong>ASCII table</strong>. Lucky for you, we have an <Link href='../reference/ascii-table' target="_blank">ASCII table</Link> on our reference page!</p>
+          <p>The quickest way to convert between ASCII text and binary is to use an <strong>ASCII table</strong>. Lucky for you, we have an <Link href='../reference/ascii-table' target='_blank'>ASCII table</Link> on our reference page!</p>
           <p>Typically, you can use an ASCII table to convert a letter into a 1 byte hexadecimal value. You can then use this hexadecimal value to compute the 8 bits of binary that make up the byte.</p>
           <p>For example, the letter &quot;A&quot; converts to 41<sub>16</sub>, which is equivalent to 01000001<sub>2</sub> in binary.</p>
 
@@ -77,8 +77,8 @@ export default function ASCIIToBinaryConversionPage() {
           <h2>More About ASCII</h2>
           <p>ASCII stands for <strong>American Standard Code for Information Interchange</strong>. Developed in the 1960s, ASCII became a widely adopted standard for representing letters, digits, punctuation, and control characters in computers and communication equipment.</p>
           <p>ASCII uses <strong>7 bits</strong> to represent each character, allowing for a total of 128 unique symbols. These include standard English letters (A-Z, a-z), digits (0-9), punctuation marks, and control codes like newline and carriage return.</p>
-          <p>Although ASCII only requires 7 bits, characters are typically stored in <strong>8-bit bytes</strong> in modern systems. The extra bit (the most significant bit) was sometimes used for error detection or extended character sets, such as <a href="https://en.wikipedia.org/wiki/ISO/IEC_8859-1" target="_blank">ISO 8859-1</a> or other encodings that support additional symbols.</p>
-          <p>For a full ASCII table, visit our <Link href='../reference/ascii-table' target="_blank">ASCII table</Link>.</p>
+          <p>Although ASCII only requires 7 bits, characters are typically stored in <strong>8-bit bytes</strong> in modern systems. The extra bit (the most significant bit) was sometimes used for error detection or extended character sets, such as <a href='https://en.wikipedia.org/wiki/ISO/IEC_8859-1' target='_blank'>ISO 8859-1</a> or other encodings that support additional symbols.</p>
+          <p>For a full ASCII table, visit our <Link href='../reference/ascii-table' target='_blank'>ASCII table</Link>.</p>
         </div>
       </div>
     </CalculatorLayout>
