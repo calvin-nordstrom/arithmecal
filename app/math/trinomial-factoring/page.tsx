@@ -1,6 +1,7 @@
 import CalculatorLayout from '@/app/components/CalculatorLayout';
 import KatexRenderer from '@/app/components/KatexRenderer';
 import TrinomialFactoringCalculator from '@/app/components/math/TrinomialFactoringCalculator';
+import RelatedCalculators from '@/app/components/RelatedCalculators';
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
@@ -16,6 +17,12 @@ export default function TrinomialFactoringCalculatorPage() {
       <div className='calculator-content'>
         <div className='calculator-component'>
           <TrinomialFactoringCalculator />
+          <RelatedCalculators
+            links={[
+              { href: './foil', label: 'FOIL Calculator' },
+              { href: './quadratic-formula', label: 'Quadratic Formula Calculator' },
+            ]}
+          />
         </div>
         <div className='calculator-description'>
           <p>A <strong>quadratic trinomial</strong> is an expression with three non-zero terms with two variables in the expression, where the highest power seen in the expression is 2.</p>

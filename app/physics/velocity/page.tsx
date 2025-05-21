@@ -4,6 +4,7 @@ import type { Metadata } from 'next'
 import Dropdown from '@/app/components/Dropdown';
 import VelocityFromDistanceTraveledCalculator from '@/app/components/physics/VelocityFromDistanceTraveledCalculator';
 import VelocityFromAccelerationCalculator from '@/app/components/physics/VelocityFromAccelerationCalculator';
+import RelatedCalculators from '@/app/components/RelatedCalculators';
 
 export const metadata: Metadata = {
   title: 'Velocity Calculator',
@@ -29,6 +30,12 @@ export default function VelocityCalculatorPage() {
       <div className='calculator-content'>
         <div className='calculator-component'>
           <Dropdown label='Solve given' config={dropdownConfig} />
+          <RelatedCalculators
+            links={[
+              { href: './acceleration', label: 'Acceleration Calculator' },
+              { href: './free-fall', label: 'Free Fall Calculator' },
+            ]}
+          />
         </div>
         <div className='calculator-description'>
           <p>

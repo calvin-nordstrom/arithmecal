@@ -3,6 +3,7 @@ import KatexRenderer from '@/app/components/KatexRenderer';
 import Triangle306090Calculator from '@/app/components/math/Triangle306090Calculator';
 import Image from 'next/image';
 import type { Metadata } from 'next'
+import RelatedCalculators from '@/app/components/RelatedCalculators';
 
 export const metadata: Metadata = {
   title: '30-60-90 Triangle Calculator',
@@ -17,6 +18,11 @@ export default function Triangle306090CalculatorPage() {
       <div className='calculator-content'>
         <div className='calculator-component'>
           <Triangle306090Calculator />
+          <RelatedCalculators
+            links={[
+              { href: './triangle-45-45-90', label: '45 45 90 Triangle Calculator' },
+            ]}
+          />
         </div>
         <div className='calculator-description'>
           <div className='center-image'>

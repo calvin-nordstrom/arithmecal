@@ -6,6 +6,7 @@ import PotentialEnergyCalculator from '@/app/components/physics/PotentialEnergyC
 import PotentialEnergyMassCalculator from '@/app/components/physics/PotentialEnergyMassCalculator';
 import PotentialEnergyHeightCalculator from '@/app/components/physics/PotentialEnergyHeightCalculator';
 import PotentialEnergyGravityCalculator from '@/app/components/physics/PotentialEnergyGravitationalAccelerationCalculator';
+import RelatedCalculators from '@/app/components/RelatedCalculators';
 
 export const metadata: Metadata = {
   title: 'Potential Energy Calculator',
@@ -39,6 +40,11 @@ export default function PotentialEnergyCalculatorPage() {
       <div className='calculator-content'>
         <div className='calculator-component'>
           <Dropdown config={dropdownConfig} />
+          <RelatedCalculators
+            links={[
+              { href: './kinetic-energy', label: 'Kinetic Energy Calculator' },
+            ]}
+          />
         </div>
         <div className='calculator-description'>
           <p>This calculator helps you compute variables related to <strong>gravitational potential energy</strong>—a form of stored energy possessed by an object due to its height in a gravitational field.</p>
@@ -109,7 +115,7 @@ export default function PotentialEnergyCalculatorPage() {
             <li>In a closed system, potential energy can convert to kinetic energy and vice versa, illustrating the conservation of mechanical energy.</li>
           </ul>
           <p className='note'>Tip: Increasing the height of an object has a linear effect on potential energy. For example, doubling the height will double the potential energy, assuming mass and gravity stay constant.</p>
-          
+
           <h2>Try Different Scenarios</h2>
           <p>
             You can experiment with different mass and height values to see how energy changes in various conditions. For example:

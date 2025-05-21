@@ -1,6 +1,7 @@
 import CalculatorLayout from '@/app/components/CalculatorLayout';
 import KatexRenderer from '@/app/components/KatexRenderer';
 import QuadraticFormulaCalculator from '@/app/components/math/QuadraticFormulaCalculator';
+import RelatedCalculators from '@/app/components/RelatedCalculators';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -16,6 +17,12 @@ export default function QuadraticFormulaCalculatorPage() {
       <div className='calculator-content'>
         <div className='calculator-component'>
           <QuadraticFormulaCalculator />
+          <RelatedCalculators
+            links={[
+              { href: './foil', label: 'FOIL Calculator' },
+              { href: './trinomial-factoring', label: 'Trinomial Factoring Calculator' },
+            ]}
+          />
         </div>
         <div className='calculator-description'>
           <p>The quadratic formula is used to find the roots of a <strong>quadratic equation</strong> in the form</p>
@@ -26,7 +33,7 @@ export default function QuadraticFormulaCalculatorPage() {
           <div className='katex-block'>
             <KatexRenderer formula='x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}' />
           </div>
-          
+
           <h2>How to Use This Calculator</h2>
           <ol>
             <li>Enter values for coefficients a, b, and c.</li>
@@ -34,7 +41,7 @@ export default function QuadraticFormulaCalculatorPage() {
             <li>View the computed roots and discriminant below.</li>
           </ol>
           <p className='note'>Note: a must be nonzero because the variable a is in the denominator of the quadratic solution, and you cannot divide by zero.</p>
-          
+
           <h3>Understanding the Discriminant</h3>
           <p>The <strong>discriminant</strong> is used to determine the nature of the roots. It&apos;s an equation derived from within the square root of the quadratic solution equation.</p>
           <div className='katex-block'>

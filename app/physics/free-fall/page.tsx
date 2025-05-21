@@ -6,6 +6,7 @@ import FreeFallTimeOfFallCalculator from '@/app/components/physics/FreeFallTimeO
 import FreeFallVelocityCalculator from '@/app/components/physics/FreeFallVelocityCalculator';
 import FreeFallHeightCalculator from '@/app/components/physics/FreeFallHeightCalculator';
 import FreeFallInitialVelocityCalculator from '@/app/components/physics/FreeFallInitialVelocityCalculator';
+import RelatedCalculators from '@/app/components/RelatedCalculators';
 
 export const metadata: Metadata = {
   title: 'Free Fall Calculator',
@@ -39,6 +40,12 @@ export default function FreeFallCalculatorPage() {
       <div className='calculator-content'>
         <div className='calculator-component'>
           <Dropdown config={dropdownConfig} />
+          <RelatedCalculators
+            links={[
+              { href: './acceleration', label: 'Acceleration Calculator' },
+              { href: './velocity', label: 'Velocity Calculator' },
+            ]}
+          />
         </div>
         <div className='calculator-description'>
           <p>This calculator allows you to solve various aspects of <strong>free fall motion</strong> due to gravity. You can calculate unknown variables like:</p>

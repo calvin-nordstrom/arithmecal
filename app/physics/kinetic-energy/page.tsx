@@ -5,6 +5,8 @@ import Dropdown from '@/app/components/Dropdown';
 import KineticEnergyCalculator from '@/app/components/physics/KineticEnergyCalculator';
 import KineticEnergyMassCalculator from '@/app/components/physics/KineticEnergyMassCalculator';
 import KineticEnergyVelocityCalculator from '@/app/components/physics/KineticEnergyVelocityCalculator';
+import Link from 'next/link';
+import RelatedCalculators from '@/app/components/RelatedCalculators';
 
 export const metadata: Metadata = {
   title: 'Kinetic Energy Calculator',
@@ -34,6 +36,11 @@ export default function KineticEnergyCalculatorPage() {
       <div className='calculator-content'>
         <div className='calculator-component'>
           <Dropdown config={dropdownConfig} />
+          <RelatedCalculators
+            links={[
+              { href: './potential-energy', label: 'Potential Energy Calculator' },
+            ]}
+          />
         </div>
         <div className='calculator-description'>
           <p>This calculator helps you solve for <strong>kinetic energy</strong>, <strong>mass</strong>, or <strong>velocity</strong> using the kinetic energy formula:</p>

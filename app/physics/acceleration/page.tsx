@@ -5,6 +5,7 @@ import Dropdown from '@/app/components/Dropdown';
 import AccelerationFromSpeedDifferenceCalculator from '@/app/components/physics/AccelerationFromSpeedDifferenceCalculator';
 import AccelerationFromDistanceTraveledCalculator from '@/app/components/physics/AccelerationFromDistanceTraveledCalculator';
 import AccelerationFromMassAndForceCalculator from '@/app/components/physics/AccelerationFromMassAndForceCalculator';
+import RelatedCalculators from '@/app/components/RelatedCalculators';
 
 export const metadata: Metadata = {
   title: 'Acceleration Calculator',
@@ -34,6 +35,12 @@ export default function AccelerationCalculatorPage() {
       <div className='calculator-content'>
         <div className='calculator-component'>
           <Dropdown label='Solve given' config={dropdownConfig} />
+          <RelatedCalculators
+            links={[
+              { href: './free-fall', label: 'Free Fall Calculator' },
+              { href: './velocity', label: 'Velocity Calculator' },
+            ]}
+          />
         </div>
         <div className='calculator-description'>
           <p>This calculator allows you to solve for <strong>acceleration</strong> using different sets of known values. You can calculate acceleration from:</p>

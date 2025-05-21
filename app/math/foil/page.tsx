@@ -3,6 +3,7 @@ import KatexRenderer from '@/app/components/KatexRenderer';
 import FOILCalculator from '@/app/components/math/FOILCalculator';
 import Image from 'next/image';
 import type { Metadata } from 'next'
+import RelatedCalculators from '@/app/components/RelatedCalculators';
 
 export const metadata: Metadata = {
   title: 'FOIL Calculator',
@@ -17,6 +18,12 @@ export default function FOILCalculatorPage() {
       <div className='calculator-content'>
         <div className='calculator-component'>
           <FOILCalculator />
+          <RelatedCalculators
+            links={[
+              { href: './quadratic-formula', label: 'Quadratic Formula Calculator' },
+              { href: './trinomial-factoring', label: 'Trinomial Factoring Calculator' },
+            ]}
+          />
         </div>
         <div className='calculator-description'>
           <div className='center-image'>
