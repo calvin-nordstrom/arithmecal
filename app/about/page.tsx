@@ -4,8 +4,8 @@ import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'About Us',
-  description: '',
-  keywords: '',
+  description: 'Learn about Arithmecal’s mission, features, reasons to use our tools, who we are, and what we’re all about on our about page.',
+  keywords: 'Arithmecal about, about us, mission, features, reasons to use our tools, who we are, what we do,company values, company information',
 }
 
 export default function AboutPage() {
