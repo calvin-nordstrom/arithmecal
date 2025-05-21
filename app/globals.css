@@ -124,6 +124,14 @@ select {
   box-shadow: rgba(0, 0, 0, 0.1) 2px 2px 2px;
 }
 
+select:hover {
+  background-color: var(--calculator-button-hover-background);
+}
+
+select option {
+  background-color: var(--calculator-button-background);
+}
+
 table {
   font: var(--rubik-text);
   background-color: var(--calculator-background);
@@ -504,14 +512,6 @@ button:hover {
 
 .calculator select {
   width: 90px;
-}
-
-.calculator select:hover {
-  background-color: var(--calculator-button-hover-background);
-}
-
-.calculator select option {
-  background-color: var(--calculator-button-background);
 }
 
 .calculator-controls {
