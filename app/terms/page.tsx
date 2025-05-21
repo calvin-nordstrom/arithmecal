@@ -13,7 +13,7 @@ export default function TermsPage() {
       <h1>Terms of Service</h1>
       <p>Last updated: May 19, 2025</p>
 
-      <p>These Terms of Service ("Terms") govern your use of this website ("the Site"). By accessing or using the Site, you agree to these Terms. If you do not agree, please do not use the Site.</p>
+      <p>These Terms of Service (&quot;Terms&quot;) govern your use of this website (&quot;the Site&quot;). By accessing or using the Site, you agree to these Terms. If you do not agree, please do not use the Site.</p>
 
       <h2>1. Use of the Site</h2>
       <p>The Site is provided for informational and personal use only. You agree not to use the Site for any unlawful purpose or in violation of these Terms.</p>
@@ -24,12 +24,12 @@ export default function TermsPage() {
       <h2>3. Third-Party Services</h2>
       <p>The Site may use third-party services such as Google Analytics and Google AdSense. Use of these services is governed by their own terms and policies.</p>
       <ul>
-        <li><a href="https://policies.google.com/privacy" target="_blank">Google Privacy Policy</a></li>
-        <li><a href="https://policies.google.com/technologies/ads" target="_blank">Google Ad Terms</a></li>
+        <li><a href='https://policies.google.com/privacy' target='_blank'>Google Privacy Policy</a></li>
+        <li><a href='https://policies.google.com/technologies/ads' target='_blank'>Google Ad Terms</a></li>
       </ul>
 
       <h2>4. No Warranties</h2>
-      <p>The Site is provided "as is" without warranties of any kind, either express or implied. While efforts are made to ensure content is accurate and functional, no guarantees are made regarding correctness, availability, or uninterrupted use.</p>
+      <p>The Site is provided &quot;as is&quot; without warranties of any kind, either express or implied. While efforts are made to ensure content is accurate and functional, no guarantees are made regarding correctness, availability, or uninterrupted use.</p>
 
       <h2>5. Limitation of Liability</h2>
       <p>To the fullest extent permitted by law, the Site owner shall not be liable for any direct, indirect, incidental, or consequential damages resulting from the use or inability to use the Site or its content.</p>
@@ -48,7 +48,7 @@ export default function TermsPage() {
 
       <h2>10. Contact</h2>
       <p>If you have any questions about these Terms, please contact:</p>
-      <p><strong>Email:</strong> <a href="mailto:[example@example.com]">[example@example.com]</a></p>
+      <p><strong>Email:</strong> <a href='mailto:[example@example.com]'>[example@example.com]</a></p>
     </MiscLayout>
   );
 }

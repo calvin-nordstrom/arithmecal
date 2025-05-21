@@ -14,7 +14,7 @@ export default function AboutPage() {
       <h1>About Us</h1>
 
       <h2>Our Mission</h2>
-      <p>Arithmecal aims to provide <strong>fast</strong>, <strong>accurate</strong>, and <strong>easy-to-use</strong> calculators and reference tools across a wide range of subjects—from science, technology, engineering, and mathematics (STEM) to finance, health, and everyday needs. Whether you're a student, professional, or curious learner, we aim to simplify complex calculations and concepts for everyone.</p>
+      <p>Arithmecal aims to provide <strong>fast</strong>, <strong>accurate</strong>, and <strong>easy-to-use</strong> calculators and reference tools across a wide range of subjects—from science, technology, engineering, and mathematics (STEM) to finance, health, and everyday needs. Whether you&apos;re a student, professional, or curious learner, we aim to simplify complex calculations and concepts for everyone.</p>
 
       <h2>What We Offer</h2>
       <p>Our site currently features:</p>
@@ -44,10 +44,10 @@ export default function AboutPage() {
 
       <h2>Contribute or Suggest</h2>
       <p>Have an idea for a calculator or want to report an error? We&apos;d love to hear from you.</p>
-      <p>Contact us: <Link href='../contact' target="_blank">arithmecal.com/contact</Link></p>
+      <p>Contact us: <Link href='../contact' target='_blank'>arithmecal.com/contact</Link></p>
 
       <h2>Stay Updated</h2>
-      <p>We&apos;re constantly updating the site with new tools and features. Bookmark our page to see what's new!</p>
+      <p>We&apos;re constantly updating the site with new tools and features. Bookmark our page to see what&apos;s new!</p>
     </MiscLayout>
   );
 }
