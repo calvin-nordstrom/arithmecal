@@ -12,6 +12,8 @@ export default function ReferencePage() {
   return (
     <CalculatorLayout>
       <h1>Reference</h1>
+      <p>Access Arithmecal&apos;s reference page to find useful charts, diagrams, and tables from various aspects of science, technology, engineering, and mathematics (STEM) as well as general resources for everyday life. Whether you&apos;re looking for advanced or basic information, our expanding library of reference pages will help you find it.</p>
+
       <div className='calculator-category'>
         <h2>STEM Reference</h2>
         <p><em>Science, Technology, Engineering, and Mathematics</em></p>
