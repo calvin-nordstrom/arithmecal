@@ -1,29 +1,29 @@
-import { UnitDefinition } from "../unit";
+import { UnitDefinition } from '../unit';
 
 export const reactiveEnergyUnits: Record<string, UnitDefinition> = {
-  "VARh": {
-    name: "volt-ampere reactive hour",
+  'VARh': {
+    name: 'volt-ampere reactive hour',
     toAnchor: 1,
-    dimension: "reactiveEnergy"
+    dimension: 'reactiveEnergy'
   },
-  "mVARh": {
-    name: "millivolt-ampere reactive hour",
+  'mVARh': {
+    name: 'millivolt-ampere reactive hour',
     toAnchor: 0.001,
-    dimension: "reactiveEnergy"
+    dimension: 'reactiveEnergy'
   },
-  "kVARh": {
-    name: "kilovolt-ampere reactive hour",
+  'kVARh': {
+    name: 'kilovolt-ampere reactive hour',
     toAnchor: 1000,
-    dimension: "reactiveEnergy"
+    dimension: 'reactiveEnergy'
   },
-  "MVARh": {
-    name: "megavolt-ampere reactive hour",
+  'MVARh': {
+    name: 'megavolt-ampere reactive hour',
     toAnchor: 1_000_000,
-    dimension: "reactiveEnergy"
+    dimension: 'reactiveEnergy'
   },
-  "GVARh": {
-    name: "gigavolt-ampere reactive hour",
+  'GVARh': {
+    name: 'gigavolt-ampere reactive hour',
     toAnchor: 1_000_000_000,
-    dimension: "reactiveEnergy"
+    dimension: 'reactiveEnergy'
   },
 };

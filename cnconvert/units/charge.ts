@@ -1,44 +1,44 @@
-import { UnitDefinition } from "../unit";
+import { UnitDefinition } from '../unit';
 
 export const chargeUnits: Record<string, UnitDefinition> = {
-  "c": {
-    name: "coulomb",
+  'c': {
+    name: 'coulomb',
     toAnchor: 1,
-    dimension: "charge"
+    dimension: 'charge'
   },
-  "mC": {
-    name: "millicoulomb",
+  'mC': {
+    name: 'millicoulomb',
     toAnchor: 0.001,
-    dimension: "charge"
+    dimension: 'charge'
   },
-  "µC": {
-    name: "microcoulomb",
+  'µC': {
+    name: 'microcoulomb',
     toAnchor: 1e-6,
-    dimension: "charge"
+    dimension: 'charge'
   },
-  "nC": {
-    name: "nanocoulomb",
+  'nC': {
+    name: 'nanocoulomb',
     toAnchor: 1e-9,
-    dimension: "charge"
+    dimension: 'charge'
   },
-  "pC": {
-    name: "picocoulomb",
+  'pC': {
+    name: 'picocoulomb',
     toAnchor: 1e-12,
-    dimension: "charge"
+    dimension: 'charge'
   },
-  "Ah": {
-    name: "ampere-hour",
+  'Ah': {
+    name: 'ampere-hour',
     toAnchor: 3600,
-    dimension: "charge"
+    dimension: 'charge'
   },
-  "mAh": {
-    name: "milliampere-hour",
+  'mAh': {
+    name: 'milliampere-hour',
     toAnchor: 3.6,
-    dimension: "charge"
+    dimension: 'charge'
   },
-  "e": {
-    name: "elementary charge",
+  'e': {
+    name: 'elementary charge',
     toAnchor: 1.602176634e-19,
-    dimension: "charge"
+    dimension: 'charge'
   },
 };

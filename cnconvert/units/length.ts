@@ -1,69 +1,69 @@
-import { UnitDefinition } from "../unit";
+import { UnitDefinition } from '../unit';
 
 export const lengthUnits: Record<string, UnitDefinition> = {
-  "m": {
-    name: "meter",
+  'm': {
+    name: 'meter',
     toAnchor: 1,
-    dimension: "length"
+    dimension: 'length'
   },
-  "km": {
-    name: "kilometer",
+  'km': {
+    name: 'kilometer',
     toAnchor: 1000,
-    dimension: "length"
+    dimension: 'length'
   },
-  "cm": {
-    name: "centimeter",
+  'cm': {
+    name: 'centimeter',
     toAnchor: 0.01,
-    dimension: "length"
+    dimension: 'length'
   },
-  "mm": {
-    name: "millimeter",
+  'mm': {
+    name: 'millimeter',
     toAnchor: 0.001,
-    dimension: "length"
+    dimension: 'length'
   },
-  "µm": {
-    name: "micrometer",
+  'µm': {
+    name: 'micrometer',
     toAnchor: 0.000001,
-    dimension: "length"
+    dimension: 'length'
   },
-  "nm": {
-    name: "nanometer",
+  'nm': {
+    name: 'nanometer',
     toAnchor: 1e-9,
-    dimension: "length"
+    dimension: 'length'
   },
-  "pm": {
-    name: "picometer",
+  'pm': {
+    name: 'picometer',
     toAnchor: 1e-12,
-    dimension: "length"
+    dimension: 'length'
   },
-  "Å": {
-    name: "angstrom",
+  'Å': {
+    name: 'angstrom',
     toAnchor: 1e-10,
-    dimension: "length"
+    dimension: 'length'
   },
-  "ft": {
-    name: "foot",
+  'ft': {
+    name: 'foot',
     toAnchor: 0.3048,
-    dimension: "length"
+    dimension: 'length'
   },
-  "yd": {
-    name: "yard",
+  'yd': {
+    name: 'yard',
     toAnchor: 0.9144,
-    dimension: "length"
+    dimension: 'length'
   },
-  "in": {
-    name: "inch",
+  'in': {
+    name: 'inch',
     toAnchor: 0.0254,
-    dimension: "length"
+    dimension: 'length'
   },
-  "mi": {
-    name: "mile",
+  'mi': {
+    name: 'mile',
     toAnchor: 1609.34,
-    dimension: "length"
+    dimension: 'length'
   },
-  "nmi": {
-    name: "nautical mile",
+  'nmi': {
+    name: 'nautical mile',
     toAnchor: 1852,
-    dimension: "length"
+    dimension: 'length'
   },
 };

@@ -1,49 +1,49 @@
-import { UnitDefinition } from "../unit";
+import { UnitDefinition } from '../unit';
 
 export const angleUnits: Record<string, UnitDefinition> = {
-  "rad": {
-    name: "radian",
+  'rad': {
+    name: 'radian',
     toAnchor: 1,
-    dimension: "angle"
+    dimension: 'angle'
   },
-  "mil": {
-    name: "mil",
+  'mil': {
+    name: 'mil',
     toAnchor: Math.PI / 3200,
-    dimension: "angle"
+    dimension: 'angle'
   },
-  "mrad": {
-    name: "milliradian",
+  'mrad': {
+    name: 'milliradian',
     toAnchor: 0.001,
-    dimension: "angle"
+    dimension: 'angle'
   },
-  "µrad": {
-    name: "microradian",
+  'µrad': {
+    name: 'microradian',
     toAnchor: 1e-6,
-    dimension: "angle"
+    dimension: 'angle'
   },
-  "gon": {
-    name: "gradian",
+  'gon': {
+    name: 'gradian',
     toAnchor: Math.PI / 200,
-    dimension: "angle"
+    dimension: 'angle'
   },
-  "deg": {
-    name: "degree",
+  'deg': {
+    name: 'degree',
     toAnchor: Math.PI / 180,
-    dimension: "angle"
+    dimension: 'angle'
   },
-  "turn": {
-    name: "turn",
+  'turn': {
+    name: 'turn',
     toAnchor: 2 * Math.PI,
-    dimension: "angle"
+    dimension: 'angle'
   },
-  "arcmin": {
-    name: "arcminute",
+  'arcmin': {
+    name: 'arcminute',
     toAnchor: Math.PI / 10_800,
-    dimension: "angle"
+    dimension: 'angle'
   },
-  "arcsec": {
-    name: "arcsecond",
+  'arcsec': {
+    name: 'arcsecond',
     toAnchor: Math.PI / 648_000,
-    dimension: "angle"
+    dimension: 'angle'
   },
 };

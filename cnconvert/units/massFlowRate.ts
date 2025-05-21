@@ -1,64 +1,64 @@
-import { UnitDefinition } from "../unit";
+import { UnitDefinition } from '../unit';
 
 export const massFlowRateUnits: Record<string, UnitDefinition> = {
-  "kg/s": {
-    name: "kilogram per second",
+  'kg/s': {
+    name: 'kilogram per second',
     toAnchor: 1,
-    dimension: "massFlowRate"
+    dimension: 'massFlowRate'
   },
-  "kg/min": {
-    name: "kilogram per minute",
+  'kg/min': {
+    name: 'kilogram per minute',
     toAnchor: 1 / 60,
-    dimension: "massFlowRate"
+    dimension: 'massFlowRate'
   },
-  "kg/h": {
-    name: "kilogram per hour",
+  'kg/h': {
+    name: 'kilogram per hour',
     toAnchor: 1 / 3600,
-    dimension: "massFlowRate"
+    dimension: 'massFlowRate'
   },
-  "g/s": {
-    name: "gram per second",
+  'g/s': {
+    name: 'gram per second',
     toAnchor: 1 / 1000,
-    dimension: "massFlowRate"
+    dimension: 'massFlowRate'
   },
-  "g/min": {
-    name: "gram per minute",
+  'g/min': {
+    name: 'gram per minute',
     toAnchor: 1 / 1000 / 60,
-    dimension: "massFlowRate"
+    dimension: 'massFlowRate'
   },
-  "g/h": {
-    name: "gram per hour",
+  'g/h': {
+    name: 'gram per hour',
     toAnchor: 1 / 1000 / 3600,
-    dimension: "massFlowRate"
+    dimension: 'massFlowRate'
   },
-  "lb/s": {
-    name: "pound per second",
+  'lb/s': {
+    name: 'pound per second',
     toAnchor: 0.45359237,
-    dimension: "massFlowRate"
+    dimension: 'massFlowRate'
   },
-  "lb/min": {
-    name: "pound per minute",
+  'lb/min': {
+    name: 'pound per minute',
     toAnchor: 0.45359237 / 60,
-    dimension: "massFlowRate"
+    dimension: 'massFlowRate'
   },
-  "lb/h": {
-    name: "pound per hour",
+  'lb/h': {
+    name: 'pound per hour',
     toAnchor: 0.45359237 / 3600,
-    dimension: "massFlowRate"
+    dimension: 'massFlowRate'
   },
-  "oz/s": {
-    name: "ounce per second",
+  'oz/s': {
+    name: 'ounce per second',
     toAnchor: 0.0283495,
-    dimension: "massFlowRate"
+    dimension: 'massFlowRate'
   },
-  "oz/min": {
-    name: "ounce per minute",
+  'oz/min': {
+    name: 'ounce per minute',
     toAnchor: 0.0283495 / 60,
-    dimension: "massFlowRate"
+    dimension: 'massFlowRate'
   },
-  "oz/h": {
-    name: "ounce per hour",
+  'oz/h': {
+    name: 'ounce per hour',
     toAnchor: 0.0283495 / 3600,
-    dimension: "massFlowRate"
+    dimension: 'massFlowRate'
   },
 };

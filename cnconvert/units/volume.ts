@@ -1,89 +1,89 @@
-import { UnitDefinition } from "../unit";
+import { UnitDefinition } from '../unit';
 
 export const volumeUnits: Record<string, UnitDefinition> = {
-  "m^3": {
-    name: "cubic meter",
+  'm^3': {
+    name: 'cubic meter',
     toAnchor: 1,
-    dimension: "volume"
+    dimension: 'volume'
   },
-  "km^3": {
-    name: "cubic kilometer",
+  'km^3': {
+    name: 'cubic kilometer',
     toAnchor: 1e9,
-    dimension: "volume"
+    dimension: 'volume'
   },
-  "cm^3": {
-    name: "cubic centimeter",
+  'cm^3': {
+    name: 'cubic centimeter',
     toAnchor: 1e-6,
-    dimension: "volume"
+    dimension: 'volume'
   },
-  "mm^3": {
-    name: "cubic millimeter",
+  'mm^3': {
+    name: 'cubic millimeter',
     toAnchor: 1e-9,
-    dimension: "volume"
+    dimension: 'volume'
   },
-  "ml": {
-    name: "milliliter",
+  'ml': {
+    name: 'milliliter',
     toAnchor: 1e-6,
-    dimension: "volume"
+    dimension: 'volume'
   },
-  "l": {
-    name: "liter",
+  'l': {
+    name: 'liter',
     toAnchor: 1e-3,
-    dimension: "volume"
+    dimension: 'volume'
   },
-  "kl": {
-    name: "kiloliter",
+  'kl': {
+    name: 'kiloliter',
     toAnchor: 1,
-    dimension: "volume"
+    dimension: 'volume'
   },
-  "tsp": {
-    name: "teaspoon",
+  'tsp': {
+    name: 'teaspoon',
     toAnchor: 4.92892159375e-6,
-    dimension: "volume"
+    dimension: 'volume'
   },
-  "Tbs": {
-    name: "tablespoon",
+  'Tbs': {
+    name: 'tablespoon',
     toAnchor: 1.478676478125e-5,
-    dimension: "volume"
+    dimension: 'volume'
   },
-  "fl-oz": {
-    name: "fluid ounce",
+  'fl-oz': {
+    name: 'fluid ounce',
     toAnchor: 2.95735295625e-5,
-    dimension: "volume"
+    dimension: 'volume'
   },
-  "cup": {
-    name: "cup",
+  'cup': {
+    name: 'cup',
     toAnchor: 2.365882365e-4,
-    dimension: "volume"
+    dimension: 'volume'
   },
-  "pnt": {
-    name: "pint",
+  'pnt': {
+    name: 'pint',
     toAnchor: 4.73176473e-4,
-    dimension: "volume"
+    dimension: 'volume'
   },
-  "qt": {
-    name: "quart",
+  'qt': {
+    name: 'quart',
     toAnchor: 9.46352946e-4,
-    dimension: "volume"
+    dimension: 'volume'
   },
-  "gal": {
-    name: "gallon",
+  'gal': {
+    name: 'gallon',
     toAnchor: 3.785411784e-3,
-    dimension: "volume"
+    dimension: 'volume'
   },
-  "ft^3": {
-    name: "cubic foot",
+  'ft^3': {
+    name: 'cubic foot',
     toAnchor: 0.028316846592,
-    dimension: "volume"
+    dimension: 'volume'
   },
-  "yd^3": {
-    name: "cubic yard",
+  'yd^3': {
+    name: 'cubic yard',
     toAnchor: 0.764554857984,
-    dimension: "volume"
+    dimension: 'volume'
   },
-  "in^3": {
-    name: "cubic inch",
+  'in^3': {
+    name: 'cubic inch',
     toAnchor: 1.6387064e-5,
-    dimension: "volume"
+    dimension: 'volume'
   },
 };

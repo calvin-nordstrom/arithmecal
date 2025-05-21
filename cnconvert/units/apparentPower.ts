@@ -1,29 +1,29 @@
-import { UnitDefinition } from "../unit";
+import { UnitDefinition } from '../unit';
 
 export const apparentPowerUnits: Record<string, UnitDefinition> = {
-  "VA": {
-    name: "volt-ampere",
+  'VA': {
+    name: 'volt-ampere',
     toAnchor: 1,
-    dimension: "apparentPower"
+    dimension: 'apparentPower'
   },
-  "mVA": {
-    name: "millivolt-ampere",
+  'mVA': {
+    name: 'millivolt-ampere',
     toAnchor: 0.001,
-    dimension: "apparentPower"
+    dimension: 'apparentPower'
   },
-  "kVA": {
-    name: "kilovolt-ampere",
+  'kVA': {
+    name: 'kilovolt-ampere',
     toAnchor: 1000,
-    dimension: "apparentPower"
+    dimension: 'apparentPower'
   },
-  "MVA": {
-    name: "megavolt-ampere",
+  'MVA': {
+    name: 'megavolt-ampere',
     toAnchor: 1_000_000,
-    dimension: "apparentPower"
+    dimension: 'apparentPower'
   },
-  "GVA": {
-    name: "gigavolt-ampere",
+  'GVA': {
+    name: 'gigavolt-ampere',
     toAnchor: 1_000_000_000,
-    dimension: "apparentPower"
+    dimension: 'apparentPower'
   },
 };

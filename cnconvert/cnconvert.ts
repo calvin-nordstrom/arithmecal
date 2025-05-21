@@ -1,13 +1,13 @@
-import { unitRegistry } from "./registry";
-import { Unit } from "./unit";
+import { unitRegistry } from './registry';
+import { Unit } from './unit';
 
 class Converter {
   private value: number;
   private fromUnit: Unit | null = null;
 
   constructor(value: number) {
-    if (typeof value !== "number" || isNaN(value)) {
-      throw new Error("Value must be a valid number.");
+    if (typeof value !== 'number' || isNaN(value)) {
+      throw new Error('Value must be a valid number.');
     }
     this.value = value;
   }
@@ -22,7 +22,7 @@ class Converter {
 
   to(unit: Unit): number {
     if (!this.fromUnit) {
-      throw new Error("Source unit not specified. Use .from(unit) first.");
+      throw new Error('Source unit not specified. Use .from(unit) first.');
     }
     if (!unitRegistry[unit]) {
       throw new Error(`Unsupported 'to' unit: ${unit}`);
@@ -41,13 +41,13 @@ class Converter {
 
     // Convert to SI
     const siValue =
-      typeof fromDef.toAnchor === "function"
+      typeof fromDef.toAnchor === 'function'
         ? fromDef.toAnchor(this.value)
         : this.value * fromDef.toAnchor;
 
     // Convert from SI to target unit
     const result =
-      typeof toDef.fromAnchor === "function"
+      typeof toDef.fromAnchor === 'function'
         ? toDef.fromAnchor(siValue)
         : siValue / (toDef.toAnchor as number);
 

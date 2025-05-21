@@ -1,49 +1,49 @@
-import { UnitDefinition } from "../unit";
+import { UnitDefinition } from '../unit';
 
 export const pressureUnits: Record<string, UnitDefinition> = {
-  "Pa": {
-    name: "pascal",
+  'Pa': {
+    name: 'pascal',
     toAnchor: 1,
-    dimension: "pressure"
+    dimension: 'pressure'
   },
-  "kPa": {
-    name: "kilopascal",
+  'kPa': {
+    name: 'kilopascal',
     toAnchor: 1_000,
-    dimension: "pressure"
+    dimension: 'pressure'
   },
-  "MPa": {
-    name: "megapascal",
+  'MPa': {
+    name: 'megapascal',
     toAnchor: 1_000_000,
-    dimension: "pressure"
+    dimension: 'pressure'
   },
-  "hPa": {
-    name: "hectopascal",
+  'hPa': {
+    name: 'hectopascal',
     toAnchor: 100,
-    dimension: "pressure"
+    dimension: 'pressure'
   },
-  "bar": {
-    name: "bar",
+  'bar': {
+    name: 'bar',
     toAnchor: 100_000,
-    dimension: "pressure"
+    dimension: 'pressure'
   },
-  "torr": {
-    name: "torr",
+  'torr': {
+    name: 'torr',
     toAnchor: 133.322,
-    dimension: "pressure"
+    dimension: 'pressure'
   },
-  "psi": {
-    name: "pound per square inch",
+  'psi': {
+    name: 'pound per square inch',
     toAnchor: 6_894.76,
-    dimension: "pressure"
+    dimension: 'pressure'
   },
-  "atm": {
-    name: "atmosphere",
+  'atm': {
+    name: 'atmosphere',
     toAnchor: 101325,
-    dimension: "pressure"
+    dimension: 'pressure'
   },
-  "mmHg": {
-    name: "millimeter of mercury",
+  'mmHg': {
+    name: 'millimeter of mercury',
     toAnchor: 133.322,
-    dimension: "pressure"
+    dimension: 'pressure'
   },
 };

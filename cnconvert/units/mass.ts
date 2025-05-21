@@ -1,54 +1,54 @@
-import { UnitDefinition } from "../unit";
+import { UnitDefinition } from '../unit';
 
 export const massUnits: Record<string, UnitDefinition> = {
-  "kg": {
-    name: "kilogram",
+  'kg': {
+    name: 'kilogram',
     toAnchor: 1,
-    dimension: "mass"
+    dimension: 'mass'
   },
-  "g": {
-    name: "gram",
+  'g': {
+    name: 'gram',
     toAnchor: 0.001,
-    dimension: "mass"
+    dimension: 'mass'
   },
-  "mg": {
-    name: "milligram",
+  'mg': {
+    name: 'milligram',
     toAnchor: 0.000001,
-    dimension: "mass"
+    dimension: 'mass'
   },
-  "µg": {
-    name: "microgram",
+  'µg': {
+    name: 'microgram',
     toAnchor: 1e-9,
-    dimension: "mass"
+    dimension: 'mass'
   },
-  "t": {
-    name: "metric ton",
+  't': {
+    name: 'metric ton',
     toAnchor: 1000,
-    dimension: "mass"
+    dimension: 'mass'
   },
-  "oz": {
-    name: "ounce",
+  'oz': {
+    name: 'ounce',
     toAnchor: 0.0283495,
-    dimension: "mass"
+    dimension: 'mass'
   },
-  "lb": {
-    name: "pound",
+  'lb': {
+    name: 'pound',
     toAnchor: 0.453592,
-    dimension: "mass"
+    dimension: 'mass'
   },
-  "st": {
-    name: "stone",
+  'st': {
+    name: 'stone',
     toAnchor: 6.35029,
-    dimension: "mass"
+    dimension: 'mass'
   },
-  "us-ton": {
-    name: "US ton (short ton)",
+  'us-ton': {
+    name: 'US ton (short ton)',
     toAnchor: 907.18474,
-    dimension: "mass"
+    dimension: 'mass'
   },
-  "uk-ton": {
-    name: "Imperial ton (long ton)",
+  'uk-ton': {
+    name: 'Imperial ton (long ton)',
     toAnchor: 1016.0469088,
-    dimension: "mass"
+    dimension: 'mass'
   },
 };

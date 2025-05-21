@@ -1,54 +1,54 @@
-import { UnitDefinition } from "../unit";
+import { UnitDefinition } from '../unit';
 
 export const digitalUnits: Record<string, UnitDefinition> = {
-  "bit": {
-    name: "bit",
+  'bit': {
+    name: 'bit',
     toAnchor: 1,
-    dimension: "digital"
+    dimension: 'digital'
   },
-  "byte": {
-    name: "byte",
+  'byte': {
+    name: 'byte',
     toAnchor: 8,
-    dimension: "digital"
+    dimension: 'digital'
   },
-  "kB": {
-    name: "kilobyte",
+  'kB': {
+    name: 'kilobyte',
     toAnchor: 8_000,
-    dimension: "digital"
+    dimension: 'digital'
   },
-  "MB": {
-    name: "megabyte",
+  'MB': {
+    name: 'megabyte',
     toAnchor: 8_000_000,
-    dimension: "digital"
+    dimension: 'digital'
   },
-  "GB": {
-    name: "gigabyte",
+  'GB': {
+    name: 'gigabyte',
     toAnchor: 8_000_000_000,
-    dimension: "digital"
+    dimension: 'digital'
   },
-  "TB": {
-    name: "terabyte",
+  'TB': {
+    name: 'terabyte',
     toAnchor: 8_000_000_000_000,
-    dimension: "digital"
+    dimension: 'digital'
   },
-  "KiB": {
-    name: "kibibyte",
+  'KiB': {
+    name: 'kibibyte',
     toAnchor: 8_192,
-    dimension: "digital"
+    dimension: 'digital'
   },
-  "MiB": {
-    name: "mebibyte",
+  'MiB': {
+    name: 'mebibyte',
     toAnchor: 8_388_608,
-    dimension: "digital"
+    dimension: 'digital'
   },
-  "GiB": {
-    name: "gibibyte",
+  'GiB': {
+    name: 'gibibyte',
     toAnchor: 8_589_934_592,
-    dimension: "digital"
+    dimension: 'digital'
   },
-  "TiB": {
-    name: "tebibyte",
+  'TiB': {
+    name: 'tebibyte',
     toAnchor: 8_796_093_022_208,
-    dimension: "digital"
+    dimension: 'digital'
   },
 };

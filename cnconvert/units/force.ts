@@ -1,44 +1,44 @@
-import { UnitDefinition } from "../unit";
+import { UnitDefinition } from '../unit';
 
 export const forceUnits: Record<string, UnitDefinition> = {
-  "N": {
-    name: "newton",
+  'N': {
+    name: 'newton',
     toAnchor: 1,
-    dimension: "force"
+    dimension: 'force'
   },
-  "kN": {
-    name: "kilonewton",
+  'kN': {
+    name: 'kilonewton',
     toAnchor: 1000,
-    dimension: "force"
+    dimension: 'force'
   },
-  "MN": {
-    name: "megnewton",
+  'MN': {
+    name: 'megnewton',
     toAnchor: 1e6,
-    dimension: "force"
+    dimension: 'force'
   },
-  "GN": {
-    name: "giganewton",
+  'GN': {
+    name: 'giganewton',
     toAnchor: 1e9,
-    dimension: "force"
+    dimension: 'force'
   },
-  "kgf": {
-    name: "kilogram-force",
+  'kgf': {
+    name: 'kilogram-force',
     toAnchor: 9.80665,
-    dimension: "force"
+    dimension: 'force'
   },
-  "gf": {
-    name: "gram-force",
+  'gf': {
+    name: 'gram-force',
     toAnchor: 0.00980665,
-    dimension: "force"
+    dimension: 'force'
   },
-  "lbf": {
-    name: "pound-force",
+  'lbf': {
+    name: 'pound-force',
     toAnchor: 4.44822,
-    dimension: "force"
+    dimension: 'force'
   },
-  "dyne": {
-    name: "dyne",
+  'dyne': {
+    name: 'dyne',
     toAnchor: 1e-5,
-    dimension: "force"
+    dimension: 'force'
   },
 };

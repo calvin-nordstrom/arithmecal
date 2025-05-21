@@ -1,54 +1,54 @@
-import { UnitDefinition } from "../unit";
+import { UnitDefinition } from '../unit';
 
 export const timeUnits: Record<string, UnitDefinition> = {
-  "s": {
-    name: "second",
+  's': {
+    name: 'second',
     toAnchor: 1,
-    dimension: "time"
+    dimension: 'time'
   },
-  "ms": {
-    name: "millisecond",
+  'ms': {
+    name: 'millisecond',
     toAnchor: 1e-3,
-    dimension: "time"
+    dimension: 'time'
   },
-  "µs": {
-    name: "microsecond",
+  'µs': {
+    name: 'microsecond',
     toAnchor: 1e-6,
-    dimension: "time"
+    dimension: 'time'
   },
-  "ns": {
-    name: "nanosecond",
+  'ns': {
+    name: 'nanosecond',
     toAnchor: 1e-9,
-    dimension: "time"
+    dimension: 'time'
   },
-  "min": {
-    name: "minute",
+  'min': {
+    name: 'minute',
     toAnchor: 60,
-    dimension: "time"
+    dimension: 'time'
   },
-  "h": {
-    name: "hour",
+  'h': {
+    name: 'hour',
     toAnchor: 3600,
-    dimension: "time"
+    dimension: 'time'
   },
-  "d": {
-    name: "day",
+  'd': {
+    name: 'day',
     toAnchor: 86400,
-    dimension: "time"
+    dimension: 'time'
   },
-  "week": {
-    name: "week",
+  'week': {
+    name: 'week',
     toAnchor: 604800,
-    dimension: "time"
+    dimension: 'time'
   },
-  "month": {
-    name: "month",
+  'month': {
+    name: 'month',
     toAnchor: 2_629_746,
-    dimension: "time"
+    dimension: 'time'
   },
-  "year": {
-    name: "year",
+  'year': {
+    name: 'year',
     toAnchor: 31_556_952,
-    dimension: "time"
+    dimension: 'time'
   },
 };

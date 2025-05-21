@@ -1,59 +1,59 @@
-import { UnitDefinition } from "../unit";
+import { UnitDefinition } from '../unit';
 
 export const energyUnits: Record<string, UnitDefinition> = {
-  "J": {
-    name: "joule",
+  'J': {
+    name: 'joule',
     toAnchor: 1,
-    dimension: "energy"
+    dimension: 'energy'
   },
-  "kJ": {
-    name: "kilojoule",
+  'kJ': {
+    name: 'kilojoule',
     toAnchor: 1000,
-    dimension: "energy"
+    dimension: 'energy'
   },
-  "MJ": {
-    name: "megajoule",
+  'MJ': {
+    name: 'megajoule',
     toAnchor: 1_000_000,
-    dimension: "energy"
+    dimension: 'energy'
   },
-  "GJ": {
-    name: "gigajoule",
+  'GJ': {
+    name: 'gigajoule',
     toAnchor: 1_000_000_000,
-    dimension: "energy"
+    dimension: 'energy'
   },
-  "Ws": {
-    name: "watt-second",
+  'Ws': {
+    name: 'watt-second',
     toAnchor: 1,
-    dimension: "energy"
+    dimension: 'energy'
   },
-  "Wm": {
-    name: "watt-minute",
+  'Wm': {
+    name: 'watt-minute',
     toAnchor: 60,
-    dimension: "energy"
+    dimension: 'energy'
   },
-  "Wh": {
-    name: "watt-hour",
+  'Wh': {
+    name: 'watt-hour',
     toAnchor: 3600,
-    dimension: "energy"
+    dimension: 'energy'
   },
-  "mWh": {
-    name: "milliwatt-hour",
+  'mWh': {
+    name: 'milliwatt-hour',
     toAnchor: 3.6,
-    dimension: "energy"
+    dimension: 'energy'
   },
-  "kWh": {
-    name: "kilowatt-hour",
+  'kWh': {
+    name: 'kilowatt-hour',
     toAnchor: 3_600_000,
-    dimension: "energy"
+    dimension: 'energy'
   },
-  "MWh": {
-    name: "megawatt-hour",
+  'MWh': {
+    name: 'megawatt-hour',
     toAnchor: 3_600_000_000,
-    dimension: "energy"
+    dimension: 'energy'
   },
-  "GWh": {
-    name: "gigawatt-hour",
+  'GWh': {
+    name: 'gigawatt-hour',
     toAnchor: 3_600_000_000_000,
-    dimension: "energy"
+    dimension: 'energy'
   },
 };

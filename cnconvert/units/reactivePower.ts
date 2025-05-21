@@ -1,29 +1,29 @@
-import { UnitDefinition } from "../unit";
+import { UnitDefinition } from '../unit';
 
 export const reactivePowerUnits: Record<string, UnitDefinition> = {
-  "VAR": {
-    name: "volt-ampere reactive",
+  'VAR': {
+    name: 'volt-ampere reactive',
     toAnchor: 1,
-    dimension: "reactivePower"
+    dimension: 'reactivePower'
   },
-  "mVAR": {
-    name: "millivolt-ampere reactive",
+  'mVAR': {
+    name: 'millivolt-ampere reactive',
     toAnchor: 0.001,
-    dimension: "reactivePower"
+    dimension: 'reactivePower'
   },
-  "kVAR": {
-    name: "kilovolt-ampere reactive",
+  'kVAR': {
+    name: 'kilovolt-ampere reactive',
     toAnchor: 1000,
-    dimension: "reactivePower"
+    dimension: 'reactivePower'
   },
-  "MVAR": {
-    name: "megavolt-ampere reactive",
+  'MVAR': {
+    name: 'megavolt-ampere reactive',
     toAnchor: 1_000_000,
-    dimension: "reactivePower"
+    dimension: 'reactivePower'
   },
-  "GVAR": {
-    name: "gigavolt-ampere reactive",
+  'GVAR': {
+    name: 'gigavolt-ampere reactive',
     toAnchor: 1_000_000_000,
-    dimension: "reactivePower"
+    dimension: 'reactivePower'
   },
 };

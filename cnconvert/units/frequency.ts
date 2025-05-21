@@ -1,49 +1,49 @@
-import { UnitDefinition } from "../unit";
+import { UnitDefinition } from '../unit';
 
 export const frequencyUnits: Record<string, UnitDefinition> = {
-  "Hz": {
-    name: "hertz",
+  'Hz': {
+    name: 'hertz',
     toAnchor: 1,
-    dimension: "frequency"
+    dimension: 'frequency'
   },
-  "mHz": {
-    name: "millihertz",
+  'mHz': {
+    name: 'millihertz',
     toAnchor: 0.001,
-    dimension: "frequency"
+    dimension: 'frequency'
   },
-  "kHz": {
-    name: "kilohertz",
+  'kHz': {
+    name: 'kilohertz',
     toAnchor: 1000,
-    dimension: "frequency"
+    dimension: 'frequency'
   },
-  "MHz": {
-    name: "megahertz",
+  'MHz': {
+    name: 'megahertz',
     toAnchor: 1_000_000,
-    dimension: "frequency"
+    dimension: 'frequency'
   },
-  "GHz": {
-    name: "gigahertz",
+  'GHz': {
+    name: 'gigahertz',
     toAnchor: 1_000_000_000,
-    dimension: "frequency"
+    dimension: 'frequency'
   },
-  "THz": {
-    name: "terahertz",
+  'THz': {
+    name: 'terahertz',
     toAnchor: 1_000_000_000_000,
-    dimension: "frequency"
+    dimension: 'frequency'
   },
-  "rpm": {
-    name: "revolutions per minute",
+  'rpm': {
+    name: 'revolutions per minute',
     toAnchor: 1 / 60,
-    dimension: "frequency"
+    dimension: 'frequency'
   },
-  "deg/s": {
-    name: "degrees per second",
+  'deg/s': {
+    name: 'degrees per second',
     toAnchor: 1 / 360,
-    dimension: "frequency"
+    dimension: 'frequency'
   },
-  "rad/s": {
-    name: "radians per second",
+  'rad/s': {
+    name: 'radians per second',
     toAnchor: 1 / (2 * Math.PI),
-    dimension: "frequency"
+    dimension: 'frequency'
   },
 };

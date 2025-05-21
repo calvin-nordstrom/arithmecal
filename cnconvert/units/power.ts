@@ -1,49 +1,49 @@
-import { UnitDefinition } from "../unit";
+import { UnitDefinition } from '../unit';
 
 export const powerUnits: Record<string, UnitDefinition> = {
-  "W": {
-    name: "watt",
+  'W': {
+    name: 'watt',
     toAnchor: 1,
-    dimension: "power"
+    dimension: 'power'
   },
-  "mW": {
-    name: "milliwatt",
+  'mW': {
+    name: 'milliwatt',
     toAnchor: 0.001,
-    dimension: "power"
+    dimension: 'power'
   },
-  "kW": {
-    name: "kilowatt",
+  'kW': {
+    name: 'kilowatt',
     toAnchor: 1000,
-    dimension: "power"
+    dimension: 'power'
   },
-  "MW": {
-    name: "megawatt",
+  'MW': {
+    name: 'megawatt',
     toAnchor: 1_000_000,
-    dimension: "power"
+    dimension: 'power'
   },
-  "GW": {
-    name: "gigawatt",
+  'GW': {
+    name: 'gigawatt',
     toAnchor: 1_000_000_000,
-    dimension: "power"
+    dimension: 'power'
   },
-  "ft-lb/s": {
-    name: "foot-pound per second",
+  'ft-lb/s': {
+    name: 'foot-pound per second',
     toAnchor: 1.3558179483,
-    dimension: "power"
+    dimension: 'power'
   },
-  "hp": {
-    name: "horsepower (mechanical)",
+  'hp': {
+    name: 'horsepower (mechanical)',
     toAnchor: 745.69987158227022,
-    dimension: "power"
+    dimension: 'power'
   },
-  "PS": {
-    name: "Pferdestärke (metric horsepower)",
+  'PS': {
+    name: 'Pferdestärke (metric horsepower)',
     toAnchor: 735.49875,
-    dimension: "power"
+    dimension: 'power'
   },
-  "Btu/s": {
-    name: "British thermal unit per second",
+  'Btu/s': {
+    name: 'British thermal unit per second',
     toAnchor: 1055.05585,
-    dimension: "power"
+    dimension: 'power'
   },
 };

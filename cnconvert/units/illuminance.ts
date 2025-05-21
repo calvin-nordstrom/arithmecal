@@ -1,19 +1,19 @@
-import { UnitDefinition } from "../unit";
+import { UnitDefinition } from '../unit';
 
 export const illuminanceUnits: Record<string, UnitDefinition> = {
-  "lx": {
-    name: "lux",
+  'lx': {
+    name: 'lux',
     toAnchor: 1,
-    dimension: "illuminance"
+    dimension: 'illuminance'
   },
-  "ph": {
-    name: "phot",
+  'ph': {
+    name: 'phot',
     toAnchor: 10_000,
-    dimension: "illuminance"
+    dimension: 'illuminance'
   },
-  "fc": {
-    name: "foot-candle",
+  'fc': {
+    name: 'foot-candle',
     toAnchor: 10.76391,
-    dimension: "illuminance"
+    dimension: 'illuminance'
   },
 };

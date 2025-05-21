@@ -1,34 +1,34 @@
-import { UnitDefinition } from "../unit";
+import { UnitDefinition } from '../unit';
 
 export const paceUnits: Record<string, UnitDefinition> = {
-  "s/m": {
-    name: "second per meter",
+  's/m': {
+    name: 'second per meter',
     toAnchor: 1,
-    dimension: "pace"
+    dimension: 'pace'
   },
-  "s/km": {
-    name: "second per kilometer",
+  's/km': {
+    name: 'second per kilometer',
     toAnchor: 1000,
-    dimension: "pace"
+    dimension: 'pace'
   },
-  "min/km": {
-    name: "minute per kilometer",
+  'min/km': {
+    name: 'minute per kilometer',
     toAnchor: 60 * 1000,
-    dimension: "pace"
+    dimension: 'pace'
   },
-  "s/ft": {
-    name: "second per foot",
+  's/ft': {
+    name: 'second per foot',
     toAnchor: 0.3048,
-    dimension: "pace"
+    dimension: 'pace'
   },
-  "s/mi": {
-    name: "second per mile",
+  's/mi': {
+    name: 'second per mile',
     toAnchor: 1609.344,
-    dimension: "pace"
+    dimension: 'pace'
   },
-  "min/mi": {
-    name: "minute per mile",
+  'min/mi': {
+    name: 'minute per mile',
     toAnchor: 60 * 1609.344,
-    dimension: "pace"
+    dimension: 'pace'
   },
 };
