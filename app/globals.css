@@ -232,6 +232,118 @@ button:hover {
   margin-bottom: 2rem;
 }
 
+/* Home page styles */
+
+.home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.title-banner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: calc(100% - 4rem);
+  height: 500px;
+  padding: 0 2rem 0 2rem;
+  background-color: var(--blue-lighter);
+}
+
+.title-banner h1 {
+  font-size: 48px;
+  margin: 0;
+}
+
+.title-banner h2 {
+  margin: 0;
+}
+
+.home-content-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  gap: 2rem;
+  padding: 2rem 0 4rem 0;
+}
+
+.home-content {
+  width: 70%;
+}
+
+.home-content input {
+  border-radius: 1rem;
+  width: calc(100% - 2rem);
+  max-width: 600px;
+}
+
+.home-about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 800px;
+}
+
+.home-about p {
+  line-height: 2rem;
+}
+
+.home-about-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font: var(--rubik-text);
+  padding: 1rem 2rem 1rem 2rem;
+  background-color: var(--calculator-background);
+  text-decoration: none;
+  border-radius: 4px;
+  transition: 0.25s;
+}
+
+.home-about-link:hover {
+  background-color: var(--calculator-button-hover-background);
+}
+
+.home-category-item-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.home-category-item {
+  width: 10rem;
+  height: 10rem;
+}
+
+.home-category-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100%;
+  background-color: var(--calculator-background);
+  text-decoration: none;
+  border-radius: 4px;
+  transition: 0.25s;
+}
+
+.home-category-link:hover {
+  background-color: var(--calculator-button-hover-background);
+}
+
+.home-category-link h3 {
+  padding: 0;
+}
+
 /* Header styles */
 
 .header {
