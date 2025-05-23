@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   keywords: 'online calculators, math calculator, unit converter, physics calculator, conversion tools, educational tools, reference calculators, Arithmecal, free calculators, web tools, STEM calculators'
 }
 
-export default function Home() {
+export default function HomePage() {
   return (
     <>
       <main className='home'>
