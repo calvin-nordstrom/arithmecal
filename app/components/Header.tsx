@@ -4,6 +4,7 @@ import React, { useEffect, useRef } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { useState } from 'react';
+import CalculatorSearch from './CalculatorSearch';
 
 export default function Header() {
   const [isSearchExpanded, setIsSearchExpanded] = useState(false);
@@ -52,7 +53,7 @@ export default function Header() {
 
         <div className='top-right-container'>
           <div className='search-container' ref={searchContainerRef}>
-            <input type='text' className='search-input' placeholder='Search calculators...' />
+            <CalculatorSearch />
           </div>
           <button className='search-button' ref={searchButtonRef} onClick={() => setIsSearchExpanded(true)}>&#128269;</button>
           <div className='nav-links'>

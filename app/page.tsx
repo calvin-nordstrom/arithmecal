@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link';
 import Footer from './components/Footer';
+import CalculatorSearch from './components/CalculatorSearch';
 
 export const metadata: Metadata = {
   title: 'Arithmecal',
@@ -20,7 +21,7 @@ export default function HomePage() {
         <div className='home-content-container'>
           <div className='home-content'>
             <h2>Search Calculators</h2>
-            <input type='text' className='search-input' placeholder='Search calculators...' />
+            <CalculatorSearch />
           </div>
           <div className='home-content'>
             <h2>Featured Categories</h2>
