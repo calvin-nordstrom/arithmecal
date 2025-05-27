@@ -1,8 +1,6 @@
 import MiscLayout from '@/app/components/MiscLayout';
 import type { Metadata } from 'next'
-import FeedbackForm from '../components/contact/FeedbackForm';
-import SuggestCalculatorForm from '../components/contact/SuggestCalculatorForm';
-import SuggestUnitForm from '../components/contact/SuggestUnitForm';
+import EmailForm from '../components/EmailForm';
 
 export const metadata: Metadata = {
   title: 'Contact Us',
@@ -11,27 +9,56 @@ export const metadata: Metadata = {
 }
 
 export default function ContactPage() {
+  const recipient = '';
+
   return (
     <MiscLayout>
       <h1>Contact Us</h1>
 
       <div className='contact'>
         <div className='contact-form-container'>
-          <h2>1. Feedback/Errors</h2>
-          <p>Use this form to help us improve our services by providing <strong>general feedback</strong> or <strong>reporting errors</strong>.</p>
-          <FeedbackForm />
+          <EmailForm
+            title='Send Feedback'
+            description='Use this form to help us improve our services by providing general feedback or reporting errors.'
+            recipient={recipient}
+            subject='Feedback'
+            buttonLabel='Send Feedback'
+            fields={[
+              { id: 'email', label: 'Email (optional)', type: 'input' },
+              { id: 'page', label: 'Calculator/Page', required: true, type: 'input' },
+              { id: 'feedback', label: 'Feedback', required: true, type: 'textarea' },
+            ]}
+          />
         </div>
 
         <div className='contact-form-container'>
-          <h2>2. Suggest a Calculator</h2>
-          <p>Use this form to suggest a new calculator or provide feedback on an existing one.</p>
-          <SuggestCalculatorForm />
+          <EmailForm
+            title='Suggest a Calculator'
+            description='Use this form to suggest a new calculator or provide feedback on an existing one.'
+            recipient={recipient}
+            subject='Calculator Suggestion'
+            buttonLabel='Suggest Calculator'
+            fields={[
+              { id: 'email', label: 'Email (optional)', type: 'input' },
+              { id: 'name', label: 'Calculator Name', required: true, type: 'input' },
+              { id: 'description', label: 'Calculator Description', required: true, type: 'textarea' },
+            ]}
+          />
         </div>
 
         <div className='contact-form-container'>
-          <h2>3. Suggest a Unit</h2>
-          <p>Use this form to suggest a new unit or provide feedback on an existing one.</p>
-          <SuggestUnitForm />
+          <EmailForm
+            title='Suggest a Unit'
+            description='Use this form to suggest a new unit or provide feedback on an existing one.'
+            recipient={recipient}
+            subject='Unit Suggestion'
+            buttonLabel='Suggest Unit'
+            fields={[
+              { id: 'email', label: 'Email (optional)', type: 'input' },
+              { id: 'unit', label: 'Unit', required: true, type: 'input' },
+              { id: 'description', label: 'Unit Description', required: true, type: 'textarea' },
+            ]}
+          />
         </div>
       </div>
     </MiscLayout>
