@@ -773,6 +773,8 @@ button:hover {
   justify-content: center;
   align-items: center;
   position: relative;
+  width: 100%;
+  margin: 0rem 0.5rem 0rem 0.5rem;
 }
 
 .search-dropdown {
@@ -786,7 +788,7 @@ button:hover {
   overflow-y: auto;
   background-color: white;
   border: 1px solid #ccc;
-  z-index: 1000;
+  z-index: 1002;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 

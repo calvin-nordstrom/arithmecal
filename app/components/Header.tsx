@@ -74,7 +74,7 @@ export default function Header() {
       {isSearchExpanded && (
         <div className='search-expanded'>
           <button onClick={() => setIsSearchExpanded(false)}>&lt;</button>
-          <input type='text' className='search-input' placeholder='Search calculators...' />
+          <CalculatorSearch />
         </div>
       )}
     </header>
