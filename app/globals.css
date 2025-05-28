@@ -938,7 +938,7 @@ input[type=number] {
 }
 
 .contact-form-container {
-  padding: 1rem;
+  padding: 1rem 1rem 2rem 1rem;
   margin-bottom: 4rem;
   background-color: var(--calculator-background);
   border: 1px solid var(--calculator-border);
@@ -946,14 +946,13 @@ input[type=number] {
   box-shadow: rgba(0, 0, 0, 0.2) 2px 2px 4px;
 }
 
-.contact-form-container form {
-  padding-top: 1rem;
-  padding-right: 1rem;
-  padding-bottom: 1rem;
+.contact-form-container h2 {
+  padding: 0;
 }
 
 .contact-form-container input,
 textarea {
+  box-sizing: border-box;
   width: 100%;
   margin-top: 0.5rem;
   margin-bottom: 1rem;
