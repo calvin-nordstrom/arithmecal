@@ -11,12 +11,17 @@
   /* Fonts */
   --rubik-text: 400 16px 'Rubik', sans-serif;
 
+  /* Header styles */
   --header-background-color: rgb(240, 240, 240);
   --header-hamburger-background-color: rgb(255, 255, 255);
   --header-font-color: rgb(0, 0, 0);
 
+  /* Footer styles */
+  --footer-top-background-color: rgb(240, 240, 240);
+  --footer-bottom-background-color: rgb(240, 240, 240);
+  --footer-font-color: rgb(0, 0, 0);
+
   --center-background-color: rgb(216, 216, 216);
-  --content-background-color: rgb(255, 255, 255);
 
   --link-color: rgb(0, 64, 255);
 
@@ -54,12 +59,13 @@ body {
   justify-content: center;
   margin: 0;
   padding: 0;
-  background-color: var(--center-background-color);
+  background-color: var(--header-background-color);
 }
 
 .center {
   display: flex;
   justify-content: center;
+  background-color: var(--center-background-color);
 }
 
 .content {
@@ -249,10 +255,16 @@ button:hover {
   justify-content: center;
   align-items: center;
   text-align: center;
-  width: calc(100% - 4rem);
+  color: white;
+  width: 100%;
   height: 500px;
   padding: 0 2rem 0 2rem;
-  background-color: var(--blue-lighter);
+  margin: 0;
+  padding: 0;
+  background-image: url('/home_background.jpg');
+  background-repeat: no-repeat;
+  background-position: center -4rem;
+  background-attachment: fixed;
 }
 
 .title-banner h1 {
@@ -271,6 +283,7 @@ button:hover {
   width: 100%;
   gap: 2rem;
   padding: 2rem 0 4rem 0;
+  background-color: var(--center-background-color);
 }
 
 .home-content {
@@ -304,15 +317,17 @@ button:hover {
   justify-content: center;
   text-align: center;
   font: var(--rubik-text);
-  padding: 1rem 2rem 1rem 2rem;
+  padding: 1rem;
   background-color: var(--calculator-background);
+  border: 1px solid var(--calculator-button-border);
   text-decoration: none;
   border-radius: 4px;
-  transition: 0.25s;
+  transition: 0.15s;
 }
 
 .home-about-link:hover {
-  background-color: var(--calculator-button-hover-background);
+  box-shadow: rgba(0, 0, 0, 0.2) 2px 2px 4px;
+  transform: scale(1.05);
 }
 
 .home-category-item-container {
@@ -324,7 +339,7 @@ button:hover {
 }
 
 .home-category-item {
-  width: 10rem;
+  width: 12rem;
   height: 10rem;
 }
 
@@ -335,22 +350,32 @@ button:hover {
   text-align: center;
   height: 100%;
   background-color: var(--calculator-background);
+  border: 1px solid var(--calculator-button-border);
   text-decoration: none;
-  border-radius: 4px;
-  transition: 0.25s;
+  border-radius: 8px;
+  transition: 0.15s;
 }
 
 .home-category-link:hover {
-  background-color: var(--calculator-button-hover-background);
+  box-shadow: rgba(0, 0, 0, 0.2) 2px 2px 4px;
+  transform: scale(1.05);
 }
 
 .home-category-link h3 {
   padding: 0;
 }
 
+@media (max-width: 768px) {
+  .home-category-item {
+    width: 100%;
+    height: 4rem;
+  }
+}
+
 /* Header styles */
 
 .header {
+  position: relative;
   max-width: 100%;
   font-family: sans-serif;
   box-shadow: rgba(0, 0, 0, 0.2) 2px 2px 4px;
@@ -504,7 +529,7 @@ button:hover {
 
 .footer a {
   text-decoration: none;
-  color: var(--header-font-color);
+  color: var(--footer-font-color);
 }
 
 .footer a:hover {
@@ -530,7 +555,7 @@ button:hover {
   justify-content: center;
   max-width: 100%;
   font-family: sans-serif;
-  background-color: var(--header-background-color);
+  background-color: var(--footer-top-background-color);
   gap: 7.5rem;
   padding: 1rem;
 }
@@ -543,9 +568,10 @@ button:hover {
 .footer-bottom {
   display: flex;
   justify-content: center;
-  background-color: var(--header-background-color);
+  border-top: 1px solid var(--calculator-border);
+  background-color: var(--footer-bottom-background-color);
   max-width: 100%;
-  padding-bottom: 1rem;
+  padding: 1rem 0 1rem 0;
 }
 
 /* KaTeX styles */
