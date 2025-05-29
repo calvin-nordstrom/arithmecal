@@ -50,7 +50,7 @@ export default function HomePage() {
           </div>
           <div className='home-content home-about'>
             <h2>About Us</h2>
-            <p>Whether you&apos;re a student, professional, or casual learner, calculations are involved. Sometimes you might not know how to solve something or lack the details behind a calculation. These are times where a tool like Arithmecal is your best friend. Our services provide accurate results in an easy-to-use and efficient calculator format.</p>
+            <p>Whether you&apos;re a student, professional, or casual learner, calculations are almost always involved. Sometimes you might not know how to solve something or lack the details behind a calculation. These are times when a tool like Arithmecal is your best friend. Our services provide accurate results in an easy-to-use and efficient calculator format.</p>
             <Link href='./about' className='home-about-link'>
               <span>Read more about us</span>
             </Link>
