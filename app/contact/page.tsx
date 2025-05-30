@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 }
 
 export default function ContactPage() {
-  const recipient = '';
+  const recipient = 'contact@arithmecal.com';
 
   return (
     <MiscLayout>
@@ -24,7 +24,6 @@ export default function ContactPage() {
             subject='Feedback'
             buttonLabel='Send Feedback'
             fields={[
-              { id: 'email', label: 'Email (optional)', type: 'input' },
               { id: 'page', label: 'Calculator/Page', required: true, type: 'input' },
               { id: 'feedback', label: 'Feedback', required: true, type: 'textarea' },
             ]}
@@ -39,7 +38,6 @@ export default function ContactPage() {
             subject='Calculator Suggestion'
             buttonLabel='Suggest Calculator'
             fields={[
-              { id: 'email', label: 'Email (optional)', type: 'input' },
               { id: 'name', label: 'Calculator Name', required: true, type: 'input' },
               { id: 'description', label: 'Calculator Description', required: true, type: 'textarea' },
             ]}
@@ -54,7 +52,6 @@ export default function ContactPage() {
             subject='Unit Suggestion'
             buttonLabel='Suggest Unit'
             fields={[
-              { id: 'email', label: 'Email (optional)', type: 'input' },
               { id: 'unit', label: 'Unit', required: true, type: 'input' },
               { id: 'description', label: 'Unit Description', required: true, type: 'textarea' },
             ]}

@@ -48,7 +48,7 @@ export default function TermsPage() {
 
       <h2>10. Contact</h2>
       <p>If you have any questions about these Terms, please contact:</p>
-      <p><strong>Email:</strong> <a href='mailto:[example@example.com]'>[example@example.com]</a></p>
+      <p><strong>Email:</strong> <a href='mailto:[contact@arithmecal.com]'>[contact@arithmecal.com]</a></p>
     </MiscLayout>
   );
 }
