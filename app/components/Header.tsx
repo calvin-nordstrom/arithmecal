@@ -40,15 +40,17 @@ export default function Header() {
       <div className='top-bar'>
         <div className='top-left-container'>
           <button className='hamburger' onClick={() => setIsCategoryActive((prev) => !prev)}>&#9776;</button>
-          <Link href='../'>
-            <Image
-              src='/triangle_45_45_90.png'
-              width={48}
-              height={48}
-              alt='A triangle with a circumscribed circle'
-              className='image'
-            />
-          </Link>
+          <div className='center-image'>
+            <Link href='../'>
+              <Image
+                src='/logo_horizontal.png'
+                width={384}
+                height={128}
+                alt='Arithmecal horizontal logo'
+                className='image desktop-logo'
+              />
+            </Link>
+          </div>
         </div>
 
         <div className='top-right-container'>
@@ -69,6 +71,11 @@ export default function Header() {
           <Link href='../math'>Math</Link>
           <Link href='../physics'>Physics</Link>
           <Link href='../reference'>Reference</Link>
+
+          <div className='mobile-nav-links'>
+            <Link href='../about'>About</Link>
+            <Link href='../contact'>Contact</Link>
+          </div>
         </div>
       </div>
       {isSearchExpanded && (

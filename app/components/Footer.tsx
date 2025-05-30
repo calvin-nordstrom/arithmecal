@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import React from 'react';
 
 export default function Footer() {
@@ -29,7 +30,18 @@ export default function Footer() {
       </div>
 
       <div className='footer-bottom'>
-        <p>&copy; 2025 Arithmecal. All rights reserved.</p>
+        <div className='footer-bottom-container'>
+          <Link href='../'>
+            <Image
+              src='/logo_horizontal.png'
+              width={256}
+              height={64}
+              alt='Arithmecal horizontal logo'
+              className='image desktop-logo'
+            />
+          </Link>
+          <p>&copy; 2025 Arithmecal. All rights reserved.</p>
+        </div>
       </div>
     </footer>
   );

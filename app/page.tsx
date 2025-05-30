@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link';
+import Image from 'next/image';
 import Footer from './components/Footer';
 import CalculatorSearch from './components/CalculatorSearch';
 
@@ -14,8 +15,16 @@ export default function HomePage() {
     <>
       <main className='home'>
         <div className='title-banner'>
-          <h1>Arithmecal</h1>
-          <h2><em>The everything calculator</em></h2>
+          <div className='title-banner-container'>
+            <Image
+              src='/logo_horizontal.png'
+              width={512}
+              height={64}
+              alt='Arithmecal horizontal logo'
+              className='image desktop-logo'
+            />
+            <h2><em>The everything calculator</em></h2>
+          </div>
         </div>
 
         <div className='home-content-container'>
