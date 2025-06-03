@@ -79,7 +79,7 @@ export default function EmailForm({
         </div>
       ))}
 
-      <button type='submit'>{buttonLabel}</button>
+      <button className='email-submit' type='submit'>{buttonLabel}</button>
     </form>
   );
 }

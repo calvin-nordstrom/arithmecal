@@ -14,7 +14,7 @@ export default function MiscLayout({ children }: MiscLayoutProps) {
       </div>
 
       <div className='center'>
-        <main className='reference-content'>
+        <main className='misc-content'>
           {children}
         </main>
       </div>

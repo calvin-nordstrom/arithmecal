@@ -32,6 +32,8 @@
   --blue-lighter: rgb(128, 192, 255);
   --blue-lightest: rgb(224, 240, 248);
 
+  --button-font-color: rgb(0, 0, 0);
+
   /* Calculator styles */
   --calculator-border: rgb(160, 160, 160);
   --calculator-background: rgb(240, 240, 240);
@@ -210,6 +212,7 @@ textarea {
 button {
   font: var(--rubik-text);
   font-size: var(--calculator-button-font-size);
+  color: var(--button-font-color);
   height: 50px;
   border: 1px solid var(--calculator-button-border);
   border-radius: 4px;
@@ -286,7 +289,7 @@ button:hover {
   align-items: center;
   width: 100%;
   gap: 2rem;
-  padding: 2rem 0 4rem 0;
+  padding: 2rem 0rem 4rem 0rem;
   background-color: var(--center-background-color);
 }
 
@@ -295,7 +298,8 @@ button:hover {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 70%;
+  width: 80%;
+  padding: 0rem 2rem 0rem 2rem;
 }
 
 .home-content .search-wrapper {
@@ -475,11 +479,12 @@ button:hover {
   display: flex;
   align-items: center;
   position: absolute;
+  height: 100%;
   z-index: 1000;
   top: 0;
   left: 0;
   right: 0;
-  padding: 1rem;
+  padding: 0rem 1rem 0rem 1rem;
   gap: 1rem;
   background-color: var(--header-background-color);
 }
@@ -963,13 +968,18 @@ button:hover {
 }
 
 .ascii-table-text-container {
-  padding-left: 2rem;
-  padding-right: 2rem;
-  padding-bottom: 2rem;
   max-width: 880px;
 }
 
 /* Miscellaneous styles */
+
+.misc-content {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  max-width: 880px;
+  padding: 2rem;
+}
 
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
@@ -1041,7 +1051,11 @@ textarea {
 /* Extra Small (Phones) */
 @media (max-width: 479px) {
   .content {
-    width: 75%;
+    width: 80%;
+  }
+
+  .misc-content {
+    width: 100%;
   }
 
   .ad-panel-left {
@@ -1090,12 +1104,16 @@ textarea {
   .footer-bottom-container {
     flex-direction: column;
   }
+
+  .related-calculators {
+    width: calc(100% + 2rem);
+  }
 }
 
 /* Small (Larger Phones) */
 @media (min-width: 480px) and (max-width: 767px) {
   .content {
-    width: 70%;
+    width: 80%;
   }
 
   .ad-panel-left {
