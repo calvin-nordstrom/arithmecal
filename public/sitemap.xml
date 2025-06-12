@@ -1,268 +1,267 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
   <url>
-    <loc>https://arithmecal.com/</loc>
+    <loc>https://www.arithmecal.com/</loc>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
-    <lastmod>2025-06-04</lastmod>
+    <lastmod>2025-06-12</lastmod>
   </url>
   <url>
-    <loc>https://arithmecal.com/about</loc>
+    <loc>https://www.arithmecal.com/about</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <lastmod>2025-06-04</lastmod>
+    <lastmod>2025-06-12</lastmod>
   </url>
   <url>
-    <loc>https://arithmecal.com/contact</loc>
+    <loc>https://www.arithmecal.com/contact</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <lastmod>2025-06-04</lastmod>
+    <lastmod>2025-06-12</lastmod>
   </url>
   <url>
-    <loc>https://arithmecal.com/conversion</loc>
+    <loc>https://www.arithmecal.com/conversion</loc>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
-    <lastmod>2025-06-04</lastmod>
+    <lastmod>2025-06-12</lastmod>
   </url>
   <url>
-    <loc>https://arithmecal.com/conversion/ascii-to-binary</loc>
+    <loc>https://www.arithmecal.com/conversion/ascii-to-binary</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <lastmod>2025-06-04</lastmod>
+    <lastmod>2025-06-12</lastmod>
   </url>
   <url>
-    <loc>https://arithmecal.com/conversion/ascii-to-decimal</loc>
+    <loc>https://www.arithmecal.com/conversion/ascii-to-decimal</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <lastmod>2025-06-04</lastmod>
+    <lastmod>2025-06-12</lastmod>
   </url>
   <url>
-    <loc>https://arithmecal.com/conversion/ascii-to-hex</loc>
+    <loc>https://www.arithmecal.com/conversion/ascii-to-hex</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <lastmod>2025-06-04</lastmod>
+    <lastmod>2025-06-12</lastmod>
   </url>
   <url>
-    <loc>https://arithmecal.com/conversion/ascii-to-octal</loc>
+    <loc>https://www.arithmecal.com/conversion/ascii-to-octal</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <lastmod>2025-06-04</lastmod>
+    <lastmod>2025-06-12</lastmod>
   </url>
   <url>
-    <loc>https://arithmecal.com/conversion/binary-to-ascii</loc>
+    <loc>https://www.arithmecal.com/conversion/binary-to-ascii</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <lastmod>2025-06-04</lastmod>
+    <lastmod>2025-06-12</lastmod>
   </url>
   <url>
-    <loc>https://arithmecal.com/conversion/binary-to-decimal</loc>
+    <loc>https://www.arithmecal.com/conversion/binary-to-decimal</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <lastmod>2025-06-04</lastmod>
+    <lastmod>2025-06-12</lastmod>
   </url>
   <url>
-    <loc>https://arithmecal.com/conversion/binary-to-hex</loc>
+    <loc>https://www.arithmecal.com/conversion/binary-to-hex</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <lastmod>2025-06-04</lastmod>
+    <lastmod>2025-06-12</lastmod>
   </url>
   <url>
-    <loc>https://arithmecal.com/conversion/binary-to-octal</loc>
+    <loc>https://www.arithmecal.com/conversion/binary-to-octal</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <lastmod>2025-06-04</lastmod>
+    <lastmod>2025-06-12</lastmod>
   </url>
   <url>
-    <loc>https://arithmecal.com/conversion/decimal-to-ascii</loc>
+    <loc>https://www.arithmecal.com/conversion/decimal-to-ascii</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <lastmod>2025-06-04</lastmod>
+    <lastmod>2025-06-12</lastmod>
   </url>
   <url>
-    <loc>https://arithmecal.com/conversion/decimal-to-binary</loc>
+    <loc>https://www.arithmecal.com/conversion/decimal-to-binary</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <lastmod>2025-06-04</lastmod>
+    <lastmod>2025-06-12</lastmod>
   </url>
   <url>
-    <loc>https://arithmecal.com/conversion/decimal-to-hex</loc>
+    <loc>https://www.arithmecal.com/conversion/decimal-to-hex</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <lastmod>2025-06-04</lastmod>
+    <lastmod>2025-06-12</lastmod>
   </url>
   <url>
-    <loc>https://arithmecal.com/conversion/decimal-to-octal</loc>
+    <loc>https://www.arithmecal.com/conversion/decimal-to-octal</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <lastmod>2025-06-04</lastmod>
+    <lastmod>2025-06-12</lastmod>
   </url>
   <url>
-    <loc>https://arithmecal.com/conversion/hex-to-ascii</loc>
+    <loc>https://www.arithmecal.com/conversion/hex-to-ascii</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <lastmod>2025-06-04</lastmod>
+    <lastmod>2025-06-12</lastmod>
   </url>
   <url>
-    <loc>https://arithmecal.com/conversion/hex-to-binary</loc>
+    <loc>https://www.arithmecal.com/conversion/hex-to-binary</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <lastmod>2025-06-04</lastmod>
+    <lastmod>2025-06-12</lastmod>
   </url>
   <url>
-    <loc>https://arithmecal.com/conversion/hex-to-decimal</loc>
+    <loc>https://www.arithmecal.com/conversion/hex-to-decimal</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <lastmod>2025-06-04</lastmod>
+    <lastmod>2025-06-12</lastmod>
   </url>
   <url>
-    <loc>https://arithmecal.com/conversion/hex-to-octal</loc>
+    <loc>https://www.arithmecal.com/conversion/hex-to-octal</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <lastmod>2025-06-04</lastmod>
+    <lastmod>2025-06-12</lastmod>
   </url>
   <url>
-    <loc>https://arithmecal.com/conversion/octal-to-ascii</loc>
+    <loc>https://www.arithmecal.com/conversion/octal-to-ascii</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <lastmod>2025-06-04</lastmod>
+    <lastmod>2025-06-12</lastmod>
   </url>
   <url>
-    <loc>https://arithmecal.com/conversion/octal-to-binary</loc>
+    <loc>https://www.arithmecal.com/conversion/octal-to-binary</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <lastmod>2025-06-04</lastmod>
+    <lastmod>2025-06-12</lastmod>
   </url>
   <url>
-    <loc>https://arithmecal.com/conversion/octal-to-decimal</loc>
+    <loc>https://www.arithmecal.com/conversion/octal-to-decimal</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <lastmod>2025-06-04</lastmod>
+    <lastmod>2025-06-12</lastmod>
   </url>
   <url>
-    <loc>https://arithmecal.com/conversion/octal-to-hex</loc>
+    <loc>https://www.arithmecal.com/conversion/octal-to-hex</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <lastmod>2025-06-04</lastmod>
+    <lastmod>2025-06-12</lastmod>
   </url>
   <url>
-    <loc>https://arithmecal.com/math</loc>
+    <loc>https://www.arithmecal.com/math</loc>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
-    <lastmod>2025-06-04</lastmod>
+    <lastmod>2025-06-12</lastmod>
   </url>
   <url>
-    <loc>https://arithmecal.com/math/circumscribed-circle</loc>
+    <loc>https://www.arithmecal.com/math/circumscribed-circle</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <lastmod>2025-06-04</lastmod>
+    <lastmod>2025-06-12</lastmod>
   </url>
   <url>
-    <loc>https://arithmecal.com/math/foil</loc>
+    <loc>https://www.arithmecal.com/math/foil</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <lastmod>2025-06-04</lastmod>
+    <lastmod>2025-06-12</lastmod>
   </url>
   <url>
-    <loc>https://arithmecal.com/math/percent-change</loc>
+    <loc>https://www.arithmecal.com/math/percent-change</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <lastmod>2025-06-04</lastmod>
+    <lastmod>2025-06-12</lastmod>
   </url>
   <url>
-    <loc>https://arithmecal.com/math/quadratic-formula</loc>
+    <loc>https://www.arithmecal.com/math/quadratic-formula</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <lastmod>2025-06-04</lastmod>
+    <lastmod>2025-06-12</lastmod>
   </url>
   <url>
-    <loc>https://arithmecal.com/math/triangle-30-60-90</loc>
+    <loc>https://www.arithmecal.com/math/triangle-30-60-90</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <lastmod>2025-06-04</lastmod>
+    <lastmod>2025-06-12</lastmod>
   </url>
   <url>
-    <loc>https://arithmecal.com/math/triangle-45-45-90</loc>
+    <loc>https://www.arithmecal.com/math/triangle-45-45-90</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <lastmod>2025-06-04</lastmod>
+    <lastmod>2025-06-12</lastmod>
   </url>
   <url>
-    <loc>https://arithmecal.com/math/trinomial-factoring</loc>
+    <loc>https://www.arithmecal.com/math/trinomial-factoring</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <lastmod>2025-06-04</lastmod>
+    <lastmod>2025-06-12</lastmod>
   </url>
   <url>
-    <loc>https://arithmecal.com/physics</loc>
+    <loc>https://www.arithmecal.com/physics</loc>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
-    <lastmod>2025-06-04</lastmod>
+    <lastmod>2025-06-12</lastmod>
   </url>
   <url>
-    <loc>https://arithmecal.com/physics/acceleration</loc>
+    <loc>https://www.arithmecal.com/physics/acceleration</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <lastmod>2025-06-04</lastmod>
+    <lastmod>2025-06-12</lastmod>
   </url>
   <url>
-    <loc>https://arithmecal.com/physics/density</loc>
+    <loc>https://www.arithmecal.com/physics/density</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <lastmod>2025-06-04</lastmod>
+    <lastmod>2025-06-12</lastmod>
   </url>
   <url>
-    <loc>https://arithmecal.com/physics/free-fall</loc>
+    <loc>https://www.arithmecal.com/physics/free-fall</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <lastmod>2025-06-04</lastmod>
+    <lastmod>2025-06-12</lastmod>
   </url>
   <url>
-    <loc>https://arithmecal.com/physics/ideal-gas-law</loc>
+    <loc>https://www.arithmecal.com/physics/ideal-gas-law</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <lastmod>2025-06-04</lastmod>
+    <lastmod>2025-06-12</lastmod>
   </url>
   <url>
-    <loc>https://arithmecal.com/physics/kinetic-energy</loc>
+    <loc>https://www.arithmecal.com/physics/kinetic-energy</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <lastmod>2025-06-04</lastmod>
+    <lastmod>2025-06-12</lastmod>
   </url>
   <url>
-    <loc>https://arithmecal.com/physics/potential-energy</loc>
+    <loc>https://www.arithmecal.com/physics/potential-energy</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <lastmod>2025-06-04</lastmod>
+    <lastmod>2025-06-12</lastmod>
   </url>
   <url>
-    <loc>https://arithmecal.com/physics/velocity</loc>
+    <loc>https://www.arithmecal.com/physics/velocity</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <lastmod>2025-06-04</lastmod>
+    <lastmod>2025-06-12</lastmod>
   </url>
   <url>
-    <loc>https://arithmecal.com/privacy-policy</loc>
+    <loc>https://www.arithmecal.com/privacy-policy</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <lastmod>2025-06-04</lastmod>
+    <lastmod>2025-06-12</lastmod>
   </url>
   <url>
-    <loc>https://arithmecal.com/reference</loc>
+    <loc>https://www.arithmecal.com/reference</loc>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
-    <lastmod>2025-06-04</lastmod>
+    <lastmod>2025-06-12</lastmod>
   </url>
   <url>
-    <loc>https://arithmecal.com/reference/ascii-table</loc>
+    <loc>https://www.arithmecal.com/reference/ascii-table</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <lastmod>2025-06-04</lastmod>
+    <lastmod>2025-06-12</lastmod>
   </url>
   <url>
-    <loc>https://arithmecal.com/terms</loc>
+    <loc>https://www.arithmecal.com/terms</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <lastmod>2025-06-04</lastmod>
+    <lastmod>2025-06-12</lastmod>
   </url>
 </urlset>

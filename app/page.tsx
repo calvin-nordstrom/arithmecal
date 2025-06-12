@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Head from 'next/head';
 import Link from 'next/link';
 import Image from 'next/image';
 import Footer from './components/Footer';
@@ -13,6 +14,9 @@ export const metadata: Metadata = {
 export default function HomePage() {
   return (
     <>
+      <Head>
+        <link rel="canonical" href="https://www.arithmecal.com" />
+      </Head>
       <main className='home'>
         <div className='title-banner'>
           <div className='title-banner-container'>
