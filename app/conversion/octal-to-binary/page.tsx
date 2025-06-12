@@ -7,6 +7,9 @@ export const metadata: Metadata = {
   title: 'Octal to Binary Conversion',
   description: 'Convert octal (base-8) values to binary (base-2) numbers with Arithmecal’s Octal to Binary converter. Useful for programming, electronics, and digital systems.',
   keywords: 'octal to binary, octal conversion, binary conversion, number system conversion, octal to binary converter, digital systems, electronics, programming',
+  alternates: {
+    canonical: 'https://www.arithmecal.com/conversion/octal-to-binary',
+  },
 };
 
 export default function OctalToBinaryConversionPage() {

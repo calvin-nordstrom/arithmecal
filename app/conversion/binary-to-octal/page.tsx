@@ -7,6 +7,9 @@ export const metadata: Metadata = {
   title: 'Binary to Octal Conversion',
   description: 'Convert binary numbers to octal and octal to binary with Arithmecal’s accurate calculator. Learn how 3-bit binary groups map to base-8 values with examples.',
   keywords: 'binary to octal, octal to binary, binary converter, octal calculator, base-2 to base-8, 3-bit grouping, Unix file permissions, octal conversion examples, binary octal mapping',
+  alternates: {
+    canonical: 'https://www.arithmecal.com/conversion/binary-to-octal',
+  },
 }
 
 export default function BinaryToOctalConversionPage() {

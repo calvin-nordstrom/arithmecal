@@ -8,6 +8,9 @@ export const metadata: Metadata = {
   title: 'Decimal to ASCII Conversion',
   description: 'Convert decimal numbers to ASCII characters and vice versa with Arithmecal’s easy-to-use tool. Learn decimal-ASCII mappings and through conversion examples.',
   keywords: 'decimal to ASCII, ASCII to decimal, decimal ASCII converter, ASCII conversion tool, number to character conversion, Arithmecal, base-10 to ASCII',
+  alternates: {
+    canonical: 'https://www.arithmecal.com/conversion/decimal-to-ascii',
+  },
 };
 
 export default function DecimalToASCIIConversionPage() {

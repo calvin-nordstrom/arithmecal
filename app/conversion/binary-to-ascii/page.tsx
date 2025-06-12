@@ -8,6 +8,9 @@ export const metadata: Metadata = {
   title: 'Binary to ASCII Conversion',
   description: 'Convert binary values to ASCII characters and ASCII text to binary with Arithmecal’s accurate tool. Supports 8-bit binary groups and bidirectional conversion.',
   keywords: 'binary to ASCII, ASCII to binary, binary text converter, 8-bit binary ASCII, ASCII table reference, binary decoder, text to binary, binary character converter',
+  alternates: {
+    canonical: 'https://www.arithmecal.com/conversion/binary-to-ascii',
+  },
 }
 
 export default function BinaryToASCIIConversionPage() {

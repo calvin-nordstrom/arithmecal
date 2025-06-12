@@ -7,6 +7,9 @@ export const metadata: Metadata = {
   title: 'Octal to Decimal Conversion',
   description: 'Convert octal (base-8) numbers to decimal (base-10) and vice versa with Arithmecal’s easy-to-use converter. Ideal for programming and electronics tasks.',
   keywords: 'octal to decimal, decimal conversion, octal conversion, number system conversion, octal to decimal converter, computing, electronics, programming',
+  alternates: {
+    canonical: 'https://www.arithmecal.com/conversion/octal-to-decimal',
+  },
 };
 
 export default function OctalToDecimalConversionPage() {

@@ -8,6 +8,9 @@ export const metadata: Metadata = {
   title: 'Hex to ASCII Conversion',
   description: 'Convert hexadecimal values to ASCII text and vice versa with Arithmecal’s Hex to ASCII conversion tool. Ideal for decoding and analyzing data.',
   keywords: 'hex to ASCII, ASCII to hex, hex ASCII converter, hex conversion, ASCII text converter, Arithmecal',
+  alternates: {
+    canonical: 'https://www.arithmecal.com/conversion/hex-to-ascii',
+  },
 };
 
 export default function HexToASCIIConversionPage() {

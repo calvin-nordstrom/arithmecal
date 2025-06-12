@@ -5,7 +5,10 @@ import CalculatorLayout from '../components/CalculatorLayout';
 export const metadata: Metadata = {
   title: 'Physics Calculators',
   description: 'Explore Arithmecal’s range of physics calculators for energy, motion, thermodynamics, and materials. Expand your knowledge using our services.',
-  keywords: 'physics calculators, energy calculator, materials, motion calculator, thermodynamics calculator, power calculator, work calculator, physics tools, online calculator'
+  keywords: 'physics calculators, energy calculator, materials, motion calculator, thermodynamics calculator, power calculator, work calculator, physics tools, online calculator',
+  alternates: {
+    canonical: 'https://www.arithmecal.com/physics',
+  },
 }
 
 export default function PhysicsCalculatorsPage() {

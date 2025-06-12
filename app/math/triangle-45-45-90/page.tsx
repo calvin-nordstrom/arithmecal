@@ -8,7 +8,10 @@ import RelatedCalculators from '@/app/components/RelatedCalculators';
 export const metadata: Metadata = {
   title: '45-45-90 Triangle Calculator',
   description: 'Calculate sides, area, and perimeter of a 45-45-90 triangle with Arithmecal’s special right triangle calculator.',
-  keywords: '45 45 90 triangle calculator, special right triangle, isosceles right triangle, triangle area, triangle perimeter, Arithmecal'
+  keywords: '45 45 90 triangle calculator, special right triangle, isosceles right triangle, triangle area, triangle perimeter, Arithmecal',
+  alternates: {
+    canonical: 'https://www.arithmecal.com/math/triangle-45-45-90',
+  },
 }
 
 export default function Triangle454590CalculatorPage() {

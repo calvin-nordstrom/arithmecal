@@ -6,6 +6,9 @@ export const metadata: Metadata = {
   title: 'Converters',
   description: 'Explore a wide range of number system converters on Arithmecal, including ASCII, binary, decimal, hexadecimal, and octal conversions.',
   keywords: 'number system converters, ASCII to binary, binary to decimal, hexadecimal conversion, decimal to octal, radix conversion tools, online conversion tool',
+  alternates: {
+    canonical: 'https://www.arithmecal.com/conversion',
+  },
 };
 
 export default function ConvertersPage() {

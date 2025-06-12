@@ -8,7 +8,10 @@ import RelatedCalculators from '@/app/components/RelatedCalculators';
 export const metadata: Metadata = {
   title: 'FOIL Calculator',
   description: 'Multiply two binomials using the FOIL method. Arithmecal’s step-by-step calculator shows how to apply the First, Outer, Inner, Last rule with formula examples.',
-  keywords: 'FOIL calculator, binomial multiplication, algebra calculator, FOIL method, polynomial multiplication, first outer inner last, expand binomials, algebra steps, multiply binomials'
+  keywords: 'FOIL calculator, binomial multiplication, algebra calculator, FOIL method, polynomial multiplication, first outer inner last, expand binomials, algebra steps, multiply binomials',
+  alternates: {
+    canonical: 'https://www.arithmecal.com/math/foil',
+  },
 };
 
 export default function FOILCalculatorPage() {

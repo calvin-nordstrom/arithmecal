@@ -8,6 +8,9 @@ export const metadata: Metadata = {
   title: 'Octal to ASCII Conversion',
   description: 'Convert octal (base-8) values to ASCII text and vice versa using Arithmecal’s Octal to ASCII converter. Ideal for developers and working with legacy systems.',
   keywords: 'octal to ASCII, octal conversion, ASCII conversion, octal to text, ASCII to octal, number system conversion, legacy systems, UNIX',
+  alternates: {
+    canonical: 'https://www.arithmecal.com/conversion/octal-to-ascii',
+  },
 };
 
 export default function OctalToASCIIConversionPage() {

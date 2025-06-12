@@ -8,7 +8,10 @@ import RelatedCalculators from '@/app/components/RelatedCalculators';
 export const metadata: Metadata = {
   title: '30-60-90 Triangle Calculator',
   description: 'Calculate side lengths, area, and perimeter of a 30-60-90 triangle with Arithmecal’s special right triangle calculator.',
-  keywords: '30 60 90 triangle calculator, special right triangle, triangle side lengths, triangle area, triangle perimeter, Arithmecal'
+  keywords: '30 60 90 triangle calculator, special right triangle, triangle side lengths, triangle area, triangle perimeter, Arithmecal',
+  alternates: {
+    canonical: 'https://www.arithmecal.com/math/triangle-30-60-90',
+  },
 }
 
 export default function Triangle306090CalculatorPage() {

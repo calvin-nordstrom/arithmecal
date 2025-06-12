@@ -8,6 +8,9 @@ export const metadata: Metadata = {
   title: 'ASCII to Decimal Conversion',
   description: 'Use Arithmecal’s ASCII to decimal converter to convert plain text to decimal values or vice versa. Includes examples and a link to the full ASCII table.',
   keywords: 'ASCII to decimal, decimal to ASCII, ASCII converter, text to decimal, decimal code converter, ASCII table reference, online ASCII converter',
+  alternates: {
+    canonical: 'https://www.arithmecal.com/conversion/ascii-to-decimal',
+  },
 }
 
 export default function ASCIIToDecimalConversionPage() {

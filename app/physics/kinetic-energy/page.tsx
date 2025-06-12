@@ -5,13 +5,15 @@ import Dropdown from '@/app/components/Dropdown';
 import KineticEnergyCalculator from '@/app/components/physics/KineticEnergyCalculator';
 import KineticEnergyMassCalculator from '@/app/components/physics/KineticEnergyMassCalculator';
 import KineticEnergyVelocityCalculator from '@/app/components/physics/KineticEnergyVelocityCalculator';
-import Link from 'next/link';
 import RelatedCalculators from '@/app/components/RelatedCalculators';
 
 export const metadata: Metadata = {
   title: 'Kinetic Energy Calculator',
   description: 'Calculate kinetic energy, mass, or velocity with Arithmecal’s Kinetic Energy Calculator using the formula KE = 1/2mv².',
-  keywords: 'kinetic energy calculator, mass calculator, velocity calculator, Arithmecal'
+  keywords: 'kinetic energy calculator, mass calculator, velocity calculator, Arithmecal',
+  alternates: {
+    canonical: 'https://www.arithmecal.com/physics/kinetic-energy',
+  },
 }
 
 export default function KineticEnergyCalculatorPage() {

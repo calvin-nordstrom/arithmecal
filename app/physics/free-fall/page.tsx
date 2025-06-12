@@ -11,7 +11,10 @@ import RelatedCalculators from '@/app/components/RelatedCalculators';
 export const metadata: Metadata = {
   title: 'Free Fall Calculator',
   description: 'Solve time, velocity, height, or initial velocity in free fall using Arithmecal’s physics calculator based on gravity equations.',
-  keywords: 'free fall calculator, gravity calculator, time of fall, final velocity, fall height, initial velocity, Arithmecal'
+  keywords: 'free fall calculator, gravity calculator, time of fall, final velocity, fall height, initial velocity, Arithmecal',
+  alternates: {
+    canonical: 'https://www.arithmecal.com/physics/free-fall',
+  },
 }
 
 export default function FreeFallCalculatorPage() {

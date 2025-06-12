@@ -8,6 +8,9 @@ export const metadata: Metadata = {
   title: 'ASCII to Binary Conversion',
   description: 'Convert ASCII text to binary and binary to ASCII with Arithmecal’s free converter. Includes examples, ASCII table reference, and conversion explanation.',
   keywords: 'ASCII to binary, binary to ASCII, ASCII converter, text to binary, binary converter, ASCII table, free online converter',
+  alternates: {
+    canonical: 'https://www.arithmecal.com/conversion/ascii-to-binary',
+  },
 }
 
 export default function ASCIIToBinaryConversionPage() {

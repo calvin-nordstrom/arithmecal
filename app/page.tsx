@@ -1,5 +1,4 @@
 import type { Metadata } from 'next'
-import Head from 'next/head';
 import Link from 'next/link';
 import Image from 'next/image';
 import Footer from './components/Footer';
@@ -8,15 +7,15 @@ import CalculatorSearch from './components/CalculatorSearch';
 export const metadata: Metadata = {
   title: 'Arithmecal',
   description: 'Arithmecal is an all-in-one platform for fast, free, and accurate calculators featuring tools and references for math, science, technology, conversion, and more.',
-  keywords: 'online calculators, math calculator, unit converter, physics calculator, conversion tools, educational tools, reference calculators, Arithmecal, free calculators, web tools, STEM calculators'
+  keywords: 'online calculators, math calculator, unit converter, physics calculator, conversion tools, educational tools, reference calculators, Arithmecal, free calculators, web tools, STEM calculators',
+  alternates: {
+    canonical: 'https://www.arithmecal.com/',
+  },
 }
 
 export default function HomePage() {
   return (
     <>
-      <Head>
-        <link rel="canonical" href="https://www.arithmecal.com" />
-      </Head>
       <main className='home'>
         <div className='title-banner'>
           <div className='title-banner-container'>

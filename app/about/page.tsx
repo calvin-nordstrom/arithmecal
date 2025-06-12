@@ -6,6 +6,9 @@ export const metadata: Metadata = {
   title: 'About Us',
   description: 'Learn about Arithmecal’s mission, features, reasons to use our tools, who we are, and what we’re all about on our about page.',
   keywords: 'Arithmecal about, about us, mission, features, reasons to use our tools, who we are, what we do,company values, company information',
+  alternates: {
+    canonical: 'https://www.arithmecal.com/about',
+  },
 }
 
 export default function AboutPage() {

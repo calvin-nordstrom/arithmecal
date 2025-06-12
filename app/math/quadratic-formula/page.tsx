@@ -7,7 +7,10 @@ import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Quadratic Formula Calculator',
   description: 'Solve quadratic equations easily with Arithmecal’s step-by-step quadratic formula calculator.',
-  keywords: 'quadratic formula calculator, solve quadratic equation, find roots, Arithmecal, discriminant, complex roots'
+  keywords: 'quadratic formula calculator, solve quadratic equation, find roots, Arithmecal, discriminant, complex roots',
+  alternates: {
+    canonical: 'https://www.arithmecal.com/math/quadratic-formula',
+  },
 };
 
 export default function QuadraticFormulaCalculatorPage() {

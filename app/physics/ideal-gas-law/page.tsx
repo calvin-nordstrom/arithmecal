@@ -10,7 +10,10 @@ import IdealGasLawTemperatureCalculator from '@/app/components/physics/IdealGasL
 export const metadata: Metadata = {
   title: 'Ideal Gas Law Calculator',
   description: 'Solve for pressure, volume, moles, or temperature using Arithmecal’s Ideal Gas Law calculator based on the gas law equation.',
-  keywords: 'ideal gas law calculator, pressure calculator, volume calculator, moles calculator, temperature calculator, Arithmecal'
+  keywords: 'ideal gas law calculator, pressure calculator, volume calculator, moles calculator, temperature calculator, Arithmecal',
+  alternates: {
+    canonical: 'https://www.arithmecal.com/physics/ideal-gas-law',
+  },
 }
 
 export default function IdealGasLawCalculatorPage() {

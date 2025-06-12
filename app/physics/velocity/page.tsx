@@ -9,7 +9,10 @@ import RelatedCalculators from '@/app/components/RelatedCalculators';
 export const metadata: Metadata = {
   title: 'Velocity Calculator',
   description: 'Arithmecal’s velocity calculator for calculating velocity from distance, time, acceleration, and initial velocity.',
-  keywords: 'velocity calculator, distance traveled, acceleration, physics calculator, Arithmecal'
+  keywords: 'velocity calculator, distance traveled, acceleration, physics calculator, Arithmecal',
+  alternates: {
+    canonical: 'https://www.arithmecal.com/physics/velocity',
+  },
 }
 
 export default function VelocityCalculatorPage() {
