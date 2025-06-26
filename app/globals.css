@@ -639,16 +639,18 @@ button:hover {
   border-radius: 8px;
 }
 
-.katex-block-left {
-  display: flex;
-  flex-direction: column;
-  align-items: left;
-  border-radius: 8px;
-}
-
 .katex-formula {
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
+}
+
+.formula-list {
+  margin: 0;
+}
+
+.formula-list li {
+  margin: 0;
+  padding: 0.5rem 0 0.5rem 0;
 }
 
 /* Calculator category page styles */
