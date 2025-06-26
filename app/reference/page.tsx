@@ -22,6 +22,7 @@ export default function ReferencePage() {
         <p><em>Science, Technology, Engineering, and Mathematics</em></p>
         <ul>
           <li><Link href='reference/ascii-table'>ASCII Table</Link></li>
+          <li><Link href='reference/derivatives'>Table of Derivatives</Link></li>
         </ul>
       </div>
     </CalculatorLayout>

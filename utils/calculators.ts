@@ -41,6 +41,7 @@ export const calculators = [
 
   // Reference
   { title: 'ASCII Table', category: 'Reference', url: '/reference/ascii-table' },
+  { title: 'Table of Derivatives', category: 'Reference', url: '/reference/derivatives' },
 ];
 
 export type Calculator = typeof calculators[number];
