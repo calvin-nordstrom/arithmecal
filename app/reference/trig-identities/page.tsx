@@ -37,6 +37,7 @@ export default function TrigIdentitiesPage() {
       <ul className='formula-list'>
         <li><KatexRenderer formula='\sin^2(\theta)=\frac{1-\cos(2\theta)}{2}' /></li>
         <li><KatexRenderer formula='\cos^2(\theta)=\frac{1+\cos(2\theta)}{2}' /></li>
+        <li><KatexRenderer formula='\tan^2(\theta)=\frac{1-\cos(2\theta)}{1+\cos(2\theta)}' /></li>
       </ul>
 
       <h2 id='quotient-identities'>Quotient Identities</h2>
@@ -44,13 +45,17 @@ export default function TrigIdentitiesPage() {
         <li><KatexRenderer formula='\tan(\theta)=\frac{\sin(\theta)}{\cos(\theta)}' /></li>
         <li><KatexRenderer formula='\cot(\theta)=\frac{\cos(\theta)}{\sin(\theta)}' /></li>
       </ul>
-
-      <h2 id='law-of-sines-and-cosines'>Law of Sines/Cosines</h2>
+      
+      <h2 id='law-of-sines'>Law of Sines</h2>
       <ul className='formula-list'>
-        <li><KatexRenderer formula='\frac{a}{\sin(A)}=\frac{b}{\sin(B)}=\frac{c}{\sin(C)}' /></li>
-        <li><KatexRenderer formula='c^2=a^2+b^2-2ab\cos(C)' /></li>
-        <li><KatexRenderer formula='b^2=a^2+c^2-2ac\cos(B)' /></li>
+        <li><KatexRenderer formula='\frac{\sin(A)}{a}=\frac{\sin(B)}{b}=\frac{\sin(C)}{c}' /></li>
+      </ul>
+
+      <h2 id='law-of-cosines'>Law of Cosines</h2>
+      <ul className='formula-list'>
         <li><KatexRenderer formula='a^2=b^2+c^2-2bc\cos(A)' /></li>
+        <li><KatexRenderer formula='b^2=a^2+c^2-2ac\cos(B)' /></li>
+        <li><KatexRenderer formula='c^2=a^2+b^2-2ab\cos(C)' /></li>
       </ul>
 
       <h2 id='half-angle-identities'>Half Angle Identities</h2>
