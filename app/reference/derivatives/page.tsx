@@ -83,8 +83,6 @@ export default function DerivativesPage() {
         <li><strong>6</strong>. Product Rule – Used to differentiate the product of two functions.</li>
         <li><strong>7</strong>. Quotient Rule – Used to differentiate the ratio of two functions.</li>
         <li><strong>8</strong>. Chain Rule – Used to differentiate composite functions.</li>
-        <li><strong>21</strong>. Derivative of <KatexRenderer formula='e^x' /> – The derivative of the natural exponential function is itself.</li>
-        <li><strong>23</strong>. Derivative of <KatexRenderer formula='\ln(|x|)' /> – The natural log function has a derivative of <KatexRenderer formula='\frac{1}{x}' />.</li>
       </ul>
       <p>Inverse trigonometric and hyperbolic functions (entries 15–20 and 31–36) also follow standard patterns, but are not typically given short names like the above rules.</p>
     </CalculatorLayout>
