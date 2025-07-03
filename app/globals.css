@@ -720,6 +720,10 @@ button:hover {
   padding-bottom: 0.5rem;
 }
 
+.calculator-controls button {
+  padding: 0rem 0.5rem 0rem 0.5rem;
+}
+
 /* Calculator input styles */
 
 .calculator-input-container {
