@@ -793,6 +793,7 @@ button:hover {
 .converter textarea {
   width: 100%;
   resize: vertical;
+  margin: 0;
 }
 
 .converter-error {
