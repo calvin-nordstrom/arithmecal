@@ -18,6 +18,11 @@ export default function ConvertersPage() {
       <p>Explore our comprehensive collection of converters. Whether you&apos;re a student, developer, engineer, or just curious, these tools provide instant, accurate conversions to support your work or learning. Our radix and ASCII converters help you understand the importance of number system conversion in computing, data encoding, and digital electronics—this page is your one-stop solution for mastering those conversions. More converter tools are coming soon to expand your capabilities even further.</p>
 
       <div className='calculator-category'>
+        <h2>General Converters</h2>
+        <ul>
+          <li><Link href='conversion/unit-conversion'>Unit Conversion (All Units)</Link></li>
+        </ul>
+
         <h2>Radix and ASCII Converters</h2>
         <ul>
           <li><Link href='conversion/ascii-to-binary'>ASCII to Binary</Link></li>

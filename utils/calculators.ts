@@ -20,6 +20,7 @@ export const calculators = [
   { title: 'Octal to Binary', category: 'Conversion', url: '/conversion/octal-to-binary' },
   { title: 'Octal to Decimal', category: 'Conversion', url: '/conversion/octal-to-decimal' },
   { title: 'Octal to Hex', category: 'Conversion', url: '/conversion/octal-to-hex' },
+  { title: 'Unit Conversion', category: 'Conversion', url: '/conversion/unit-conversion' },
 
   // Math
   { title: 'Circumscribed Circle Calculator', category: 'Math', url: '/math/circumscribed-circle' },
