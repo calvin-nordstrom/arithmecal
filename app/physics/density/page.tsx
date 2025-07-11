@@ -17,18 +17,9 @@ export const metadata: Metadata = {
 
 export default function DensityCalculatorPage() {
   const dropdownConfig = [
-    {
-      label: 'Density (ρ)',
-      component: <DensityCalculator />
-    },
-    {
-      label: 'Volume (V)',
-      component: <DensityVolumeCalculator />
-    },
-    {
-      label: 'Mass (n)',
-      component: <DensityMassCalculator />
-    },
+    { label: 'Density (ρ)', component: <DensityCalculator /> },
+    { label: 'Volume (V)', component: <DensityVolumeCalculator /> },
+    { label: 'Mass (n)', component: <DensityMassCalculator /> },
   ];
 
   return (

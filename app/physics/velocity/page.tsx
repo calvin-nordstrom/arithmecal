@@ -17,14 +17,8 @@ export const metadata: Metadata = {
 
 export default function VelocityCalculatorPage() {
   const dropdownConfig = [
-    {
-      label: 'Distance traveled',
-      component: <VelocityFromDistanceTraveledCalculator />
-    },
-    {
-      label: 'Acceleration',
-      component: <VelocityFromAccelerationCalculator />
-    },
+    { label: 'Distance traveled', component: <VelocityFromDistanceTraveledCalculator /> },
+    { label: 'Acceleration', component: <VelocityFromAccelerationCalculator /> },
   ];
 
   return (

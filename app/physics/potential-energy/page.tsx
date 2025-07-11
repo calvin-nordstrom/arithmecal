@@ -19,22 +19,10 @@ export const metadata: Metadata = {
 
 export default function PotentialEnergyCalculatorPage() {
   const dropdownConfig = [
-    {
-      label: 'Potential energy',
-      component: <PotentialEnergyCalculator />
-    },
-    {
-      label: 'Mass',
-      component: <PotentialEnergyMassCalculator />
-    },
-    {
-      label: 'Height',
-      component: <PotentialEnergyHeightCalculator />
-    },
-    {
-      label: 'Gravitational acceleration',
-      component: <PotentialEnergyGravityCalculator />
-    },
+    { label: 'Potential energy', component: <PotentialEnergyCalculator /> },
+    { label: 'Mass', component: <PotentialEnergyMassCalculator /> },
+    { label: 'Height', component: <PotentialEnergyHeightCalculator /> },
+    { label: 'Gravitational acceleration', component: <PotentialEnergyGravityCalculator /> },
   ];
 
   return (

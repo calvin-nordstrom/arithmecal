@@ -18,18 +18,9 @@ export const metadata: Metadata = {
 
 export default function KineticEnergyCalculatorPage() {
   const dropdownConfig = [
-    {
-      label: 'Kinetic energy',
-      component: <KineticEnergyCalculator />
-    },
-    {
-      label: 'Mass',
-      component: <KineticEnergyMassCalculator />
-    },
-    {
-      label: 'Velocity',
-      component: <KineticEnergyVelocityCalculator />
-    },
+    { label: 'Kinetic energy', component: <KineticEnergyCalculator /> },
+    { label: 'Mass', component: <KineticEnergyMassCalculator /> },
+    { label: 'Velocity', component: <KineticEnergyVelocityCalculator /> },
   ];
 
   return (

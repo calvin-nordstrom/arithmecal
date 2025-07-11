@@ -18,18 +18,9 @@ export const metadata: Metadata = {
 
 export default function AccelerationCalculatorPage() {
   const dropdownConfig = [
-    {
-      label: 'Speed difference',
-      component: <AccelerationFromSpeedDifferenceCalculator />
-    },
-    {
-      label: 'Distance traveled',
-      component: <AccelerationFromDistanceTraveledCalculator />
-    },
-    {
-      label: 'Mass and force',
-      component: <AccelerationFromMassAndForceCalculator />
-    },
+    { label: 'Speed difference', component: <AccelerationFromSpeedDifferenceCalculator /> },
+    { label: 'Distance traveled', component: <AccelerationFromDistanceTraveledCalculator /> },
+    { label: 'Mass and force', component: <AccelerationFromMassAndForceCalculator /> },
   ];
 
   return (

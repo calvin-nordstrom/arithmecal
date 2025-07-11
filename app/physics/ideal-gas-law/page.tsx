@@ -18,22 +18,10 @@ export const metadata: Metadata = {
 
 export default function IdealGasLawCalculatorPage() {
   const dropdownConfig = [
-    {
-      label: 'Pressure (P)',
-      component: <IdealGasLawPressureCalculator />
-    },
-    {
-      label: 'Volume (V)',
-      component: <IdealGasLawVolumeCalculator />
-    },
-    {
-      label: 'Moles (n)',
-      component: <IdealGasLawMolesCalculator />
-    },
-    {
-      label: 'Temperature (T)',
-      component: <IdealGasLawTemperatureCalculator />
-    },
+    { label: 'Pressure (P)', component: <IdealGasLawPressureCalculator /> },
+    { label: 'Volume (V)', component: <IdealGasLawVolumeCalculator /> },
+    { label: 'Moles (n)', component: <IdealGasLawMolesCalculator /> },
+    { label: 'Temperature (T)', component: <IdealGasLawTemperatureCalculator /> },
   ];
 
   return (

@@ -19,22 +19,10 @@ export const metadata: Metadata = {
 
 export default function FreeFallCalculatorPage() {
   const dropdownConfig = [
-    {
-      label: 'Time of fall',
-      component: <FreeFallTimeOfFallCalculator />
-    },
-    {
-      label: 'Velocity',
-      component: <FreeFallVelocityCalculator />
-    },
-    {
-      label: 'Height',
-      component: <FreeFallHeightCalculator />
-    },
-    {
-      label: 'Initial velocity',
-      component: <FreeFallInitialVelocityCalculator />
-    },
+    { label: 'Time of fall', component: <FreeFallTimeOfFallCalculator /> },
+    { label: 'Velocity', component: <FreeFallVelocityCalculator /> },
+    { label: 'Height', component: <FreeFallHeightCalculator /> },
+    { label: 'Initial velocity', component: <FreeFallInitialVelocityCalculator /> },
   ];
 
   return (
