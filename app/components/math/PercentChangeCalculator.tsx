@@ -19,9 +19,6 @@ const config: CalculatorConfig = {
       type: 'error'
     },
     {
-      type: 'divider'
-    },
-    {
       type: 'field',
       key: 'percentChange',
       label: 'Percent change',

@@ -29,9 +29,6 @@ const config: CalculatorConfig = {
       type: 'error'
     },
     {
-      type: 'divider'
-    },
-    {
       type: 'field',
       key: 'result',
       label: 'Result',
