@@ -855,6 +855,17 @@ button:hover {
   width: 100%;
 }
 
+/* Component fieldset styles */
+
+.component-fieldset {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1rem;
+  margin: 0rem 0rem 1rem 0rem;
+  border: none;
+}
+
 /* Calculator search styles */
 
 .search-input {
@@ -1099,6 +1110,14 @@ textarea {
 
   .dropdown-container {
     width: 100%;
+  }
+
+  .component-fieldset-container {
+    width: calc(100% + 2rem)
+  }
+
+  .component-fieldset-component {
+    width: calc(100% - 2rem);
   }
 
   .calculator-category li {
