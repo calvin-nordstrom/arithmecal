@@ -42,9 +42,7 @@ const config: CalculatorConfig = {
       conversionBase: 'K',
       isOutput: true,
     },
-    {
-      type: 'error',
-    },
+    { type: 'error' },
   ],
   formula: (inputs, changedField) => {
     const { P, V, n } = inputs;

@@ -35,9 +35,7 @@ const config: CalculatorConfig = {
       conversionBase: 'kg/m^3',
       isOutput: true,
     },
-    {
-      type: 'error',
-    },
+    { type: 'error' },
   ],
   formula: (inputs, changedField) => {
     const { m, V } = inputs;

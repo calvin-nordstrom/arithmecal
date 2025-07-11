@@ -35,9 +35,7 @@ const config: CalculatorConfig = {
       conversionBase: 'm/s^2',
       isOutput: true,
     },
-    {
-      type: 'error',
-    },
+    { type: 'error' },
   ],
   formula: (inputs, changedField) => {
     const { F, m } = inputs;

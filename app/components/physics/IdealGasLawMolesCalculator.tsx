@@ -42,9 +42,7 @@ const config: CalculatorConfig = {
       label: 'Amount of substance (n) in mols',
       isOutput: true,
     },
-    {
-      type: 'error',
-    },
+    { type: 'error' },
   ],
   formula: (inputs, changedField) => {
     const { P, V, T } = inputs;

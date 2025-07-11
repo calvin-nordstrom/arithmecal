@@ -42,9 +42,7 @@ const config: CalculatorConfig = {
       conversionBase: 'm^3',
       isOutput: true,
     },
-    {
-      type: 'error',
-    },
+    { type: 'error' },
   ],
   formula: (inputs, changedField) => {
     const { P, n, T } = inputs;

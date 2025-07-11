@@ -33,12 +33,8 @@ const config: CalculatorConfig = {
       defaultUnit: 'm',
       conversionBase: 'm'
     },
-    {
-      type: 'error'
-    },
-    {
-      type: 'divider'
-    },
+    { type: 'error' },
+    { type: 'divider' },
     {
       type: 'field',
       key: 'radius',
@@ -75,9 +71,7 @@ const config: CalculatorConfig = {
       conversionBase: 'm^2',
       isOutput: true
     },
-    {
-      type: 'divider'
-    },
+    { type: 'divider' },
     {
       type: 'field',
       key: 'trianglePerimeter',

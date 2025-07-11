@@ -45,9 +45,7 @@ const config: CalculatorConfig = {
       conversionBase: 'kg',
       isOutput: true,
     },
-    {
-      type: 'error',
-    },
+    { type: 'error' },
   ],
   formula: (inputs, changedField) => {
     const { PE, h, g } = inputs;

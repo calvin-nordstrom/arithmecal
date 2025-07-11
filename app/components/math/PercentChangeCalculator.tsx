@@ -15,9 +15,7 @@ const config: CalculatorConfig = {
       key: 'finalValue',
       label: 'Final value',
     },
-    {
-      type: 'error'
-    },
+    { type: 'error' },
     {
       type: 'field',
       key: 'percentChange',

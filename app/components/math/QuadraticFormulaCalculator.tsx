@@ -20,12 +20,8 @@ const config: CalculatorConfig = {
       key: 'c',
       label: 'Coefficient c',
     },
-    {
-      type: 'error'
-    },
-    {
-      type: 'divider'
-    },
+    { type: 'error' },
+    { type: 'divider' },
     {
       type: 'field',
       key: 'root1',

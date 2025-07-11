@@ -25,9 +25,7 @@ const config: CalculatorConfig = {
       key: 'd',
       label: 'd',
     },
-    {
-      type: 'error'
-    },
+    { type: 'error' },
     {
       type: 'field',
       key: 'result',

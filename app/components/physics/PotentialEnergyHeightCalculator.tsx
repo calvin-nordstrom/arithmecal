@@ -45,9 +45,7 @@ const config: CalculatorConfig = {
       conversionBase: 'm',
       isOutput: true,
     },
-    {
-      type: 'error',
-    },
+    { type: 'error' },
   ],
   formula: (inputs, changedField) => {
     const { PE, m, g } = inputs;

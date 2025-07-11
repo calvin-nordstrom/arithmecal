@@ -49,9 +49,7 @@ const config: CalculatorConfig = {
       defaultUnit: 'm',
       conversionBase: 'm'
     },
-    {
-      type: 'error'
-    },
+    { type: 'error' },
   ],
   formula: (inputs, changedField) => {
     let a: number | undefined = undefined;
