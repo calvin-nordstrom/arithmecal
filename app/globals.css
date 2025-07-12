@@ -864,6 +864,7 @@ button:hover {
   padding: 1rem;
   margin: 0rem 0rem 1rem 0rem;
   border: none;
+  max-width: 300px;
 }
 
 /* Calculator search styles */
