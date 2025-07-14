@@ -14,7 +14,7 @@ export default function TriangleAreaCalculator() {
     { label: 'Three sides', component: <TriangleAreaFromThreeSidesCalculator /> },
     { label: 'Two sides & angle between them', component: <TriangleAreaFromTwoSidesAndAngleCalculator /> },
     { label: 'Two angles & side between them', component: <TriangleAreaFromOneSideAndTwoAnglesCalculator /> },
-    { label: '2D coordinate points', component: <TriangleAreaFromCoordinatesCalculator /> },
+    { label: '2D vertex coordinates', component: <TriangleAreaFromCoordinatesCalculator /> },
   ];
 
   return (
