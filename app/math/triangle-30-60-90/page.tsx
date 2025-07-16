@@ -2,6 +2,7 @@ import CalculatorLayout from '@/app/components/CalculatorLayout';
 import KatexRenderer from '@/app/components/KatexRenderer';
 import Triangle306090Calculator from '@/app/components/math/Triangle306090Calculator';
 import Image from 'next/image';
+import triangle306090Image from '@/assets/images/math/triangle_30_60_90.png'
 import type { Metadata } from 'next'
 import RelatedCalculators from '@/app/components/RelatedCalculators';
 
@@ -30,7 +31,7 @@ export default function Triangle306090CalculatorPage() {
         <div className='calculator-description'>
           <div className='center-image'>
             <Image
-              src='/triangle_30_60_90.png'
+              src={triangle306090Image}
               width={350}
               height={256}
               alt='A 30 60 90 triangle showing angles and side lengths proportional to Side A'

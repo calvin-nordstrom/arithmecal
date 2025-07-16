@@ -2,6 +2,7 @@ import CalculatorLayout from '@/app/components/CalculatorLayout';
 import KatexRenderer from '@/app/components/KatexRenderer';
 import FOILCalculator from '@/app/components/math/FOILCalculator';
 import Image from 'next/image';
+import foilImage from '@/assets/images/math/foil.png'
 import type { Metadata } from 'next'
 import RelatedCalculators from '@/app/components/RelatedCalculators';
 
@@ -31,7 +32,7 @@ export default function FOILCalculatorPage() {
         <div className='calculator-description'>
           <div className='center-image'>
             <Image
-              src='/foil.png'
+              src={foilImage}
               width={384}
               height={280}
               alt='A diagram showing two binomials multiplied together with the FOIL method'

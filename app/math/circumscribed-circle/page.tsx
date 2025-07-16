@@ -2,6 +2,7 @@ import CalculatorLayout from '@/app/components/CalculatorLayout';
 import KatexRenderer from '@/app/components/KatexRenderer';
 import CircumscribedCircleCalculator from '@/app/components/math/CircumscribedCircleCalculator';
 import Image from 'next/image';
+import circumscribedCircleImage from '@/assets/images/math/circumscribed_circle.png';
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
@@ -24,7 +25,7 @@ export default function CircumscribedCircleCalculatorPage() {
         <div className='calculator-description'>
           <div className='center-image'>
             <Image
-              src='/circumscribed_circle.png'
+              src={circumscribedCircleImage}
               width={256}
               height={256}
               alt='A triangle with a circumscribed circle'
