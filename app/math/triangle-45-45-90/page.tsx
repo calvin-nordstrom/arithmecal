@@ -2,7 +2,7 @@ import CalculatorLayout from '@/app/components/CalculatorLayout';
 import KatexRenderer from '@/app/components/KatexRenderer';
 import Triangle454590Calculator from '@/app/components/math/Triangle454590Calculator';
 import Image from 'next/image';
-import triangle454590Image from '@/assets/images/math/triangle_45_45_90.png'
+import triangle454590Image from '@/assets/images/math/triangle-45-45-90.png'
 import type { Metadata } from 'next'
 import RelatedCalculators from '@/app/components/RelatedCalculators';
 
