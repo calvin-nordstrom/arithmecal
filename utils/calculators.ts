@@ -23,6 +23,7 @@ export const calculators = [
   { title: 'Unit Conversion', category: 'Conversion', url: '/conversion/unit-conversion' },
 
   // Math
+  { title: 'Area Calculator', category: 'Math', url: '/math/area' },
   { title: 'Circumscribed Circle Calculator', category: 'Math', url: '/math/circumscribed-circle' },
   { title: 'FOIL Calculator', category: 'Math', url: '/math/foil' },
   { title: 'Percent Change Calculator', category: 'Math', url: '/math/percent-change' },
