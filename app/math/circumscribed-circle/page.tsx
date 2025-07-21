@@ -2,7 +2,7 @@ import CalculatorLayout from '@/app/components/CalculatorLayout';
 import KatexRenderer from '@/app/components/KatexRenderer';
 import CircumscribedCircleCalculator from '@/app/components/math/CircumscribedCircleCalculator';
 import Image from 'next/image';
-import circumscribedCircleImage from '@/assets/images/math/circumscribed-circle.png';
+import circumscribedCircleImage from '@/assets/images/math/circumscribed-circle/circumscribed-circle.png';
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
