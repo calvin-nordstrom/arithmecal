@@ -1,6 +1,6 @@
 import CalculatorLayout from '@/app/components/CalculatorLayout';
 import KatexRenderer from '@/app/components/KatexRenderer';
-import TrinomialFactoringCalculator from '@/app/components/math/TrinomialFactoringCalculator';
+import TrinomialFactoringCalculator from '@/app/components/math/trinomial-factoring/TrinomialFactoringCalculator';
 import RelatedCalculators from '@/app/components/RelatedCalculators';
 import type { Metadata } from 'next'
 

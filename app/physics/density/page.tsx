@@ -2,9 +2,9 @@ import CalculatorLayout from '@/app/components/CalculatorLayout';
 import KatexRenderer from '@/app/components/KatexRenderer';
 import type { Metadata } from 'next'
 import Dropdown from '@/app/components/Dropdown';
-import DensityCalculator from '@/app/components/physics/DensityCalculator';
-import DensityVolumeCalculator from '@/app/components/physics/DensityVolumeCalculator';
-import DensityMassCalculator from '@/app/components/physics/DensityMassCalculator';
+import DensityCalculator from '@/app/components/physics/density/DensityCalculator';
+import DensityVolumeCalculator from '@/app/components/physics/density/DensityVolumeCalculator';
+import DensityMassCalculator from '@/app/components/physics/density/DensityMassCalculator';
 
 export const metadata: Metadata = {
   title: 'Density Calculator',

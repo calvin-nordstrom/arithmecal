@@ -1,7 +1,7 @@
 import CalculatorLayout from '@/app/components/CalculatorLayout';
 import type { Metadata } from 'next'
 import BaseConverterNavigator from '@/app/components/BaseConverterNavigator';
-import BinaryToOctalConverter from '@/app/components/conversion/BinaryToOctalConverter';
+import BinaryToOctalConverter from '@/app/components/conversion/binary-to-octal/BinaryToOctalConverter';
 
 export const metadata: Metadata = {
   title: 'Binary to Octal Conversion',

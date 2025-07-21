@@ -1,7 +1,7 @@
 import CalculatorLayout from '@/app/components/CalculatorLayout';
 import type { Metadata } from 'next'
 import BaseConverterNavigator from '@/app/components/BaseConverterNavigator';
-import DecimalToBinaryConverter from '@/app/components/conversion/DecimalToBinaryConverter';
+import DecimalToBinaryConverter from '@/app/components/conversion/decimal-to-binary/DecimalToBinaryConverter';
 
 export const metadata: Metadata = {
   title: 'Decimal to Binary Conversion',

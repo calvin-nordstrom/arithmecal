@@ -1,6 +1,6 @@
 import CalculatorLayout from '@/app/components/CalculatorLayout';
 import KatexRenderer from '@/app/components/KatexRenderer';
-import PercentChangeCalculator from '@/app/components/math/PercentChangeCalculator';
+import PercentChangeCalculator from '@/app/components/math/percent-change/PercentChangeCalculator';
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {

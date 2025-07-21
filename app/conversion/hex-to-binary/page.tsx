@@ -1,7 +1,7 @@
 import CalculatorLayout from '@/app/components/CalculatorLayout';
 import type { Metadata } from 'next'
 import BaseConverterNavigator from '@/app/components/BaseConverterNavigator';
-import HexToBinaryConverter from '@/app/components/conversion/HexToBinaryConverter';
+import HexToBinaryConverter from '@/app/components/conversion/hex-to-binary/HexToBinaryConverter';
 
 export const metadata: Metadata = {
   title: 'Hex to Binary Conversion',

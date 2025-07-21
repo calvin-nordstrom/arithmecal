@@ -1,6 +1,6 @@
 import CalculatorLayout from '@/app/components/CalculatorLayout';
 import KatexRenderer from '@/app/components/KatexRenderer';
-import FOILCalculator from '@/app/components/math/FOILCalculator';
+import FOILCalculator from '@/app/components/math/foil/FOILCalculator';
 import Image from 'next/image';
 import foilImage from '@/assets/images/math/foil/foil.png'
 import type { Metadata } from 'next'

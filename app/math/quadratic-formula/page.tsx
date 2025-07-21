@@ -1,6 +1,6 @@
 import CalculatorLayout from '@/app/components/CalculatorLayout';
 import KatexRenderer from '@/app/components/KatexRenderer';
-import QuadraticFormulaCalculator from '@/app/components/math/QuadraticFormulaCalculator';
+import QuadraticFormulaCalculator from '@/app/components/math/quadratic-formula/QuadraticFormulaCalculator';
 import RelatedCalculators from '@/app/components/RelatedCalculators';
 import type { Metadata } from 'next';
 

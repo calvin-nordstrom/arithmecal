@@ -2,9 +2,9 @@ import CalculatorLayout from '@/app/components/CalculatorLayout';
 import KatexRenderer from '@/app/components/KatexRenderer';
 import type { Metadata } from 'next'
 import Dropdown from '@/app/components/Dropdown';
-import KineticEnergyCalculator from '@/app/components/physics/KineticEnergyCalculator';
-import KineticEnergyMassCalculator from '@/app/components/physics/KineticEnergyMassCalculator';
-import KineticEnergyVelocityCalculator from '@/app/components/physics/KineticEnergyVelocityCalculator';
+import KineticEnergyCalculator from '@/app/components/physics/kinetic-energy/KineticEnergyCalculator';
+import KineticEnergyMassCalculator from '@/app/components/physics/kinetic-energy/KineticEnergyMassCalculator';
+import KineticEnergyVelocityCalculator from '@/app/components/physics/kinetic-energy/KineticEnergyVelocityCalculator';
 import RelatedCalculators from '@/app/components/RelatedCalculators';
 
 export const metadata: Metadata = {

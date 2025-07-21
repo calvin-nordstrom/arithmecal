@@ -2,10 +2,10 @@ import CalculatorLayout from '@/app/components/CalculatorLayout';
 import KatexRenderer from '@/app/components/KatexRenderer';
 import type { Metadata } from 'next'
 import Dropdown from '@/app/components/Dropdown';
-import FreeFallTimeOfFallCalculator from '@/app/components/physics/FreeFallTimeOfFallCalculator';
-import FreeFallVelocityCalculator from '@/app/components/physics/FreeFallVelocityCalculator';
-import FreeFallHeightCalculator from '@/app/components/physics/FreeFallHeightCalculator';
-import FreeFallInitialVelocityCalculator from '@/app/components/physics/FreeFallInitialVelocityCalculator';
+import FreeFallTimeOfFallCalculator from '@/app/components/physics/free-fall/FreeFallTimeOfFallCalculator';
+import FreeFallVelocityCalculator from '@/app/components/physics/free-fall/FreeFallVelocityCalculator';
+import FreeFallHeightCalculator from '@/app/components/physics/free-fall/FreeFallHeightCalculator';
+import FreeFallInitialVelocityCalculator from '@/app/components/physics/free-fall/FreeFallInitialVelocityCalculator';
 import RelatedCalculators from '@/app/components/RelatedCalculators';
 
 export const metadata: Metadata = {

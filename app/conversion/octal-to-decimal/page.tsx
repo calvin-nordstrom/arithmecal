@@ -1,7 +1,7 @@
 import CalculatorLayout from '@/app/components/CalculatorLayout';
 import type { Metadata } from 'next'
 import BaseConverterNavigator from '@/app/components/BaseConverterNavigator';
-import OctalToDecimalConverter from '@/app/components/conversion/OctalToDecimalConverter';
+import OctalToDecimalConverter from '@/app/components/conversion/octal-to-decimal/OctalToDecimalConverter';
 
 export const metadata: Metadata = {
   title: 'Octal to Decimal Conversion',

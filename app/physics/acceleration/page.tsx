@@ -2,9 +2,9 @@ import CalculatorLayout from '@/app/components/CalculatorLayout';
 import KatexRenderer from '@/app/components/KatexRenderer';
 import type { Metadata } from 'next'
 import Dropdown from '@/app/components/Dropdown';
-import AccelerationFromSpeedDifferenceCalculator from '@/app/components/physics/AccelerationFromSpeedDifferenceCalculator';
-import AccelerationFromDistanceTraveledCalculator from '@/app/components/physics/AccelerationFromDistanceTraveledCalculator';
-import AccelerationFromMassAndForceCalculator from '@/app/components/physics/AccelerationFromMassAndForceCalculator';
+import AccelerationFromSpeedDifferenceCalculator from '@/app/components/physics/acceleration/AccelerationFromSpeedDifferenceCalculator';
+import AccelerationFromDistanceTraveledCalculator from '@/app/components/physics/acceleration/AccelerationFromDistanceTraveledCalculator';
+import AccelerationFromMassAndForceCalculator from '@/app/components/physics/acceleration/AccelerationFromMassAndForceCalculator';
 import RelatedCalculators from '@/app/components/RelatedCalculators';
 
 export const metadata: Metadata = {

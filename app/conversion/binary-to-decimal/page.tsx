@@ -2,7 +2,7 @@ import CalculatorLayout from '@/app/components/CalculatorLayout';
 import KatexRenderer from '@/app/components/KatexRenderer';
 import type { Metadata } from 'next'
 import BaseConverterNavigator from '@/app/components/BaseConverterNavigator';
-import BinaryToDecimalConverter from '@/app/components/conversion/BinaryToDecimalConverter';
+import BinaryToDecimalConverter from '@/app/components/conversion/binary-to-decimal/BinaryToDecimalConverter';
 
 export const metadata: Metadata = {
   title: 'Binary to Decimal Conversion',

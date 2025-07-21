@@ -1,7 +1,7 @@
 import CalculatorLayout from '@/app/components/CalculatorLayout';
 import type { Metadata } from 'next'
 import BaseConverterNavigator from '@/app/components/BaseConverterNavigator';
-import HexToDecimalConverter from '@/app/components/conversion/HexToDecimalConverter';
+import HexToDecimalConverter from '@/app/components/conversion/hex-to-decimal/HexToDecimalConverter';
 
 export const metadata: Metadata = {
   title: 'Hex to Decimal Conversion',

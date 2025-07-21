@@ -1,7 +1,7 @@
 import CalculatorLayout from '@/app/components/CalculatorLayout';
 import type { Metadata } from 'next'
 import BaseConverterNavigator from '@/app/components/BaseConverterNavigator';
-import HexToASCIIConverter from '@/app/components/conversion/HexToASCIIConverter';
+import HexToASCIIConverter from '@/app/components/conversion/hex-to-ascii/HexToASCIIConverter';
 import Link from 'next/link';
 
 export const metadata: Metadata = {

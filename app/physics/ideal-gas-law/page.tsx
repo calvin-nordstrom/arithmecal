@@ -2,10 +2,10 @@ import CalculatorLayout from '@/app/components/CalculatorLayout';
 import KatexRenderer from '@/app/components/KatexRenderer';
 import type { Metadata } from 'next'
 import Dropdown from '@/app/components/Dropdown';
-import IdealGasLawPressureCalculator from '@/app/components/physics/IdealGasLawPressureCalculator';
-import IdealGasLawVolumeCalculator from '@/app/components/physics/IdealGasLawVolumeCalculator';
-import IdealGasLawMolesCalculator from '@/app/components/physics/IdealGasLawMolesCalculator';
-import IdealGasLawTemperatureCalculator from '@/app/components/physics/IdealGasLawTemperatureCalculator';
+import IdealGasLawPressureCalculator from '@/app/components/physics/ideal-gas-law/IdealGasLawPressureCalculator';
+import IdealGasLawVolumeCalculator from '@/app/components/physics/ideal-gas-law/IdealGasLawVolumeCalculator';
+import IdealGasLawMolesCalculator from '@/app/components/physics/ideal-gas-law/IdealGasLawMolesCalculator';
+import IdealGasLawTemperatureCalculator from '@/app/components/physics/ideal-gas-law/IdealGasLawTemperatureCalculator';
 
 export const metadata: Metadata = {
   title: 'Ideal Gas Law Calculator',

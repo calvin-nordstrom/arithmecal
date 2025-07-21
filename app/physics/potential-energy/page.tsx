@@ -2,10 +2,10 @@ import CalculatorLayout from '@/app/components/CalculatorLayout';
 import KatexRenderer from '@/app/components/KatexRenderer';
 import type { Metadata } from 'next'
 import Dropdown from '@/app/components/Dropdown';
-import PotentialEnergyCalculator from '@/app/components/physics/PotentialEnergyCalculator';
-import PotentialEnergyMassCalculator from '@/app/components/physics/PotentialEnergyMassCalculator';
-import PotentialEnergyHeightCalculator from '@/app/components/physics/PotentialEnergyHeightCalculator';
-import PotentialEnergyGravityCalculator from '@/app/components/physics/PotentialEnergyGravitationalAccelerationCalculator';
+import PotentialEnergyCalculator from '@/app/components/physics/potential-energy/PotentialEnergyCalculator';
+import PotentialEnergyMassCalculator from '@/app/components/physics/potential-energy/PotentialEnergyMassCalculator';
+import PotentialEnergyHeightCalculator from '@/app/components/physics/potential-energy/PotentialEnergyHeightCalculator';
+import PotentialEnergyGravityCalculator from '@/app/components/physics/potential-energy/PotentialEnergyGravitationalAccelerationCalculator';
 import RelatedCalculators from '@/app/components/RelatedCalculators';
 
 export const metadata: Metadata = {

@@ -1,7 +1,7 @@
 import CalculatorLayout from '@/app/components/CalculatorLayout';
 import type { Metadata } from 'next'
 import BaseConverterNavigator from '@/app/components/BaseConverterNavigator';
-import HexToOctalConverter from '@/app/components/conversion/HexToOctalConverter';
+import HexToOctalConverter from '@/app/components/conversion/hex-to-octal/HexToOctalConverter';
 
 export const metadata: Metadata = {
   title: 'Hex to Octal Conversion',
