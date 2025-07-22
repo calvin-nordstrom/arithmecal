@@ -93,7 +93,8 @@ export default function IdealGasLawCalculatorPage() {
           <h2>Area Formulas</h2>
 
           <h3 id='square-area'>Square Area Formula</h3>
-          <p><KatexRenderer formula='A = s^2' /> where <em>s</em> is the side length.</p>
+          <p>Side length: <KatexRenderer formula='A = s^2' /> where <em>s</em> is the side length.</p>
+          <p>Diagonal length: <KatexRenderer formula='A = \frac{d^2}{2}' /> where <em>d</em> is the diagonal length.</p>
 
           <h3 id='rectangle-area'>Rectangle Area Formula</h3>
           <p><KatexRenderer formula='A = l \times w' /> where <em>l</em> is length and <em>w</em> is width.</p>
