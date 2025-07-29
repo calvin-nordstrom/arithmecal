@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   description: 'Discover essential trigonometric identities including Pythagorean, reciprocal, double angle, half angle, cofunction, and more on Arithmecal’s visual reference.',
   keywords: 'trigonometric identities, trig formulas, pythagorean identity, cofunction identity, double angle formula, half angle identity, sum to product, product to sum, Arithmecal, math reference, trigonometry chart, Euler, reciprocal identity, law of sines, law of cosines',
   alternates: {
-    canonical: 'https://www.arithmecal.com/reference/trigonometry',
+    canonical: 'https://www.arithmecal.com/reference/trig-identities',
   },
 }
 
