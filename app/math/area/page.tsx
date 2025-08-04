@@ -28,7 +28,7 @@ export const metadata: Metadata = {
   },
 }
 
-export default function IdealGasLawCalculatorPage() {
+export default function AreaCalculatorPage() {
   const dropdownConfig = [
     { label: 'Square', component: <SquareAreaCalculator /> },
     { label: 'Rectangle', component: <RectangleAreaCalculator /> },
