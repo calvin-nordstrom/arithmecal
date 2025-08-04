@@ -20,7 +20,7 @@ export default function ConvertersPage() {
       <div className='calculator-category'>
         <h2>General Converters</h2>
         <ul>
-          <li><Link href='conversion/unit-conversion'>Unit Conversion (All Units)</Link></li>
+          <li><Link href='conversion/unit-converter'>Unit Converter (All Units)</Link></li>
         </ul>
 
         <h2>Radix and ASCII Converters</h2>

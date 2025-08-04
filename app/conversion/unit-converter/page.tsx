@@ -32,17 +32,17 @@ import VolumeUnitConverter from '@/app/components/conversion/unit-conversion/Vol
 import KatexRenderer from '@/app/components/KatexRenderer';
 
 export const metadata: Metadata = {
-  title: 'Unit Conversion',
+  title: 'Unit Converter',
   description: 'Convert units across length, mass, temperature, volume, and more. This unit converter is perfect for students and professionals needing precise and instant conversions.',
   keywords: [
     'unit conversion', 'unit converter', 'metric to imperial', 'SI units', 'convert units', 'length conversion', 'mass conversion', 'temperature conversion', 'scientific calculator', 'engineering unit converter', 'volume converter', 'pressure converter', 'power converter',
   ],
   alternates: {
-    canonical: 'https://www.arithmecal.com/conversion/unit-conversion',
+    canonical: 'https://www.arithmecal.com/conversion/unit-converter',
   },
 }
 
-export default function UnitConversionPage() {
+export default function UnitConverterPage() {
   const dropdownConfig = [
     { label: 'Acceleration', component: <AccelerationUnitConverter /> },
     { label: 'Angle', component: <AngleUnitConverter /> },
@@ -76,7 +76,7 @@ export default function UnitConversionPage() {
 
   return (
     <CalculatorLayout>
-      <h1>Unit Conversion</h1>
+      <h1>Unit Converter</h1>
       <div className='calculator-content'>
         <div className='calculator-component'>
           <Dropdown config={dropdownConfig} />
