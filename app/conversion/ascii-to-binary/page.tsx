@@ -5,7 +5,7 @@ import ASCIIToBinaryConverter from '@/app/components/conversion/ascii-to-binary/
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'ASCII to Binary Conversion',
+  title: 'ASCII to Binary Converter',
   description: 'Convert ASCII text to binary and binary to ASCII with Arithmecal’s free converter. Includes examples, ASCII table reference, and conversion explanation.',
   keywords: 'ASCII to binary, binary to ASCII, ASCII converter, text to binary, binary converter, ASCII table, free online converter',
   alternates: {
@@ -13,10 +13,10 @@ export const metadata: Metadata = {
   },
 }
 
-export default function ASCIIToBinaryConversionPage() {
+export default function ASCIIToBinaryConverterPage() {
   return (
     <CalculatorLayout>
-      <h1>ASCII to Binary Conversion</h1>
+      <h1>ASCII to Binary Converter</h1>
       <div className='calculator-content'>
         <div className='calculator-component'>
           <BaseConverterNavigator />

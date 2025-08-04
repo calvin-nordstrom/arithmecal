@@ -5,7 +5,7 @@ import ASCIIToHexConverter from '@/app/components/conversion/ascii-to-hex/ASCIIT
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'ASCII to Hex Conversion',
+  title: 'ASCII to Hex Converter',
   description: 'Convert ASCII text to hexadecimal and vice versa with Arithmecal’s free online converter. Includes examples, explanations, and a full ASCII table reference.',
   keywords: 'ASCII to hex, hex to ASCII, ASCII hex converter, text to hexadecimal, hex conversion tool, online ASCII converter, ASCII table reference',
   alternates: {
@@ -13,10 +13,10 @@ export const metadata: Metadata = {
   },
 }
 
-export default function ASCIIToHexConversionPage() {
+export default function ASCIIToHexConverterPage() {
   return (
     <CalculatorLayout>
-      <h1>ASCII to Hex Conversion</h1>
+      <h1>ASCII to Hex Converter</h1>
       <div className='calculator-content'>
         <div className='calculator-component'>
           <BaseConverterNavigator />

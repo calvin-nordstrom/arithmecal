@@ -4,7 +4,7 @@ import BaseConverterNavigator from '@/app/components/BaseConverterNavigator';
 import BinaryToOctalConverter from '@/app/components/conversion/binary-to-octal/BinaryToOctalConverter';
 
 export const metadata: Metadata = {
-  title: 'Binary to Octal Conversion',
+  title: 'Binary to Octal Converter',
   description: 'Convert binary numbers to octal and octal to binary with Arithmecal’s accurate calculator. Learn how 3-bit binary groups map to base-8 values with examples.',
   keywords: 'binary to octal, octal to binary, binary converter, octal calculator, base-2 to base-8, 3-bit grouping, Unix file permissions, octal conversion examples, binary octal mapping',
   alternates: {
@@ -12,10 +12,10 @@ export const metadata: Metadata = {
   },
 }
 
-export default function BinaryToOctalConversionPage() {
+export default function BinaryToOctalConverterPage() {
   return (
     <CalculatorLayout>
-      <h1>Binary to Octal Conversion</h1>
+      <h1>Binary to Octal Converter</h1>
       <div className='calculator-content'>
         <div className='calculator-component'>
           <BaseConverterNavigator />

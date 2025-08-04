@@ -5,7 +5,7 @@ import ASCIIToOctalConverter from '@/app/components/conversion/ascii-to-octal/AS
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'ASCII to Octal Conversion',
+  title: 'ASCII to Octal Converter',
   description: 'Convert ASCII text to octal numbers (base-8) and vice versa with Arithmecal’s free online converter. Includes examples, explanations, and ASCII reference.',
   keywords: 'ASCII to octal, octal to ASCII, ASCII octal converter, text to octal, octal conversion tool, online ASCII converter, ASCII table reference',
   alternates: {
@@ -13,10 +13,10 @@ export const metadata: Metadata = {
   },
 }
 
-export default function ASCIIToOctalConversionPage() {
+export default function ASCIIToOctalConverterPage() {
   return (
     <CalculatorLayout>
-      <h1>ASCII to Octal Conversion</h1>
+      <h1>ASCII to Octal Converter</h1>
       <div className='calculator-content'>
         <div className='calculator-component'>
           <BaseConverterNavigator />

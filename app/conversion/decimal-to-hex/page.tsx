@@ -4,7 +4,7 @@ import BaseConverterNavigator from '@/app/components/BaseConverterNavigator';
 import DecimalToHexConverter from '@/app/components/conversion/decimal-to-hex/DecimalToHexConverter';
 
 export const metadata: Metadata = {
-  title: 'Decimal to Hex Conversion',
+  title: 'Decimal to Hex Converter',
   description: 'Convert decimal numbers to hexadecimal and vice versa with Arithmecal’s easy-to-use tool. Understand hexadecimal conversion for programming and digital systems.',
   keywords: 'decimal to hex, hex to decimal, decimal hexadecimal converter, number conversion tool, hexadecimal conversion, Arithmecal',
   alternates: {
@@ -12,10 +12,10 @@ export const metadata: Metadata = {
   },
 };
 
-export default function DecimalToHexConversionPage() {
+export default function DecimalToHexConverterPage() {
   return (
     <CalculatorLayout>
-      <h1>Decimal to Hex Conversion</h1>
+      <h1>Decimal to Hex Converter</h1>
       <div className='calculator-content'>
         <div className='calculator-component'>
           <BaseConverterNavigator />

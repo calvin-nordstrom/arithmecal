@@ -4,7 +4,7 @@ import BaseConverterNavigator from '@/app/components/BaseConverterNavigator';
 import DecimalToOctalConverter from '@/app/components/conversion/decimal-to-octal/DecimalToOctalConverter';
 
 export const metadata: Metadata = {
-  title: 'Decimal to Octal Conversion',
+  title: 'Decimal to Octal Converter',
   description: 'Convert decimal numbers to octal and vice versa with Arithmecal’s easy-to-use tool. Understand octal conversion for computing and digital systems.',
   keywords: 'decimal to octal, octal to decimal, decimal octal converter, number conversion tool, octal conversion, Arithmecal',
   alternates: {
@@ -12,10 +12,10 @@ export const metadata: Metadata = {
   },
 };
 
-export default function DecimalToOctalConversionPage() {
+export default function DecimalToOctalConverterPage() {
   return (
     <CalculatorLayout>
-      <h1>Decimal to Octal Conversion</h1>
+      <h1>Decimal to Octal Converter</h1>
       <div className='calculator-content'>
         <div className='calculator-component'>
           <BaseConverterNavigator />

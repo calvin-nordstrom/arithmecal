@@ -5,7 +5,7 @@ import ASCIIToDecimalConverter from '@/app/components/conversion/ascii-to-decima
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'ASCII to Decimal Conversion',
+  title: 'ASCII to Decimal Converter',
   description: 'Use Arithmecal’s ASCII to decimal converter to convert plain text to decimal values or vice versa. Includes examples and a link to the full ASCII table.',
   keywords: 'ASCII to decimal, decimal to ASCII, ASCII converter, text to decimal, decimal code converter, ASCII table reference, online ASCII converter',
   alternates: {
@@ -13,10 +13,10 @@ export const metadata: Metadata = {
   },
 }
 
-export default function ASCIIToDecimalConversionPage() {
+export default function ASCIIToDecimalConverterPage() {
   return (
     <CalculatorLayout>
-      <h1>ASCII to Decimal Conversion</h1>
+      <h1>ASCII to Decimal Converter</h1>
       <div className='calculator-content'>
         <div className='calculator-component'>
           <BaseConverterNavigator />

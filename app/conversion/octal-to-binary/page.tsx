@@ -4,7 +4,7 @@ import BaseConverterNavigator from '@/app/components/BaseConverterNavigator';
 import OctalToBinaryConverter from '@/app/components/conversion/octal-to-binary/OctalToBinaryConverter';
 
 export const metadata: Metadata = {
-  title: 'Octal to Binary Conversion',
+  title: 'Octal to Binary Converter',
   description: 'Convert octal (base-8) values to binary (base-2) numbers with Arithmecal’s Octal to Binary converter. Useful for programming, electronics, and digital systems.',
   keywords: 'octal to binary, octal conversion, binary conversion, number system conversion, octal to binary converter, digital systems, electronics, programming',
   alternates: {
@@ -12,10 +12,10 @@ export const metadata: Metadata = {
   },
 };
 
-export default function OctalToBinaryConversionPage() {
+export default function OctalToBinaryConverterPage() {
   return (
     <CalculatorLayout>
-      <h1>Octal to Binary Conversion</h1>
+      <h1>Octal to Binary Converter</h1>
       <div className='calculator-content'>
         <div className='calculator-component'>
           <BaseConverterNavigator />

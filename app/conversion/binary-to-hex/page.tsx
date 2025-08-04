@@ -4,7 +4,7 @@ import BaseConverterNavigator from '@/app/components/BaseConverterNavigator';
 import BinaryToHexConverter from '@/app/components/conversion/binary-to-hex/BinaryToHexConverter';
 
 export const metadata: Metadata = {
-  title: 'Binary to Hex Conversion',
+  title: 'Binary to Hex Converter',
   description: 'Convert binary numbers to hexadecimal and vice versa using Arithmecal’s calculator. Understand 4-bit binary to hex mapping,  examples, and its importance.',
   keywords: 'binary to hex, hex to binary, binary converter, hexadecimal calculator, base-2 to base-16, hex digits, binary hex conversion, 4-bit binary mapping, hex values in computing',
   alternates: {
@@ -12,10 +12,10 @@ export const metadata: Metadata = {
   },
 }
 
-export default function BinaryToHexConversionPage() {
+export default function BinaryToHexConverterPage() {
   return (
     <CalculatorLayout>
-      <h1>Binary to Hex Conversion</h1>
+      <h1>Binary to Hex Converter</h1>
       <div className='calculator-content'>
         <div className='calculator-component'>
           <BaseConverterNavigator />

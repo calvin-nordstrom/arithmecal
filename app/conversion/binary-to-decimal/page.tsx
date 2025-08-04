@@ -5,7 +5,7 @@ import BaseConverterNavigator from '@/app/components/BaseConverterNavigator';
 import BinaryToDecimalConverter from '@/app/components/conversion/binary-to-decimal/BinaryToDecimalConverter';
 
 export const metadata: Metadata = {
-  title: 'Binary to Decimal Conversion',
+  title: 'Binary to Decimal Converter',
   description: 'Convert binary numbers to decimal and vice versa with Arithmecal’s accurate and easy-to-use calculator. Understand binary place values through math examples.',
   keywords: 'binary to decimal, decimal to binary, binary converter, base-2 to base-10, binary number calculator, binary math, bit value table, binary positional values, number base conversion',
   alternates: {
@@ -13,10 +13,10 @@ export const metadata: Metadata = {
   },
 }
 
-export default function BinaryToDecimalConversionPage() {
+export default function BinaryToDecimalConverterPage() {
   return (
     <CalculatorLayout>
-      <h1>Binary to Decimal Conversion</h1>
+      <h1>Binary to Decimal Converter</h1>
       <div className='calculator-content'>
         <div className='calculator-component'>
           <BaseConverterNavigator />

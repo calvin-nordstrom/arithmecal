@@ -4,7 +4,7 @@ import BaseConverterNavigator from '@/app/components/BaseConverterNavigator';
 import HexToOctalConverter from '@/app/components/conversion/hex-to-octal/HexToOctalConverter';
 
 export const metadata: Metadata = {
-  title: 'Hex to Octal Conversion',
+  title: 'Hex to Octal Converter',
   description: 'Convert hexadecimal to octal and vice versa with Arithmecal’s Hex to Octal converter. Ideal for developers, programmers, and tech enthusiasts.',
   keywords: 'hex to octal, octal to hex, hex conversion, octal conversion, number system conversion, binary to octal, Arithmecal',
   alternates: {
@@ -12,10 +12,10 @@ export const metadata: Metadata = {
   },
 };
 
-export default function HexToOctalConversionPage() {
+export default function HexToOctalConverterPage() {
   return (
     <CalculatorLayout>
-      <h1>Hex to Octal Conversion</h1>
+      <h1>Hex to Octal Converter</h1>
       <div className='calculator-content'>
         <div className='calculator-component'>
           <BaseConverterNavigator />

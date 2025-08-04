@@ -5,7 +5,7 @@ import DecimalToASCIIConverter from '@/app/components/conversion/decimal-to-asci
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'Decimal to ASCII Conversion',
+  title: 'Decimal to ASCII Converter',
   description: 'Convert decimal numbers to ASCII characters and vice versa with Arithmecal’s easy-to-use tool. Learn decimal-ASCII mappings and through conversion examples.',
   keywords: 'decimal to ASCII, ASCII to decimal, decimal ASCII converter, ASCII conversion tool, number to character conversion, Arithmecal, base-10 to ASCII',
   alternates: {
@@ -13,10 +13,10 @@ export const metadata: Metadata = {
   },
 };
 
-export default function DecimalToASCIIConversionPage() {
+export default function DecimalToASCIIConverterPage() {
   return (
     <CalculatorLayout>
-      <h1>Decimal to ASCII Conversion</h1>
+      <h1>Decimal to ASCII Converter</h1>
       <div className='calculator-content'>
         <div className='calculator-component'>
           <BaseConverterNavigator />
