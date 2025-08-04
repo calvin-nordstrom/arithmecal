@@ -5,7 +5,7 @@ import OctalToHexConverter from '@/app/components/conversion/octal-to-hex/OctalT
 
 export const metadata: Metadata = {
   title: 'Octal to Hexadecimal Converter',
-  description: 'Convert octal (base-8) numbers to hexadecimal (base-16) with Arithmecal’s easy-to-use tool. Ideal for programming, debugging, and systems work.',
+  description: 'Convert octal (base-8) numbers to hexadecimal (base-16) with Arithmecal’s easy-to-use converter. Ideal for programming, debugging, and systems work.',
   keywords: 'octal to hexadecimal, hexadecimal conversion, octal to hex converter, number system conversion, octal conversion, programming, debugging, memory addressing',
   alternates: {
     canonical: 'https://www.arithmecal.com/conversion/octal-to-hex',

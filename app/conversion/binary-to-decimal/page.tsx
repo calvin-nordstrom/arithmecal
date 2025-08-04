@@ -6,7 +6,7 @@ import BinaryToDecimalConverter from '@/app/components/conversion/binary-to-deci
 
 export const metadata: Metadata = {
   title: 'Binary to Decimal Converter',
-  description: 'Convert binary numbers to decimal and vice versa with Arithmecal’s accurate and easy-to-use calculator. Understand binary place values through math examples.',
+  description: 'Convert binary numbers to decimal and vice versa with Arithmecal’s accurate and easy-to-use converter. Understand binary place values through math examples.',
   keywords: 'binary to decimal, decimal to binary, binary converter, base-2 to base-10, binary number calculator, binary math, bit value table, binary positional values, number base conversion',
   alternates: {
     canonical: 'https://www.arithmecal.com/conversion/binary-to-decimal',
