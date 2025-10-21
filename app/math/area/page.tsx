@@ -1,7 +1,7 @@
 import CalculatorLayout from '@/app/components/CalculatorLayout';
 import KatexRenderer from '@/app/components/KatexRenderer';
 import type { Metadata } from 'next'
-import Dropdown from '@/app/components/Dropdown';
+import ComponentSelect from '@/app/components/ComponentSelect';
 import SquareAreaCalculator from '@/app/components/math/area/SquareAreaCalculator';
 import RectangleAreaCalculator from '@/app/components/math/area/RectangleAreaCalculator';
 import TriangleAreaCalculator from '@/app/components/math/area/TriangleAreaCalculator';
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
 }
 
 export default function AreaCalculatorPage() {
-  const dropdownConfig = [
+  const selectConfig = [
     { label: 'Square', component: <SquareAreaCalculator /> },
     { label: 'Rectangle', component: <RectangleAreaCalculator /> },
     { label: 'Triangle', component: <TriangleAreaCalculator /> },
@@ -52,7 +52,7 @@ export default function AreaCalculatorPage() {
       <h1>Area Calculator</h1>
       <div className='calculator-content'>
         <div className='calculator-component'>
-          <Dropdown label='Shape' config={dropdownConfig} />
+          <ComponentSelect label='Shape' config={selectConfig} />
         </div>
         <div className='calculator-description'>
           <p>This calculator allows you to compute the area of <strong>15 popular shapes</strong> rapidly and accurately. Below is a list of the shapes we offer and information about computing their areas.</p>

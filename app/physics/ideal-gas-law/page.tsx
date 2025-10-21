@@ -1,7 +1,7 @@
 import CalculatorLayout from '@/app/components/CalculatorLayout';
 import KatexRenderer from '@/app/components/KatexRenderer';
 import type { Metadata } from 'next'
-import Dropdown from '@/app/components/Dropdown';
+import ComponentSelect from '@/app/components/ComponentSelect';
 import IdealGasLawPressureCalculator from '@/app/components/physics/ideal-gas-law/IdealGasLawPressureCalculator';
 import IdealGasLawVolumeCalculator from '@/app/components/physics/ideal-gas-law/IdealGasLawVolumeCalculator';
 import IdealGasLawMolesCalculator from '@/app/components/physics/ideal-gas-law/IdealGasLawMolesCalculator';
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
 }
 
 export default function IdealGasLawCalculatorPage() {
-  const dropdownConfig = [
+  const selectConfig = [
     { label: 'Pressure (P)', component: <IdealGasLawPressureCalculator /> },
     { label: 'Volume (V)', component: <IdealGasLawVolumeCalculator /> },
     { label: 'Moles (n)', component: <IdealGasLawMolesCalculator /> },
@@ -29,7 +29,7 @@ export default function IdealGasLawCalculatorPage() {
       <h1>Ideal Gas Law Calculator</h1>
       <div className='calculator-content'>
         <div className='calculator-component'>
-          <Dropdown config={dropdownConfig} />
+          <ComponentSelect config={selectConfig} />
         </div>
         <div className='calculator-description'>
           <p>This calculator allows you to use the <strong>Ideal Gas Law</strong> to find a missing variable when given the other properties of the gas&apos;s environment.</p>

@@ -1,7 +1,7 @@
 import CalculatorLayout from '@/app/components/CalculatorLayout';
 import KatexRenderer from '@/app/components/KatexRenderer';
 import type { Metadata } from 'next'
-import Dropdown from '@/app/components/Dropdown';
+import ComponentSelect from '@/app/components/ComponentSelect';
 import AccelerationFromSpeedDifferenceCalculator from '@/app/components/physics/acceleration/AccelerationFromSpeedDifferenceCalculator';
 import AccelerationFromDistanceTraveledCalculator from '@/app/components/physics/acceleration/AccelerationFromDistanceTraveledCalculator';
 import AccelerationFromMassAndForceCalculator from '@/app/components/physics/acceleration/AccelerationFromMassAndForceCalculator';
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
 }
 
 export default function AccelerationCalculatorPage() {
-  const dropdownConfig = [
+  const selectConfig = [
     { label: 'Speed difference', component: <AccelerationFromSpeedDifferenceCalculator /> },
     { label: 'Distance traveled', component: <AccelerationFromDistanceTraveledCalculator /> },
     { label: 'Mass and force', component: <AccelerationFromMassAndForceCalculator /> },
@@ -28,7 +28,7 @@ export default function AccelerationCalculatorPage() {
       <h1>Acceleration Calculator</h1>
       <div className='calculator-content'>
         <div className='calculator-component'>
-          <Dropdown label='Solve given' config={dropdownConfig} />
+          <ComponentSelect label='Solve given' config={selectConfig} />
           <RelatedCalculators
             links={[
               { href: './free-fall', label: 'Free Fall Calculator' },

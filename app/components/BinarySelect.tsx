@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState } from 'react';
 
-interface BinaryDropdownProps<T extends string, U extends string> {
+interface BinarySelectProps<T extends string, U extends string> {
   fromOptions: T[];
   toOptions: U[];
   selectedFrom: T;
@@ -10,13 +10,13 @@ interface BinaryDropdownProps<T extends string, U extends string> {
   onChange: (newFrom: T, newTo: U) => void;
 }
 
-const BinaryDropdown = <T extends string, U extends string>({
+const BinarySelect = <T extends string, U extends string>({
   fromOptions,
   toOptions,
   selectedFrom,
   selectedTo,
   onChange,
-}: BinaryDropdownProps<T, U>) => {
+}: BinarySelectProps<T, U>) => {
   const [localFrom, setLocalFrom] = useState<T>(selectedFrom);
   const [localTo, setLocalTo] = useState<U>(selectedTo);
 
@@ -46,9 +46,9 @@ const BinaryDropdown = <T extends string, U extends string>({
   };
 
   return (
-    <div className='dropdown'>
-      <div className='dropdown-container'>
-        <div className='dropdown-item'>
+    <div className='component-select'>
+      <div className='component-select-container'>
+        <div className='component-select-item'>
           <label>From</label>
           <select value={localFrom} onChange={handleFromChange}>
             {fromOptions.map((opt) => (
@@ -59,7 +59,7 @@ const BinaryDropdown = <T extends string, U extends string>({
           </select>
         </div>
 
-        <div className='dropdown-item'>
+        <div className='component-select-item'>
           <label>To</label>
           <select value={localTo} onChange={handleToChange}>
             {toOptions.map((opt) => (
@@ -74,4 +74,4 @@ const BinaryDropdown = <T extends string, U extends string>({
   );
 };
 
-export default BinaryDropdown;
+export default BinarySelect;

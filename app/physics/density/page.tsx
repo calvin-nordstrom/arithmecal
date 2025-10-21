@@ -1,7 +1,7 @@
 import CalculatorLayout from '@/app/components/CalculatorLayout';
 import KatexRenderer from '@/app/components/KatexRenderer';
 import type { Metadata } from 'next'
-import Dropdown from '@/app/components/Dropdown';
+import ComponentSelect from '@/app/components/ComponentSelect';
 import DensityCalculator from '@/app/components/physics/density/DensityCalculator';
 import DensityVolumeCalculator from '@/app/components/physics/density/DensityVolumeCalculator';
 import DensityMassCalculator from '@/app/components/physics/density/DensityMassCalculator';
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 }
 
 export default function DensityCalculatorPage() {
-  const dropdownConfig = [
+  const selectConfig = [
     { label: 'Density (ρ)', component: <DensityCalculator /> },
     { label: 'Volume (V)', component: <DensityVolumeCalculator /> },
     { label: 'Mass (n)', component: <DensityMassCalculator /> },
@@ -27,7 +27,7 @@ export default function DensityCalculatorPage() {
       <h1>Density Calculator</h1>
       <div className='calculator-content'>
         <div className='calculator-component'>
-          <Dropdown config={dropdownConfig} />
+          <ComponentSelect config={selectConfig} />
         </div>
         <div className='calculator-description'>
           <p>This calculator allows you to use the <strong>density formula</strong> to solve for mass, volume, or density when the other two values are known.</p>

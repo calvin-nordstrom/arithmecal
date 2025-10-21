@@ -2,15 +2,15 @@
 
 import React, { useEffect, useState } from 'react';
 
-interface DropdownProps {
+interface ComponentSelectProps {
   label?: string,
   config: { label: string; component: React.ReactNode }[];
 }
 
-export default function Dropdown({
+export default function ComponentSelect({
   label = 'Solve for',
   config
-}: DropdownProps) {
+}: ComponentSelectProps) {
   const [selectedIndex, setSelectedIndex] = useState(0);
 
   useEffect(() => {
@@ -39,9 +39,9 @@ export default function Dropdown({
   };
 
   return (
-    <div className='dropdown'>
-      <div className='dropdown-container'>
-        <div className='dropdown-item'>
+    <div className='component-select'>
+      <div className='component-select-container'>
+        <div className='component-select-item'>
           <label>{label}</label>
           <select
             value={selectedIndex}

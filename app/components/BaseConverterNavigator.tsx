@@ -2,7 +2,7 @@
 
 import { usePathname, useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
-import BinaryDropdown from './BinaryDropdown';
+import BinarySelect from './BinarySelect';
 
 const bases = ['ascii', 'binary', 'decimal', 'hex', 'octal'];
 type BaseType = (typeof bases)[number];
@@ -54,7 +54,7 @@ const BaseConverterNavigator = () => {
   if (!from || !to) return null;
 
   return (
-    <BinaryDropdown
+    <BinarySelect
       fromOptions={bases}
       toOptions={bases}
       selectedFrom={from}

@@ -1,6 +1,6 @@
 import CalculatorLayout from '@/app/components/CalculatorLayout';
 import type { Metadata } from 'next'
-import Dropdown from '@/app/components/Dropdown';
+import ComponentSelect from '@/app/components/ComponentSelect';
 import AccelerationUnitConverter from '@/app/components/conversion/unit-converter/AccelerationUnitConverter';
 import AngleUnitConverter from '@/app/components/conversion/unit-converter/AngleUnitConverter';
 import ApparentPowerUnitConverter from '@/app/components/conversion/unit-converter/ApparentPowerUnitConverter';
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
 }
 
 export default function UnitConverterPage() {
-  const dropdownConfig = [
+  const selectConfig = [
     { label: 'Acceleration', component: <AccelerationUnitConverter /> },
     { label: 'Angle', component: <AngleUnitConverter /> },
     { label: 'Apparent Power', component: <ApparentPowerUnitConverter /> },
@@ -79,7 +79,7 @@ export default function UnitConverterPage() {
       <h1>Unit Converter</h1>
       <div className='calculator-content'>
         <div className='calculator-component'>
-          <Dropdown config={dropdownConfig} />
+          <ComponentSelect config={selectConfig} />
         </div>
         <div className='calculator-description'>
           <h2>The Importance of Unit Conversion</h2>

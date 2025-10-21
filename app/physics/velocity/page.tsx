@@ -1,7 +1,7 @@
 import CalculatorLayout from '@/app/components/CalculatorLayout';
 import KatexRenderer from '@/app/components/KatexRenderer';
 import type { Metadata } from 'next'
-import Dropdown from '@/app/components/Dropdown';
+import ComponentSelect from '@/app/components/ComponentSelect';
 import VelocityFromDistanceTraveledCalculator from '@/app/components/physics/velocity/VelocityFromDistanceTraveledCalculator';
 import VelocityFromAccelerationCalculator from '@/app/components/physics/velocity/VelocityFromAccelerationCalculator';
 import RelatedCalculators from '@/app/components/RelatedCalculators';
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 }
 
 export default function VelocityCalculatorPage() {
-  const dropdownConfig = [
+  const selectConfig = [
     { label: 'Distance traveled', component: <VelocityFromDistanceTraveledCalculator /> },
     { label: 'Acceleration', component: <VelocityFromAccelerationCalculator /> },
   ];
@@ -26,7 +26,7 @@ export default function VelocityCalculatorPage() {
       <h1>Velocity Calculator</h1>
       <div className='calculator-content'>
         <div className='calculator-component'>
-          <Dropdown label='Solve given' config={dropdownConfig} />
+          <ComponentSelect label='Solve given' config={selectConfig} />
           <RelatedCalculators
             links={[
               { href: './acceleration', label: 'Acceleration Calculator' },

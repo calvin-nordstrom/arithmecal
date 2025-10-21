@@ -1,7 +1,7 @@
 import CalculatorLayout from '@/app/components/CalculatorLayout';
 import KatexRenderer from '@/app/components/KatexRenderer';
 import type { Metadata } from 'next'
-import Dropdown from '@/app/components/Dropdown';
+import ComponentSelect from '@/app/components/ComponentSelect';
 import PotentialEnergyCalculator from '@/app/components/physics/potential-energy/PotentialEnergyCalculator';
 import PotentialEnergyMassCalculator from '@/app/components/physics/potential-energy/PotentialEnergyMassCalculator';
 import PotentialEnergyHeightCalculator from '@/app/components/physics/potential-energy/PotentialEnergyHeightCalculator';
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
 }
 
 export default function PotentialEnergyCalculatorPage() {
-  const dropdownConfig = [
+  const selectConfig = [
     { label: 'Potential energy', component: <PotentialEnergyCalculator /> },
     { label: 'Mass', component: <PotentialEnergyMassCalculator /> },
     { label: 'Height', component: <PotentialEnergyHeightCalculator /> },
@@ -30,7 +30,7 @@ export default function PotentialEnergyCalculatorPage() {
       <h1>Potential Energy Calculator</h1>
       <div className='calculator-content'>
         <div className='calculator-component'>
-          <Dropdown config={dropdownConfig} />
+          <ComponentSelect config={selectConfig} />
           <RelatedCalculators
             links={[
               { href: './kinetic-energy', label: 'Kinetic Energy Calculator' },

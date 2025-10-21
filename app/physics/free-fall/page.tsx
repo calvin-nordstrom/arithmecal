@@ -1,7 +1,7 @@
 import CalculatorLayout from '@/app/components/CalculatorLayout';
 import KatexRenderer from '@/app/components/KatexRenderer';
 import type { Metadata } from 'next'
-import Dropdown from '@/app/components/Dropdown';
+import ComponentSelect from '@/app/components/ComponentSelect';
 import FreeFallTimeOfFallCalculator from '@/app/components/physics/free-fall/FreeFallTimeOfFallCalculator';
 import FreeFallVelocityCalculator from '@/app/components/physics/free-fall/FreeFallVelocityCalculator';
 import FreeFallHeightCalculator from '@/app/components/physics/free-fall/FreeFallHeightCalculator';
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
 }
 
 export default function FreeFallCalculatorPage() {
-  const dropdownConfig = [
+  const selectConfig = [
     { label: 'Time of fall', component: <FreeFallTimeOfFallCalculator /> },
     { label: 'Velocity', component: <FreeFallVelocityCalculator /> },
     { label: 'Height', component: <FreeFallHeightCalculator /> },
@@ -30,7 +30,7 @@ export default function FreeFallCalculatorPage() {
       <h1>Free Fall Calculator</h1>
       <div className='calculator-content'>
         <div className='calculator-component'>
-          <Dropdown config={dropdownConfig} />
+          <ComponentSelect config={selectConfig} />
           <RelatedCalculators
             links={[
               { href: './acceleration', label: 'Acceleration Calculator' },
