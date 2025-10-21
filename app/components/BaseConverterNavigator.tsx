@@ -15,7 +15,7 @@ const validRoutes = new Set(
   )
 );
 
-const BaseConverterNavigator = () => {
+export default function BaseConverterNavigator() {
   const router = useRouter();
   const pathname = usePathname();
 
@@ -63,5 +63,3 @@ const BaseConverterNavigator = () => {
     />
   );
 };
-
-export default BaseConverterNavigator;

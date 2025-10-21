@@ -10,13 +10,13 @@ interface BinarySelectProps<T extends string, U extends string> {
   onChange: (newFrom: T, newTo: U) => void;
 }
 
-const BinarySelect = <T extends string, U extends string>({
+export default function BinarySelect<T extends string, U extends string>({
   fromOptions,
   toOptions,
   selectedFrom,
   selectedTo,
   onChange,
-}: BinarySelectProps<T, U>) => {
+}: BinarySelectProps<T, U>) {
   const [localFrom, setLocalFrom] = useState<T>(selectedFrom);
   const [localTo, setLocalTo] = useState<U>(selectedTo);
 
@@ -73,5 +73,3 @@ const BinarySelect = <T extends string, U extends string>({
     </div>
   );
 };
-
-export default BinarySelect;
