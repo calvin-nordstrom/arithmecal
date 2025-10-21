@@ -19,13 +19,14 @@ export default function HomePage() {
       <main className='home'>
         <div className='title-banner'>
           <div className='title-banner-container'>
-            <Image
+            {/* <Image
               src='/logo_horizontal.png'
               width={512}
               height={64}
               alt='Arithmecal horizontal logo'
               className='image desktop-logo'
-            />
+            /> */}
+            <h1>Arithmecal</h1>
             <h2><em>The everything calculator</em></h2>
           </div>
         </div>

@@ -271,12 +271,15 @@ button:hover {
 }
 
 .title-banner-container {
+  display: flex;
+  flex-direction: column;
   padding: 0 2rem 0 2rem;
 }
 
 .title-banner h1 {
-  font-size: 48px;
+  font-size: 80px;
   margin: 0;
+  text-shadow: rgba(0, 0, 0, 0.8) 2px 2px 4px;
 }
 
 .title-banner h2 {
@@ -1142,6 +1145,10 @@ textarea {
   .related-calculators {
     width: calc(100% + 2rem);
   }
+
+  .title-banner h1 {
+    font-size: 48px;
+  }
 }
 
 /* Small (Larger Phones) */
@@ -1172,6 +1179,10 @@ textarea {
 
   .footer-bottom-container {
     flex-direction: column;
+  }
+
+  .title-banner h1 {
+    font-size: 64px;
   }
 }
 
