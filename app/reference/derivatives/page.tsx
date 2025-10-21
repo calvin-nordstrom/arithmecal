@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   description: 'Explore a comprehensive table of derivative formulas with names and examples. Learn and master Calculus rules easily with Arithmecal’s visual math reference.',
   keywords: 'derivative rules, calculus formulas, table of derivatives, power rule, product rule, quotient rule, chain rule, trigonometric derivatives, Arithmecal, math reference, calculus help, differentiation table, derivative chart, inverse trig derivatives, exponential derivatives, logarithmic derivatives, hyperbolic functions',
   alternates: {
-    canonical: 'https://www.arithmecal.com/reference/derivatives',
+    canonical: 'https://arithmecal.com/reference/derivatives',
   },
 }
 

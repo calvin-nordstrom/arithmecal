@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   description: 'Arithmecal is an all-in-one platform for fast, free, and accurate calculators featuring tools and references for math, science, technology, conversion, and more.',
   keywords: 'online calculators, math calculator, unit converter, physics calculator, conversion tools, educational tools, reference calculators, Arithmecal, free calculators, web tools, STEM calculators',
   alternates: {
-    canonical: 'https://www.arithmecal.com/',
+    canonical: 'https://arithmecal.com/',
   },
 }
 

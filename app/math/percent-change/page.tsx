@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   description: 'Calculate percent increase or decrease with Arithmecal’s step-by-step percent change calculator.',
   keywords: 'percent change calculator, percentage increase, percentage decrease, percent calculator, Arithmecal, percent difference',
   alternates: {
-    canonical: 'https://www.arithmecal.com/math/percent-change',
+    canonical: 'https://arithmecal.com/math/percent-change',
   },
 };
 

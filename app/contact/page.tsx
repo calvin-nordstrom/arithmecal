@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   description: 'Have feedback, found an error, or want to suggest a new calculator or unit? Use our contact forms to reach the Arithmecal team.',
   keywords: 'contact Arithmecal, feedback form, report error, suggest calculator, suggest unit, calculator suggestions, unit suggestions',
   alternates: {
-    canonical: 'https://www.arithmecal.com/contact',
+    canonical: 'https://arithmecal.com/contact',
   },
 }
 

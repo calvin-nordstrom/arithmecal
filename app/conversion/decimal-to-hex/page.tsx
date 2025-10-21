@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   description: 'Convert decimal numbers to hexadecimal and vice versa with Arithmecal’s easy-to-use converter. Understand hexadecimal conversion for programming and digital systems.',
   keywords: 'decimal to hex, hex to decimal, decimal hexadecimal converter, number conversion tool, hexadecimal conversion, Arithmecal',
   alternates: {
-    canonical: 'https://www.arithmecal.com/conversion/decimal-to-hex',
+    canonical: 'https://arithmecal.com/conversion/decimal-to-hex',
   },
 };
 

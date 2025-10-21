@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   description: 'Convert hexadecimal values to binary and vice versa with Arithmecal’s Hex to Binary converter. Perfect for developers and tech enthusiasts.',
   keywords: 'hex to binary, binary to hex, hex binary converter, hex conversion, binary conversion, Arithmecal',
   alternates: {
-    canonical: 'https://www.arithmecal.com/conversion/hex-to-binary',
+    canonical: 'https://arithmecal.com/conversion/hex-to-binary',
   },
 };
 

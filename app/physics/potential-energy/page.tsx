@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   description: 'Calculate potential energy, mass, height, or gravitational acceleration with Arithmecal’s Potential Energy Calculator using the formula PE = mgh.',
   keywords: 'potential energy calculator, mass calculator, height calculator, gravitational acceleration calculator, Arithmecal',
   alternates: {
-    canonical: 'https://www.arithmecal.com/physics/potential-energy',
+    canonical: 'https://arithmecal.com/physics/potential-energy',
   },
 }
 

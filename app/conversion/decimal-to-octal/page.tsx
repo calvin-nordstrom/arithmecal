@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   description: 'Convert decimal numbers to octal and vice versa with Arithmecal’s easy-to-use converter. Understand octal conversion for computing and digital systems.',
   keywords: 'decimal to octal, octal to decimal, decimal octal converter, number conversion tool, octal conversion, Arithmecal',
   alternates: {
-    canonical: 'https://www.arithmecal.com/conversion/decimal-to-octal',
+    canonical: 'https://arithmecal.com/conversion/decimal-to-octal',
   },
 };
 

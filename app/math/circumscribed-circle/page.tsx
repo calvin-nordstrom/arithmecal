@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   description: 'Use Arithmecal to calculate the circumradius, circumcenter, and area of a triangle’s circumcircle using side lengths and Heron’s formula. Fast and accurate.',
   keywords: 'circumscribed circle calculator, circumradius, circumcenter, triangle circumcircle, Heron’s formula, triangle calculator, geometry tools, radius of circumcircle, triangle area, circumcircle center',
   alternates: {
-    canonical: 'https://www.arithmecal.com/math/circumscribed-circle',
+    canonical: 'https://arithmecal.com/math/circumscribed-circle',
   },
 };
 

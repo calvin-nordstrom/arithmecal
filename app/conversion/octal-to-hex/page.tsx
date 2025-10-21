@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   description: 'Convert octal (base-8) numbers to hexadecimal (base-16) with Arithmecal’s easy-to-use converter. Ideal for programming, debugging, and systems work.',
   keywords: 'octal to hexadecimal, hexadecimal conversion, octal to hex converter, number system conversion, octal conversion, programming, debugging, memory addressing',
   alternates: {
-    canonical: 'https://www.arithmecal.com/conversion/octal-to-hex',
+    canonical: 'https://arithmecal.com/conversion/octal-to-hex',
   },
 };
 

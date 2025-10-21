@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   description: 'Convert hexadecimal to octal and vice versa with Arithmecal’s Hex to Octal converter. Ideal for developers, programmers, and tech enthusiasts.',
   keywords: 'hex to octal, octal to hex, hex conversion, octal conversion, number system conversion, binary to octal, Arithmecal',
   alternates: {
-    canonical: 'https://www.arithmecal.com/conversion/hex-to-octal',
+    canonical: 'https://arithmecal.com/conversion/hex-to-octal',
   },
 };
 

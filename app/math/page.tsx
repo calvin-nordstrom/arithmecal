@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   description: 'Explore Arithmecal’s library of math calculators for geometry, algebra, and calculus equations. Enhance your understanding with our tools.',
   keywords: 'math calculators, algebra calculator, geometry calculator, calculus, math tools, online calculator, triangle calculator',
   alternates: {
-    canonical: 'https://www.arithmecal.com/math',
+    canonical: 'https://arithmecal.com/math',
   },
 }
 

@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   description: 'Easily calculate density, mass, or volume using Arithmecal’s physics-based density calculator. Enter two values to solve the third using the formula ρ = m / V.',
   keywords: 'density calculator, mass calculator, volume calculator, physics calculator, density formula, rho = m/V, Arithmecal',
   alternates: {
-    canonical: 'https://www.arithmecal.com/physics/density',
+    canonical: 'https://arithmecal.com/physics/density',
   },
 }
 

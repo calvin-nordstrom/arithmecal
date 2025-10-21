@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   description: 'Calculate the area of 15 different geometric shapes using Arithmecal’s simple formulas and interactive tools.',
   keywords: 'area calculator, geometry, triangle area, circle area, Arithmecal, square area, ellipse area, polygon area, area',
   alternates: {
-    canonical: 'https://www.arithmecal.com/math/area',
+    canonical: 'https://arithmecal.com/math/area',
   },
 }
 

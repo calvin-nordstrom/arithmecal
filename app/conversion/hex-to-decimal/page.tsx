@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   description: 'Convert hexadecimal (base-16) values to decimal (base-10) and vice versa with Arithmecal’s Hex to Decimal converter. Great for developers and tech enthusiasts.',
   keywords: 'hex to decimal, decimal to hex, hex conversion, hexadecimal, decimal number converter, Arithmecal',
   alternates: {
-    canonical: 'https://www.arithmecal.com/conversion/hex-to-decimal',
+    canonical: 'https://arithmecal.com/conversion/hex-to-decimal',
   },
 };
 

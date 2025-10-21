@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   description: 'Calculate sides, area, and perimeter of a 45-45-90 triangle with Arithmecal’s special right triangle calculator.',
   keywords: '45 45 90 triangle calculator, special right triangle, isosceles right triangle, triangle area, triangle perimeter, Arithmecal',
   alternates: {
-    canonical: 'https://www.arithmecal.com/math/triangle-45-45-90',
+    canonical: 'https://arithmecal.com/math/triangle-45-45-90',
   },
 }
 

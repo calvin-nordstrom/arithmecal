@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   description: 'Calculate kinetic energy, mass, or velocity with Arithmecal’s Kinetic Energy Calculator using the formula KE = 1/2mv².',
   keywords: 'kinetic energy calculator, mass calculator, velocity calculator, Arithmecal',
   alternates: {
-    canonical: 'https://www.arithmecal.com/physics/kinetic-energy',
+    canonical: 'https://arithmecal.com/physics/kinetic-energy',
   },
 }
 

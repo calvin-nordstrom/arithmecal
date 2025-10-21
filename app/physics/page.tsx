@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   description: 'Explore Arithmecal’s range of physics calculators for energy, motion, thermodynamics, and materials. Expand your knowledge using our services.',
   keywords: 'physics calculators, energy calculator, materials, motion calculator, thermodynamics calculator, power calculator, work calculator, physics tools, online calculator',
   alternates: {
-    canonical: 'https://www.arithmecal.com/physics',
+    canonical: 'https://arithmecal.com/physics',
   },
 }
 

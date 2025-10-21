@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   description: 'Use Arithmecal’s acceleration calculator to solve for acceleration using speed difference, distance, or Newton’s Second Law. Fast and accurate results.',
   keywords: 'acceleration calculator, physics calculator, acceleration from speed, acceleration from distance, acceleration from force, Newton’s Second Law, Arithmecal',
   alternates: {
-    canonical: 'https://www.arithmecal.com/physics/acceleration',
+    canonical: 'https://arithmecal.com/physics/acceleration',
   },
 }
 

@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   description: 'Arithmecal’s velocity calculator for calculating velocity from distance, time, acceleration, and initial velocity.',
   keywords: 'velocity calculator, distance traveled, acceleration, physics calculator, Arithmecal',
   alternates: {
-    canonical: 'https://www.arithmecal.com/physics/velocity',
+    canonical: 'https://arithmecal.com/physics/velocity',
   },
 }
 

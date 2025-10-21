@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description: 'Read Arithmecal’s Terms of Service to understand the rules and limitations for using our services including acceptable use, liability, and third-party services.',
   keywords: 'Terms of Service, Website Terms, Legal, Disclaimer, Privacy, Usage Rules, Liability, Google Analytics, Google AdSense, Online Tools, Calculator Terms',
   alternates: {
-    canonical: 'https://www.arithmecal.com/terms',
+    canonical: 'https://arithmecal.com/terms',
   },
 }
 

@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   description: 'Convert binary numbers to decimal and vice versa with Arithmecal’s accurate and easy-to-use converter. Understand binary place values through math examples.',
   keywords: 'binary to decimal, decimal to binary, binary converter, base-2 to base-10, binary number calculator, binary math, bit value table, binary positional values, number base conversion',
   alternates: {
-    canonical: 'https://www.arithmecal.com/conversion/binary-to-decimal',
+    canonical: 'https://arithmecal.com/conversion/binary-to-decimal',
   },
 }
 

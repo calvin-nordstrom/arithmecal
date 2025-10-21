@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description: 'Explore Arithmecal’s ASCII table with both standard and extended characters, including binary, octal, hex, and character representations.',
   keywords: 'ASCII table, standard ASCII, extended ASCII, character encoding, binary, octal, hex, printable characters, control characters, character encoding reference',
   alternates: {
-    canonical: 'https://www.arithmecal.com/reference/ascii-table',
+    canonical: 'https://arithmecal.com/reference/ascii-table',
   },
   formatDetection: { telephone: false, },
 }

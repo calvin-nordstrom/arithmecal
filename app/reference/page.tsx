@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   description: 'Explore Arithmecal’s references including ASCII tables and other resources for Science, Technology, Engineering, and Mathematics.',
   keywords: 'STEM reference, ASCII table, mathematical reference, science reference, technology reference, engineering reference, math tools',
   alternates: {
-    canonical: 'https://www.arithmecal.com/reference',
+    canonical: 'https://arithmecal.com/reference',
   },
 }
 

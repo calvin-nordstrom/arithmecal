@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   description: 'Factor any quadratic trinomial with Arithmecal’s trinomial factoring calculator using the AC method. Get step-by-step results instantly.',
   keywords: 'trinomial factoring calculator, quadratic trinomial, AC method, factor trinomials, factor ax^2+bx+c, Arithmecal',
   alternates: {
-    canonical: 'https://www.arithmecal.com/math/trinomial-factoring',
+    canonical: 'https://arithmecal.com/math/trinomial-factoring',
   },
 }
 

@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   description: 'Solve quadratic equations easily with Arithmecal’s step-by-step quadratic formula calculator.',
   keywords: 'quadratic formula calculator, solve quadratic equation, find roots, Arithmecal, discriminant, complex roots',
   alternates: {
-    canonical: 'https://www.arithmecal.com/math/quadratic-formula',
+    canonical: 'https://arithmecal.com/math/quadratic-formula',
   },
 };
 

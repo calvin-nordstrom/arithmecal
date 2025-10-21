@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     'unit conversion', 'unit converter', 'metric to imperial', 'SI units', 'convert units', 'length conversion', 'mass conversion', 'temperature conversion', 'scientific calculator', 'engineering unit converter', 'volume converter', 'pressure converter', 'power converter',
   ],
   alternates: {
-    canonical: 'https://www.arithmecal.com/conversion/unit-converter',
+    canonical: 'https://arithmecal.com/conversion/unit-converter',
   },
 }
 

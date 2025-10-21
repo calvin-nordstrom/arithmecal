@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   description: 'Solve time, velocity, height, or initial velocity in free fall using Arithmecal’s physics calculator based on gravity equations.',
   keywords: 'free fall calculator, gravity calculator, time of fall, final velocity, fall height, initial velocity, Arithmecal',
   alternates: {
-    canonical: 'https://www.arithmecal.com/physics/free-fall',
+    canonical: 'https://arithmecal.com/physics/free-fall',
   },
 }
 

@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   description: 'Read Arithmecal’s Privacy Policy to understand how we collect, use, and protect your personal information when you use our calculators and tools.',
   keywords: 'privacy policy, data collection, data usage, personal information, cookies, user data protection, Arithmecal privacy, information security, terms of use, data privacy',
   alternates: {
-    canonical: 'https://www.arithmecal.com/privacy-policy',
+    canonical: 'https://arithmecal.com/privacy-policy',
   },
 }
 
