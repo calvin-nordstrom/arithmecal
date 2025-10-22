@@ -41,9 +41,10 @@ export default function ComponentSelect({
   return (
     <div className='component-select'>
       <div className='component-select-container'>
-        <div className='component-select-item'>
-          <label>{label}</label>
+        <form className='component-select-item'>
+          <label htmlFor='component-select-selection'>{label}</label>
           <select
+            id='component-select-selection'
             value={selectedIndex}
             onChange={handleSelectionChange}
           >
@@ -53,7 +54,7 @@ export default function ComponentSelect({
               </option>
             ))}
           </select>
-        </div>
+        </form>
       </div>
       {config[selectedIndex].component}
     </div>
