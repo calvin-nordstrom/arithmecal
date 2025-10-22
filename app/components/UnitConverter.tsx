@@ -2,9 +2,9 @@
 
 import React, { useState } from 'react';
 import CalculatorInput from './CalculatorInput';
+import CalculatorOutput from './CalculatorOutput';
 import { cnconvert } from '@/cnconvert/cnconvert';
 import { clamp, getDecimalCount, countConsecutiveDecimalZeroes } from '@/utils/mathUtils';
-import CalculatorOutput from './CalculatorOutput';
 
 interface FieldData {
   real: number;
@@ -49,32 +49,36 @@ export default function UnitConverter({ unitOptions }: UnitConverterProps) {
   const [fields, setFields] = useState<{
     from: FieldData;
     to: FieldData;
-  }>(() => {
-    const defaultFromValue = 1;
-    const real = cnconvert(defaultFromValue).from(unitOptions[0]).to(baseUnit);
-    return {
-      from: {
-        real,
-        display: formatValue(defaultFromValue, 0),
-        unit: unitOptions[0],
-      },
-      to: {
-        real,
-        display: formatValue(cnconvert(real).from(baseUnit).to(unitOptions[1]), 0),
-        unit: unitOptions[1],
-      },
-    };
-  });
+  }>(() => ({
+    from: {
+      real: NaN,
+      display: '',
+      unit: unitOptions[0],
+    },
+    to: {
+      real: NaN,
+      display: '',
+      unit: unitOptions[1],
+    },
+  }));
 
   const updateFrom = (source: 'from' | 'to', newDisplay: string) => {
     const target = source === 'from' ? 'to' : 'from';
-    const parsed = parseFloat(newDisplay.trim());
+    const trimmed = newDisplay.trim();
+    const parsed = parseFloat(trimmed);
     const sourceUnit = fields[source].unit;
     const targetUnit = fields[target].unit;
 
-    const newReal = isNaN(parsed)
-      ? NaN
-      : cnconvert(parsed).from(sourceUnit).to(baseUnit);
+    if (trimmed === '' || isNaN(parsed)) {
+      setFields({
+        ...fields,
+        [source]: { ...fields[source], display: newDisplay, real: NaN },
+        [target]: { ...fields[target], display: '', real: NaN },
+      });
+      return;
+    }
+
+    const newReal = cnconvert(parsed).from(sourceUnit).to(baseUnit);
 
     const newTargetDisplay = isNaN(newReal)
       ? ''
@@ -112,19 +116,9 @@ export default function UnitConverter({ unitOptions }: UnitConverterProps) {
   };
 
   const reset = () => {
-    const defaultFromValue = 1;
-    const real = cnconvert(defaultFromValue).from(unitOptions[0]).to(baseUnit);
     setFields({
-      from: {
-        real,
-        display: formatValue(defaultFromValue, 0),
-        unit: unitOptions[0],
-      },
-      to: {
-        real,
-        display: formatValue(cnconvert(real).from(baseUnit).to(unitOptions[1]), 0),
-        unit: unitOptions[1],
-      },
+      from: { real: NaN, display: '', unit: unitOptions[0] },
+      to: { real: NaN, display: '', unit: unitOptions[1] },
     });
   };
 
