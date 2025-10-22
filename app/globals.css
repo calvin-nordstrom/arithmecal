@@ -775,6 +775,7 @@ button:hover {
 .calculator-output-controls {
   display: flex;
   gap: 0.5rem;
+  min-height: 2.625rem;
 }
 
 /* Converter styles */
