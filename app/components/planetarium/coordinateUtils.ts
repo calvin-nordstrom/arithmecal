@@ -1,0 +1,65 @@
+import { Vector3 } from 'three';
+import { Horizon, Observer as AstroObserver } from 'astronomy-engine';
+import { Star } from './render/star/Star';
+import { Observer } from './Observer';
+
+const DEG2RAD = Math.PI / 180;
+
+export function altAzToVector(
+  alt: number,
+  az: number
+): Vector3 {
+  const altRad = alt * DEG2RAD;
+  const azRad = az * DEG2RAD;
+
+  const x = Math.cos(altRad) * Math.sin(azRad);
+  const y = Math.sin(altRad);
+  const z = -Math.cos(altRad) * Math.cos(azRad);
+
+  return new Vector3(x, y, z).normalize();
+}
+
+export function raDecToAltAz(
+  ra: number,
+  dec: number,
+  observer: Observer
+): { alt: number; az: number } {
+  const astroObserver = new AstroObserver(
+    observer.latitude,
+    observer.longitude,
+    observer.elevation ?? 0
+  );
+
+  const horizontal = Horizon(
+    observer.date,
+    astroObserver,
+    ra,
+    dec,
+    'normal'
+  );
+
+  return {
+    alt: horizontal.altitude,
+    az: horizontal.azimuth,
+  };
+}
+
+export function buildStarDirections(
+  stars: Star[],
+  observer: Observer
+): Vector3[] {
+  const result: Vector3[] = [];
+
+  for (const star of stars) {
+    const { alt, az } = raDecToAltAz(star.ra, star.dec, observer);
+
+    // Cull stars below horizon
+    // if (alt <= 0) continue;
+
+    const v = altAzToVector(alt, az);
+    
+    result.push(v);
+  }
+
+  return result;
+}
