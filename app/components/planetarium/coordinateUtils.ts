@@ -1,4 +1,4 @@
-import { Vector3 } from 'three';
+import { PerspectiveCamera, Quaternion, Vector3 } from 'three';
 import { Horizon, Observer as AstroObserver } from 'astronomy-engine';
 import { Star } from './render/star/Star';
 import { Observer } from './Observer';
@@ -62,4 +62,28 @@ export function buildStarDirections(
   }
 
   return result;
+}
+
+export function directionToYawPitch(dir: Vector3) {
+  const yaw = Math.atan2(dir.x, -dir.z);
+  const pitch = Math.asin(dir.y);
+
+  return { yaw, pitch };
+}
+
+export function rotationBetweenVectors(a: Vector3, b: Vector3) {
+  const q = new Quaternion();
+  q.setFromUnitVectors(b, a);
+  return q;
+}
+
+export function ray(
+  ndcX: number,
+  ndcY: number,
+  pCamera: PerspectiveCamera
+): Vector3 {
+  return new Vector3(ndcX, ndcY, 0.5)
+    .unproject(pCamera)
+    .sub(pCamera.position)
+    .normalize();
 }

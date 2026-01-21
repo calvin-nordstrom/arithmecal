@@ -1,37 +1,61 @@
-import { Text } from '@react-three/drei';
+import { Html } from '@react-three/drei';
+import { Vector3 } from 'three';
+import { useState } from 'react';
+import { useFrame, useThree } from '@react-three/fiber';
 import { altAzToVector } from '../coordinateUtils';
 
-const CARDINAL_FONT_SIZE = 0.04;
-const INTERCARDINAL_FONT_SIZE = 0.03;
-
 const directions = [
-  { label: 'N', az: 0, fontSize: CARDINAL_FONT_SIZE },
-  { label: 'NE', az: 45, fontSize: INTERCARDINAL_FONT_SIZE },
-  { label: 'E', az: 90, fontSize: CARDINAL_FONT_SIZE },
-  { label: 'SE', az: 135, fontSize: INTERCARDINAL_FONT_SIZE },
-  { label: 'S', az: 180, fontSize: CARDINAL_FONT_SIZE },
-  { label: 'SW', az: 225, fontSize: INTERCARDINAL_FONT_SIZE },
-  { label: 'W', az: 270, fontSize: CARDINAL_FONT_SIZE },
-  { label: 'NW', az: 315, fontSize: INTERCARDINAL_FONT_SIZE },
+  { label: 'N', az: 0 },
+  { label: 'NE', az: 45 },
+  { label: 'E', az: 90 },
+  { label: 'SE', az: 135 },
+  { label: 'S', az: 180 },
+  { label: 'SW', az: 225 },
+  { label: 'W', az: 270 },
+  { label: 'NW', az: 315 },
 ];
 
 export default function CardinalLabelRenderer() {
+  const { camera } = useThree();
+  const [visible, setVisible] = useState<boolean[]>(() =>
+    directions.map(() => false)
+  );
+
+  const cameraForward = new Vector3();
+
+  useFrame(() => {
+    camera.getWorldDirection(cameraForward);
+
+    setVisible(() =>
+      directions.map((d) => {
+        const pos = altAzToVector(0, d.az);
+        return pos.dot(cameraForward) > 0;
+      })
+    );
+  });
+
   return (
     <>
-      {directions.map((d) => {
+      {directions.map((d, i) => {
+        if (!visible[i]) {
+          return null;
+        }
+
         const pos = altAzToVector(0, d.az);
+
         return (
-          <Text
+          <Html
+            className='cardinal-label'
             key={d.label}
-            position={pos.clone()}
-            fontSize={d.fontSize}
-            color={0xFFFFFF}
-            anchorX='center'
-            anchorY='bottom'
-            rotation={[0, d.az / -90 * Math.PI / 2, 0]}
+            position={pos}
+            center
+            style={{
+              fontSize: d.label.length === 1 ? '32px' : '20px',
+              fontWeight: d.label.length === 1 ? 400 : 300,
+            }}
           >
             {d.label}
-          </Text>
+          </Html>
         );
       })}
     </>
