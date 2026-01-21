@@ -1092,16 +1092,22 @@ textarea {
   background-color: rgb(64, 64, 64);
 }
 
-.planetarium-controls input {
+.planetarium-control {
   display: flex;
   flex-direction: column;
-  width: calc(100% - 1rem - 2px);
-  font: 400 16px 'Rubik', sans-serif;
-}
-
-.planetarium-controls label {
+  width: 100%;
   font: 400 16px 'Rubik', sans-serif;
   color: rgb(255, 255, 255);
+}
+
+.planetarium-control button {
+  width: 100%;
+}
+
+.time-input {
+  padding: 0;
+  border: none;
+  width: 100%;
 }
 
 /* Media width dependent styles */

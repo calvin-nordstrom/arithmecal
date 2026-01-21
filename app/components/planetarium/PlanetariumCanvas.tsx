@@ -36,16 +36,20 @@ export default function PlanetariumCanvas() {
   return (
     <div className='planetarium'>
       <div className='planetarium-controls'>
-        <button onClick={() => setShowEquatorial(v => !v)}>
-          {showEquatorial ? 'Hide' : 'Show'} Equatorial Coordinates
-        </button>
+        <div className='planetarium-control'>
+          <button onClick={() => setShowEquatorial(v => !v)}>
+            {showEquatorial ? 'Hide' : 'Show'} Equatorial Coordinates
+          </button>
+        </div>
+        
+        <div className='planetarium-control'>
+          <button onClick={() => setShowHorizontal(v => !v)}>
+            {showHorizontal ? 'Hide' : 'Show'} Horizontal Coordinates
+          </button>
+        </div>
 
-        <button onClick={() => setShowHorizontal(v => !v)}>
-          {showHorizontal ? 'Hide' : 'Show'} Horizontal Coordinates
-        </button>
-
-        <label>
-          Date:
+        <div className='planetarium-control'>
+          <label>Date:</label>
           <input
             type='date'
             value={date}
@@ -61,11 +65,12 @@ export default function PlanetariumCanvas() {
               }
             }}
           />
-        </label>
+        </div>
 
-        <label>
-          <span>Time: {formatTime(timeMinutes)}</span>
+        <div className='planetarium-control'>
+          <label>Time: {formatTime(timeMinutes)}</label>
           <input
+            className='time-input'
             type='range'
             min={0}
             max={1439}
@@ -73,7 +78,7 @@ export default function PlanetariumCanvas() {
             value={timeMinutes}
             onChange={e => setTimeMinutes(Number(e.target.value))}
           />
-        </label>
+        </div>
       </div>
 
       <Canvas
