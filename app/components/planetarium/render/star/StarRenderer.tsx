@@ -10,11 +10,9 @@ export interface RenderStar {
   label?: string;
 }
 
-type StarRendererProps = {
-  stars: RenderStar[];
-};
-
-export default function StarRenderer({ stars }: StarRendererProps) {
+export default function StarRenderer({
+  stars
+}: { stars: RenderStar[] }) {
   const positions = useMemo(() => {
     const buffer = new Float32Array(stars.length * 3);
 

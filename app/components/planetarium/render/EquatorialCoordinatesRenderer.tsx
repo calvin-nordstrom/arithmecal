@@ -2,7 +2,9 @@ import { Line } from '@react-three/drei';
 import { altAzToVector, raDecToAltAz } from '../coordinateUtils';
 import { Observer } from '../Observer';
 
-export default function EquatorialCoordinatesRenderer({ observer }: { observer: Observer }) {
+export default function EquatorialCoordinatesRenderer({
+  observer
+}: { observer: Observer }) {
   const lines = [];
 
   // Horizontal lines
