@@ -1076,6 +1076,18 @@ textarea {
   font-size: 16px;
 }
 
+/* Planetarium styles */
+
+.planetarium {
+  display: flex;
+  height: 100vh;
+}
+
+.planetarium-controls {
+  width: 300px;
+  background-color: rgb(64, 64, 64);
+}
+
 /* Media width dependent styles */
 
 /* Extra Small (Phones) */

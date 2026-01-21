@@ -1,7 +1,7 @@
 'use client';
 
 import { Canvas } from '@react-three/fiber';
-import { Suspense, useMemo } from 'react';
+import { Suspense, useMemo, useState } from 'react';
 import SkySphere from './SkySphere';
 import { usePlanetariumControls } from './usePlanetariumControls';
 import { buildStarDirections } from './coordinateUtils';
@@ -13,26 +13,40 @@ import EquatorialCoordinatesRenderer from './render/EquatorialCoordinatesRendere
 import HorizontalCoordinatesRenderer from './render/HorizontalCoordinatesRenderer';
 
 export default function PlanetariumCanvas() {
-  return (
-    <Canvas
-      camera={{
-        fov: 60,
-        near: 0.1,
-        far: 10000,
-        position: [0, 0, 0.001],
-      }}
-      gl={{
-        antialias: true,
-        alpha: false,
-      }}
-      dpr={[1, 2]}
-    >
-      <color attach='background' args={['#000000']} />
+  const [showEquatorial, setShowEquatorial] = useState(false);
+  const [showHorizontal, setShowHorizontal] = useState(false);
 
-      <Suspense fallback={null}>
-        <Scene />
-      </Suspense>
-    </Canvas>
+  return (
+    <div className='planetarium'>
+      <div className='planetarium-controls'>
+        <button onClick={() => setShowEquatorial(v => !v)}>
+          {showEquatorial ? 'Hide' : 'Show'} Equatorial Coordinates
+        </button>
+        <button onClick={() => setShowHorizontal(v => !v)}>
+          {showHorizontal ? 'Hide' : 'Show'} Horizontal Coordinates
+        </button>
+      </div>
+
+      <Canvas
+        camera={{
+          fov: 60,
+          near: 0.1,
+          far: 10000,
+          position: [0, 0, 0.001],
+        }}
+        gl={{ antialias: true, alpha: false }}
+        dpr={[1, 2]}
+      >
+        <color attach='background' args={['#000000']} />
+
+        <Suspense fallback={null}>
+          <Scene
+            showEquatorial={showEquatorial}
+            showHorizontal={showHorizontal}
+          />
+        </Suspense>
+      </Canvas>
+    </div>
   );
 }
 
@@ -50,7 +64,15 @@ const observer = {
   date: new Date('2025-01-19T21:00:00'),
 };
 
-function Scene() {
+type SceneProps = {
+  showEquatorial: boolean;
+  showHorizontal: boolean;
+};
+
+function Scene({
+  showEquatorial, 
+  showHorizontal
+}: SceneProps) {
   usePlanetariumControls();
 
   const starDirections = useMemo(
@@ -69,8 +91,8 @@ function Scene() {
       />
       <HorizonRenderer />
       <CardinalLabelRenderer />
-      <EquatorialCoordinatesRenderer observer={observer} />
-      {/* <HorizontalCoordinatesRenderer /> */}
+      {showEquatorial && <EquatorialCoordinatesRenderer observer={observer} />}
+      {showHorizontal && <HorizontalCoordinatesRenderer />}
     </>
   );
 }

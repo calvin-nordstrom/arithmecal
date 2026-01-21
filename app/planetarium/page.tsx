@@ -12,8 +12,6 @@ export const metadata: Metadata = {
 
 export default function PlanetariumPage() {
   return (
-    <div style={{ width: '100vw', height: '100vh' }}>
-      <PlanetariumCanvas />
-    </div>
+    <PlanetariumCanvas />
   );
 }
