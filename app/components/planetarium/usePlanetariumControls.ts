@@ -7,6 +7,8 @@ import { useThree, useFrame } from '@react-three/fiber';
 const DEG2RAD = Math.PI / 180;
 const MAX_PITCH = 89.9 * DEG2RAD;
 
+const SENSITIVITY = 0.0015;
+
 export function usePlanetariumControls() {
   const { camera, gl } = useThree();
 
@@ -16,8 +18,6 @@ export function usePlanetariumControls() {
 
   const yaw = useRef(0);
   const pitch = useRef(0);
-
-  const sensitivity = 0.0015;
 
   useEffect(() => {
     const canvas = gl.domElement;
@@ -30,21 +30,19 @@ export function usePlanetariumControls() {
     }
 
     function onPointerMove(e: PointerEvent) {
-      if (!isDragging.current) return;
+      if (!isDragging.current) {
+        return;
+      }
 
       const dx = e.clientX - lastX.current;
       const dy = e.clientY - lastY.current;
-
       lastX.current = e.clientX;
       lastY.current = e.clientY;
 
-      yaw.current += dx * sensitivity;
-      pitch.current += dy * sensitivity;
+      yaw.current += dx * SENSITIVITY;
+      pitch.current += dy * SENSITIVITY;
 
-      pitch.current = Math.max(
-        -MAX_PITCH,
-        Math.min(MAX_PITCH, pitch.current)
-      );
+      pitch.current = Math.max(-MAX_PITCH, Math.min(MAX_PITCH, pitch.current));
     }
 
     function onPointerUp(e: PointerEvent) {
