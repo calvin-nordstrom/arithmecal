@@ -3,7 +3,7 @@
 import { useEffect, useRef } from 'react';
 import { Euler, MathUtils, PerspectiveCamera } from 'three';
 import { useThree, useFrame } from '@react-three/fiber';
-import { ray, rotationBetweenVectors } from './coordinateUtils';
+import { ray, rotationBetweenVectors } from './util/coordinateUtil';
 
 const DEG2RAD = Math.PI / 180;
 const MAX_PITCH = 89.9 * DEG2RAD;

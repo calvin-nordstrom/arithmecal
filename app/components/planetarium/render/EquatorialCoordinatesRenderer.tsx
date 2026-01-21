@@ -1,5 +1,5 @@
 import { Line } from '@react-three/drei';
-import { altAzToVector, raDecToAltAz } from '../coordinateUtils';
+import { altAzToVector, raDecToAltAz } from '../util/coordinateUtil';
 import { Observer } from '../Observer';
 
 export default function EquatorialCoordinatesRenderer({
