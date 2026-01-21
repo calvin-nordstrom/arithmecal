@@ -1084,8 +1084,24 @@ textarea {
 }
 
 .planetarium-controls {
-  width: 300px;
+  display: flex;
+  flex-direction: column;
+  width: 24rem;
+  padding: 1rem;
+  gap: 0.5rem;
   background-color: rgb(64, 64, 64);
+}
+
+.planetarium-controls input {
+  display: flex;
+  flex-direction: column;
+  width: calc(100% - 1rem - 2px);
+  font: 400 16px 'Rubik', sans-serif;
+}
+
+.planetarium-controls label {
+  font: 400 16px 'Rubik', sans-serif;
+  color: rgb(255, 255, 255);
 }
 
 /* Media width dependent styles */
