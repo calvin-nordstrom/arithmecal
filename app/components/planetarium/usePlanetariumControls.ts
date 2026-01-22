@@ -8,8 +8,6 @@ import { ray, rotationBetweenVectors } from './util/coordinateUtil';
 const DEG2RAD = Math.PI / 180;
 const MAX_PITCH = 89.9 * DEG2RAD;
 
-const SENSITIVITY = 0.0015;
-
 const MIN_FOV = 1;
 const MAX_FOV = 90;
 
@@ -19,8 +17,7 @@ export function usePlanetariumControls() {
   const pCamera = camera as PerspectiveCamera;
 
   const isDragging = useRef(false);
-  const lastX = useRef(0);
-  const lastY = useRef(0);
+  const dragStartNDC = useRef({ x: 0, y: 0 });
 
   const yaw = useRef(0);
   const pitch = useRef(0);
@@ -30,8 +27,11 @@ export function usePlanetariumControls() {
 
     function onPointerDown(e: PointerEvent) {
       isDragging.current = true;
-      lastX.current = e.clientX;
-      lastY.current = e.clientY;
+
+      const rect = canvas.getBoundingClientRect();
+      dragStartNDC.current.x = ((e.clientX - rect.left) / rect.width) * 2 - 1;
+      dragStartNDC.current.y = -((e.clientY - rect.top) / rect.height) * 2 + 1;
+
       canvas.setPointerCapture(e.pointerId);
     }
 
@@ -40,15 +40,28 @@ export function usePlanetariumControls() {
         return;
       }
 
-      const dx = e.clientX - lastX.current;
-      const dy = e.clientY - lastY.current;
-      lastX.current = e.clientX;
-      lastY.current = e.clientY;
+      const rect = canvas.getBoundingClientRect();
+      const ndcX = ((e.clientX - rect.left) / rect.width) * 2 - 1;
+      const ndcY = -((e.clientY - rect.top) / rect.height) * 2 + 1;
 
-      yaw.current += dx * SENSITIVITY * pCamera.fov / 50;
-      pitch.current += dy * SENSITIVITY * pCamera.fov / 50;
+      // Ray at drag start
+      const before = ray(dragStartNDC.current.x, dragStartNDC.current.y, pCamera);
 
-      pitch.current = Math.max(-MAX_PITCH, Math.min(MAX_PITCH, pitch.current));
+      // Ray at current cursor position
+      const after = ray(ndcX, ndcY, pCamera);
+
+      // Rotate camera so that "after" maps back to "before"
+      const q = rotationBetweenVectors(before, after);
+      pCamera.quaternion.premultiply(q);
+
+      // Update stored yaw/pitch from quaternion
+      const euler = new Euler().setFromQuaternion(pCamera.quaternion, 'YXZ');
+      yaw.current = euler.y;
+      pitch.current = Math.max(-MAX_PITCH, Math.min(MAX_PITCH, euler.x));
+
+      // Reset drag anchor to avoid cumulative error
+      dragStartNDC.current.x = ndcX;
+      dragStartNDC.current.y = ndcY;
     }
 
     function onPointerUp(e: PointerEvent) {
