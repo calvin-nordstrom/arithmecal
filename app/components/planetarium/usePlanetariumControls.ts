@@ -11,7 +11,7 @@ const MAX_PITCH = 89.9 * DEG2RAD;
 const SENSITIVITY = 0.0015;
 
 const MIN_FOV = 1;
-const MAX_FOV = 120;
+const MAX_FOV = 90;
 
 export function usePlanetariumControls() {
   const { camera, gl } = useThree();
@@ -67,12 +67,8 @@ export function usePlanetariumControls() {
       const before = ray(ndcX, ndcY, pCamera);
 
       // Apply zoom
-      const zoomFactor = Math.exp(e.deltaY * 0.001);
-      pCamera.fov = MathUtils.clamp(
-        pCamera.fov * zoomFactor,
-        MIN_FOV,
-        MAX_FOV
-      );
+      const fovFactor = Math.exp(e.deltaY * 0.001);
+      pCamera.fov = MathUtils.clamp(pCamera.fov * fovFactor, MIN_FOV, MAX_FOV);
       pCamera.updateProjectionMatrix();
 
       // Ray AFTER zoom
