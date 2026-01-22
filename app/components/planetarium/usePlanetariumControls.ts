@@ -3,7 +3,7 @@
 import { useEffect, useRef } from 'react';
 import { Euler, MathUtils, PerspectiveCamera } from 'three';
 import { useThree, useFrame } from '@react-three/fiber';
-import { ray, rotationBetweenVectors } from './util/coordinateUtil';
+import { distance, ray, rotationBetweenVectors } from './util/coordinateUtil';
 
 const DEG2RAD = Math.PI / 180;
 const MAX_PITCH = 89.9 * DEG2RAD;
@@ -27,12 +27,6 @@ export function usePlanetariumControls() {
   const pointers = useRef<Map<number, { x: number; y: number }>>(new Map());
   const lastPinchDistance = useRef<number | null>(null);
   const wasPinching = useRef(false); // prevents snap after pinch
-
-  function distance(a: { x: number; y: number }, b: { x: number; y: number }) {
-    const dx = a.x - b.x;
-    const dy = a.y - b.y;
-    return Math.sqrt(dx * dx + dy * dy);
-  }
 
   useEffect(() => {
     const canvas = gl.domElement;
