@@ -1,13 +1,14 @@
 'use client';
 
 import { Canvas } from '@react-three/fiber';
-import { Suspense, useMemo, useState } from 'react';
+import { Suspense, useEffect, useMemo, useState } from 'react';
 import SkySphere from './SkySphere';
-import { Observer } from './Observer';
 import { usePlanetariumControls } from './usePlanetariumControls';
+import { Observer } from './Observer';
+import { Star } from './render/star/Star';
+import { fetchHipStars } from './data/hipStarApi';
 import { buildStarDirections } from './util/coordinateUtil';
 import { formatTime, todayISODate } from './util/timeUtil';
-import { minimalStars } from './render/star/minimalStars';
 import StarRenderer from './render/star/StarRenderer';
 import HorizonRenderer from './render/HorizonRenderer';
 import CardinalLabelRenderer from './render/CardinalLabelRenderer';
@@ -15,12 +16,8 @@ import EquatorialCoordinatesRenderer from './render/EquatorialCoordinatesRendere
 import HorizontalCoordinatesRenderer from './render/HorizontalCoordinatesRenderer';
 
 export default function PlanetariumCanvas() {
-  const [showEquatorial, setShowEquatorial] = useState(false);
-  const [showHorizontal, setShowHorizontal] = useState(false);
-
   const [date, setDate] = useState(todayISODate());
   const [timeMinutes, setTimeMinutes] = useState(20 * 60);
-
   const observer: Observer = useMemo(() => {
     const d = new Date(`${date}T00:00:00`);
     d.setMinutes(timeMinutes);
@@ -32,6 +29,16 @@ export default function PlanetariumCanvas() {
       date: d,
     };
   }, [date, timeMinutes]);
+
+  const [stars, setStars] = useState<Star[]>([]);
+  useEffect(() => {
+    fetchHipStars('/planetarium/stars_6_5.json')
+      .then(setStars)
+      .catch(console.error);
+  }, []);
+
+  const [showEquatorial, setShowEquatorial] = useState(false);
+  const [showHorizontal, setShowHorizontal] = useState(false);
 
   return (
     <div className='planetarium'>
@@ -96,6 +103,7 @@ export default function PlanetariumCanvas() {
         <Suspense fallback={null}>
           <Scene
             observer={observer}
+            stars={stars}
             showEquatorial={showEquatorial}
             showHorizontal={showHorizontal}
           />
@@ -107,29 +115,32 @@ export default function PlanetariumCanvas() {
 
 type SceneProps = {
   observer: Observer;
+  stars: Star[];
   showEquatorial: boolean;
   showHorizontal: boolean;
 };
 
 function Scene({
   observer,
+  stars,
   showEquatorial, 
   showHorizontal
 }: SceneProps) {
   usePlanetariumControls();
 
   const starDirections = useMemo(
-    () => buildStarDirections(minimalStars, observer),
+    () => buildStarDirections(stars, observer),
     [observer]
   );
 
   return (
     <>
       <SkySphere />
-      <StarRenderer stars={starDirections.map((dir, i) => ({
+      <StarRenderer 
+        stars={starDirections.map((dir, i) => ({
           direction: dir,
-          magnitude: minimalStars[i].magnitude ?? 0,
-          label: minimalStars[i].label ?? '',
+          magnitude: stars[i].magnitude ?? 0,
+          label: stars[i].label ?? '',
         }))}
       />
       <HorizonRenderer />
