@@ -11,7 +11,7 @@ import { buildStarDirections } from './util/coordinateUtil';
 import { formatTime, todayISODate } from './util/timeUtil';
 import StarRenderer from './render/star/StarRenderer';
 import HorizonRenderer from './render/HorizonRenderer';
-import CardinalLabelRenderer from './render/CardinalLabelRenderer';
+import CardinalLabelRenderer from './render/CardinalLabelsRenderer';
 import EquatorialCoordinatesRenderer from './render/EquatorialCoordinatesRenderer';
 import HorizontalCoordinatesRenderer from './render/HorizontalCoordinatesRenderer';
 
@@ -37,7 +37,7 @@ export default function PlanetariumCanvas() {
       .catch(console.error);
   }, []);
 
-  const [showCardinal, setShowCardinal] = useState(true);
+  const [showCardinalLabels, setShowCardinalLabels] = useState(true);
   const [showHorizon, setShowHorizon] = useState(true);
   const [showEquatorial, setShowEquatorial] = useState(false);
   const [showHorizontal, setShowHorizontal] = useState(false);
@@ -64,8 +64,8 @@ export default function PlanetariumCanvas() {
         </div>
         
         <div className='planetarium-control'>
-          <button onClick={() => setShowCardinal(v => !v)}>
-            {showCardinal ? 'Hide' : 'Show'} Cardinal
+          <button onClick={() => setShowCardinalLabels(v => !v)}>
+            {showCardinalLabels ? 'Hide' : 'Show'} Cardinal Labels
           </button>
         </div>
 
@@ -119,7 +119,7 @@ export default function PlanetariumCanvas() {
             observer={observer}
             stars={stars}
             showHorizon={showHorizon}
-            showCardinal={showCardinal}
+            showCardinalLabels={showCardinalLabels}
             showEquatorial={showEquatorial}
             showHorizontal={showHorizontal}
           />
@@ -133,7 +133,7 @@ type SceneProps = {
   observer: Observer;
   stars: Star[];
   showHorizon: boolean;
-  showCardinal: boolean;
+  showCardinalLabels: boolean;
   showEquatorial: boolean;
   showHorizontal: boolean;
 };
@@ -142,7 +142,7 @@ function Scene({
   observer,
   stars,
   showHorizon,
-  showCardinal,
+  showCardinalLabels,
   showEquatorial, 
   showHorizontal
 }: SceneProps) {
@@ -164,7 +164,7 @@ function Scene({
         }))}
       />
       {showHorizon && <HorizonRenderer />}
-      {showCardinal && <CardinalLabelRenderer />}
+      {showCardinalLabels && <CardinalLabelRenderer />}
       {showEquatorial && <EquatorialCoordinatesRenderer observer={observer} />}
       {showHorizontal && <HorizontalCoordinatesRenderer />}
     </>
