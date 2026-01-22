@@ -1104,6 +1104,10 @@ textarea {
   width: 100%;
 }
 
+canvas {
+  touch-action: none;
+}
+
 .time-input {
   padding: 0;
   border: none;
