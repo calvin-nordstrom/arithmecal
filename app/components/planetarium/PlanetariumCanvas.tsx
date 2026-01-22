@@ -37,6 +37,8 @@ export default function PlanetariumCanvas() {
       .catch(console.error);
   }, []);
 
+  const [showCardinal, setShowCardinal] = useState(true);
+  const [showHorizon, setShowHorizon] = useState(true);
   const [showEquatorial, setShowEquatorial] = useState(false);
   const [showHorizontal, setShowHorizontal] = useState(false);
 
@@ -52,6 +54,18 @@ export default function PlanetariumCanvas() {
         <div className='planetarium-control'>
           <button onClick={() => setShowHorizontal(v => !v)}>
             {showHorizontal ? 'Hide' : 'Show'} Horizontal Coordinates
+          </button>
+        </div>
+
+        <div className='planetarium-control'>
+          <button onClick={() => setShowHorizon(v => !v)}>
+            {showHorizon ? 'Hide' : 'Show'} Horizon
+          </button>
+        </div>
+        
+        <div className='planetarium-control'>
+          <button onClick={() => setShowCardinal(v => !v)}>
+            {showCardinal ? 'Hide' : 'Show'} Cardinal
           </button>
         </div>
 
@@ -104,6 +118,8 @@ export default function PlanetariumCanvas() {
           <Scene
             observer={observer}
             stars={stars}
+            showHorizon={showHorizon}
+            showCardinal={showCardinal}
             showEquatorial={showEquatorial}
             showHorizontal={showHorizontal}
           />
@@ -116,6 +132,8 @@ export default function PlanetariumCanvas() {
 type SceneProps = {
   observer: Observer;
   stars: Star[];
+  showHorizon: boolean;
+  showCardinal: boolean;
   showEquatorial: boolean;
   showHorizontal: boolean;
 };
@@ -123,6 +141,8 @@ type SceneProps = {
 function Scene({
   observer,
   stars,
+  showHorizon,
+  showCardinal,
   showEquatorial, 
   showHorizontal
 }: SceneProps) {
@@ -143,8 +163,8 @@ function Scene({
           label: stars[i].label ?? '',
         }))}
       />
-      <HorizonRenderer />
-      <CardinalLabelRenderer />
+      {showHorizon && <HorizonRenderer />}
+      {showCardinal && <CardinalLabelRenderer />}
       {showEquatorial && <EquatorialCoordinatesRenderer observer={observer} />}
       {showHorizontal && <HorizontalCoordinatesRenderer />}
     </>
