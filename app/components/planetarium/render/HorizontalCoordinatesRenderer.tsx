@@ -53,7 +53,7 @@ export default function HorizontalCoordinatesRenderer() {
           transparent={true}
           lineWidth={1}
           color={0x00FFFF}
-          opacity={0.2}
+          opacity={0.3}
         />
       ))}
     </>
