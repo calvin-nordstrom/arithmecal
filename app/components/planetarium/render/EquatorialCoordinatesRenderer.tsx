@@ -24,7 +24,6 @@ export default function EquatorialCoordinatesRenderer({
   const raSpacing = 24;
   const raSegments = 90;
   for (let ra = 0; ra < 360; ra += 360 / raSpacing) {
-    // Skip north and south celestial pole lines
     if (ra % 90 === 0) {
       continue;
     }

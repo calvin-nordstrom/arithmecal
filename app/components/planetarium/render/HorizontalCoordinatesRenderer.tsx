@@ -20,7 +20,6 @@ export default function HorizontalCoordinatesRenderer() {
   const azSpacing = 15;
   const azSegments = 90;
   for (let az = 0; az <= 360; az += azSpacing) {
-    // Skip zenith and nadir lines
     if (az % 90 === 0) {
       continue;
     }
