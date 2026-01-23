@@ -60,7 +60,7 @@ export default function EquatorialCoordinatesRenderer({
           transparent={true}
           lineWidth={1}
           color={0xFDAE44}
-          opacity={0.3}
+          opacity={0.25}
         />
       ))}
     </>
