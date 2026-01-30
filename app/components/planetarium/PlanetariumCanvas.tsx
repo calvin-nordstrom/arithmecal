@@ -10,10 +10,10 @@ import { fetchHipStars } from './data/hipStarApi';
 import { buildStarDirections } from './util/coordinateUtil';
 import { formatTime, todayISODate } from './util/timeUtil';
 import StarRenderer from './render/star/StarRenderer';
-import HorizonRenderer from './render/overlay/HorizonRenderer';
-import CardinalLabelsRenderer from './render/text/CardinalLabelsRenderer';
-import EquatorialCoordinatesRenderer from './render/overlay/EquatorialCoordinatesRenderer';
-import HorizontalCoordinatesRenderer from './render/overlay/HorizontalCoordinatesRenderer';
+import HorizonRenderer from './render/horizon/HorizonRenderer';
+import CardinalLabelsRenderer from './render/horizon/CardinalLabelsRenderer';
+import EquatorialCoordinatesRenderer from './render/coordinate/EquatorialCoordinatesRenderer';
+import HorizontalCoordinatesRenderer from './render/coordinate/HorizontalCoordinatesRenderer';
 import StarLabelsRenderer from './render/star/StarLabelsRenderer';
 
 export default function PlanetariumCanvas() {
