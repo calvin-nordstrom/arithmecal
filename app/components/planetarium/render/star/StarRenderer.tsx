@@ -15,7 +15,6 @@ function magnitudeToSize(mag: number) {
 export interface RenderStar {
   direction: Vector3;
   magnitude: number;
-  label?: string;
 }
 
 export default function StarRenderer({

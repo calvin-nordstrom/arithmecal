@@ -1121,6 +1121,13 @@ canvas {
   white-space: nowrap;
 }
 
+.star-label {
+  font: 100 16px 'Rubik', sans-serif;
+  color: rgb(255, 255, 255);
+  pointer-events: none;
+  white-space: nowrap;
+}
+
 /* Media width dependent styles */
 
 /* Extra Small (Phones) */

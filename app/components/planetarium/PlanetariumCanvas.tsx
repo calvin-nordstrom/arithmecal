@@ -14,6 +14,7 @@ import HorizonRenderer from './render/overlay/HorizonRenderer';
 import CardinalLabelsRenderer from './render/text/CardinalLabelsRenderer';
 import EquatorialCoordinatesRenderer from './render/overlay/EquatorialCoordinatesRenderer';
 import HorizontalCoordinatesRenderer from './render/overlay/HorizontalCoordinatesRenderer';
+import StarLabelsRenderer from './render/star/StarLabelsRenderer';
 
 export default function PlanetariumCanvas() {
   const [date, setDate] = useState(todayISODate());
@@ -37,14 +38,27 @@ export default function PlanetariumCanvas() {
       .catch(console.error);
   }, []);
 
-  const [showCardinalLabels, setShowCardinalLabels] = useState(true);
   const [showHorizon, setShowHorizon] = useState(true);
+  const [showCardinalLabels, setShowCardinalLabels] = useState(true);
   const [showEquatorial, setShowEquatorial] = useState(false);
   const [showHorizontal, setShowHorizontal] = useState(false);
+  const [showStarLabels, setShowStarLabels] = useState(true);
 
   return (
     <div className='planetarium'>
       <div className='planetarium-controls'>
+        <div className='planetarium-control'>
+          <button onClick={() => setShowHorizon(v => !v)}>
+            {showHorizon ? 'Hide' : 'Show'} Horizon
+          </button>
+        </div>
+        
+        <div className='planetarium-control'>
+          <button onClick={() => setShowCardinalLabels(v => !v)}>
+            {showCardinalLabels ? 'Hide' : 'Show'} Cardinal Labels
+          </button>
+        </div>
+
         <div className='planetarium-control'>
           <button onClick={() => setShowEquatorial(v => !v)}>
             {showEquatorial ? 'Hide' : 'Show'} Equatorial Coordinates
@@ -58,14 +72,8 @@ export default function PlanetariumCanvas() {
         </div>
 
         <div className='planetarium-control'>
-          <button onClick={() => setShowHorizon(v => !v)}>
-            {showHorizon ? 'Hide' : 'Show'} Horizon
-          </button>
-        </div>
-        
-        <div className='planetarium-control'>
-          <button onClick={() => setShowCardinalLabels(v => !v)}>
-            {showCardinalLabels ? 'Hide' : 'Show'} Cardinal Labels
+          <button onClick={() => setShowStarLabels(v => !v)}>
+            {showStarLabels ? 'Hide' : 'Show'} Star Labels
           </button>
         </div>
 
@@ -122,6 +130,7 @@ export default function PlanetariumCanvas() {
             showCardinalLabels={showCardinalLabels}
             showEquatorial={showEquatorial}
             showHorizontal={showHorizontal}
+            showStarLabels={showStarLabels}
           />
         </Suspense>
       </Canvas>
@@ -136,6 +145,7 @@ type SceneProps = {
   showCardinalLabels: boolean;
   showEquatorial: boolean;
   showHorizontal: boolean;
+  showStarLabels: boolean;
 };
 
 function Scene({
@@ -144,7 +154,8 @@ function Scene({
   showHorizon,
   showCardinalLabels,
   showEquatorial, 
-  showHorizontal
+  showHorizontal,
+  showStarLabels
 }: SceneProps) {
   usePlanetariumControls();
 
@@ -160,13 +171,19 @@ function Scene({
         stars={starDirections.map((dir, i) => ({
           direction: dir,
           magnitude: stars[i].magnitude ?? 0,
-          label: stars[i].label ?? '',
         }))}
       />
       {showHorizon && <HorizonRenderer />}
       {showCardinalLabels && <CardinalLabelsRenderer />}
       {showEquatorial && <EquatorialCoordinatesRenderer observer={observer} />}
       {showHorizontal && <HorizontalCoordinatesRenderer />}
+      {showStarLabels && <StarLabelsRenderer
+        stars={starDirections.map((dir, i) => ({
+          direction: dir,
+          magnitude: stars[i].magnitude ?? 0,
+          label: stars[i].label ?? '',
+        }))}
+      />}
     </>
   );
 }
