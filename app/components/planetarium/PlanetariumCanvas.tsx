@@ -11,7 +11,7 @@ import { buildStarDirections } from './util/coordinateUtil';
 import { formatTime, todayISODate } from './util/timeUtil';
 import StarRenderer from './render/star/StarRenderer';
 import HorizonRenderer from './render/overlay/HorizonRenderer';
-import CardinalLabelRenderer from './render/text/CardinalLabelsRenderer';
+import CardinalLabelsRenderer from './render/text/CardinalLabelsRenderer';
 import EquatorialCoordinatesRenderer from './render/overlay/EquatorialCoordinatesRenderer';
 import HorizontalCoordinatesRenderer from './render/overlay/HorizontalCoordinatesRenderer';
 
@@ -164,7 +164,7 @@ function Scene({
         }))}
       />
       {showHorizon && <HorizonRenderer />}
-      {showCardinalLabels && <CardinalLabelRenderer />}
+      {showCardinalLabels && <CardinalLabelsRenderer />}
       {showEquatorial && <EquatorialCoordinatesRenderer observer={observer} />}
       {showHorizontal && <HorizontalCoordinatesRenderer />}
     </>

@@ -15,7 +15,7 @@ const directions = [
   { label: 'NW', az: 315 },
 ];
 
-export default function CardinalLabelRenderer() {
+export default function CardinalLabelsRenderer() {
   const { camera } = useThree();
   const [visible, setVisible] = useState<boolean[]>(() =>
     directions.map(() => false)
