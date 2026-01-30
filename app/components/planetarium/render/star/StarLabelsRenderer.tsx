@@ -40,6 +40,9 @@ export default function StarLabelsRenderer({
       if (!el || !star.label) {
         return;
       }
+
+      const visible = cameraForward.dot(star.direction) > 0;
+      el.style.visibility = visible ? 'visible' : 'hidden';
     });
   });
 
@@ -53,12 +56,12 @@ export default function StarLabelsRenderer({
         return (
           <Html
             className='star-label'
+            ref={el => { labelRefs.current[i] = el; }}
             key={i}
             position={s.direction}
-            center
             style={{
-              fontSize: `${magnitudeToSize(s.magnitude)}px`,
               transform: 'translate(-50%, -150%)',
+              fontSize: `${magnitudeToSize(s.magnitude)}px`,
             }}
           >
             {s.label}
