@@ -2,7 +2,7 @@ import { Html } from '@react-three/drei';
 import { Vector3 } from 'three';
 import { useState } from 'react';
 import { useFrame, useThree } from '@react-three/fiber';
-import { altAzToVector } from '../util/coordinateUtil';
+import { altAzToVector } from '../../util/coordinateUtil';
 
 const directions = [
   { label: 'N', az: 0 },

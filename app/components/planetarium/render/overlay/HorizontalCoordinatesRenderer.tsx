@@ -1,5 +1,5 @@
 import { Line } from '@react-three/drei';
-import { altAzToVector } from '../util/coordinateUtil';
+import { altAzToVector } from '../../util/coordinateUtil';
 
 export default function HorizontalCoordinatesRenderer() {
   const lines = [];
