@@ -2,21 +2,28 @@
 
 import { useMemo, useRef } from 'react';
 import { Html } from '@react-three/drei';
-import { Vector3 } from 'three';
+import { PerspectiveCamera, Vector3 } from 'three';
 import { useFrame, useThree } from '@react-three/fiber';
+import { LabelRenderPolicy } from '../LabelRenderPolicy';
 
-const MIN_MAG = -1.5;
-const MAX_MAG = 6.5;
+const starLabelRenderPolicy: LabelRenderPolicy = {
+  maxMagnitude: (fov) => {
+    const fovMin = 1;
+    const fovMax = 90;
 
-const MIN_FONT = 8;
-const MAX_FONT = 20;
+    const magMin = 1.0;
+    const magMax = 6.5;
 
-function magnitudeToSize(mag: number) {
-  const m = Math.min(MAX_MAG, Math.max(MIN_MAG, mag));
-  const t = 1 - (m - MIN_MAG) / (MAX_MAG - MIN_MAG);
-  const eased = Math.pow(t, 0.5);
-  return MIN_FONT + eased * (MAX_FONT - MIN_FONT);
-}
+    const t = Math.min(
+      1,
+      Math.max(0, (fovMax - fov) / (fovMax - fovMin))
+    );
+
+    const eased = Math.pow(t, 2);
+
+    return magMin + eased * (magMax - magMin);
+  },
+};
 
 export interface RenderStarLabel {
   direction: Vector3;
@@ -28,12 +35,14 @@ export default function StarLabelsRenderer({
   stars
 }: { stars: RenderStarLabel[] }) {
   const { camera } = useThree();
+  const pCamera = camera as PerspectiveCamera;
   
   const cameraForward = useMemo(() => new Vector3(), []);
   const labelRefs = useRef<(HTMLDivElement | null)[]>([]);
 
   useFrame(() => {
     camera.getWorldDirection(cameraForward);
+    const fov = pCamera.fov;
 
     stars.forEach((star, i) => {
       const el = labelRefs.current[i];
@@ -41,8 +50,32 @@ export default function StarLabelsRenderer({
         return;
       }
 
-      const visible = cameraForward.dot(star.direction) > 0;
-      el.style.visibility = visible ? 'visible' : 'hidden';
+      const dot = cameraForward.dot(star.direction);
+
+      const v = star.direction.clone().project(camera);
+      const inFrustum =
+        v.z >= -1 && v.z <= 1 &&
+        v.x >= -1 && v.x <= 1 &&
+        v.y >= -1 && v.y <= 1;
+
+      if (dot <= 0 || !inFrustum) {
+        el.style.visibility = 'hidden';
+        return;
+      }
+
+      const maxMag = starLabelRenderPolicy.maxMagnitude(fov);
+      const eligible = star.magnitude <= maxMag;
+
+      if (eligible) {
+        el.style.visibility = 'visible';
+        requestAnimationFrame(() => {
+          el.style.opacity = '1';
+        });
+      } else {
+        requestAnimationFrame(() => {
+          el.style.opacity = '0';
+        });
+      }
     });
   });
 
@@ -61,7 +94,7 @@ export default function StarLabelsRenderer({
             position={s.direction}
             style={{
               transform: 'translate(-50%, -150%)',
-              fontSize: `${magnitudeToSize(s.magnitude)}px`,
+              fontSize: '16px',
             }}
           >
             {s.label}
