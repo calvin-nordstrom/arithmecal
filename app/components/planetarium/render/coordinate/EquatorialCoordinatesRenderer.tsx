@@ -14,8 +14,7 @@ export default function EquatorialCoordinatesRenderer({
     const points = [];
     for (let ra = 0; ra <= 360; ra += 360 / decSegments) {
       const altAz = raDecToAltAz(ra / 15, dec, observer);
-      const v = altAzToVector(altAz.alt, altAz.az);
-      points.push(v);
+      points.push(altAzToVector(altAz.alt, altAz.az));
     }
     lines.push(points);
   }
@@ -27,14 +26,13 @@ export default function EquatorialCoordinatesRenderer({
     if (ra % 90 === 0) {
       continue;
     }
+
     const points = [];
     for (let dec = -90 + decSpacing; dec <= 90 - decSpacing; dec += 180 / raSegments) {
       const altAz = raDecToAltAz(ra / 15, dec, observer);
-      const v = altAzToVector(altAz.alt, altAz.az);
-      points.push(v);
+      points.push(altAzToVector(altAz.alt, altAz.az));
     }
-
-    if (points.length > 0) lines.push(points);
+    lines.push(points);
   }
 
   // North and south celestial pole vertical lines
@@ -42,8 +40,7 @@ export default function EquatorialCoordinatesRenderer({
     const points = [];
     for (let dec = -90; dec <= 90; dec += 180 / raSegments) {
       const altAz = raDecToAltAz(ra / 15, dec, observer);
-      const v = altAzToVector(altAz.alt, altAz.az);
-      points.push(v);
+      points.push(altAzToVector(altAz.alt, altAz.az));
     }
     lines.push(points);
   }
