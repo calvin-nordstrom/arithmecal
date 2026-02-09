@@ -1,4 +1,4 @@
-import { Star } from "../render/star/Star";
+import { Star } from "./Star";
 
 interface HipStarApiEntry {
   id: number;

@@ -1,6 +1,6 @@
 import { PerspectiveCamera, Quaternion, Vector3 } from 'three';
 import { Horizon, Observer as AstroObserver } from 'astronomy-engine';
-import { Star } from '../render/star/Star';
+import { Star } from '../data/Star';
 import { Observer } from '../Observer';
 
 const DEG2RAD = Math.PI / 180;

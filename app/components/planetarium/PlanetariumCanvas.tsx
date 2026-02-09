@@ -5,7 +5,7 @@ import { Suspense, useEffect, useMemo, useState } from 'react';
 import SkySphere from './SkySphere';
 import { usePlanetariumControls } from './usePlanetariumControls';
 import { Observer } from './Observer';
-import { Star } from './render/star/Star';
+import { Star } from './data/Star';
 import { fetchHipStars } from './data/hipStarApi';
 import { buildStarDirections } from './util/coordinateUtil';
 import { formatTime, todayISODate } from './util/timeUtil';
