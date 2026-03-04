@@ -1,4 +1,6 @@
-export function getDecimalCount(value: number): number {
+export function getDecimalCount(
+  value: number
+): number {
   if (!isFinite(value)) {
     return 0;
   }
@@ -9,7 +11,9 @@ export function getDecimalCount(value: number): number {
   return numStr.split('.')[1].length;
 }
 
-export function countConsecutiveDecimalZeroes(value: number): number {
+export function countConsecutiveDecimalZeroes(
+  value: number
+): number {
   if (!isFinite(value)) {
     return 0;
   }
@@ -28,6 +32,20 @@ export function countConsecutiveDecimalZeroes(value: number): number {
   return Math.max(...zeroStreaks.map(z => z.length));
 }
 
-export function clamp(value: number, min: number, max: number) {
+export function clamp(
+  value: number, 
+  min: number, 
+  max: number
+) {
   return Math.max(min, Math.min(max, value));
+}
+
+export function map(
+  value: number,
+  inMin: number,
+  inMax: number,
+  outMin: number,
+  outMax: number
+) {
+  return ((value - inMin) * (outMax - outMin) / (inMax - inMin) + outMin);
 }
