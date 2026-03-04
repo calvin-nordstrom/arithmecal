@@ -450,6 +450,7 @@ button:hover {
 
 .category-nav {
   display: flex;
+  align-items: center;
   padding: 0.5rem 1rem;
   gap: 1rem;
   transition: max-height 0.3s ease;
@@ -683,6 +684,10 @@ button:hover {
 .note {
   font-style: italic;
   color: var(--blue);
+}
+
+.note a {
+  font-style: italic;
 }
 
 /* Calculator styles */
@@ -1076,6 +1081,84 @@ textarea {
   font-size: 16px;
 }
 
+/* Disc golf styles */
+
+.disc-golf-flight-chart-container {
+  margin-bottom: 1rem;
+}
+
+.disc-golf-flight-chart {
+  border: 1px solid var(--calculator-border);
+  border-radius: 4px;
+  background-color: #ffffff;
+}
+
+.disc-golf-flight-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.disc-golf-flight-input-container {
+  display: flex;
+  justify-content: space-between;
+  max-width: calc(100% - 1rem); /* account for input padding */
+}
+
+.disc-golf-flight-input {
+  display: flex;
+  flex-direction: column;
+  max-width: 3rem;
+}
+
+.disc-golf-flight-input input {
+  width: 100%;
+}
+
+.disc-golf-throw-type-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.disc-golf-throw-type-input {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.disc-golf-throw-type-input select {
+  width: 100%;
+}
+
+/* Badge styles */
+
+.badge-container {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.badge-new {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  background-color: gold;
+  border: 1px solid orange;
+  color: gray;
+  font: var(--rubik-text);
+  font-size: 14px;
+  padding: 3px 6px;
+  border-radius: 999px;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(255, 0, 0, 0.2); }
+  70% { box-shadow: 0 0 0 6px rgba(255, 0, 0, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(255, 0, 0, 0); }
+}
+
 /* Media width dependent styles */
 
 /* Extra Small (Phones) */
@@ -1149,6 +1232,11 @@ textarea {
 
   .title-banner h1 {
     font-size: 48px;
+  }
+
+  .disc-golf-flight-input-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
   }
 }
 

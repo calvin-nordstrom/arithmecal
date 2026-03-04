@@ -45,6 +45,9 @@ export const calculators = [
   { title: 'ASCII Table', category: 'Reference', url: '/reference/ascii-table' },
   { title: 'Table of Derivatives', category: 'Reference', url: '/reference/derivatives' },
   { title: 'Trigonometric Identities', category: 'Reference', url: '/reference/trig-identities' },
+
+  // Sports
+  { title: 'Disc Golf Flight Guide', category: 'Sports', url: '/sports/disc-golf' },
 ];
 
 export type Calculator = typeof calculators[number];

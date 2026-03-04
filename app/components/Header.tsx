@@ -70,6 +70,10 @@ export default function Header() {
           <Link href='../conversion'>Conversion</Link>
           <Link href='../math'>Math</Link>
           <Link href='../physics'>Physics</Link>
+          <div className='badge-container'>
+            <Link href='../sports'>Sports</Link>
+            <span className='badge-new'>NEW</span>
+          </div>
           <Link href='../reference'>Reference</Link>
 
           <div className='mobile-nav-links'>
