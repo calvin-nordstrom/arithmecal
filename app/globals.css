@@ -1133,6 +1133,8 @@ canvas {
   white-space: nowrap;
   visibility: hidden;
   transition: opacity 0.25s linear;
+}
+
 /* Disc golf styles */
 
 .disc-golf-flight-chart-container {
