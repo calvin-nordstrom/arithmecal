@@ -20,6 +20,10 @@ export default function DiscGolfPage() {
           <DiscGolfFlightChartCalculator />
         </div>
         <div className='calculator-description'>
+          <h2>What is Disc Golf?</h2>
+          <p>Disc golf is a flying disc sport where players throw specialized discs toward a metal basket target in as few throws as possible. Similar to traditional golf, each hole begins from a tee area and ends at a basket, but instead of clubs and balls, players use discs designed for distance, control, and stability.</p>
+          <p>Discs are rated using four <strong>flight numbers</strong> which describe how they behave in the air. This guide and calculator help visualize how those numbers translate into real-world flight paths.</p>
+          
           <h2>Flight Numbers</h2>
           <p>In disc golf, the flight numbers of a disc describe how it flies. While not formally standardized across manufacturers, the four-number system is widely used to communicate a disc&apos;s aerodynamic tendencies throughout its flight. These numbers represent <strong>Speed, Glide, Turn,</strong> and <strong>Fade</strong>.</p>
 
