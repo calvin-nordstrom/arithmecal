@@ -1,34 +1,36 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Arithmecal
 
-## Getting Started
+**Arithmecal** is a web-based platform that offers tools, calculators, and interactive simulations designed for students, professionals, and curious learners alike.
 
-First, run the development server:
+Unlike many similar services, Arithmecal emphasizes both accuracy and performance by performing computations directly in the browser. This client-side approach reduces reliance on network requests, resulting in faster response times, improved privacy, and a smoother user experience overall.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+Whether you're solving equations, converting units, or exploring complex systems, Arithmecal aims to make these tasks intuitive, efficient, and engaging.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Features and Services
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Arithmecal currently offers several categories of tools, with more continuously being developed:
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+### Calculators
 
-## Learn More
+A diverse set of calculators designed to handle everything from basic arithmetic to more advanced scientific and technical computations. These tools are built for precision and ease of use, making them suitable for both quick calculations and in-depth problem solving.
 
-To learn more about Next.js, take a look at the following resources:
+### Converters
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Quickly convert between units, measurement systems, and number systems. These tools are optimized for speed, helping users switch between formats without unnecessary complexity.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Design Philosophy
 
-## Deploy on Vercel
+Arithmecal is built around a few core principles:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+* **Efficiency** - Minimize network latency by performing computations in the browser.
+* **Accuracy** - Ensure reliable and precise results across all features.
+* **Accessibility** - Provide a clean, responsive interface that works for users of all experience levels on any browser.
+* **Scalability** - Continuously expand the platform with new tools and features.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+More technically, the system contains templates to easily create  components for calculators, converters, and the layouts for entire pages. This design allows contributors to make new pages without knowing how the systems work internally.
+
+## Contributing
+
+Contributions are welcome and encouraged. Whether you're fixing bugs, adding new features, improving documentation, or suggesting ideas, your input helps make Arithmecal better.
+
+To get started, please visit the [Contributing Guide](./docs/CONTRIBUTING.md) to see how to participate.
