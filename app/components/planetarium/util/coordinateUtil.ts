@@ -3,14 +3,12 @@ import { Horizon, Observer as AstroObserver } from 'astronomy-engine';
 import { Star } from '../data/Star';
 import { Observer } from '../Observer';
 
-const DEG2RAD = Math.PI / 180;
-
 export function altAzToVector(
   alt: number,
   az: number
 ): Vector3 {
-  const altRad = alt * DEG2RAD;
-  const azRad = az * DEG2RAD;
+  const altRad = alt * Math.PI / 180;
+  const azRad = az * Math.PI / 180;
 
   const x = Math.cos(altRad) * Math.sin(azRad);
   const y = Math.sin(altRad);
