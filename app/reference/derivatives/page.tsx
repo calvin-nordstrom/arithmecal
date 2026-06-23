@@ -1,6 +1,7 @@
 import CalculatorLayout from '@/app/components/CalculatorLayout';
 import type { Metadata } from 'next'
 import KatexRenderer from '@/app/components/KatexRenderer';
+import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'Table of Derivatives',
@@ -85,6 +86,7 @@ export default function DerivativesPage() {
         <li><strong>8</strong>. Chain Rule – Used to differentiate composite functions.</li>
       </ul>
       <p>Inverse trigonometric and hyperbolic functions (entries 15–20 and 31–36) also follow standard patterns, but are not typically given short names like the above rules.</p>
+      <p>To see a comprehensive list of derivatives, check out our <Link href='./integrals' target='_blank'>Table of Integrals</Link></p>
     </CalculatorLayout>
   );
 }
