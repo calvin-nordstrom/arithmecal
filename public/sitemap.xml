@@ -274,7 +274,13 @@
     <loc>https://arithmecal.com/reference/derivatives</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <lastmod>2025-10-20</lastmod>
+    <lastmod>2026-6-23</lastmod>
+  </url>
+  <url>
+    <loc>https://arithmecal.com/reference/integrals</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-6-23</lastmod>
   </url>
   <url>
     <loc>https://arithmecal.com/reference/trig-identities</loc>
