@@ -56,10 +56,7 @@ export default function HomePage() {
               </div>
               <div className='home-category-item'>
                 <Link href='./sports' className='home-category-link'>
-                  <div className='badge-container'>
-                    <h3>Sports</h3>
-                    <span className='badge-new'>NEW</span>
-                  </div>
+                  <h3>Sports</h3>
                 </Link>
               </div>
               <div className='home-category-item'>

@@ -14,12 +14,7 @@ export default function Footer() {
             <li><Link href='../conversion'>Conversion</Link></li>
             <li><Link href='../math'>Math</Link></li>
             <li><Link href='../physics'>Physics</Link></li>
-            <li>
-              <div className='badge-container'>
-                <Link href='../sports'>Sports</Link>
-                <span className='badge-new'>NEW</span>
-              </div>
-            </li>
+            <li><Link href='../sports'>Sports</Link></li>
             <li><Link href='../reference'>Reference</Link></li>
           </ul>
         </div>
