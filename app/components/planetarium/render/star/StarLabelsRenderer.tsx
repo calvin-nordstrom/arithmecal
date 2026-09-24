@@ -1,7 +1,6 @@
 'use client';
 
-import { useMemo, useRef } from 'react';
-import { Html } from '@react-three/drei';
+import { useMemo, type MutableRefObject } from 'react';
 import { PerspectiveCamera, Vector3 } from 'three';
 import { useFrame, useThree } from '@react-three/fiber';
 import { LabelRenderPolicy } from '../LabelRenderPolicy';
@@ -32,13 +31,17 @@ export interface RenderStarLabel {
 }
 
 export default function StarLabelsRenderer({
-  stars
-}: { stars: RenderStarLabel[] }) {
-  const { camera } = useThree();
+  stars,
+  labelRefs,
+}: {
+  stars: RenderStarLabel[];
+  labelRefs: MutableRefObject<(HTMLDivElement | null)[]>;
+}) {
+  const { camera, size } = useThree();
   const pCamera = camera as PerspectiveCamera;
   
   const cameraForward = useMemo(() => new Vector3(), []);
-  const labelRefs = useRef<(HTMLDivElement | null)[]>([]);
+  const projectedPosition = useMemo(() => new Vector3(), []);
 
   useFrame(() => {
     camera.getWorldDirection(cameraForward);
@@ -52,55 +55,23 @@ export default function StarLabelsRenderer({
 
       const dot = cameraForward.dot(star.direction);
 
-      const v = star.direction.clone().project(camera);
+      const v = projectedPosition.copy(star.direction).project(camera);
       const inFrustum =
         v.z >= -1 && v.z <= 1 &&
         v.x >= -1 && v.x <= 1 &&
         v.y >= -1 && v.y <= 1;
 
-      if (dot <= 0 || !inFrustum) {
-        el.style.visibility = 'hidden';
-        return;
-      }
-
       const maxMag = starLabelRenderPolicy.maxMagnitude(fov);
-      const eligible = star.magnitude <= maxMag;
+      const isVisible =
+        dot > 0 &&
+        inFrustum &&
+        star.magnitude <= maxMag;
 
-      if (eligible) {
-        el.style.visibility = 'visible';
-        requestAnimationFrame(() => {
-          el.style.opacity = '1';
-        });
-      } else {
-        requestAnimationFrame(() => {
-          el.style.opacity = '0';
-        });
-      }
+      el.style.visibility = isVisible ? 'visible' : 'hidden';
+      el.style.opacity = isVisible ? '1' : '0';
+      el.style.transform = `translate3d(${(v.x + 1) * size.width * 0.5}px, ${(1 - v.y) * size.height * 0.5}px, 0) translate(-50%, -150%)`;
     });
   });
 
-  return (
-    <>
-      {stars.map((s, i) => {
-        if (!s.label) {
-          return null;
-        }
-
-        return (
-          <Html
-            className='star-label'
-            ref={el => { labelRefs.current[i] = el; }}
-            key={i}
-            position={s.direction}
-            style={{
-              transform: 'translate(-50%, -150%)',
-              fontSize: '16px',
-            }}
-          >
-            {s.label}
-          </Html>
-        );
-      })}
-    </>
-  );
+  return null;
 }

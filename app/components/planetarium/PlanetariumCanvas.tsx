@@ -1,7 +1,7 @@
 'use client';
 
 import { Canvas } from '@react-three/fiber';
-import { Suspense, useEffect, useMemo, useState } from 'react';
+import { Suspense, useEffect, useMemo, useRef, useState, type MutableRefObject } from 'react';
 import SkySphere from './SkySphere';
 import { usePlanetariumControls } from './usePlanetariumControls';
 import { Observer } from './Observer';
@@ -9,12 +9,12 @@ import { Star } from './data/Star';
 import { fetchHipStars } from './data/hipStarApi';
 import { buildStarDirections } from './util/coordinateUtil';
 import { formatTime, todayISODate } from './util/timeUtil';
-import StarRenderer from './render/star/StarRenderer';
+import StarRenderer, { RenderStar } from './render/star/StarRenderer';
 import HorizonRenderer from './render/horizon/HorizonRenderer';
-import CardinalLabelsRenderer from './render/horizon/CardinalLabelsRenderer';
+import CardinalLabelsRenderer, { cardinalDirections } from './render/horizon/CardinalLabelsRenderer';
 import EquatorialCoordinatesRenderer from './render/coordinate/EquatorialCoordinatesRenderer';
 import HorizontalCoordinatesRenderer from './render/coordinate/HorizontalCoordinatesRenderer';
-import StarLabelsRenderer from './render/star/StarLabelsRenderer';
+import StarLabelsRenderer, { RenderStarLabel } from './render/star/StarLabelsRenderer';
 
 export default function PlanetariumCanvas() {
   const [date, setDate] = useState(todayISODate());
@@ -43,6 +43,28 @@ export default function PlanetariumCanvas() {
   const [showEquatorial, setShowEquatorial] = useState(false);
   const [showHorizontal, setShowHorizontal] = useState(false);
   const [showStarLabels, setShowStarLabels] = useState(true);
+  const starLabelRefs = useRef<(HTMLDivElement | null)[]>([]);
+  const cardinalLabelRefs = useRef<(HTMLDivElement | null)[]>([]);
+
+  const starDirections = useMemo(
+    () => buildStarDirections(stars, observer),
+    [stars, observer]
+  );
+  const renderStars: RenderStar[] = useMemo(
+    () => starDirections.map((direction, i) => ({
+      direction,
+      magnitude: stars[i].magnitude ?? 0,
+    })),
+    [starDirections, stars]
+  );
+  const renderStarLabels: RenderStarLabel[] = useMemo(
+    () => starDirections.map((direction, i) => ({
+      direction,
+      magnitude: stars[i].magnitude ?? 0,
+      label: stars[i].label ?? '',
+    })),
+    [starDirections, stars]
+  );
 
   return (
     <div className='planetarium'>
@@ -110,37 +132,69 @@ export default function PlanetariumCanvas() {
         </div>
       </div>
 
-      <Canvas
-        camera={{
-          fov: 60,
-          near: 0.1,
-          far: 10000,
-          position: [0, 0, 0.001],
-        }}
-        gl={{ antialias: true, alpha: false }}
-        dpr={[1, 2]}
-      >
-        <color attach='background' args={['#000000']} />
+      <div className='planetarium-canvas'>
+        <Canvas
+          camera={{
+            fov: 60,
+            near: 0.1,
+            far: 10000,
+            position: [0, 0, 0.001],
+          }}
+          gl={{ antialias: true, alpha: false }}
+          dpr={[1, 2]}
+        >
+          <color attach='background' args={['#000000']} />
 
-        <Suspense fallback={null}>
-          <Scene
-            observer={observer}
-            stars={stars}
-            showHorizon={showHorizon}
-            showCardinalLabels={showCardinalLabels}
-            showEquatorial={showEquatorial}
-            showHorizontal={showHorizontal}
-            showStarLabels={showStarLabels}
-          />
-        </Suspense>
-      </Canvas>
+          <Suspense fallback={null}>
+            <Scene
+              observer={observer}
+              renderStars={renderStars}
+              renderStarLabels={renderStarLabels}
+              starLabelRefs={starLabelRefs}
+              cardinalLabelRefs={cardinalLabelRefs}
+              showHorizon={showHorizon}
+              showCardinalLabels={showCardinalLabels}
+              showEquatorial={showEquatorial}
+              showHorizontal={showHorizontal}
+              showStarLabels={showStarLabels}
+            />
+          </Suspense>
+        </Canvas>
+        <div className='planetarium-label-overlay' aria-hidden='true'>
+          {showCardinalLabels && cardinalDirections.map((direction, i) => (
+            <div
+              className='cardinal-label'
+              ref={el => { cardinalLabelRefs.current[i] = el; }}
+              key={direction.label}
+              style={{
+                fontSize: direction.label.length === 1 ? '32px' : '20px',
+                fontWeight: direction.label.length === 1 ? 400 : 300,
+              }}
+            >
+              {direction.label}
+            </div>
+          ))}
+          {showStarLabels && renderStarLabels.map((star, i) => star.label && (
+            <div
+              className='star-label'
+              ref={el => { starLabelRefs.current[i] = el; }}
+              key={i}
+            >
+              {star.label}
+            </div>
+          ))}
+        </div>
+      </div>
     </div>
   );
 }
 
 type SceneProps = {
   observer: Observer;
-  stars: Star[];
+  renderStars: RenderStar[];
+  renderStarLabels: RenderStarLabel[];
+  starLabelRefs: MutableRefObject<(HTMLDivElement | null)[]>;
+  cardinalLabelRefs: MutableRefObject<(HTMLDivElement | null)[]>;
   showHorizon: boolean;
   showCardinalLabels: boolean;
   showEquatorial: boolean;
@@ -150,7 +204,10 @@ type SceneProps = {
 
 function Scene({
   observer,
-  stars,
+  renderStars,
+  renderStarLabels,
+  starLabelRefs,
+  cardinalLabelRefs,
   showHorizon,
   showCardinalLabels,
   showEquatorial, 
@@ -159,31 +216,15 @@ function Scene({
 }: SceneProps) {
   usePlanetariumControls();
 
-  const starDirections = useMemo(
-    () => buildStarDirections(stars, observer),
-    [observer]
-  );
-
   return (
     <>
       <SkySphere />
-      <StarRenderer 
-        stars={starDirections.map((dir, i) => ({
-          direction: dir,
-          magnitude: stars[i].magnitude ?? 0,
-        }))}
-      />
+      <StarRenderer stars={renderStars} />
       {showHorizon && <HorizonRenderer />}
-      {showCardinalLabels && <CardinalLabelsRenderer />}
+      {showCardinalLabels && <CardinalLabelsRenderer labelRefs={cardinalLabelRefs} />}
       {showEquatorial && <EquatorialCoordinatesRenderer observer={observer} />}
       {showHorizontal && <HorizontalCoordinatesRenderer />}
-      {showStarLabels && <StarLabelsRenderer
-        stars={starDirections.map((dir, i) => ({
-          direction: dir,
-          magnitude: stars[i].magnitude ?? 0,
-          label: stars[i].label ?? '',
-        }))}
-      />}
+      {showStarLabels && <StarLabelsRenderer stars={renderStarLabels} labelRefs={starLabelRefs} />}
     </>
   );
 }

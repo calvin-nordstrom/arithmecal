@@ -1,10 +1,9 @@
-import { Html } from '@react-three/drei';
+import { useMemo, type MutableRefObject } from 'react';
 import { Vector3 } from 'three';
-import { useState } from 'react';
 import { useFrame, useThree } from '@react-three/fiber';
 import { altAzToVector } from '../../util/coordinateUtil';
 
-const directions = [
+export const cardinalDirections = [
   { label: 'N', az: 0 },
   { label: 'NE', az: 45 },
   { label: 'E', az: 90 },
@@ -15,49 +14,39 @@ const directions = [
   { label: 'NW', az: 315 },
 ];
 
-export default function CardinalLabelsRenderer() {
-  const { camera } = useThree();
-  const [visible, setVisible] = useState<boolean[]>(() =>
-    directions.map(() => false)
+export default function CardinalLabelsRenderer({
+  labelRefs,
+}: {
+  labelRefs: MutableRefObject<(HTMLDivElement | null)[]>;
+}) {
+  const { camera, size } = useThree();
+  const cameraForward = useMemo(() => new Vector3(), []);
+  const projectedPosition = useMemo(() => new Vector3(), []);
+  const positions = useMemo(
+    () => cardinalDirections.map((direction) => altAzToVector(0, direction.az)),
+    []
   );
-
-  const cameraForward = new Vector3();
 
   useFrame(() => {
     camera.getWorldDirection(cameraForward);
 
-    setVisible(() =>
-      directions.map((d) => {
-        const pos = altAzToVector(0, d.az);
-        return pos.dot(cameraForward) > 0;
-      })
-    );
+    positions.forEach((position, i) => {
+      const el = labelRefs.current[i];
+      if (!el) {
+        return;
+      }
+
+      const projected = projectedPosition.copy(position).project(camera);
+      const isVisible =
+        position.dot(cameraForward) > 0 &&
+        projected.z >= -1 && projected.z <= 1 &&
+        projected.x >= -1 && projected.x <= 1 &&
+        projected.y >= -1 && projected.y <= 1;
+
+      el.style.visibility = isVisible ? 'visible' : 'hidden';
+      el.style.transform = `translate3d(${(projected.x + 1) * size.width * 0.5}px, ${(1 - projected.y) * size.height * 0.5}px, 0) translate(-50%, -50%)`;
+    });
   });
 
-  return (
-    <>
-      {directions.map((d, i) => {
-        if (!visible[i]) {
-          return null;
-        }
-
-        const pos = altAzToVector(0, d.az);
-
-        return (
-          <Html
-            className='cardinal-label'
-            key={d.label}
-            position={pos}
-            center
-            style={{
-              fontSize: d.label.length === 1 ? '32px' : '20px',
-              fontWeight: d.label.length === 1 ? 400 : 300,
-            }}
-          >
-            {d.label}
-          </Html>
-        );
-      })}
-    </>
-  );
+  return null;
 }

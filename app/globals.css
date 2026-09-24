@@ -1109,6 +1109,24 @@ textarea {
   width: 100%;
 }
 
+.planetarium-canvas {
+  position: relative;
+  flex: 1;
+  min-width: 0;
+}
+
+.planetarium-canvas > div:first-child {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.planetarium-label-overlay {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
 canvas {
   touch-action: none;
 }
@@ -1120,13 +1138,16 @@ canvas {
 }
 
 .cardinal-label {
+  position: absolute;
   font: 400 16px 'Rubik', sans-serif;
   color: rgb(255, 255, 255);
   pointer-events: none;
   white-space: nowrap;
+  visibility: hidden;
 }
 
 .star-label {
+  position: absolute;
   font: 100 16px 'Rubik', sans-serif;
   color: rgb(255, 255, 255);
   pointer-events: none;
