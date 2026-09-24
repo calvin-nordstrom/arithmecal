@@ -44,6 +44,7 @@ export const calculators = [
   // Reference
   { title: 'ASCII Table', category: 'Reference', url: '/reference/ascii-table' },
   { title: 'Table of Derivatives', category: 'Reference', url: '/reference/derivatives' },
+  { title: 'Table of Integrals', category: 'Reference', url: '/reference/integrals' },
   { title: 'Trigonometric Identities', category: 'Reference', url: '/reference/trig-identities' },
 
   // Sports

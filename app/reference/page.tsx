@@ -23,6 +23,12 @@ export default function ReferencePage() {
         <ul>
           <li><Link href='reference/ascii-table'>ASCII Table</Link></li>
           <li><Link href='reference/derivatives'>Table of Derivatives</Link></li>
+          <li>
+            <div className='badge-container'>
+              <Link href='reference/integrals'>Table of Integrals</Link>
+              <span className='badge-new'>NEW</span>
+            </div>
+          </li>
           <li><Link href='reference/trig-identities'>Trigonometric Identities</Link></li>
         </ul>
       </div>

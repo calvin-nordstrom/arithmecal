@@ -20,12 +20,7 @@ export default function SportsCalculatorsPage() {
       <div className='calculator-category'>
         <h2>Outdoor Sports Calculators</h2>
         <ul>
-          <li>
-            <div className='badge-container'>
-              <Link href='sports/disc-golf'>Disc Golf Flight Guide</Link>
-              <span className='badge-new'>NEW</span>
-            </div>
-          </li>
+          <li><Link href='sports/disc-golf'>Disc Golf Flight Guide</Link></li>
         </ul>
       </div>
     </CalculatorLayout>
